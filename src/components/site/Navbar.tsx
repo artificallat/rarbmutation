@@ -79,7 +79,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
               { to: `${p}/news`, label: tr.nav.news },
               { to: `${p}/donate`, label: tr.nav.donate },
             ].map(l => (
-              <NavLink key={l.to} to={l.to} className={linkCls + " block px-3 py-2 rounded-lg hover:bg-muted/60"}>{l.label}</NavLink>
+              <NavLink key={l.to} to={l.to} className="block px-3 py-2 rounded-lg hover:bg-muted/60 text-sm font-medium">{l.label}</NavLink>
             ))}
             <Link to={otherPath} className="block px-3 py-2 rounded-lg hover:bg-muted/60 text-sm font-medium">🌐 {otherLang.toUpperCase()}</Link>
           </div>
