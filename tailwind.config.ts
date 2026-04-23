@@ -13,7 +13,21 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
+      },
       colors: {
+        navy: {
+          DEFAULT: "hsl(var(--navy))",
+          deep: "hsl(var(--navy-deep))",
+        },
+        teal: "hsl(var(--teal))",
+        amber: {
+          DEFAULT: "hsl(var(--amber))",
+          deep: "hsl(var(--amber-deep))",
+        },
+        warm: "hsl(var(--warm))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
