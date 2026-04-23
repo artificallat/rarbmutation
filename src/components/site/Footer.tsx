@@ -1,0 +1,48 @@
+import { Link } from "react-router-dom";
+import { Linkedin, Facebook, Twitter, Mail } from "lucide-react";
+import { t, socials, type Lang } from "@/content/site";
+
+export default function Footer({ lang }: { lang: Lang }) {
+  const tr = t[lang].footer;
+  const p = lang === "de" ? "/de" : "";
+  return (
+    <footer className="bg-navy-deep text-white/80 mt-24">
+      <div className="container-wide py-16 grid md:grid-cols-3 gap-12">
+        <div>
+          <Link to={`${p}/`} className="flex items-center gap-2 mb-4">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber to-teal grid place-items-center text-navy-deep font-display font-bold">C</div>
+            <span className="font-display font-bold text-xl text-white">Cure MCOPS12</span>
+          </Link>
+          <p className="text-sm leading-relaxed max-w-xs">{tr.tagline}</p>
+        </div>
+        <div className="text-sm space-y-2">
+          <p className="text-white font-semibold mb-2">{tr.contact}</p>
+          <a href={`mailto:${socials.email}`} className="inline-flex items-center gap-2 hover:text-amber"><Mail className="w-4 h-4" />{socials.email}</a>
+          <p className="pt-2">{tr.org}</p>
+          <p className="text-white/60">{tr.reg}</p>
+        </div>
+        <div>
+          <p className="text-white font-semibold mb-3">Follow</p>
+          <div className="flex gap-3">
+            {[
+              { Icon: Linkedin, href: socials.linkedin, label: "LinkedIn" },
+              { Icon: Facebook, href: socials.facebook, label: "Facebook" },
+              { Icon: Twitter, href: socials.twitter, label: "Twitter" },
+            ].map(({ Icon, href, label }) => (
+              <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label}
+                 className="w-10 h-10 rounded-full bg-white/10 grid place-items-center hover:bg-amber hover:text-navy-deep transition-colors">
+                <Icon className="w-4 h-4" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-white/10">
+        <div className="container-wide py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/50">
+          <p>{tr.rights}</p>
+          <p>{tr.imprint}</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
