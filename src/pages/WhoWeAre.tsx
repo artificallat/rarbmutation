@@ -1,12 +1,14 @@
 import { Linkedin } from "lucide-react";
 import { Placeholder, SectionTitle } from "@/components/site/Bits";
 import type { Lang } from "@/content/site";
-import reinhardPhoto from "@/assets/reinhard-simon-lights.jpg";
-import edithPhoto from "@/assets/edith-simon-guitar.jpg";
+import reinhardPhoto from "@/assets/reinhard-pell-portrait.jpg";
+import edithPhoto from "@/assets/edith-pell-portrait.jpg";
+import katriPhoto from "@/assets/katri-rouvali.jpg";
 
 const photos: Record<string, string> = {
   "Reinhard Pell": reinhardPhoto,
   "Edith Pell": edithPhoto,
+  "Katri Rouvali": katriPhoto,
 };
 
 const board = [
