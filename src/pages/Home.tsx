@@ -28,7 +28,7 @@ export default function Home({ lang }: { lang: Lang }) {
         {slides.map((s, i) => (
           <div key={i} className={`absolute inset-0 transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}>
             <div className={`absolute inset-0 ${i === slide ? "animate-slow-zoom" : ""}`}>
-              <Placeholder label={`Simon & family — slide ${i+1}`} src={heroImages[i % heroImages.length]} className="h-full w-full !rounded-none" />
+              <Placeholder label={`Simon & family — slide ${i+1}`} src={heroImages[i % heroImages.length]} className="h-full w-full !rounded-none" objectPosition={i === 0 ? "center 20%" : "center"} />
             </div>
             <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, hsl(var(--navy-deep)/0.4) 0%, hsl(var(--navy-deep)/0.85) 100%)" }} />
             <div className="relative h-full container-wide flex items-end pb-24 sm:pb-32">
