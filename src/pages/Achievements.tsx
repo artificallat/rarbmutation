@@ -2,6 +2,7 @@ import { ExternalLink } from "lucide-react";
 import { SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
+import conferencePhoto from "@/assets/rarb-conference.jpg";
 
 const milestones = [
   { y: "2020", en: "Cure MCOPS12 founded", de: "Cure MCOPS12 gegründet" },
@@ -33,6 +34,12 @@ export default function Achievements({ lang }: { lang: Lang }) {
 
       <section id="network" className="container-wide pb-20">
         <SectionTitle eyebrow={de ? "Gemeinsam stark" : "Stronger together"} title={de ? "Das Netzwerk" : "The Network"} />
+        <figure className="mb-10 rounded-3xl overflow-hidden border border-border">
+          <img src={conferencePhoto} alt={de ? "RARB-Familienkonferenz am CHU Sainte-Justine" : "RARB family conference at CHU Sainte-Justine"} className="w-full h-auto object-cover" loading="lazy" />
+          <figcaption className="bg-card text-sm text-foreground/70 px-5 py-3">
+            {de ? "RARB-Familienkonferenz am CHU Sainte-Justine, Montréal — Familien, Forschende und Kliniker:innen vereint." : "RARB family conference at CHU Sainte-Justine, Montréal — families, researchers and clinicians united."}
+          </figcaption>
+        </figure>
         <p className="text-lg max-w-3xl text-foreground/80 mb-8 leading-relaxed">
           {de
             ? "Wir sind stolz auf unsere Partnerschaft mit A Cure for Sophia and Friends (USA) und A Cure for Sienna (Australien). Gemeinsam haben wir bisher über €235.000 (Stand Mai 2026) für engagierte Forschungs- und Entwicklungsprogramme gesammelt."
