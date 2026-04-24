@@ -69,7 +69,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
         </nav>
 
         {open && (
-          <div className="lg:hidden mt-2 pill-nav p-4 space-y-1 animate-in fade-in">
+          <div className="lg:hidden mt-2 rounded-2xl p-4 space-y-1 animate-in fade-in bg-navy text-white shadow-[var(--shadow-card)] border border-navy-deep">
             {[
               { to: `${p}/who-we-are`, label: tr.nav.whoWeAre },
               { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
@@ -77,11 +77,11 @@ export default function Navbar({ lang }: { lang: Lang }) {
               { to: `${p}/achievements`, label: tr.nav.achievements },
               { to: `${p}/research`, label: tr.nav.research },
               { to: `${p}/news`, label: tr.nav.news },
-              { to: `${p}/donate`, label: tr.nav.donate },
             ].map(l => (
-              <NavLink key={l.to} to={l.to} className="block px-3 py-2 rounded-lg hover:bg-muted/60 text-sm font-medium">{l.label}</NavLink>
+              <NavLink key={l.to} to={l.to} onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-3 rounded-lg hover:bg-white/10 text-base font-medium text-white">{l.label}</NavLink>
             ))}
-            <Link to={otherPath} className="block px-3 py-2 rounded-lg hover:bg-muted/60 text-sm font-medium">🌐 {otherLang.toUpperCase()}</Link>
+            <Link to={otherPath} onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-3 rounded-lg hover:bg-white/10 text-base font-medium text-white">🌐 {otherLang.toUpperCase()}</Link>
+            <Link to={`${p}/donate`} onClick={() => setOpen(false)} className="flex items-center justify-center min-h-[48px] px-4 py-3 mt-2 rounded-lg bg-amber text-navy font-semibold text-base hover:bg-amber-deep">{tr.cta.donate}</Link>
           </div>
         )}
       </div>
