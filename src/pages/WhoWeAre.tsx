@@ -1,6 +1,13 @@
 import { Linkedin } from "lucide-react";
 import { Placeholder, SectionTitle } from "@/components/site/Bits";
 import type { Lang } from "@/content/site";
+import reinhardPhoto from "@/assets/reinhard-simon-lights.jpg";
+import edithPhoto from "@/assets/edith-simon-guitar.jpg";
+
+const photos: Record<string, string> = {
+  "Reinhard Pell": reinhardPhoto,
+  "Edith Pell": edithPhoto,
+};
 
 const board = [
   { name: "Reinhard Pell", role: { en: "Founder & Chairman", de: "Gründer & Vorsitzender" },
