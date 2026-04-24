@@ -69,7 +69,10 @@ export default function Navbar({ lang }: { lang: Lang }) {
         </nav>
 
         {open && (
-          <div className="lg:hidden mt-2 rounded-2xl p-4 space-y-1 animate-in fade-in bg-navy text-white shadow-[var(--shadow-card)] border border-navy-deep">
+          <div
+            className="lg:hidden mt-2 rounded-2xl p-4 space-y-1 shadow-[var(--shadow-card)]"
+            style={{ backgroundColor: "hsl(var(--navy))", color: "#ffffff" }}
+          >
             {[
               { to: `${p}/who-we-are`, label: tr.nav.whoWeAre },
               { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
@@ -78,10 +81,32 @@ export default function Navbar({ lang }: { lang: Lang }) {
               { to: `${p}/research`, label: tr.nav.research },
               { to: `${p}/news`, label: tr.nav.news },
             ].map(l => (
-              <NavLink key={l.to} to={l.to} onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-3 rounded-lg hover:bg-white/10 text-base font-medium text-white">{l.label}</NavLink>
+              <Link
+                key={l.to}
+                to={l.to}
+                onClick={() => setOpen(false)}
+                className="flex items-center min-h-[48px] px-4 py-3 rounded-lg text-base font-medium"
+                style={{ color: "#ffffff" }}
+              >
+                {l.label}
+              </Link>
             ))}
-            <Link to={otherPath} onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-3 rounded-lg hover:bg-white/10 text-base font-medium text-white">🌐 {otherLang.toUpperCase()}</Link>
-            <Link to={`${p}/donate`} onClick={() => setOpen(false)} className="flex items-center justify-center min-h-[48px] px-4 py-3 mt-2 rounded-lg bg-amber text-navy font-semibold text-base hover:bg-amber-deep">{tr.cta.donate}</Link>
+            <Link
+              to={otherPath}
+              onClick={() => setOpen(false)}
+              className="flex items-center min-h-[48px] px-4 py-3 rounded-lg text-base font-medium"
+              style={{ color: "#ffffff" }}
+            >
+              🌐 {otherLang.toUpperCase()}
+            </Link>
+            <Link
+              to={`${p}/donate`}
+              onClick={() => setOpen(false)}
+              className="flex items-center justify-center min-h-[48px] px-4 py-3 mt-2 rounded-lg font-semibold text-base"
+              style={{ backgroundColor: "hsl(var(--amber))", color: "hsl(var(--navy))" }}
+            >
+              {tr.cta.donate}
+            </Link>
           </div>
         )}
       </div>
