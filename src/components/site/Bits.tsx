@@ -1,4 +1,11 @@
-export function Placeholder({ label, className = "aspect-[4/3]" }: { label: string; className?: string }) {
+export function Placeholder({ label, className = "aspect-[4/3]", src }: { label: string; className?: string; src?: string }) {
+  if (src) {
+    return (
+      <div className={`${className} w-full overflow-hidden rounded-2xl bg-muted`}>
+        <img src={src} alt={label} loading="lazy" className="w-full h-full object-cover" />
+      </div>
+    );
+  }
   return (
     <div className={`placeholder-img ${className} w-full`}>
       <span className="px-4 text-center">{label}</span>

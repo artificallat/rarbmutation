@@ -3,6 +3,11 @@ import { ChevronDown } from "lucide-react";
 import { Placeholder } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { kids, type Lang } from "@/content/site";
+import simonPhoto from "@/assets/simon-sleeping.jpg";
+
+const kidPhotos: Record<string, string> = {
+  "Simon Pell": simonPhoto,
+};
 
 export default function MeetOurKids({ lang }: { lang: Lang }) {
   const de = lang === "de";
@@ -27,7 +32,7 @@ function KidCard({ kid, lang }: { kid: typeof kids[number]; lang: Lang }) {
   const de = lang === "de";
   return (
     <article className="bg-card rounded-3xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] transition-shadow">
-      <Placeholder label={`Photo: ${kid.name}`} className="aspect-[4/5] !rounded-none" />
+      <Placeholder label={kid.name} src={kidPhotos[kid.name]} className="aspect-[4/5] !rounded-none" />
       <div className="p-6">
         <h3 className="font-display text-2xl font-bold text-navy">{kid.name}</h3>
         <p className="text-teal text-sm font-semibold mt-1">{kid.place} · {de ? "Geboren" : "Born"} {kid.year}</p>

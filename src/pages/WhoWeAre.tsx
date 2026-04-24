@@ -1,6 +1,13 @@
 import { Linkedin } from "lucide-react";
 import { Placeholder, SectionTitle } from "@/components/site/Bits";
 import type { Lang } from "@/content/site";
+import reinhardPhoto from "@/assets/reinhard-simon-lights.jpg";
+import edithPhoto from "@/assets/edith-simon-guitar.jpg";
+
+const photos: Record<string, string> = {
+  "Reinhard Pell": reinhardPhoto,
+  "Edith Pell": edithPhoto,
+};
 
 const board = [
   { name: "Reinhard Pell", role: { en: "Founder & Chairman", de: "Gründer & Vorsitzender" },
@@ -71,7 +78,7 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
         <div className="grid md:grid-cols-2 gap-8">
           {board.filter(b => b.featured).map(b => (
             <div key={b.name} className="bg-card rounded-3xl overflow-hidden border border-border">
-              <Placeholder label={`Photo: ${b.name}`} className="aspect-[5/4] !rounded-none" />
+              <Placeholder label={b.name} src={photos[b.name]} className="aspect-[5/4] !rounded-none" />
               <div className="p-7">
                 <h3 className="font-display text-2xl font-bold text-navy">{b.name}</h3>
                 <p className="text-teal font-semibold mt-1">{b.role[lang]}</p>
