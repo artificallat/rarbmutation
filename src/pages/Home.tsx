@@ -119,46 +119,64 @@ export default function Home({ lang }: { lang: Lang }) {
       {/* OUR STORY */}
       <section className="py-24">
         <div className="container-tight grid md:grid-cols-2 gap-12 items-center">
-          <div className="fade-in">
+          <Reveal>
             <SectionTitle eyebrow={lang === "de" ? "Wie alles begann" : "How it began"} title={tr.home.storyTitle} />
             <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
               <p>{tr.home.storyP1}</p>
               <p className="font-display text-2xl text-navy">{tr.home.storyP2}</p>
               <p>{tr.home.storyP3}</p>
             </div>
-          </div>
-          <div className="fade-in fade-in-delay-1">
+          </Reveal>
+          <Reveal delay={150}>
             <Placeholder label="Simon and his pony" src={storyPhoto} className="aspect-[4/5]" />
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ASO HIGHLIGHT */}
       <section className="bg-gradient-to-br from-navy to-navy-deep text-white py-24">
         <div className="container-tight">
-          <SectionTitle eyebrow={lang === "de" ? "Wissenschaft" : "Science"} title={tr.home.asoTitle} light />
-          <div className="space-y-5 text-lg text-white/85 leading-relaxed max-w-3xl">
-            <p>{tr.home.asoP1}</p>
-            <p>{tr.home.asoP2}</p>
-          </div>
-          <Link
-            to={`${p}/achievements`}
-            className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition"
-          >
-            {tr.cta.learnMore} <ArrowRight className="w-4 h-4" />
-          </Link>
+          <Reveal>
+            <SectionTitle eyebrow={lang === "de" ? "Wissenschaft" : "Science"} title={tr.home.asoTitle} light />
+          </Reveal>
+          <Reveal delay={150}>
+            <div className="space-y-5 text-lg text-white/85 leading-relaxed max-w-3xl">
+              <p>{tr.home.asoP1}</p>
+              <p>{tr.home.asoP2}</p>
+            </div>
+            <Link
+              to={`${p}/achievements`}
+              className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition"
+            >
+              {tr.cta.learnMore} <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Reveal>
         </div>
       </section>
 
       {/* STATS */}
       <section className="py-24 bg-teal text-white">
         <div className="container-wide grid sm:grid-cols-3 gap-8">
-          {tr.home.stats.map((s, i) => (
-            <div key={i} className="text-center">
-              <p className="font-display text-6xl md:text-7xl font-bold">{s.n}</p>
-              <p className="mt-3 text-white/90 max-w-xs mx-auto">{s.l}</p>
-            </div>
-          ))}
+          {tr.home.stats.map((s, i) => {
+            // parse n string to extract prefix/number/suffix
+            const match = s.n.match(/^([^\d]*)([\d.,]+)(.*)$/);
+            const prefix = match?.[1] ?? "";
+            const numStr = match?.[2] ?? s.n;
+            const suffix = match?.[3] ?? "";
+            const num = parseInt(numStr.replace(/[.,]/g, ""), 10);
+            return (
+              <Reveal key={i} delay={i * 150} className="text-center">
+                <p className="font-display text-6xl md:text-7xl font-bold">
+                  {isNaN(num) ? (
+                    s.n
+                  ) : (
+                    <Counter to={num} prefix={prefix} suffix={suffix} duration={2000} />
+                  )}
+                </p>
+                <p className="mt-3 text-white/90 max-w-xs mx-auto">{s.l}</p>
+              </Reveal>
+            );
+          })}
         </div>
       </section>
 
