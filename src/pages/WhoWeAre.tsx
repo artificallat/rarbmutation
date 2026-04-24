@@ -1,12 +1,14 @@
 import { Linkedin } from "lucide-react";
 import { Placeholder, SectionTitle } from "@/components/site/Bits";
 import type { Lang } from "@/content/site";
-import reinhardPhoto from "@/assets/reinhard-simon-lights.jpg";
-import edithPhoto from "@/assets/edith-simon-guitar.jpg";
+import reinhardPhoto from "@/assets/reinhard-pell-portrait.jpg";
+import edithPhoto from "@/assets/edith-pell-portrait.jpg";
+import katriPhoto from "@/assets/katri-rouvali.jpg";
 
 const photos: Record<string, string> = {
   "Reinhard Pell": reinhardPhoto,
   "Edith Pell": edithPhoto,
+  "Katri Rouvali": katriPhoto,
 };
 
 const board = [
@@ -75,11 +77,11 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
       {/* Featured board */}
       <section className="container-wide py-16">
         <SectionTitle eyebrow={lang === "de" ? "Vorstand" : "Board"} title={lang === "de" ? "Vorstandsmitglieder" : "Board Members"} />
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 items-stretch">
           {board.filter(b => b.featured).map(b => (
-            <div key={b.name} className="bg-card rounded-3xl overflow-hidden border border-border">
-              <Placeholder label={b.name} src={photos[b.name]} className="aspect-[5/4] !rounded-none" />
-              <div className="p-7">
+            <div key={b.name} className="bg-card rounded-3xl overflow-hidden border border-border flex flex-col h-full">
+              <Placeholder label={b.name} src={photos[b.name]} objectPosition="center top" className="aspect-[5/4] !rounded-none shrink-0" />
+              <div className="p-7 flex flex-col flex-1">
                 <h3 className="font-display text-2xl font-bold text-navy">{b.name}</h3>
                 <p className="text-teal font-semibold mt-1">{b.role[lang]}</p>
                 <p className="text-foreground/75 mt-4 leading-relaxed">{b.bio[lang]}</p>
@@ -90,16 +92,25 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
             </div>
           ))}
         </div>
-        <div className="grid sm:grid-cols-2 gap-6 mt-8">
+        <div className="grid sm:grid-cols-2 gap-6 mt-10">
           {board.filter(b => !b.featured).map(b => (
-            <div key={b.name} className="bg-card rounded-2xl border border-border p-6 flex gap-4">
-              <Placeholder label={b.name} className="!aspect-square w-24 shrink-0 !rounded-full text-xs" />
-              <div>
-                <h4 className="font-display text-xl font-bold text-navy">{b.name}</h4>
-                <p className="text-teal font-semibold text-sm">{b.role[lang]}</p>
-                <p className="text-sm text-foreground/75 mt-2">{b.bio[lang]}</p>
-                {b.linkedin && <a href={b.linkedin} target="_blank" rel="noreferrer" className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-navy hover:text-teal"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>}
-              </div>
+            <div key={b.name} className="bg-card rounded-2xl border border-border p-6 flex flex-col items-center text-center h-full">
+              {photos[b.name] ? (
+                <img
+                  src={photos[b.name]}
+                  alt={b.name}
+                  style={{ width: 120, height: 120, objectFit: "cover", objectPosition: "center top", borderRadius: "9999px", display: "block" }}
+                  className="mb-4"
+                />
+              ) : (
+                <div className="placeholder-img mb-4 text-xs" style={{ width: 120, height: 120, borderRadius: "9999px" }}>
+                  {b.name.split(" ")[0]}
+                </div>
+              )}
+              <h4 className="font-display text-xl font-bold text-navy">{b.name}</h4>
+              <p className="text-teal font-semibold text-sm mt-1">{b.role[lang]}</p>
+              <p className="text-sm text-foreground/75 mt-3 leading-relaxed">{b.bio[lang]}</p>
+              {b.linkedin && <a href={b.linkedin} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-navy hover:text-teal"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>}
             </div>
           ))}
         </div>
