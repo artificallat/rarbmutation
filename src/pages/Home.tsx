@@ -5,12 +5,11 @@ import { t, partners, donationGoal, socials, type Lang } from "@/content/site";
 import { Placeholder, ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import heroFamily from "@/assets/family-mountains.jpg";
-import heroGuitar from "@/assets/edith-simon-guitar.jpg";
-import heroLights from "@/assets/reinhard-simon-lights.jpg";
 import heroPlayground from "@/assets/reinhard-simon-playground.jpg";
+import heroGuitar from "@/assets/edith-simon-guitar.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
 
-const heroImages = [heroFamily, heroPlayground, heroGuitar, heroLights];
+const heroImages = [heroFamily, heroPlayground, heroGuitar];
 
 export default function Home({ lang }: { lang: Lang }) {
   const tr = t[lang];
