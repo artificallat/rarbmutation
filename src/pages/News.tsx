@@ -2,15 +2,18 @@ import { ArrowRight } from "lucide-react";
 import { Placeholder } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
+import simonWinter from "@/assets/simon-winter-2026.jpg";
+import simonNeujahr from "@/assets/simon-neujahr-2026.jpg";
+import simonLights from "@/assets/simon-fiber-lights.jpg";
 
 const posts = [
-  { cat: "Research", date: "March 2026",
+  { cat: "Research", date: "March 2026", img: simonLights,
     en: { t: "ASO toxicity study reaches final phase", e: "Our six lead candidates are now entering the final IND-enabling toxicity assessments — a critical step toward Simon's first dose." },
     de: { t: "ASO-Toxizitätsstudie in finaler Phase", e: "Unsere sechs Leitkandidaten gehen in die letzten IND-relevanten Sicherheitstests – ein entscheidender Schritt vor Simons erster Dosis." } },
-  { cat: "Community", date: "January 2026",
+  { cat: "Community", date: "January 2026", img: simonNeujahr,
     en: { t: "€235,000 milestone reached", e: "Thanks to families, runners, and corporate partners across three continents, we've crossed a major fundraising milestone." },
     de: { t: "€235.000-Meilenstein erreicht", e: "Dank Familien, Läufer:innen und Unternehmenspartnern auf drei Kontinenten haben wir einen großen Fundraising-Meilenstein erreicht." } },
-  { cat: "Science", date: "November 2025",
+  { cat: "Science", date: "November 2025", img: simonWinter,
     en: { t: "New iPSC striatal neuron model published", e: "The Taylor Lab in Basel has published a new disease model that will accelerate drug screening for MCOPS12." },
     de: { t: "Neues iPSC-Striatum-Modell publiziert", e: "Das Taylor-Labor in Basel hat ein neues Krankheitsmodell publiziert, das das Wirkstoff-Screening für MCOPS12 beschleunigt." } },
 ];
@@ -26,7 +29,7 @@ export default function News({ lang }: { lang: Lang }) {
         <div className="grid md:grid-cols-3 gap-6">
           {posts.map((p, i) => (
             <article key={i} className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-[var(--shadow-card)] transition-shadow">
-              <Placeholder label={`Thumbnail: ${p.cat}`} className="aspect-video !rounded-none" />
+              <Placeholder label={`Thumbnail: ${p.cat}`} src={p.img} className="aspect-video !rounded-none" />
               <div className="p-6">
                 <p className="text-xs text-teal font-semibold uppercase tracking-wider">{p.cat} · {p.date}</p>
                 <h3 className="font-display text-xl font-bold text-navy mt-2">{de ? p.de.t : p.en.t}</h3>
