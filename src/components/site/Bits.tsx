@@ -24,16 +24,28 @@ export function Placeholder({ label, className = "aspect-[4/3]", src, objectPosi
   );
 }
 
+import { useInView, Counter } from "@/components/site/Reveal";
+
 export function ProgressBar({ raised, goal }: { raised: number; goal: number }) {
   const pct = Math.min(100, Math.round((raised / goal) * 100));
+  const { ref, inView } = useInView<HTMLDivElement>();
   return (
-    <div>
+    <div ref={ref}>
       <div className="flex items-end justify-between mb-2 text-sm font-medium">
-        <span><span className="text-2xl font-display font-bold text-navy">€{raised.toLocaleString("de-AT")}</span> <span className="text-muted-foreground">raised</span></span>
+        <span>
+          <Counter to={raised} prefix="€" duration={1500} className="text-2xl font-display font-bold text-navy" />{" "}
+          <span className="text-muted-foreground">raised</span>
+        </span>
         <span className="text-muted-foreground">of €{goal.toLocaleString("de-AT")} goal</span>
       </div>
       <div className="h-3 rounded-full bg-muted overflow-hidden">
-        <div className="h-full bg-gradient-to-r from-teal to-amber transition-all duration-1000" style={{ width: `${pct}%` }} />
+        <div
+          className="h-full bg-gradient-to-r from-teal to-amber"
+          style={{
+            width: inView ? `${pct}%` : "0%",
+            transition: "width 1.5s ease-out",
+          }}
+        />
       </div>
       <p className="text-xs text-muted-foreground mt-2">{pct}% — together we keep going.</p>
     </div>
