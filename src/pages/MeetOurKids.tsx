@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { Placeholder } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { kids, type Lang } from "@/content/site";
-import simonPhoto from "@/assets/simon-sleeping.jpg";
+import simonPhoto from "@/assets/simon-schulbeginn.jpg";
 
 const kidPhotos: Record<string, string> = {
   "Simon Pell": simonPhoto,
