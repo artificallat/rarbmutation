@@ -12,6 +12,8 @@ import Achievements from "@/pages/Achievements";
 import Research from "@/pages/Research";
 import Donate from "@/pages/Donate";
 import News from "@/pages/News";
+import Imprint from "@/pages/Imprint";
+import Privacy from "@/pages/Privacy";
 import NotFound from "./pages/NotFound.tsx";
 import type { Lang } from "@/content/site";
 
@@ -27,6 +29,8 @@ const pages = (lang: Lang) => (
     <Route path="research" element={<Research lang={lang} />} />
     <Route path="donate" element={<Donate lang={lang} />} />
     <Route path="news" element={<News lang={lang} />} />
+    <Route path="imprint" element={<Imprint lang={lang} />} />
+    <Route path="privacy" element={<Privacy lang={lang} />} />
   </>
 );
 

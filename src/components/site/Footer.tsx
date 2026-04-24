@@ -38,9 +38,16 @@ export default function Footer({ lang }: { lang: Lang }) {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-wide py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/50">
+        <div className="container-wide py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
           <p>{tr.rights}</p>
-          <p>{tr.imprint}</p>
+          <div className="flex items-center gap-5">
+            <Link to={`${p}/imprint`} className="hover:text-amber transition-colors">
+              {lang === "de" ? "Impressum" : "Imprint"}
+            </Link>
+            <Link to={`${p}/privacy`} className="hover:text-amber transition-colors">
+              {lang === "de" ? "Datenschutz" : "Privacy"}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

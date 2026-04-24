@@ -4,11 +4,20 @@ import type { Lang } from "@/content/site";
 import reinhardPhoto from "@/assets/reinhard-pell-portrait.jpg";
 import edithPhoto from "@/assets/edith-pell-portrait.jpg";
 import katriPhoto from "@/assets/katri-rouvali.jpg";
+import krezelPhoto from "@/assets/krezel-simon.jpg";
+import bowlingPhoto from "@/assets/rodney-bowling.png";
+import michaudPhoto from "@/assets/jacques-michaud.jpg";
 
 const photos: Record<string, string> = {
   "Reinhard Pell": reinhardPhoto,
   "Edith Pell": edithPhoto,
   "Katri Rouvali": katriPhoto,
+};
+
+const sabPhotos: Record<string, string> = {
+  "Dr. Wojciech Krezel": krezelPhoto,
+  "Rodney A. Bowling Jr, PhD": bowlingPhoto,
+  "Jacques L. Michaud, MD, FRCP": michaudPhoto,
 };
 
 const board = [
@@ -140,13 +149,29 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
       <section className="container-wide py-20">
         <SectionTitle eyebrow={lang === "de" ? "Wissenschaft" : "Science"} title={lang === "de" ? "Wissenschaftlicher Beirat" : "Scientific Advisory Board"} />
         <div className="grid sm:grid-cols-2 gap-6">
-          {sab.map(s => (
-            <a key={s.name} href={s.url} target="_blank" rel="noreferrer"
-              className={`bg-card rounded-2xl border border-border p-6 ${s.url ? "hover:border-teal hover:shadow-[var(--shadow-card)]" : ""} transition`}>
-              <h4 className="font-display text-xl font-bold text-navy">{s.name}</h4>
-              <p className="text-sm text-foreground/75 mt-2">{s.title}</p>
-            </a>
-          ))}
+          {sab.map(s => {
+            const photo = sabPhotos[s.name];
+            const Tag: any = s.url ? "a" : "div";
+            const props = s.url ? { href: s.url, target: "_blank", rel: "noreferrer" } : {};
+            return (
+              <Tag key={s.name} {...props}
+                className={`bg-card rounded-2xl border border-border p-6 flex gap-5 items-start ${s.url ? "hover:border-teal hover:shadow-[var(--shadow-card)]" : ""} transition`}>
+                {photo ? (
+                  <img src={photo} alt={s.name}
+                    style={{ width: 88, height: 88, objectFit: "cover", objectPosition: "center top", borderRadius: "9999px" }}
+                    className="shrink-0" />
+                ) : (
+                  <div className="placeholder-img shrink-0 text-xs" style={{ width: 88, height: 88, borderRadius: "9999px" }}>
+                    {s.name.split(" ")[0]}
+                  </div>
+                )}
+                <div>
+                  <h4 className="font-display text-xl font-bold text-navy">{s.name}</h4>
+                  <p className="text-sm text-foreground/75 mt-2">{s.title}</p>
+                </div>
+              </Tag>
+            );
+          })}
         </div>
       </section>
     </>
