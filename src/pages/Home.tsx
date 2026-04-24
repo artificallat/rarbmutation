@@ -182,57 +182,64 @@ export default function Home({ lang }: { lang: Lang }) {
 
       {/* DONATE BAR */}
       <section className="py-24">
-        <div className="container-tight bg-card rounded-3xl border border-border p-8 sm:p-12 shadow-[var(--shadow-card)]">
-          <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
-          <p className="mt-6 text-lg text-balance">{tr.home.donateBar}</p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Link
-              to={`${p}/donate`}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition shadow-[var(--shadow-amber)]"
-            >
-              {tr.cta.donateNow}
-            </Link>
-            <a
-              href={socials.gofundme}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-navy text-white font-semibold hover:bg-navy-deep transition"
-            >
-              {tr.cta.gofundme} <ExternalLink className="w-4 h-4" />
-            </a>
-          </div>
+        <div className="container-tight">
+          <Reveal>
+            <div className="bg-card rounded-3xl border border-border p-8 sm:p-12 shadow-[var(--shadow-card)]">
+              <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
+              <p className="mt-6 text-lg text-balance">{tr.home.donateBar}</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link
+                  to={`${p}/donate`}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition shadow-[var(--shadow-amber)]"
+                >
+                  {tr.cta.donateNow}
+                </Link>
+                <a
+                  href={socials.gofundme}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-navy text-white font-semibold hover:bg-navy-deep transition"
+                >
+                  {tr.cta.gofundme} <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* NEWS */}
       <section className="py-12">
         <div className="container-wide">
-          <SectionTitle eyebrow={lang === "de" ? "Aktuelles" : "Recent"} title={tr.home.newsTitle} />
+          <Reveal>
+            <SectionTitle eyebrow={lang === "de" ? "Aktuelles" : "Recent"} title={tr.home.newsTitle} />
+          </Reveal>
           <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <article
-                key={i}
-                className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] transition-shadow"
-              >
-                <Placeholder label={`News thumbnail ${i}`} className="aspect-video !rounded-none" />
-                <div className="p-6">
-                  <p className="text-xs text-teal font-semibold uppercase tracking-wider">Research · 2025</p>
-                  <h3 className="font-display text-xl font-bold mt-2">
-                    {lang === "de" ? "Update zur ASO-Toxizitätsstudie" : "ASO toxicity study update"}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
-                    {lang === "de"
-                      ? "Erste Ergebnisse zeigen ein vielversprechendes Sicherheitsprofil unserer ASO-Kandidaten."
-                      : "Early results show a promising safety profile across our ASO candidates."}
-                  </p>
-                  <Link
-                    to={`${p}/news`}
-                    className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal"
-                  >
-                    {tr.cta.readMore} <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </article>
+            {[1, 2, 3].map((i, idx) => (
+              <Reveal key={i} delay={idx * 150}>
+                <article
+                  className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all duration-200 h-full"
+                >
+                  <Placeholder label={`News thumbnail ${i}`} className="aspect-video !rounded-none" />
+                  <div className="p-6">
+                    <p className="text-xs text-teal font-semibold uppercase tracking-wider">Research · 2025</p>
+                    <h3 className="font-display text-xl font-bold mt-2">
+                      {lang === "de" ? "Update zur ASO-Toxizitätsstudie" : "ASO toxicity study update"}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
+                      {lang === "de"
+                        ? "Erste Ergebnisse zeigen ein vielversprechendes Sicherheitsprofil unserer ASO-Kandidaten."
+                        : "Early results show a promising safety profile across our ASO candidates."}
+                    </p>
+                    <Link
+                      to={`${p}/news`}
+                      className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal"
+                    >
+                      {tr.cta.readMore} <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </article>
+              </Reveal>
             ))}
           </div>
           <div className="text-center mt-10">
@@ -249,22 +256,25 @@ export default function Home({ lang }: { lang: Lang }) {
       {/* PARTNERS */}
       <section className="py-24">
         <div className="container-wide">
-          <SectionTitle
-            eyebrow={lang === "de" ? "Gemeinsam stark" : "Stronger together"}
-            title={tr.home.partnersTitle}
-            center
-          />
+          <Reveal>
+            <SectionTitle
+              eyebrow={lang === "de" ? "Gemeinsam stark" : "Stronger together"}
+              title={tr.home.partnersTitle}
+              center
+            />
+          </Reveal>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            {partners.map((p) => (
-              <a
-                key={p.name}
-                href={p.url}
-                target="_blank"
-                rel="noreferrer"
-                className="group bg-card border border-border rounded-2xl p-6 h-28 flex items-center justify-center text-center hover:border-teal hover:shadow-[var(--shadow-card)] transition"
-              >
-                <span className="font-display font-semibold text-navy group-hover:text-teal text-sm">{p.name}</span>
-              </a>
+            {partners.map((partner, idx) => (
+              <Reveal key={partner.name} delay={idx * 80}>
+                <a
+                  href={partner.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group bg-card border border-border rounded-2xl p-6 h-28 flex items-center justify-center text-center hover:border-teal hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all duration-200"
+                >
+                  <span className="font-display font-semibold text-navy group-hover:text-teal text-sm">{partner.name}</span>
+                </a>
+              </Reveal>
             ))}
           </div>
         </div>
