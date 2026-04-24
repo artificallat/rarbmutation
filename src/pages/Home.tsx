@@ -31,11 +31,17 @@ export default function Home({ lang }: { lang: Lang }) {
             className={`absolute inset-0 transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
           >
             <div className={`absolute inset-0 ${i === slide ? "animate-slow-zoom" : ""}`}>
-              <Placeholder
-                label={`Simon & family — slide ${i + 1}`}
+              <img
                 src={heroImages[i % heroImages.length]}
-                className="h-full w-full !rounded-none"
-                objectPosition={i === 0 ? "center top" : "center"}
+                alt={`Simon & family — slide ${i + 1}`}
+                style={{
+                  objectFit: "cover",
+                  objectPosition: i === 0 ? "center 15%" : "center",
+                  width: "100%",
+                  height: "100%",
+                  position: "absolute",
+                  inset: 0,
+                }}
               />
             </div>
             <div
