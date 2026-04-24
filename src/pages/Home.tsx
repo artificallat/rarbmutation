@@ -36,7 +36,7 @@ export default function Home({ lang }: { lang: Lang }) {
                 alt={`Simon & family — slide ${i + 1}`}
                 style={{
                   objectFit: "cover",
-                  objectPosition: i === 0 ? "center 50%" : "center",
+                  objectPosition: i === 0 ? "50% 15%" : "center",
                   width: "100%",
                   height: "100%",
                   position: "absolute",
