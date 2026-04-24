@@ -6,8 +6,13 @@ export function Placeholder({ label, className = "aspect-[4/3]", src, objectPosi
           src={src}
           alt={label}
           loading="lazy"
-          className="w-full h-full object-cover"
-          style={objectPosition ? { objectPosition } : undefined}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: objectPosition || "center",
+            display: "block",
+          }}
         />
       </div>
     );
