@@ -17,7 +17,7 @@ export default function Home({ lang }: { lang: Lang }) {
   const slides = tr.home.slides;
 
   useEffect(() => {
-    const id = setInterval(() => setSlide(s => (s + 1) % slides.length), 6500);
+    const id = setInterval(() => setSlide((s) => (s + 1) % slides.length), 6500);
     return () => clearInterval(id);
   }, [slides.length]);
 
@@ -26,25 +26,48 @@ export default function Home({ lang }: { lang: Lang }) {
       {/* HERO */}
       <section className="relative h-[92vh] min-h-[640px] w-full overflow-hidden bg-navy-deep">
         {slides.map((s, i) => (
-          <div key={i} className={`absolute inset-0 transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}>
+          <div
+            key={i}
+            className={`absolute inset-0 transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
+          >
             <div className={`absolute inset-0 ${i === slide ? "animate-slow-zoom" : ""}`}>
-              <Placeholder label={`Simon & family — slide ${i+1}`} src={heroImages[i % heroImages.length]} className="h-full w-full !rounded-none" objectPosition={i === 0 ? "center 20%" : "center"} />
+              <Placeholder
+                label={`Simon & family — slide ${i + 1}`}
+                src={heroImages[i % heroImages.length]}
+                className="h-full w-full !rounded-none"
+                objectPosition={i === 0 ? "center 15%" : "center"}
+              />
             </div>
-            <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, hsl(var(--navy-deep)/0.4) 0%, hsl(var(--navy-deep)/0.85) 100%)" }} />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(180deg, hsl(var(--navy-deep)/0.4) 0%, hsl(var(--navy-deep)/0.85) 100%)",
+              }}
+            />
             <div className="relative h-full container-wide flex items-end pb-24 sm:pb-32">
               {i === slide && (
                 <div className="max-w-3xl text-white fade-in">
-                  <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold leading-[1.05] text-balance">{s.title}</h1>
+                  <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold leading-[1.05] text-balance">
+                    {s.title}
+                  </h1>
                   {"sub" in s && s.sub && <p className="mt-4 text-xl sm:text-2xl text-white/90 font-light">{s.sub}</p>}
-                  {"sub2" in s && (s as any).sub2 && <p className="mt-1 text-xl sm:text-2xl text-amber font-medium">{(s as any).sub2}</p>}
+                  {"sub2" in s && (s as any).sub2 && (
+                    <p className="mt-1 text-xl sm:text-2xl text-amber font-medium">{(s as any).sub2}</p>
+                  )}
                   <div className="mt-8 flex flex-wrap gap-3">
                     {i === 1 && (
-                      <Link to={`${p}/donate`} className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition-colors shadow-[var(--shadow-amber)]">
+                      <Link
+                        to={`${p}/donate`}
+                        className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition-colors shadow-[var(--shadow-amber)]"
+                      >
                         {tr.cta.donateNow} <ArrowRight className="w-4 h-4" />
                       </Link>
                     )}
                     {i === 2 && (
-                      <Link to={`${p}/who-we-are`} className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-white text-navy font-semibold hover:bg-white/90 transition">
+                      <Link
+                        to={`${p}/who-we-are`}
+                        className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-white text-navy font-semibold hover:bg-white/90 transition"
+                      >
                         {tr.cta.learnMore} <ArrowRight className="w-4 h-4" />
                       </Link>
                     )}
@@ -58,13 +81,27 @@ export default function Home({ lang }: { lang: Lang }) {
         <div className="absolute bottom-8 left-0 right-0 z-10 container-wide flex items-center justify-between">
           <div className="flex gap-2">
             {slides.map((_, i) => (
-              <button key={i} onClick={() => setSlide(i)}
-                className={`h-1.5 rounded-full transition-all ${i === slide ? "w-10 bg-amber" : "w-6 bg-white/40"}`} aria-label={`slide ${i+1}`} />
+              <button
+                key={i}
+                onClick={() => setSlide(i)}
+                className={`h-1.5 rounded-full transition-all ${i === slide ? "w-10 bg-amber" : "w-6 bg-white/40"}`}
+                aria-label={`slide ${i + 1}`}
+              />
             ))}
           </div>
           <div className="hidden sm:flex gap-2">
-            <button onClick={() => setSlide((slide - 1 + slides.length) % slides.length)} className="w-10 h-10 grid place-items-center rounded-full bg-white/10 text-white hover:bg-white/20"><ChevronLeft className="w-4 h-4"/></button>
-            <button onClick={() => setSlide((slide + 1) % slides.length)} className="w-10 h-10 grid place-items-center rounded-full bg-white/10 text-white hover:bg-white/20"><ChevronRight className="w-4 h-4"/></button>
+            <button
+              onClick={() => setSlide((slide - 1 + slides.length) % slides.length)}
+              className="w-10 h-10 grid place-items-center rounded-full bg-white/10 text-white hover:bg-white/20"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => setSlide((slide + 1) % slides.length)}
+              className="w-10 h-10 grid place-items-center rounded-full bg-white/10 text-white hover:bg-white/20"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </section>
@@ -94,7 +131,10 @@ export default function Home({ lang }: { lang: Lang }) {
             <p>{tr.home.asoP1}</p>
             <p>{tr.home.asoP2}</p>
           </div>
-          <Link to={`${p}/achievements`} className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition">
+          <Link
+            to={`${p}/achievements`}
+            className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition"
+          >
             {tr.cta.learnMore} <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -118,8 +158,20 @@ export default function Home({ lang }: { lang: Lang }) {
           <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
           <p className="mt-6 text-lg text-balance">{tr.home.donateBar}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link to={`${p}/donate`} className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition shadow-[var(--shadow-amber)]">{tr.cta.donateNow}</Link>
-            <a href={socials.gofundme} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-navy text-white font-semibold hover:bg-navy-deep transition">{tr.cta.gofundme} <ExternalLink className="w-4 h-4"/></a>
+            <Link
+              to={`${p}/donate`}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition shadow-[var(--shadow-amber)]"
+            >
+              {tr.cta.donateNow}
+            </Link>
+            <a
+              href={socials.gofundme}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-navy text-white font-semibold hover:bg-navy-deep transition"
+            >
+              {tr.cta.gofundme} <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
@@ -129,20 +181,39 @@ export default function Home({ lang }: { lang: Lang }) {
         <div className="container-wide">
           <SectionTitle eyebrow={lang === "de" ? "Aktuelles" : "Recent"} title={tr.home.newsTitle} />
           <div className="grid md:grid-cols-3 gap-6">
-            {[1,2,3].map(i => (
-              <article key={i} className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] transition-shadow">
+            {[1, 2, 3].map((i) => (
+              <article
+                key={i}
+                className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] transition-shadow"
+              >
                 <Placeholder label={`News thumbnail ${i}`} className="aspect-video !rounded-none" />
                 <div className="p-6">
                   <p className="text-xs text-teal font-semibold uppercase tracking-wider">Research · 2025</p>
-                  <h3 className="font-display text-xl font-bold mt-2">{lang === "de" ? "Update zur ASO-Toxizitätsstudie" : "ASO toxicity study update"}</h3>
-                  <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{lang === "de" ? "Erste Ergebnisse zeigen ein vielversprechendes Sicherheitsprofil unserer ASO-Kandidaten." : "Early results show a promising safety profile across our ASO candidates."}</p>
-                  <Link to={`${p}/news`} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal">{tr.cta.readMore} <ArrowRight className="w-3.5 h-3.5"/></Link>
+                  <h3 className="font-display text-xl font-bold mt-2">
+                    {lang === "de" ? "Update zur ASO-Toxizitätsstudie" : "ASO toxicity study update"}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
+                    {lang === "de"
+                      ? "Erste Ergebnisse zeigen ein vielversprechendes Sicherheitsprofil unserer ASO-Kandidaten."
+                      : "Early results show a promising safety profile across our ASO candidates."}
+                  </p>
+                  <Link
+                    to={`${p}/news`}
+                    className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal"
+                  >
+                    {tr.cta.readMore} <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
                 </div>
               </article>
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to={`${p}/news`} className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-navy text-navy font-semibold hover:bg-navy hover:text-white transition">{tr.cta.viewAll}</Link>
+            <Link
+              to={`${p}/news`}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-navy text-navy font-semibold hover:bg-navy hover:text-white transition"
+            >
+              {tr.cta.viewAll}
+            </Link>
           </div>
         </div>
       </section>
@@ -150,11 +221,20 @@ export default function Home({ lang }: { lang: Lang }) {
       {/* PARTNERS */}
       <section className="py-24">
         <div className="container-wide">
-          <SectionTitle eyebrow={lang === "de" ? "Gemeinsam stark" : "Stronger together"} title={tr.home.partnersTitle} center />
+          <SectionTitle
+            eyebrow={lang === "de" ? "Gemeinsam stark" : "Stronger together"}
+            title={tr.home.partnersTitle}
+            center
+          />
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            {partners.map(p => (
-              <a key={p.name} href={p.url} target="_blank" rel="noreferrer"
-                className="group bg-card border border-border rounded-2xl p-6 h-28 flex items-center justify-center text-center hover:border-teal hover:shadow-[var(--shadow-card)] transition">
+            {partners.map((p) => (
+              <a
+                key={p.name}
+                href={p.url}
+                target="_blank"
+                rel="noreferrer"
+                className="group bg-card border border-border rounded-2xl p-6 h-28 flex items-center justify-center text-center hover:border-teal hover:shadow-[var(--shadow-card)] transition"
+              >
                 <span className="font-display font-semibold text-navy group-hover:text-teal text-sm">{p.name}</span>
               </a>
             ))}
