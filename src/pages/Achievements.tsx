@@ -72,17 +72,41 @@ export default function Achievements({ lang }: { lang: Lang }) {
               : "In collaboration with AlphaRose RareLabs (US), IGBMC (France), and CHU Sainte-Justine (Canada), we developed an ASO therapy targeting Simon's specific RARB mutation. Six safe and efficacious ASO candidates were identified in a cellular disease model. We are now conducting the critical toxicity study to identify the safest ASO for Simon. This N-of-1 approach is a model for other MCOPS12 patients."}
           </p>
 
-          <ol className="mt-12 relative border-l-2 border-amber/30 space-y-8 pl-6">
-            {milestones.map(m => (
-              <li key={m.y} className="relative">
-                <span className="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-amber" />
-                <p className="text-amber font-display text-xl font-bold">{m.y}</p>
-                <p className="text-white/85 mt-1">{de ? m.de : m.en}</p>
-              </li>
-            ))}
-          </ol>
+          <Timeline items={milestones} de={de} />
         </div>
       </section>
     </>
+  );
+}
+
+function Timeline({ items, de }: { items: typeof milestones; de: boolean }) {
+  const { ref, inView } = useInView<HTMLOListElement>({ threshold: 0.1 });
+  return (
+    <ol ref={ref} className="mt-12 relative pl-6 space-y-8">
+      {/* Animated vertical line */}
+      <span
+        aria-hidden
+        className="absolute left-0 top-0 w-[2px] bg-amber/40"
+        style={{
+          height: inView ? "100%" : "0%",
+          transition: `height ${items.length * 300 + 400}ms ease-out`,
+        }}
+      />
+      {items.map((m, i) => (
+        <li
+          key={m.y}
+          className="relative"
+          style={{
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateX(0)" : "translateX(-40px)",
+            transition: `opacity 0.6s ease-out ${i * 300}ms, transform 0.6s ease-out ${i * 300}ms`,
+          }}
+        >
+          <span className="absolute -left-[27px] top-1 w-4 h-4 rounded-full bg-amber" />
+          <p className="text-amber font-display text-xl font-bold">{m.y}</p>
+          <p className="text-white/85 mt-1">{de ? m.de : m.en}</p>
+        </li>
+      ))}
+    </ol>
   );
 }
