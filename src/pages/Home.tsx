@@ -31,7 +31,10 @@ export default function Home({ lang }: { lang: Lang }) {
             key={i}
             className={`absolute inset-0 transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
           >
-            <div className={`absolute inset-0 ${i === slide ? "animate-slow-zoom" : ""}`}>
+            <div
+              key={`zoom-${i}-${i === slide ? slide : "off"}`}
+              className={`absolute inset-0 ${i === slide ? "animate-slow-zoom" : ""}`}
+            >
               <img
                 src={heroImages[i % heroImages.length]}
                 alt={`Simon & family — slide ${i + 1}`}
