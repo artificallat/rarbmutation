@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Facebook, Twitter, Mail } from "lucide-react";
 import { t, socials, type Lang } from "@/content/site";
+import logo from "@/assets/logo.png";
 
 export default function Footer({ lang }: { lang: Lang }) {
   const tr = t[lang].footer;
@@ -9,9 +10,8 @@ export default function Footer({ lang }: { lang: Lang }) {
     <footer className="bg-navy-deep text-white/80 mt-24">
       <div className="container-wide py-16 grid md:grid-cols-3 gap-12">
         <div>
-          <Link to={`${p}/`} className="flex items-center gap-2 mb-4">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber to-teal grid place-items-center text-navy-deep font-display font-bold">C</div>
-            <span className="font-display font-bold text-xl text-white">Cure MCOPS12</span>
+          <Link to={`${p}/`} className="inline-flex items-center mb-4 bg-white rounded-xl px-3 py-2" aria-label="Cure MCOPS12 — Home">
+            <img src={logo} alt="Cure MCOPS12" className="h-10 w-auto" />
           </Link>
           <p className="text-sm leading-relaxed max-w-xs">{tr.tagline}</p>
         </div>

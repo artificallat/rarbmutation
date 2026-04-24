@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ChevronDown, Globe, Menu, X } from "lucide-react";
 import { t, type Lang } from "@/content/site";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 function prefix(lang: Lang) { return lang === "de" ? "/de" : ""; }
 
@@ -35,9 +36,8 @@ export default function Navbar({ lang }: { lang: Lang }) {
     <header className={cn("sticky top-0 z-40 transition-all", scrolled ? "py-2" : "py-4")}>
       <div className="container-wide">
         <nav className={cn("pill-nav flex items-center justify-between px-4 sm:px-6 py-3 transition-all")}>
-          <Link to={`${p}/`} className="flex items-center gap-2 shrink-0">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-navy to-teal grid place-items-center text-white font-display font-bold">C</div>
-            <span className="font-display font-bold text-lg leading-none">Cure<span className="text-teal">MCOPS12</span></span>
+          <Link to={`${p}/`} className="flex items-center shrink-0" aria-label="Cure MCOPS12 — Home">
+            <img src={logo} alt="Cure MCOPS12" className="h-10 sm:h-11 w-auto" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
