@@ -35,7 +35,7 @@ export default function Home({ lang }: { lang: Lang }) {
                 label={`Simon & family — slide ${i + 1}`}
                 src={heroImages[i % heroImages.length]}
                 className="h-full w-full !rounded-none"
-                objectPosition={i === 0 ? "center 5%" : "center"}
+                objectPosition={i === 0 ? "center top" : "center"}
               />
             </div>
             <div
