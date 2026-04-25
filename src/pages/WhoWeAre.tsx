@@ -8,12 +8,21 @@ import edithRockenschaubPhoto from "@/assets/edith-rockenschaub.jpeg";
 import krezelPhoto from "@/assets/krezel-simon.jpg";
 import bowlingPhoto from "@/assets/rodney-bowling.png";
 import michaudPhoto from "@/assets/jacques-michaud.jpg";
+import ivanaPhoto from "@/assets/volunteers/ivana.jpeg";
+import wittneyPhoto from "@/assets/volunteers/wittney.jpeg";
+import biswadipPhoto from "@/assets/volunteers/biswadip.jpeg";
 
 const photos: Record<string, string> = {
   "Reinhard Pell": reinhardPhoto,
   "Edith Pell": edithPhoto,
   "Katri Rouvali": katriPhoto,
   "Edith Rockenschaub": edithRockenschaubPhoto,
+};
+
+const volunteerPhotos: Record<string, string> = {
+  "Ivana Ursić Ivić": ivanaPhoto,
+  "Wittney Sadler": wittneyPhoto,
+  "Biswadip Sinha": biswadipPhoto,
 };
 
 const sabPhotos: Record<string, string> = {
