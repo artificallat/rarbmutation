@@ -1,4 +1,4 @@
-export function Placeholder({ label, className = "aspect-[4/3]", src, objectPosition }: { label: string; className?: string; src?: string; objectPosition?: string }) {
+export function Placeholder({ label, className = "aspect-[4/3]", src, objectPosition, objectFit }: { label: string; className?: string; src?: string; objectPosition?: string; objectFit?: "cover" | "contain" }) {
   if (src) {
     return (
       <div className={`${className} w-full overflow-hidden rounded-2xl bg-muted`}>
@@ -9,7 +9,7 @@ export function Placeholder({ label, className = "aspect-[4/3]", src, objectPosi
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: objectFit || "cover",
             objectPosition: objectPosition || "center",
             display: "block",
           }}
