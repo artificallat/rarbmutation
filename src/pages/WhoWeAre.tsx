@@ -166,7 +166,7 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
                   <p className="text-sm text-teal font-semibold">{v.role[lang]}</p>
                   <div className="absolute inset-0 bg-navy text-white p-6 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center">
                     <p className="text-sm leading-relaxed">{v.bio[lang]}</p>
-                    {v.linkedin && <a href={v.linkedin} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center justify-center gap-1 text-xs font-semibold text-amber"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>}
+                    {v.linkedin && <a href={v.linkedin} target="_blank" rel="noreferrer" className="mt-3 self-start inline-flex items-center gap-1 text-xs font-semibold text-amber"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>}
                   </div>
                 </div>
               );
