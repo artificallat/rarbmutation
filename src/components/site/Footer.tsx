@@ -16,13 +16,13 @@ export default function Footer({ lang }: { lang: Lang }) {
           <p className="text-sm leading-relaxed max-w-xs">{tr.tagline}</p>
         </div>
         <div className="text-sm space-y-2">
-          <p className="text-white font-semibold mb-2">{tr.contact}</p>
+          <p className="text-white font-sans font-semibold text-base mb-2">{tr.contact}</p>
           <a href={`mailto:${socials.email}`} className="inline-flex items-center gap-2 hover:text-amber"><Mail className="w-4 h-4" />{socials.email}</a>
           <p className="pt-2">{tr.org}</p>
           <p className="text-white/60">{tr.reg}</p>
         </div>
         <div>
-          <p className="text-white font-semibold mb-3">Follow</p>
+          <p className="text-white font-sans font-semibold text-base mb-3">{tr.follow}</p>
           <div className="flex gap-3">
             {[
               { Icon: Linkedin, href: socials.linkedin, label: "LinkedIn" },
