@@ -6,6 +6,9 @@ import { kids, type Lang } from "@/content/site";
 import simonPhoto from "@/assets/simon-schulbeginn.jpg";
 import rhettPhoto from "@/assets/kids/rhett.webp";
 import raynePhoto from "@/assets/kids/rayne.webp";
+import troyPhoto from "@/assets/kids/troy.webp";
+import siennaPhoto from "@/assets/kids/getimage.webp";
+import zaydPhoto from "@/assets/kids/zayd.webp";
 import atlePhoto from "@/assets/kids/atle.jpg";
 import sophiaPhoto from "@/assets/kids/sophia.webp";
 import josephinePhoto from "@/assets/kids/josephine.webp";
@@ -13,12 +16,15 @@ import miaPhoto from "@/assets/kids/mia.webp";
 import noePhoto from "@/assets/kids/noe.webp";
 import piperPhoto from "@/assets/kids/piper.webp";
 import rinPhoto from "@/assets/kids/rin.webp";
-import getImagePhoto from "@/assets/kids/getimage.webp";
+import stellaPhoto from "@/assets/kids/stella.webp";
 
 const kidPhotos: Record<string, string> = {
   "Simon": simonPhoto,
   "Rhett": rhettPhoto,
   "Rayne": raynePhoto,
+  "Troy": troyPhoto,
+  "Sienna": siennaPhoto,
+  "Zayd": zaydPhoto,
   "Atle": atlePhoto,
   "Sophia": sophiaPhoto,
   "Josephine": josephinePhoto,
@@ -26,7 +32,7 @@ const kidPhotos: Record<string, string> = {
   "Noé": noePhoto,
   "Piper": piperPhoto,
   "Rin": rinPhoto,
-  "GetImage": getImagePhoto,
+  "Stella": stellaPhoto,
 };
 
 export default function MeetOurKids({ lang }: { lang: Lang }) {
