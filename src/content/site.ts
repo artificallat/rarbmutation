@@ -89,6 +89,7 @@ export const kids = [
 export const t = {
   en: {
     nav: {
+      home: "Home",
       about: "About", whoWeAre: "Who We Are", whatIs: "What is MCOPS12?",
       kids: "Meet Our Kids", ourWork: "Our Work",
       achievements: "Achievements", research: "Research & Drug Development",
@@ -132,6 +133,7 @@ export const t = {
   },
   de: {
     nav: {
+      home: "Startseite",
       about: "Über uns", whoWeAre: "Wer wir sind", whatIs: "Was ist MCOPS12?",
       kids: "Unsere Kinder", ourWork: "Unsere Arbeit",
       achievements: "Erfolge", research: "Forschung & Wirkstoffentwicklung",

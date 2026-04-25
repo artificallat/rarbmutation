@@ -41,6 +41,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
+            <NavLink to={`${p}/`} end className={({isActive}) => cn("px-3 py-2 rounded-full text-sm font-medium hover:bg-muted/60", isActive && "text-navy")}>{tr.nav.home}</NavLink>
             <Dropdown label={tr.nav.about} items={[
               { to: `${p}/who-we-are`, label: tr.nav.whoWeAre },
               { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
@@ -74,6 +75,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
             style={{ backgroundColor: "hsl(var(--navy))", color: "#ffffff" }}
           >
             {[
+              { to: `${p}/`, label: tr.nav.home },
               { to: `${p}/who-we-are`, label: tr.nav.whoWeAre },
               { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
               { to: `${p}/meet-our-kids`, label: tr.nav.kids },
