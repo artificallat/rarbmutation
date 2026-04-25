@@ -4,6 +4,7 @@ import type { Lang } from "@/content/site";
 import reinhardPhoto from "@/assets/reinhard-pell-portrait.jpg";
 import edithPhoto from "@/assets/edith-pell-portrait.jpg";
 import katriPhoto from "@/assets/katri-rouvali.jpg";
+import edithRockenschaubPhoto from "@/assets/edith-rockenschaub.jpeg";
 import krezelPhoto from "@/assets/krezel-simon.jpg";
 import bowlingPhoto from "@/assets/rodney-bowling.png";
 import michaudPhoto from "@/assets/jacques-michaud.jpg";
@@ -12,6 +13,7 @@ const photos: Record<string, string> = {
   "Reinhard Pell": reinhardPhoto,
   "Edith Pell": edithPhoto,
   "Katri Rouvali": katriPhoto,
+  "Edith Rockenschaub": edithRockenschaubPhoto,
 };
 
 const sabPhotos: Record<string, string> = {
