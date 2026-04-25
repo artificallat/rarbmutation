@@ -108,7 +108,6 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
               <Placeholder
                 label={b.name}
                 src={photos[b.name]}
-                objectFit={b.name === "Edith Pell" ? "contain" : "cover"}
                 objectPosition="center top"
                 className="aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] max-h-[280px] sm:max-h-[300px] md:max-h-[320px] !rounded-none shrink-0"
               />
