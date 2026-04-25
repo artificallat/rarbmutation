@@ -40,7 +40,7 @@ export default function Home({ lang }: { lang: Lang }) {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-[92vh] min-h-[640px] w-full overflow-hidden bg-navy-deep">
+      <section className="relative h-[70vh] min-h-[460px] sm:h-[80vh] sm:min-h-[560px] lg:h-[92vh] lg:min-h-[640px] w-full overflow-hidden bg-navy-deep">
         {slides.map((s, i) => (
           <div
             key={i}
