@@ -6,7 +6,7 @@ import { kids, type Lang } from "@/content/site";
 import simonPhoto from "@/assets/simon-schulbeginn.jpg";
 
 const kidPhotos: Record<string, string> = {
-  "Simon Pell": simonPhoto,
+  "Simon": simonPhoto,
 };
 
 export default function MeetOurKids({ lang }: { lang: Lang }) {

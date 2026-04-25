@@ -25,7 +25,7 @@ export const donationGoal = { raised: 235000, goal: 600000 };
 
 export const kids = [
   {
-    name: "Simon Pell", year: 2017, place: "Salzburg, Austria",
+    name: "Simon", year: 2017, place: "Salzburg, Austria",
     parents: "Edith & Reinhard", siblings: "—",
     storyEn:
       "Simon is the heart of our mission. Diagnosed with MCOPS12 shortly after birth, he is a bright, joyful boy who loves swimming with his dad and being held close. His courage drives every step of our work.",
