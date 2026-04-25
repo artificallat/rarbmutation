@@ -2,15 +2,24 @@
 
 export type Lang = "en" | "de";
 
+import alpharoseLogo from "@/assets/partners/alpharose.png";
+import chusjLogo from "@/assets/partners/chusj.png";
+import igbmcLogo from "@/assets/partners/igbmc.png";
+import n1Logo from "@/assets/partners/n1.png";
+import prorareLogo from "@/assets/partners/prorare.svg";
+import eurordisLogo from "@/assets/partners/eurordis.png";
+import sophiaLogo from "@/assets/partners/sophia.png";
+import siennaLogo from "@/assets/partners/sienna.jpg";
+
 export const partners = [
-  { name: "AlphaRose RareLabs", url: "https://www.alpharose.com/" },
-  { name: "CHU Sainte-Justine", url: "https://research.chusj.org/en/Home" },
-  { name: "IGBMC", url: "https://www.igbmc.fr" },
-  { name: "N=1 Collaborative", url: "https://www.n1collaborative.org/" },
-  { name: "Pro Rare Austria", url: "https://www.prorare-austria.org/" },
-  { name: "EURORDIS", url: "https://www.eurordis.org/" },
-  { name: "A Cure for Sophia & Friends", url: "https://www.acureforsophiaandfriends.com/" },
-  { name: "A Cure for Sienna", url: "https://www.facebook.com/acureforsienna/" },
+  { name: "AlphaRose RareLabs", url: "https://www.alpharose.com/", logo: alpharoseLogo },
+  { name: "CHU Sainte-Justine", url: "https://research.chusj.org/en/Home", logo: chusjLogo },
+  { name: "IGBMC", url: "https://www.igbmc.fr", logo: igbmcLogo },
+  { name: "N=1 Collaborative", url: "https://www.n1collaborative.org/", logo: n1Logo },
+  { name: "Pro Rare Austria", url: "https://www.prorare-austria.org/", logo: prorareLogo },
+  { name: "EURORDIS", url: "https://www.eurordis.org/", logo: eurordisLogo },
+  { name: "A Cure for Sophia & Friends", url: "https://www.acureforsophiaandfriends.com/", logo: sophiaLogo },
+  { name: "A Cure for Sienna", url: "https://www.facebook.com/acureforsienna/", logo: siennaLogo },
 ];
 
 export const socials = {

@@ -283,9 +283,10 @@ export default function Home({ lang }: { lang: Lang }) {
                   href={partner.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="group bg-card border border-border rounded-2xl p-6 h-28 flex items-center justify-center text-center hover:border-teal hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all duration-200"
+                  title={partner.name}
+                  className="group bg-card border border-border rounded-2xl p-4 h-28 flex items-center justify-center text-center hover:border-teal hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all duration-200"
                 >
-                  <span className="font-display font-semibold text-navy group-hover:text-teal text-sm">{partner.name}</span>
+                  <img src={partner.logo} alt={partner.name} className="max-h-full max-w-full object-contain" loading="lazy" />
                 </a>
               </Reveal>
             ))}
