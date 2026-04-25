@@ -122,12 +122,12 @@ export const t = {
     },
     footer: {
       tagline: "An Austrian nonprofit racing to find a cure for MCOPS12.",
-      contact: "Contact",
+      contact: "Contact us",
       org: "Cure MCOPS12 — Verein zur Förderung einer Therapieentwicklung für MCOPS12 Patienten",
       reg: "ZVR: 1002067031 | 4963 St. Peter am Hart, Austria",
       rights: "© 2025 Cure MCOPS12",
       imprint: "Imprint",
-      follow: "Follow",
+      follow: "Follow us",
     },
   },
   de: {
@@ -165,12 +165,12 @@ export const t = {
     },
     footer: {
       tagline: "Ein österreichischer Verein im Wettlauf um eine Therapie für MCOPS12.",
-      contact: "Kontakt",
+      contact: "Kontaktieren Sie uns",
       org: "Cure MCOPS12 – Verein zur Förderung einer Therapieentwicklung für MCOPS12-Patient:innen",
       reg: "ZVR: 1002067031 | 4963 St. Peter am Hart, Österreich",
       rights: "© 2025 Cure MCOPS12",
       imprint: "Impressum",
-      follow: "Folgen",
+      follow: "Folgen Sie uns",
     },
   },
 } as const;
