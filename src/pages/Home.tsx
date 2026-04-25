@@ -286,7 +286,12 @@ export default function Home({ lang }: { lang: Lang }) {
                   title={partner.name}
                   className="group bg-card border border-border rounded-2xl p-4 h-28 flex items-center justify-center text-center hover:border-teal hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all duration-200"
                 >
-                  <img src={partner.logo} alt={partner.name} className="max-h-full max-w-full object-contain" loading="lazy" />
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    loading="lazy"
+                    className={`max-h-full max-w-full object-contain ${partner.name === "EURORDIS" ? "[filter:drop-shadow(0_2px_4px_rgba(0,0,0,0.25))]" : ""}`}
+                  />
                 </a>
               </Reveal>
             ))}
