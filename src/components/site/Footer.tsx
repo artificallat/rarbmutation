@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Facebook, Twitter, Mail } from "lucide-react";
+import { Linkedin, Facebook, Mail } from "lucide-react";
 import { t, socials, type Lang } from "@/content/site";
 import logo from "@/assets/logo.png";
 
@@ -27,7 +27,6 @@ export default function Footer({ lang }: { lang: Lang }) {
             {[
               { Icon: Linkedin, href: socials.linkedin, label: "LinkedIn" },
               { Icon: Facebook, href: socials.facebook, label: "Facebook" },
-              { Icon: Twitter, href: socials.twitter, label: "Twitter" },
             ].map(({ Icon, href, label }) => (
               <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label}
                  className="w-10 h-10 rounded-full bg-white/10 grid place-items-center hover:bg-amber hover:text-navy-deep transition-colors">
