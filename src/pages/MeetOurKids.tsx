@@ -4,9 +4,29 @@ import { Placeholder } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { kids, type Lang } from "@/content/site";
 import simonPhoto from "@/assets/simon-schulbeginn.jpg";
+import rhettPhoto from "@/assets/kids/rhett.webp";
+import raynePhoto from "@/assets/kids/rayne.webp";
+import atlePhoto from "@/assets/kids/atle.jpg";
+import sophiaPhoto from "@/assets/kids/sophia.webp";
+import josephinePhoto from "@/assets/kids/josephine.webp";
+import miaPhoto from "@/assets/kids/mia.webp";
+import noePhoto from "@/assets/kids/noe.webp";
+import piperPhoto from "@/assets/kids/piper.webp";
+import rinPhoto from "@/assets/kids/rin.webp";
+import getImagePhoto from "@/assets/kids/getimage.webp";
 
 const kidPhotos: Record<string, string> = {
   "Simon": simonPhoto,
+  "Rhett": rhettPhoto,
+  "Rayne": raynePhoto,
+  "Atle": atlePhoto,
+  "Sophia": sophiaPhoto,
+  "Josephine": josephinePhoto,
+  "Mia": miaPhoto,
+  "Noé": noePhoto,
+  "Piper": piperPhoto,
+  "Rin": rinPhoto,
+  "GetImage": getImagePhoto,
 };
 
 export default function MeetOurKids({ lang }: { lang: Lang }) {
