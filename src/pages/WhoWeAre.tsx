@@ -25,10 +25,13 @@ const volunteerPhotos: Record<string, string> = {
   "Biswadip Sinha": biswadipPhoto,
 };
 
+import ingePhoto from "@/assets/inge-meijer.jpeg";
+
 const sabPhotos: Record<string, string> = {
   "Dr. Wojciech Krezel": krezelPhoto,
   "Rodney A. Bowling Jr, PhD": bowlingPhoto,
   "Jacques L. Michaud, MD, FRCP": michaudPhoto,
+  "Inge Meijer, MD, PhD": ingePhoto,
 };
 
 const board = [
