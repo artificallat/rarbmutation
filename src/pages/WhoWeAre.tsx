@@ -164,7 +164,7 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
                   )}
                   <h4 className="font-display text-lg font-bold text-navy">{v.name}</h4>
                   <p className="text-sm text-teal font-semibold">{v.role[lang]}</p>
-                  <div className="absolute inset-0 bg-navy text-white p-6 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center">
+                  <div className="absolute inset-0 bg-navy text-white p-6 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center text-left">
                     <p className="text-sm leading-relaxed">{v.bio[lang]}</p>
                     {v.linkedin && <a href={v.linkedin} target="_blank" rel="noreferrer" className="mt-3 self-start inline-flex items-center gap-1 text-xs font-semibold text-amber"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>}
                   </div>
