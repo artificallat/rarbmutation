@@ -11,6 +11,7 @@ import michaudPhoto from "@/assets/jacques-michaud.jpg";
 import ivanaPhoto from "@/assets/volunteers/ivana.jpeg";
 import wittneyPhoto from "@/assets/volunteers/wittney.jpeg";
 import biswadipPhoto from "@/assets/volunteers/biswadip.jpeg";
+import kathiPhoto from "@/assets/volunteers/kathi.jpeg";
 
 const photos: Record<string, string> = {
   "Reinhard Pell": reinhardPhoto,
@@ -23,6 +24,7 @@ const volunteerPhotos: Record<string, string> = {
   "Ivana Ursić Ivić": ivanaPhoto,
   "Wittney Sadler": wittneyPhoto,
   "Biswadip Sinha": biswadipPhoto,
+  "Kathi Carl": kathiPhoto,
 };
 
 import ingePhoto from "@/assets/inge-meijer.jpeg";
