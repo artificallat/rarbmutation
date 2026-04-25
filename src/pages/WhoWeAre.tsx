@@ -103,7 +103,7 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
           {board.filter(b => b.featured).map(b => (
             <div key={b.name} className="bg-card rounded-3xl overflow-hidden border border-border flex flex-col h-full">
-              <Placeholder label={b.name} src={photos[b.name]} objectPosition="center top" className="aspect-[4/3] sm:aspect-[16/10] md:aspect-[3/2] max-h-[420px] !rounded-none shrink-0" />
+              <Placeholder label={b.name} src={photos[b.name]} objectPosition="center top" className="aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] max-h-[280px] sm:max-h-[300px] md:max-h-[320px] !rounded-none shrink-0" />
               <div className="p-7 flex flex-col flex-1">
                 <h3 className="font-display text-2xl font-bold text-navy">{b.name}</h3>
                 <p className="text-teal font-semibold mt-1">{b.role[lang]}</p>
