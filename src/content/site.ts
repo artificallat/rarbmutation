@@ -84,6 +84,86 @@ export const kids = [
     dreamEn: "A world where rare doesn't mean forgotten.",
     dreamDe: "Eine Welt, in der 'selten' nicht 'vergessen' bedeutet.",
   },
+  {
+    name: "Atle", year: 2015, place: "Norway",
+    parents: "—", siblings: "—",
+    storyEn:
+      "Atle's bright laughter and joy fill every room. His family treasures every milestone and every smile.",
+    storyDe:
+      "Atles helles Lachen und seine Freude erfüllen jeden Raum. Seine Familie schätzt jeden Meilenstein und jedes Lächeln.",
+    dreamEn: "A future filled with laughter, learning and possibility.",
+    dreamDe: "Eine Zukunft voller Lachen, Lernen und Möglichkeiten.",
+  },
+  {
+    name: "Josephine", year: 2016, place: "Germany",
+    parents: "Familie Ebert", siblings: "—",
+    storyEn:
+      "Josephine has a contagious smile and a heart full of love. Her family is a pillar of the European MCOPS12 community.",
+    storyDe:
+      "Josephine hat ein ansteckendes Lächeln und ein Herz voller Liebe. Ihre Familie ist eine Stütze der europäischen MCOPS12-Community.",
+    dreamEn: "Comfort, communication and a treatment that brings new hope.",
+    dreamDe: "Geborgenheit, Kommunikation und eine Therapie, die neue Hoffnung bringt.",
+  },
+  {
+    name: "Mia", year: 2022, place: "—",
+    parents: "—", siblings: "—",
+    storyEn:
+      "Mia is the family's little princess — curious, sweet and full of light.",
+    storyDe:
+      "Mia ist die kleine Prinzessin der Familie – neugierig, lieb und voller Licht.",
+    dreamEn: "A childhood full of joy and a future shaped by science.",
+    dreamDe: "Eine Kindheit voller Freude und eine Zukunft, die die Wissenschaft mitgestaltet.",
+  },
+  {
+    name: "Noé", year: 2018, place: "France",
+    parents: "—", siblings: "—",
+    storyEn:
+      "Noé loves swinging in the mountain air. His joy on the playground is pure magic.",
+    storyDe:
+      "Noé liebt es, in der Bergluft zu schaukeln. Seine Freude am Spielplatz ist pure Magie.",
+    dreamEn: "More moments of pure joy — and a treatment to share them longer.",
+    dreamDe: "Mehr Momente purer Freude – und eine Therapie, um sie länger zu teilen.",
+  },
+  {
+    name: "Piper", year: 2020, place: "USA",
+    parents: "—", siblings: "—",
+    storyEn:
+      "Piper's giggles in the sunshine remind us why we fight. Every swing, every laugh is a gift.",
+    storyDe:
+      "Pipers Lachen im Sonnenschein erinnert uns daran, warum wir kämpfen. Jedes Schaukeln, jedes Lachen ist ein Geschenk.",
+    dreamEn: "A long, joyful childhood and a treatment within reach.",
+    dreamDe: "Eine lange, fröhliche Kindheit und eine Therapie in Reichweite.",
+  },
+  {
+    name: "Rin", year: 2021, place: "—",
+    parents: "—", siblings: "—",
+    storyEn:
+      "Rin is calm, beautiful and beloved. Her gentle spirit is at the heart of her family.",
+    storyDe:
+      "Rin ist ruhig, wunderschön und geliebt. Ihre sanfte Art ist das Herz ihrer Familie.",
+    dreamEn: "Health, peace and a future shaped by progress.",
+    dreamDe: "Gesundheit, Frieden und eine Zukunft, geprägt von Fortschritt.",
+  },
+  {
+    name: "Sophia", year: 2010, place: "USA",
+    parents: "Familie Sutherland", siblings: "—",
+    storyEn:
+      "Sophia is bright, brave and beautiful. Her family's foundation 'A Cure for Sophia & Friends' supports MCOPS12 research worldwide.",
+    storyDe:
+      "Sophia ist klug, mutig und wunderschön. Die Stiftung ihrer Familie 'A Cure for Sophia & Friends' unterstützt die MCOPS12-Forschung weltweit.",
+    dreamEn: "A treatment that honors every year of her courage.",
+    dreamDe: "Eine Therapie, die jedes Jahr ihres Mutes würdigt.",
+  },
+  {
+    name: "Stella", year: 2020, place: "USA",
+    parents: "—", siblings: "—",
+    storyEn:
+      "Stella is curious, joyful and stylish — her sunglasses say it all. She brings light wherever she goes.",
+    storyDe:
+      "Stella ist neugierig, fröhlich und stilbewusst – ihre Sonnenbrille sagt alles. Sie bringt Licht, wohin sie auch geht.",
+    dreamEn: "Adventures, laughter and a future without limits.",
+    dreamDe: "Abenteuer, Lachen und eine Zukunft ohne Grenzen.",
+  },
 ];
 
 export const t = {
