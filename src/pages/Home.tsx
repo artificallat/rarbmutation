@@ -25,6 +25,11 @@ const homeNews = [
 ];
 
 const heroImages = [heroFamily, heroPlayground, heroGuitar];
+const heroImagePositionClasses = [
+  "object-[68%_center] sm:object-[85%_70%] lg:object-[100%_100%]",
+  "object-center",
+  "object-[55%_center] sm:object-center",
+];
 
 export default function Home({ lang }: { lang: Lang }) {
   const tr = t[lang];
@@ -40,7 +45,7 @@ export default function Home({ lang }: { lang: Lang }) {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-[70vh] min-h-[460px] sm:h-[80vh] sm:min-h-[560px] lg:h-[92vh] lg:min-h-[640px] w-full overflow-hidden bg-navy-deep">
+      <section className="relative h-[58vh] min-h-[360px] sm:h-[68vh] sm:min-h-[480px] lg:h-[76vh] lg:min-h-[560px] xl:h-[72vh] w-full overflow-hidden bg-navy-deep">
         {slides.map((s, i) => (
           <div
             key={i}
@@ -53,14 +58,7 @@ export default function Home({ lang }: { lang: Lang }) {
               <img
                 src={heroImages[i % heroImages.length]}
                 alt={`Simon & family — slide ${i + 1}`}
-                style={{
-                  objectFit: "cover",
-                  objectPosition: i === 0 ? "100% 100%" : "center",
-                  width: "100%",
-                  height: "100%",
-                  position: "absolute",
-                  inset: 0,
-                }}
+                className={`absolute inset-0 h-full w-full object-cover ${heroImagePositionClasses[i % heroImagePositionClasses.length]}`}
               />
             </div>
             <div
