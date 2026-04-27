@@ -26,9 +26,9 @@ const homeNews = [
 
 const heroImages = [heroFamily, heroPlayground, heroGuitar];
 const heroImagePositionClasses = [
-  "object-[68%_center] sm:object-[85%_70%] lg:object-[100%_100%]",
   "object-center",
-  "object-[55%_center] sm:object-center",
+  "object-center",
+  "object-center",
 ];
 
 export default function Home({ lang }: { lang: Lang }) {
@@ -45,7 +45,7 @@ export default function Home({ lang }: { lang: Lang }) {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-[58vh] min-h-[360px] sm:h-[68vh] sm:min-h-[480px] lg:h-[76vh] lg:min-h-[560px] xl:h-[72vh] w-full overflow-hidden bg-navy-deep">
+      <section className="relative mt-0 h-[60vh] min-h-[360px] sm:h-[85vh] sm:min-h-[480px] w-full overflow-hidden bg-navy-deep">
         {slides.map((s, i) => (
           <div
             key={i}
