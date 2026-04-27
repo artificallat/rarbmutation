@@ -93,7 +93,7 @@ export default function Home({ lang }: { lang: Lang }) {
                 background: "linear-gradient(180deg, hsl(var(--navy-deep)/0.4) 0%, hsl(var(--navy-deep)/0.85) 100%)",
               }}
             />
-            <div className="relative h-full container-wide flex items-start pt-16 sm:pt-24">
+            <div className="relative h-full container-wide flex items-end pb-24 sm:pb-32">
               {i === slide && (
                 <div className="max-w-3xl text-white fade-in">
                   <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold leading-[1.05] text-balance">
