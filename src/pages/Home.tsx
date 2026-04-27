@@ -13,49 +13,18 @@ import newsNeujahr from "@/assets/simon-neujahr-2026.jpg";
 import newsWinter from "@/assets/simon-winter-2026.jpg";
 
 const homeNews = [
-  {
-    img: newsLights,
-    cat: "Research",
-    date: "March 2026",
-    en: {
-      t: "ASO toxicity study reaches final phase",
-      e: "Our six lead candidates are now entering the final IND-enabling toxicity assessments — a critical step toward Simon's first dose.",
-    },
-    de: {
-      t: "ASO-Toxizitätsstudie in finaler Phase",
-      e: "Unsere sechs Leitkandidaten gehen in die letzten IND-relevanten Sicherheitstests – ein entscheidender Schritt vor Simons erster Dosis.",
-    },
-  },
-  {
-    img: newsNeujahr,
-    cat: "Community",
-    date: "January 2026",
-    en: {
-      t: "€235,000 milestone reached",
-      e: "Thanks to families, runners, and corporate partners across three continents, we've crossed a major fundraising milestone.",
-    },
-    de: {
-      t: "€235.000-Meilenstein erreicht",
-      e: "Dank Familien, Läufer:innen und Unternehmenspartnern auf drei Kontinenten haben wir einen großen Fundraising-Meilenstein erreicht.",
-    },
-  },
-  {
-    img: newsWinter,
-    cat: "Science",
-    date: "November 2025",
-    en: {
-      t: "New iPSC striatal neuron model published",
-      e: "The Taylor Lab in Basel has published a new disease model that will accelerate drug screening for MCOPS12.",
-    },
-    de: {
-      t: "Neues iPSC-Striatum-Modell publiziert",
-      e: "Das Taylor-Labor in Basel hat ein neues Krankheitsmodell publiziert, das das Wirkstoff-Screening für MCOPS12 beschleunigt.",
-    },
-  },
+  { img: newsLights, cat: "Research", date: "March 2026",
+    en: { t: "ASO toxicity study reaches final phase", e: "Our six lead candidates are now entering the final IND-enabling toxicity assessments — a critical step toward Simon's first dose." },
+    de: { t: "ASO-Toxizitätsstudie in finaler Phase", e: "Unsere sechs Leitkandidaten gehen in die letzten IND-relevanten Sicherheitstests – ein entscheidender Schritt vor Simons erster Dosis." } },
+  { img: newsNeujahr, cat: "Community", date: "January 2026",
+    en: { t: "€235,000 milestone reached", e: "Thanks to families, runners, and corporate partners across three continents, we've crossed a major fundraising milestone." },
+    de: { t: "€235.000-Meilenstein erreicht", e: "Dank Familien, Läufer:innen und Unternehmenspartnern auf drei Kontinenten haben wir einen großen Fundraising-Meilenstein erreicht." } },
+  { img: newsWinter, cat: "Science", date: "November 2025",
+    en: { t: "New iPSC striatal neuron model published", e: "The Taylor Lab in Basel has published a new disease model that will accelerate drug screening for MCOPS12." },
+    de: { t: "Neues iPSC-Striatum-Modell publiziert", e: "Das Taylor-Labor in Basel hat ein neues Krankheitsmodell publiziert, das das Wirkstoff-Screening für MCOPS12 beschleunigt." } },
 ];
 
 const heroImages = [heroFamily, heroPlayground, heroGuitar];
-const heroImagePositionClasses = ["object-[center_30%]", "object-center", "object-center"];
 
 export default function Home({ lang }: { lang: Lang }) {
   const tr = t[lang];
@@ -71,7 +40,7 @@ export default function Home({ lang }: { lang: Lang }) {
   return (
     <>
       {/* HERO */}
-      <section className="relative mt-0 h-[60vh] min-h-[360px] sm:h-[85vh] sm:min-h-[480px] w-full overflow-hidden bg-navy-deep">
+      <section className="relative h-[70vh] min-h-[460px] sm:h-[80vh] sm:min-h-[560px] lg:h-[92vh] lg:min-h-[640px] w-full overflow-hidden bg-navy-deep">
         {slides.map((s, i) => (
           <div
             key={i}
@@ -84,7 +53,14 @@ export default function Home({ lang }: { lang: Lang }) {
               <img
                 src={heroImages[i % heroImages.length]}
                 alt={`Simon & family — slide ${i + 1}`}
-                className={`absolute inset-0 h-full w-full object-cover ${heroImagePositionClasses[i % heroImagePositionClasses.length]}`}
+                style={{
+                  objectFit: "cover",
+                  objectPosition: i === 0 ? "100% 100%" : "center",
+                  width: "100%",
+                  height: "100%",
+                  position: "absolute",
+                  inset: 0,
+                }}
               />
             </div>
             <div
@@ -206,7 +182,11 @@ export default function Home({ lang }: { lang: Lang }) {
             return (
               <Reveal key={i} delay={i * 150} className="text-center">
                 <p className="font-display text-6xl md:text-7xl font-bold">
-                  {isNaN(num) ? s.n : <Counter to={num} prefix={prefix} suffix={suffix} duration={2000} />}
+                  {isNaN(num) ? (
+                    s.n
+                  ) : (
+                    <Counter to={num} prefix={prefix} suffix={suffix} duration={2000} />
+                  )}
                 </p>
                 <p className="mt-3 text-white/90 max-w-xs mx-auto">{s.l}</p>
               </Reveal>
@@ -252,13 +232,15 @@ export default function Home({ lang }: { lang: Lang }) {
           <div className="grid md:grid-cols-3 gap-6">
             {homeNews.map((post, idx) => (
               <Reveal key={idx} delay={idx * 150}>
-                <article className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all duration-200 h-full">
+                <article
+                  className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all duration-200 h-full"
+                >
                   <Placeholder label={`Thumbnail: ${post.cat}`} src={post.img} className="aspect-video !rounded-none" />
                   <div className="p-6">
-                    <p className="text-xs text-teal font-semibold uppercase tracking-wider">
-                      {post.cat} · {post.date}
-                    </p>
-                    <h3 className="font-display text-xl font-bold mt-2">{lang === "de" ? post.de.t : post.en.t}</h3>
+                    <p className="text-xs text-teal font-semibold uppercase tracking-wider">{post.cat} · {post.date}</p>
+                    <h3 className="font-display text-xl font-bold mt-2">
+                      {lang === "de" ? post.de.t : post.en.t}
+                    </h3>
                     <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
                       {lang === "de" ? post.de.e : post.en.e}
                     </p>
