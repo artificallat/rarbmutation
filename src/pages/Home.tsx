@@ -53,20 +53,19 @@ export default function Home({ lang }: { lang: Lang }) {
               <img
                 src={heroImages[i % heroImages.length]}
                 alt={`Simon & family — slide ${i + 1}`}
-                style={{
-                  objectFit: "cover",
-                  objectPosition: i === 0 ? "100% 100%" : "center",
-                  width: "100%",
-                  height: "100%",
-                  position: "absolute",
-                  inset: 0,
-                }}
+                className={`absolute inset-0 h-full w-full object-cover ${
+                  i === 0
+                    ? "object-[center_65%] sm:object-[center_40%]"
+                    : i === 1
+                    ? "object-[center_40%] sm:object-center"
+                    : "object-center"
+                }`}
               />
             </div>
             <div
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(180deg, hsl(var(--navy-deep)/0.4) 0%, hsl(var(--navy-deep)/0.85) 100%)",
+                background: "linear-gradient(180deg, hsl(var(--navy-deep)/0.5) 0%, hsl(var(--navy-deep)/0.3) 40%, hsl(var(--navy-deep)/0.85) 100%)",
               }}
             />
             <div className="relative h-full container-wide flex items-end pb-24 sm:pb-32">
