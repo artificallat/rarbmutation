@@ -78,25 +78,26 @@ export default function Home({ lang }: { lang: Lang }) {
           >
             <div
               key={`zoom-${i}-${i === slide ? slide : "off"}`}
-              className={`absolute inset-0 ${i === slide ? "animate-slow-zoom" : ""}`}
+              className={`absolute inset-0 ${i === slide ? "animate-slow-zoom" : ""} ${
+                i === 0 ? "sm:left-[18%] lg:left-[22%]" : ""
+              }`}
             >
               <img
                 src={heroImages[i % heroImages.length]}
                 alt={`Simon & family — slide ${i + 1}`}
-                style={
-                  i === 0
-                    ? { transformOrigin: "left center" }
-                    : undefined
-                }
                 className={`absolute inset-0 h-full w-full object-cover ${
                   i === 0
-                    ? "object-[center_65%] sm:object-center sm:scale-125 lg:scale-[1.35]"
+                    ? "object-[center_65%] sm:object-[center_40%]"
                     : i === 1
                       ? "object-[center_40%] sm:object-center"
                       : "object-center"
                 }`}
               />
             </div>
+            {/* On desktop, fill the area to the left of the shifted image with a navy block so background isn't empty */}
+            {i === 0 && (
+              <div className="hidden sm:block absolute inset-y-0 left-0 sm:w-[18%] lg:w-[22%] bg-navy-deep" />
+            )}
             <div
               className="absolute inset-0"
               style={{
