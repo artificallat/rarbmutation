@@ -6,7 +6,7 @@ import { Placeholder, ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import heroFamily from "@/assets/family-mountains-wide.jpg";
 import heroPlayground from "@/assets/reinhard-simon-playground.jpg";
-import heroGuitar from "@/assets/edith-simon-guitar.jpg";
+import heroGuitar from "@/assets/edith-simon-guitar-wide.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
 import newsLights from "@/assets/simon-fiber-lights.jpg";
 import newsNeujahr from "@/assets/simon-neujahr-2026.jpg";
@@ -88,7 +88,7 @@ export default function Home({ lang }: { lang: Lang }) {
                     ? "object-[center_65%] sm:object-[center_25%]"
                     : i === 1
                       ? "object-[center_40%] sm:object-center"
-                      : "object-[center_30%] sm:object-[75%_30%] lg:object-[80%_30%]"
+                      : "object-center"
                 }`}
               />
             </div>
