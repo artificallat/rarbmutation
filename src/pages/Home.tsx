@@ -99,7 +99,7 @@ export default function Home({ lang }: { lang: Lang }) {
                 alt={`Simon & family — slide ${i + 1}`}
                 className={`absolute inset-0 h-full w-full object-cover ${
                   i === 0
-                    ? "object-[70%_center] sm:object-[center_top]"
+                    ? "object-[70%_center] sm:object-[center_25%]"
                     : i === 1
                       ? "object-[center_40%] sm:object-center"
                       : "object-center"
