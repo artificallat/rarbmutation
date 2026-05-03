@@ -20,8 +20,8 @@ export default function Achievements({ lang }: { lang: Lang }) {
     <>
       <PageHero eyebrow={de ? "Erfolge" : "Achievements"} title={de ? "Von der Diagnose zum Handeln" : "From Diagnosis to Action"}
         sub={de
-          ? "Nach Simons Diagnose und der Gründung von Cure MCOPS12 im Jahr 2020 haben wir in nur fünf Jahren ein internationales Forschungskonsortium aufgebaut, eine Natural History Study etabliert und ein personalisiertes ASO-Therapieprogramm in die präklinische Endphase gebracht."
-          : "Following Simon's diagnosis and the founding of Cure MCOPS12 in 2020, we have — in just five years — built an international research consortium, established a Natural History Study, and advanced a personalised ASO therapy program into late preclinical development."} />
+          ? "Nach Simons Diagnose und der Gründung von Cure MCOPS12 haben wir ein internationales Forschungsnetzwerk aufgebaut, eine Natural History Study etabliert und ein personalisiertes ASO-Therapieprogramm in die präklinische Endphase gebracht."
+          : "Following Simon's diagnosis and the founding of Cure MCOPS12, we have built an international research network, established a Natural History Study, and advanced a personalised ASO therapy program into late preclinical development."} />
 
       <section className="container-wide py-16">
         <SectionTitle eyebrow={de ? "Bilanz" : "By the numbers"} title={de ? "Was bisher erreicht wurde" : "What we have achieved so far"} />
