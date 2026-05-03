@@ -116,7 +116,7 @@ export default function Research({ lang }: { lang: Lang }) {
                 <div className="bg-card border border-border rounded-2xl p-6 h-full hover:-translate-y-1 hover:shadow-xl hover:border-teal transition-all duration-300">
                   <h4 className="font-display text-xl font-bold text-navy">{l.n}</h4>
                   <p className="text-sm text-teal font-semibold mt-1">{l.inst}</p>
-                  <p className="text-sm text-foreground/70 mt-2">{l.lead}</p>
+                  
                   <p className="text-sm text-foreground/85 mt-3"><span className="font-semibold text-navy">{de ? "Schwerpunkt: " : "Focus: "}</span>{l.focus[lang]}</p>
                 </div>
               </Reveal>
