@@ -85,7 +85,9 @@ export default function Navbar({ lang }: { lang: Lang }) {
               { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
               { to: `${p}/meet-our-kids`, label: tr.nav.kids },
               { to: `${p}/achievements`, label: tr.nav.achievements },
+              { to: `${p}/network`, label: tr.nav.network },
               { to: `${p}/research`, label: tr.nav.research },
+              { to: `${p}/natural-history`, label: tr.nav.naturalHistory },
               { to: `${p}/news`, label: tr.nav.news },
             ].map(l => (
               <Link
