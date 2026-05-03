@@ -3,7 +3,6 @@ import { SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import { socials, type Lang } from "@/content/site";
-import nhsImage from "@/assets/natural-history.jpg";
 
 export default function NaturalHistory({ lang }: { lang: Lang }) {
   const de = lang === "de";
@@ -17,20 +16,7 @@ export default function NaturalHistory({ lang }: { lang: Lang }) {
           : "A comprehensive longitudinal study collecting medical data from MCOPS12 families worldwide — the scientific and regulatory foundation for clinical trials and new therapies."}
       />
 
-      <section className="container-tight pb-12">
-        <Reveal>
-          <figure className="rounded-3xl overflow-hidden border border-border mb-12 group">
-            <img
-              src={nhsImage}
-              alt={de ? "Natural History Study – Patientenregister und longitudinale Daten" : "Natural History Study – patient registry and longitudinal data"}
-              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-              loading="lazy"
-              width={1920}
-              height={1080}
-            />
-          </figure>
-        </Reveal>
-
+      <section className="container-tight pb-12 pt-12">
         <SectionTitle eyebrow={de ? "Warum diese Studie" : "Why this study"} title={de ? "Ohne Naturverlauf keine klinische Studie" : "No natural history, no clinical trial"} />
         <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
           <Reveal>
