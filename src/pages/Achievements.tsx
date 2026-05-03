@@ -50,15 +50,15 @@ export default function Achievements({ lang }: { lang: Lang }) {
           <Reveal>
             <p className="text-lg leading-relaxed text-foreground/80">
               {de
-                ? "Als Reinhard und Edith Pell 2020 die Diagnose ihres Sohnes Simon erhielten, gab es für MCOPS12 weder eine Behandlung noch eine etablierte Forschungsinfrastruktur. Innerhalb weniger Monate gründeten sie Cure MCOPS12 und begannen, Forschende, Kliniker:innen und andere betroffene Familien zu vernetzen – mit dem Ziel, aus einer ultra-seltenen Diagnose ein konkretes Forschungsprogramm zu machen."
-                : "When Reinhard and Edith Pell received their son Simon's diagnosis in 2020, MCOPS12 had no treatment and no established research infrastructure. Within months they founded Cure MCOPS12 and began connecting researchers, clinicians and other affected families — with one goal: to turn an ultra-rare diagnosis into a concrete research program."}
+                ? "Als Reinhard und Edith Pell die Diagnose ihres Sohnes Simon erhielten, gab es für MCOPS12 weder eine Behandlung noch eine etablierte Forschungsinfrastruktur. Innerhalb weniger Monate gründeten sie Cure MCOPS12 und begannen, Forschende, Kliniker:innen und andere betroffene Familien zu vernetzen – mit dem Ziel, aus einer ultra-seltenen Diagnose ein konkretes Forschungsprogramm zu machen."
+                : "When Reinhard and Edith Pell received their son Simon's diagnosis, MCOPS12 had no treatment and no established research infrastructure. Within months they founded Cure MCOPS12 and began connecting researchers, clinicians and other affected families — with one goal: to turn an ultra-rare diagnosis into a concrete research program."}
             </p>
           </Reveal>
           <Reveal delay={150}>
             <p className="text-lg leading-relaxed text-foreground/80">
               {de
-                ? "Heute, fünf Jahre später, koordiniert Cure MCOPS12 ein internationales Konsortium, finanziert präklinische Studien mit, und ist Hauptträger einer personalisierten ASO-Therapie, die in der entscheidenden Toxizitätsphase steht. Jeder Schritt war ein Meilenstein, der ohne ehrenamtliches Engagement, Spender:innen und wissenschaftliche Partner nicht möglich gewesen wäre."
-                : "Five years on, Cure MCOPS12 coordinates an international consortium, co-funds preclinical studies, and is the driving force behind a personalised ASO therapy now in its critical toxicity phase. Every step has been a milestone — none of which would have been possible without volunteers, donors and scientific partners."}
+                ? "Heute koordiniert Cure MCOPS12 ein internationales Forschungsnetzwerk, finanziert präklinische Studien mit und ist Hauptträger einer personalisierten ASO-Therapie, die in der entscheidenden Toxizitätsphase steht. Jeder Schritt war ein Meilenstein, der ohne ehrenamtliches Engagement, Spender:innen und wissenschaftliche Partner nicht möglich gewesen wäre."
+                : "Today, Cure MCOPS12 coordinates an international research network, co-funds preclinical studies, and is the driving force behind a personalised ASO therapy now in its critical toxicity phase. Every step has been a milestone — none of which would have been possible without volunteers, donors and scientific partners."}
             </p>
           </Reveal>
         </div>
