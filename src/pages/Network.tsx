@@ -11,8 +11,8 @@ const network = [
 ];
 const alliances = [
   { n: "Pro Rare Austria", u: "https://www.prorare-austria.org/", d: { en: "Austrian umbrella alliance for rare disease patient organisations.", de: "Österreichische Allianz für Patientenorganisationen seltener Erkrankungen." } },
-  { n: "Selbsthilfe Salzburg", u: "https://www.selbsthilfe-salzburg.at/", d: { en: "Regional self-help network supporting families and patient groups in Salzburg.", de: "Regionales Selbsthilfe-Netzwerk in Salzburg für Familien und Patient:innengruppen." } },
-  { n: "EURORDIS", u: "https://www.eurordis.org/", d: { en: "European federation representing 1,000+ rare disease organisations across 74 countries.", de: "Europäischer Dachverband mit über 1.000 Mitgliedsorganisationen aus 74 Ländern." } },
+  { n: "EURORDIS", u: "https://www.eurordis.org/", d: { en: "European federation representing rare disease patient organisations across Europe.", de: "Europäischer Dachverband der Patientenorganisationen für seltene Erkrankungen." } },
+  { n: "N=1 Collaborative", u: "https://www.n1collaborative.org/", d: { en: "International collaborative advancing the science and ethics of N-of-1 therapies.", de: "Internationales Netzwerk für Wissenschaft und Ethik von N-of-1-Therapien." } },
 ];
 
 export default function Network({ lang }: { lang: Lang }) {
