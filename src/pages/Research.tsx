@@ -1,7 +1,7 @@
-import { Mail } from "lucide-react";
 import { Placeholder, SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
-import { socials, type Lang } from "@/content/site";
+import type { Lang } from "@/content/site";
+import labImage from "@/assets/research-lab.jpg";
 
 const labs = [
   { n: "Michaud Lab", inst: "CHU Sainte-Justine, Université de Montréal", lead: "Jacques Michaud, MD PhD", focus: { en: "Clinical patient data, mouse analysis", de: "Klinische Patientendaten, Maus-Analyse" } },
