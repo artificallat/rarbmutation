@@ -33,9 +33,14 @@ export default function Navbar({ lang }: { lang: Lang }) {
       isActive ? "text-navy" : "text-foreground/70");
 
   return (
-    <header className={cn("sticky top-0 z-40 transition-all", scrolled ? "py-2" : "py-4")}>
-      <div className="container-wide">
-        <nav className={cn("pill-nav flex items-center justify-between px-4 sm:px-6 py-3 transition-all")}>
+    <header className={cn("sticky top-0 z-40 transition-all", scrolled ? "py-2" : "py-0")}>
+      <div className={cn("transition-all", scrolled ? "container-wide" : "max-w-none px-0")}>
+        <nav className={cn(
+          "flex items-center justify-between transition-all",
+          scrolled
+            ? "pill-nav px-4 sm:px-6 py-3 rounded-full"
+            : "px-5 sm:px-8 py-4 rounded-none bg-background/80 backdrop-blur-md border-b border-border/60"
+        )}>
           <Link to={`${p}/`} className="flex items-center shrink-0" aria-label="Cure MCOPS12 — Home">
             <img src={logo} alt="Cure MCOPS12" className="h-10 sm:h-11 w-auto" />
           </Link>
