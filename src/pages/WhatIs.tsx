@@ -1,7 +1,9 @@
 import { ExternalLink } from "lucide-react";
-import { Placeholder, SectionTitle } from "@/components/site/Bits";
+import { SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
+import rarbProtein from "@/assets/rarb-protein.jpg";
+import rarbMutation from "@/assets/rarb-mutation.jpg";
 
 export default function WhatIs({ lang }: { lang: Lang }) {
   const de = lang === "de";
@@ -45,7 +47,9 @@ export default function WhatIs({ lang }: { lang: Lang }) {
               ? "Das Gen für den Retinsäure-Rezeptor Beta (RARB) liegt auf Chromosom 3 (3p24.2) und kodiert das RARβ-Protein – einen nukleären Rezeptor und Transkriptionsfaktor, der durch Retinsäure (ein Vitamin-A-Metabolit) aktiviert wird. RARβ steuert die Expression vieler Gene und ist zentral für die Entwicklung von Augen, Zwerchfell, Herz, Verdauungstrakt und Gehirn."
               : "The retinoic acid receptor beta (RARB) gene is located on chromosome 3 (3p24.2). It encodes the RARβ protein — a nuclear receptor and transcription factor activated by retinoic acid (a metabolite of vitamin A). RARβ regulates the expression of many genes, playing a pivotal role in the development of the eyes, diaphragm, heart, digestive tract, and brain."}
           </p>
-          <Placeholder label="Figure: RARβ protein" className="aspect-square" />
+          <div className="rounded-2xl overflow-hidden border border-border aspect-square bg-muted">
+            <img src={rarbProtein} alt={de ? "RARβ-Protein an DNA gebunden" : "RARβ protein bound to DNA"} className="w-full h-full object-cover" loading="lazy" width={1024} height={1024} />
+          </div>
         </div>
         <div className="grid sm:grid-cols-2 gap-4 mt-8">
           {[
@@ -63,7 +67,9 @@ export default function WhatIs({ lang }: { lang: Lang }) {
         <div className="container-tight">
           <SectionTitle eyebrow={de ? "Pathophysiologie" : "Pathophysiology"} title={de ? "Die Krankheit" : "The Disease"} />
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <Placeholder label="Figure: RARB gene mutation as cause of MCOPS12" className="aspect-square" />
+            <div className="rounded-2xl overflow-hidden border border-border aspect-square bg-muted">
+              <img src={rarbMutation} alt={de ? "Punktmutation im RARB-Gen" : "Point mutation in the RARB gene"} className="w-full h-full object-cover" loading="lazy" width={1024} height={1024} />
+            </div>
             <p className="text-lg leading-relaxed text-foreground/80">
               {de
                 ? "MCOPS12 wird in der Regel autosomal-dominant vererbt – eine Mutation in nur einer Genkopie genügt. In den meisten Familien entsteht die Mutation spontan (de novo). Das mutierte RARβ-Protein stört die Transkription wichtiger Zielgene, besonders im Striatum und präfrontalen Kortex – das erklärt die Bewegungsstörungen und kognitiven Beeinträchtigungen der Patient:innen."
