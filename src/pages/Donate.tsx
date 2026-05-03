@@ -46,8 +46,8 @@ export default function Donate({ lang }: { lang: Lang }) {
             <CreditCard className="w-7 h-7 text-teal" />
             <h3 className="font-display text-xl font-bold text-navy mt-4">{de ? "Kreditkarte / PayPal" : "Credit Card / PayPal"}</h3>
             <p className="text-sm text-foreground/75 mt-3">{de ? "Schnell und sicher – über unseren Zahlungsdienstleister." : "Fast and secure via our payment provider."}</p>
-            <a href="#" className="mt-5 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition">
-              {de ? "Online spenden" : "Donate Online"}
+            <a href={socials.gofundme} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition">
+              {de ? "Online spenden" : "Donate Online"} <ExternalLink className="w-4 h-4"/>
             </a>
           </div>
         </div>

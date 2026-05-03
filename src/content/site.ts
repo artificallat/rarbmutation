@@ -234,7 +234,7 @@ export const t = {
       donateOnline: "Online spenden", subscribe: "Abonnieren" },
     home: {
       slides: [
-        { title: "Wie weit würdest du gehen, wenn ein geliebter Mensch eine seltene Krankheit hätte –", sub: "dein Mann, deine Frau…", sub2: "…dein Kind?" },
+        { title: "Wie weit würdest du gehen –", sub: "für deinen Mann, deine Frau…", sub2: "…dein Kind?" },
         { title: "Eine personalisierte Therapie für Simon.", sub: "Wegweisende RNA-Therapien für MCOPS12." },
         { title: "Gemeinsam sind wir näher dran als je zuvor.", sub: "Schließen Sie sich den Familien, Forschenden und Unterstützern an." },
       ],
