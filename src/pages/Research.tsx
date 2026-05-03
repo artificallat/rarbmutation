@@ -38,8 +38,15 @@ export default function Research({ lang }: { lang: Lang }) {
             </p>
           </div>
         </div>
-        <div className="mt-10">
-          <Placeholder label="Figure: Approaches for treatment of MCOPS12" className="aspect-[16/7]" />
+        <div className="mt-10 rounded-3xl overflow-hidden border border-border">
+          <img
+            src={labImage}
+            alt={de ? "Forschungslabor – Wirkstoffentwicklung für MCOPS12" : "Research laboratory – drug development for MCOPS12"}
+            className="w-full h-auto object-cover"
+            loading="lazy"
+            width={1920}
+            height={1080}
+          />
         </div>
       </section>
 
@@ -58,21 +65,7 @@ export default function Research({ lang }: { lang: Lang }) {
           </div>
         </div>
       </section>
-
-      <section id="natural-history" className="container-tight py-20">
-        <SectionTitle eyebrow={de ? "Patientenregister" : "Patient registry"} title={de ? "Natural History Study" : "Natural History Study"} />
-        <p className="text-lg leading-relaxed text-foreground/80">
-          {de
-            ? "Eine Natural History Study ist eine behördliche Voraussetzung für jede klinische Studie. Unsere Studie baut ein Patientenregister auf – mit umfassenden longitudinalen medizinischen Daten von MCOPS12-Familien weltweit. Sie ermöglicht es Forschenden, Fälle zu vergleichen, neue Phänotypen zu entdecken und Familien bei neuen Erkenntnissen erneut zu kontaktieren."
-            : "A natural history study is required by health authorities before a clinical trial can be conducted. Our study is building a patient registry — collecting comprehensive longitudinal medical data from MCOPS12 families worldwide. This allows researchers to compare cases, discover new phenotypes, and re-contact families as discoveries are made."}
-        </p>
-        <div className="mt-8 bg-teal text-white rounded-2xl p-6 flex flex-wrap items-center justify-between gap-4">
-          <p className="font-medium">{de ? "Mehr erfahren oder teilnehmen?" : "Want more information or to participate?"}</p>
-          <a href={`mailto:${socials.email}`} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition">
-            <Mail className="w-4 h-4"/> {socials.email}
-          </a>
-        </div>
-      </section>
     </>
   );
 }
+
