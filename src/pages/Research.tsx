@@ -1,4 +1,4 @@
-import { Placeholder, SectionTitle } from "@/components/site/Bits";
+import { SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
 import labImage from "@/assets/research-lab.jpg";
