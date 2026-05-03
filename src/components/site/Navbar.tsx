@@ -54,9 +54,9 @@ export default function Navbar({ lang }: { lang: Lang }) {
             <NavLink to={`${p}/meet-our-kids`} className={({isActive}) => cn("px-3 py-2 rounded-full text-sm font-medium hover:bg-muted/60", isActive && "text-navy")}>{tr.nav.kids}</NavLink>
             <Dropdown label={tr.nav.ourWork} items={[
               { to: `${p}/achievements`, label: tr.nav.achievements },
+              { to: `${p}/network`, label: tr.nav.network },
               { to: `${p}/research`, label: tr.nav.research },
-              { to: `${p}/research#natural-history`, label: tr.nav.naturalHistory },
-              { to: `${p}/achievements#network`, label: tr.nav.network },
+              { to: `${p}/natural-history`, label: tr.nav.naturalHistory },
             ]} />
             <NavLink to={`${p}/news`} className={({isActive}) => cn("px-3 py-2 rounded-full text-sm font-medium hover:bg-muted/60", isActive && "text-navy")}>{tr.nav.news}</NavLink>
           </div>
@@ -85,7 +85,9 @@ export default function Navbar({ lang }: { lang: Lang }) {
               { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
               { to: `${p}/meet-our-kids`, label: tr.nav.kids },
               { to: `${p}/achievements`, label: tr.nav.achievements },
+              { to: `${p}/network`, label: tr.nav.network },
               { to: `${p}/research`, label: tr.nav.research },
+              { to: `${p}/natural-history`, label: tr.nav.naturalHistory },
               { to: `${p}/news`, label: tr.nav.news },
             ].map(l => (
               <Link

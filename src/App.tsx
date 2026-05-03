@@ -10,6 +10,8 @@ import WhatIs from "@/pages/WhatIs";
 import MeetOurKids from "@/pages/MeetOurKids";
 import Achievements from "@/pages/Achievements";
 import Research from "@/pages/Research";
+import Network from "@/pages/Network";
+import NaturalHistory from "@/pages/NaturalHistory";
 import Donate from "@/pages/Donate";
 import News from "@/pages/News";
 import Imprint from "@/pages/Imprint";
@@ -27,6 +29,8 @@ const pages = (lang: Lang) => (
     <Route path="meet-our-kids" element={<MeetOurKids lang={lang} />} />
     <Route path="achievements" element={<Achievements lang={lang} />} />
     <Route path="research" element={<Research lang={lang} />} />
+    <Route path="network" element={<Network lang={lang} />} />
+    <Route path="natural-history" element={<NaturalHistory lang={lang} />} />
     <Route path="donate" element={<Donate lang={lang} />} />
     <Route path="news" element={<News lang={lang} />} />
     <Route path="imprint" element={<Imprint lang={lang} />} />
