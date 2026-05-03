@@ -129,16 +129,16 @@ export default function Research({ lang }: { lang: Lang }) {
         <SectionTitle eyebrow={de ? "Wie wir arbeiten" : "How we work"} title={de ? "Vom Mausmodell zur klinischen Studie" : "From mouse model to clinical trial"} />
         <ol className="space-y-5 max-w-4xl">
           {(de ? [
-            { n: "01", t: "Krankheitsmodelle etablieren", d: "Mausmodelle und iPSC-abgeleitete humane Neuronen, die die häufigste RARB-Mutation (p.R387C) tragen, bilden die Grundlage für alle Tests." },
+            { n: "01", t: "Krankheitsmodelle etablieren", d: "Zelluläre Krankheitsmodelle, die Simons RARB-Mutation tragen, bilden die Grundlage für alle Tests von Wirkstoffkandidaten." },
             { n: "02", t: "Wirkstoff-Screening", d: "Kandidatenmoleküle werden zunächst in Zellmodellen auf Sicherheit und Wirksamkeit geprüft, anschließend in Tiermodellen validiert." },
-            { n: "03", t: "Toxikologie & Pharmakokinetik", d: "GLP-konforme Toxizitätsstudien sind regulatorische Voraussetzung vor jeder Anwendung am Menschen." },
-            { n: "04", t: "Regulatorischer Antrag", d: "IND/IMPD-Einreichung bei FDA bzw. EMA – inklusive aller präklinischen Daten und Daten aus der Natural History Study." },
-            { n: "05", t: "Klinische Anwendung", d: "Erste Verabreichung an Patient:innen unter engmaschiger klinischer Überwachung; Auswertung gegen die Naturverlauf-Daten." },
+            { n: "03", t: "Toxikologie & Pharmakokinetik", d: "Toxizitätsstudien sind regulatorische Voraussetzung vor jeder Anwendung am Menschen – aktuell der entscheidende Schritt für Simons ASO." },
+            { n: "04", t: "Regulatorischer Antrag", d: "Einreichung bei FDA bzw. EMA – inklusive aller präklinischen Daten und Daten aus der Natural History Study." },
+            { n: "05", t: "Klinische Anwendung", d: "Erste Verabreichung an die Patient:innen unter engmaschiger klinischer Überwachung; Auswertung gegen die Naturverlauf-Daten." },
           ] : [
-            { n: "01", t: "Establish disease models", d: "Mouse models and iPSC-derived human neurons carrying the most common RARB mutation (p.R387C) form the foundation for all testing." },
+            { n: "01", t: "Establish disease models", d: "Cellular disease models carrying Simon's RARB mutation form the foundation for all candidate testing." },
             { n: "02", t: "Drug screening", d: "Candidate molecules are first screened in cell models for safety and efficacy, then validated in animal models." },
-            { n: "03", t: "Toxicology & pharmacokinetics", d: "GLP-compliant toxicity studies are a regulatory prerequisite before any first-in-human use." },
-            { n: "04", t: "Regulatory filing", d: "IND/IMPD submission to FDA or EMA — including all preclinical data and Natural History Study data." },
+            { n: "03", t: "Toxicology & pharmacokinetics", d: "Toxicity studies are a regulatory prerequisite before any first-in-human use — currently the critical step for Simon's ASO." },
+            { n: "04", t: "Regulatory filing", d: "Submission to FDA or EMA — including all preclinical data and Natural History Study data." },
             { n: "05", t: "Clinical administration", d: "First-in-patient administration under close clinical monitoring; outcomes are read against the natural history baseline." },
           ]).map((s, i) => {
             const Icon = stepIcons[i];
