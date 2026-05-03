@@ -82,10 +82,13 @@
   .container-tight { @apply mx-auto max-w-6xl px-5 sm:px-8; }
   .container-wide  { @apply mx-auto max-w-7xl px-5 sm:px-8; }
 
-  .fade-in { opacity: 0; transform: translateY(16px); animation: fadeUp 0.8s ease-out forwards; }
-  .fade-in-delay-1 { animation-delay: 0.1s; }
-  .fade-in-delay-2 { animation-delay: 0.2s; }
-  .fade-in-delay-3 { animation-delay: 0.3s; }
+  .fade-in { opacity: 0; transform: translateY(20px); animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+  .fade-in-delay-1 { animation-delay: 0.15s; }
+  .fade-in-delay-2 { animation-delay: 0.3s; }
+  .fade-in-delay-3 { animation-delay: 0.45s; }
+
+  .hover-lift { @apply transition-all duration-300; }
+  .hover-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
 
   .placeholder-img {
     @apply flex items-center justify-center bg-muted text-muted-foreground text-sm font-medium rounded-2xl;
