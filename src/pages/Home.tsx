@@ -88,7 +88,7 @@ export default function Home({ lang }: { lang: Lang }) {
                     ? "object-[center_65%] sm:object-[center_25%]"
                     : i === 1
                       ? "object-[center_40%] sm:object-center"
-                      : "object-center"
+                      : "object-[80%_center] sm:object-center"
                 }`}
               />
             </div>
