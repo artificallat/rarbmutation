@@ -5,11 +5,12 @@ import { Trophy, FlaskConical, Target, Users, Globe2, Award, Network as NetworkI
 import type { Lang } from "@/content/site";
 
 const milestones = [
-  { y: "2020", en: "Cure MCOPS12 founded in Salzburg following Simon's diagnosis", de: "Cure MCOPS12 in Salzburg gegründet – nach Simons Diagnose" },
-  { y: "2021", en: "Research consortium RAinRARE established (EU-funded)", de: "Forschungskonsortium RAinRARE (EU-gefördert) etabliert" },
-  { y: "2022", en: "Disease models established, Natural History Study launched", de: "Krankheitsmodelle etabliert, Natural History Study gestartet" },
-  { y: "2023", en: "ASO program initiated, 6 candidates identified in cellular models", de: "ASO-Programm gestartet, 6 Kandidaten in Zellmodellen identifiziert" },
-  { y: "2024/25", en: "GLP-compliant toxicity study ongoing", de: "GLP-konforme Toxizitätsstudie läuft" },
+  { y: "2017", en: "Simon is born — diagnosis of MCOPS12 (RARB mutation) follows", de: "Simon wird geboren – die Diagnose MCOPS12 (RARB-Mutation) folgt" },
+  { y: "Founding", en: "Cure MCOPS12 founded in Austria by Edith & Reinhard Pell", de: "Cure MCOPS12 in Österreich von Edith & Reinhard Pell gegründet" },
+  { y: "Network", en: "International research network with partners in France, Canada and the US established", de: "Internationales Forschungsnetzwerk mit Partnern in Frankreich, Kanada und den USA aufgebaut" },
+  { y: "Registry", en: "Natural History Study launched — international MCOPS12 patient registry", de: "Natural History Study gestartet – internationales MCOPS12-Patientenregister" },
+  { y: "2023", en: "ASO program initiated — 6 safe candidates identified in cellular models", de: "ASO-Programm gestartet – 6 sichere Kandidaten in Zellmodellen identifiziert" },
+  { y: "Now", en: "Toxicity study underway to select the safest ASO for Simon", de: "Toxizitätsstudie läuft – Auswahl des sichersten ASO für Simon" },
   { y: "Goal", en: "First administration of Simon's ASO therapy", de: "Erste Verabreichung von Simons ASO-Therapie" },
 ];
 
