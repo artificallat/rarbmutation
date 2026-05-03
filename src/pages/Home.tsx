@@ -88,7 +88,7 @@ export default function Home({ lang }: { lang: Lang }) {
         {slides.map((s, i) => (
           <div
             key={i}
-            className={`absolute inset-0 transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${i === slide ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
           >
             <div
               key={`zoom-${i}-${i === slide ? slide : "off"}`}
