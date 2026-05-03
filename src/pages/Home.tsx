@@ -83,9 +83,14 @@ export default function Home({ lang }: { lang: Lang }) {
               <img
                 src={heroImages[i % heroImages.length]}
                 alt={`Simon & family — slide ${i + 1}`}
+                style={
+                  i === 0
+                    ? { transformOrigin: "right center" }
+                    : undefined
+                }
                 className={`absolute inset-0 h-full w-full object-cover ${
                   i === 0
-                    ? "object-[center_65%] sm:object-[100%_40%]"
+                    ? "object-[center_65%] sm:object-center sm:scale-125 lg:scale-[1.35]"
                     : i === 1
                       ? "object-[center_40%] sm:object-center"
                       : "object-center"
