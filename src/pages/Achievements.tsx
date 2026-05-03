@@ -1,9 +1,7 @@
-import { ExternalLink } from "lucide-react";
 import { SectionTitle } from "@/components/site/Bits";
-import { Reveal, useInView } from "@/components/site/Reveal";
+import { useInView } from "@/components/site/Reveal";
 import { PageHero } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
-import conferencePhoto from "@/assets/rarb-conference.jpg";
 
 const milestones = [
   { y: "2020", en: "Cure MCOPS12 founded", de: "Cure MCOPS12 gegründet" },
