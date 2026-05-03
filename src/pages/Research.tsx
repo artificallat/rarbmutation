@@ -6,10 +6,10 @@ import type { Lang } from "@/content/site";
 import labImage from "@/assets/research-lab.jpg";
 
 const labs = [
-  { n: "Michaud Lab", inst: "CHU Sainte-Justine, Université de Montréal", lead: "Jacques Michaud, MD PhD", focus: { en: "Clinical patient data, mouse phenotyping", de: "Klinische Patientendaten, Phänotypisierung im Mausmodell" } },
-  { n: "Krezel Lab", inst: "IGBMC Illkirch, France", lead: "Wojciech Krezel, PhD", focus: { en: "Mouse striatum analysis, RAR signalling", de: "Analyse des Striatums (Maus), RAR-Signalwege" } },
-  { n: "Taylor Lab", inst: "University of Basel", lead: "Verdon Taylor, PhD", focus: { en: "iPSC-derived striatal neurons, human disease model", de: "iPSC-abgeleitete Striatum-Neuronen, humanes Krankheitsmodell" } },
-  { n: "Poch Lab", inst: "CNRS Strasbourg", lead: "Olivier Poch, PhD", focus: { en: "FAIRification of data, biomarker identification", de: "FAIRifizierung von Daten, Biomarker-Identifikation" } },
+  { n: "CHU Sainte-Justine", inst: "Université de Montréal, Canada", focus: { en: "Clinical patient data and disease characterisation", de: "Klinische Patientendaten und Krankheitscharakterisierung" } },
+  { n: "IGBMC", inst: "Illkirch, France", focus: { en: "RARβ biology, mouse models, RAR signalling", de: "RARβ-Biologie, Mausmodelle, RAR-Signalwege" } },
+  { n: "AlphaRose RareLabs", inst: "United States", focus: { en: "ASO design and personalised RNA therapeutics", de: "ASO-Design und personalisierte RNA-Therapeutika" } },
+  { n: "N=1 Collaborative", inst: "International", focus: { en: "Methodology and ethics for N-of-1 therapies", de: "Methodik und Ethik für N-of-1-Therapien" } },
 ];
 
 export default function Research({ lang }: { lang: Lang }) {
@@ -106,8 +106,8 @@ export default function Research({ lang }: { lang: Lang }) {
           <Reveal>
             <p className="text-lg leading-relaxed text-foreground/80 max-w-4xl mb-10">
               {de
-                ? "Unter dem Dach des EU-geförderten Projekts RAinRARE arbeiten vier spezialisierte Forschungsgruppen aus Frankreich, Kanada und der Schweiz eng zusammen. Jede Gruppe bringt eine entscheidende Komponente ein – von klinischer Patientencharakterisierung über Tier- und Zellmodelle bis hin zu Bioinformatik und Biomarkerforschung. Diese Bündelung von Expertise ist bei einer ultra-seltenen Erkrankung kein Luxus, sondern Voraussetzung für jeden echten Fortschritt."
-                : "Under the umbrella of the EU-funded RAinRARE project, four specialised research groups from France, Canada and Switzerland collaborate closely. Each contributes a critical piece — from clinical patient characterisation, to mouse and cell models, to bioinformatics and biomarker research. For an ultra-rare disease, pooling this kind of expertise is not a luxury but a prerequisite for any real progress."}
+                ? "Vier spezialisierte Partner aus Frankreich, Kanada und den USA arbeiten in einem koordinierten Forschungsnetzwerk zusammen. Jeder bringt eine entscheidende Komponente ein – von der klinischen Patientencharakterisierung über Krankheitsmodelle bis hin zum Design der ASO-Therapie. Diese Bündelung von Expertise ist bei einer ultra-seltenen Erkrankung kein Luxus, sondern Voraussetzung für jeden echten Fortschritt."
+                : "Four specialised partners from France, Canada and the United States work together in a coordinated research network. Each contributes a critical piece — from clinical patient characterisation to disease models to ASO design. For an ultra-rare disease, pooling this kind of expertise is not a luxury but a prerequisite for any real progress."}
             </p>
           </Reveal>
           <div className="grid sm:grid-cols-2 gap-6">
@@ -116,7 +116,7 @@ export default function Research({ lang }: { lang: Lang }) {
                 <div className="bg-card border border-border rounded-2xl p-6 h-full hover:-translate-y-1 hover:shadow-xl hover:border-teal transition-all duration-300">
                   <h4 className="font-display text-xl font-bold text-navy">{l.n}</h4>
                   <p className="text-sm text-teal font-semibold mt-1">{l.inst}</p>
-                  <p className="text-sm text-foreground/70 mt-2">{l.lead}</p>
+                  
                   <p className="text-sm text-foreground/85 mt-3"><span className="font-semibold text-navy">{de ? "Schwerpunkt: " : "Focus: "}</span>{l.focus[lang]}</p>
                 </div>
               </Reveal>
@@ -129,16 +129,16 @@ export default function Research({ lang }: { lang: Lang }) {
         <SectionTitle eyebrow={de ? "Wie wir arbeiten" : "How we work"} title={de ? "Vom Mausmodell zur klinischen Studie" : "From mouse model to clinical trial"} />
         <ol className="space-y-5 max-w-4xl">
           {(de ? [
-            { n: "01", t: "Krankheitsmodelle etablieren", d: "Mausmodelle und iPSC-abgeleitete humane Neuronen, die die häufigste RARB-Mutation (p.R387C) tragen, bilden die Grundlage für alle Tests." },
+            { n: "01", t: "Krankheitsmodelle etablieren", d: "Zelluläre Krankheitsmodelle, die Simons RARB-Mutation tragen, bilden die Grundlage für alle Tests von Wirkstoffkandidaten." },
             { n: "02", t: "Wirkstoff-Screening", d: "Kandidatenmoleküle werden zunächst in Zellmodellen auf Sicherheit und Wirksamkeit geprüft, anschließend in Tiermodellen validiert." },
-            { n: "03", t: "Toxikologie & Pharmakokinetik", d: "GLP-konforme Toxizitätsstudien sind regulatorische Voraussetzung vor jeder Anwendung am Menschen." },
-            { n: "04", t: "Regulatorischer Antrag", d: "IND/IMPD-Einreichung bei FDA bzw. EMA – inklusive aller präklinischen Daten und Daten aus der Natural History Study." },
-            { n: "05", t: "Klinische Anwendung", d: "Erste Verabreichung an Patient:innen unter engmaschiger klinischer Überwachung; Auswertung gegen die Naturverlauf-Daten." },
+            { n: "03", t: "Toxikologie & Pharmakokinetik", d: "Toxizitätsstudien sind regulatorische Voraussetzung vor jeder Anwendung am Menschen – aktuell der entscheidende Schritt für Simons ASO." },
+            { n: "04", t: "Regulatorischer Antrag", d: "Einreichung bei FDA bzw. EMA – inklusive aller präklinischen Daten und Daten aus der Natural History Study." },
+            { n: "05", t: "Klinische Anwendung", d: "Erste Verabreichung an die Patient:innen unter engmaschiger klinischer Überwachung; Auswertung gegen die Naturverlauf-Daten." },
           ] : [
-            { n: "01", t: "Establish disease models", d: "Mouse models and iPSC-derived human neurons carrying the most common RARB mutation (p.R387C) form the foundation for all testing." },
+            { n: "01", t: "Establish disease models", d: "Cellular disease models carrying Simon's RARB mutation form the foundation for all candidate testing." },
             { n: "02", t: "Drug screening", d: "Candidate molecules are first screened in cell models for safety and efficacy, then validated in animal models." },
-            { n: "03", t: "Toxicology & pharmacokinetics", d: "GLP-compliant toxicity studies are a regulatory prerequisite before any first-in-human use." },
-            { n: "04", t: "Regulatory filing", d: "IND/IMPD submission to FDA or EMA — including all preclinical data and Natural History Study data." },
+            { n: "03", t: "Toxicology & pharmacokinetics", d: "Toxicity studies are a regulatory prerequisite before any first-in-human use — currently the critical step for Simon's ASO." },
+            { n: "04", t: "Regulatory filing", d: "Submission to FDA or EMA — including all preclinical data and Natural History Study data." },
             { n: "05", t: "Clinical administration", d: "First-in-patient administration under close clinical monitoring; outcomes are read against the natural history baseline." },
           ]).map((s, i) => {
             const Icon = stepIcons[i];

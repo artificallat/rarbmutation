@@ -5,11 +5,12 @@ import { Trophy, FlaskConical, Target, Users, Globe2, Award, Network as NetworkI
 import type { Lang } from "@/content/site";
 
 const milestones = [
-  { y: "2020", en: "Cure MCOPS12 founded in Salzburg following Simon's diagnosis", de: "Cure MCOPS12 in Salzburg gegründet – nach Simons Diagnose" },
-  { y: "2021", en: "Research consortium RAinRARE established (EU-funded)", de: "Forschungskonsortium RAinRARE (EU-gefördert) etabliert" },
-  { y: "2022", en: "Disease models established, Natural History Study launched", de: "Krankheitsmodelle etabliert, Natural History Study gestartet" },
-  { y: "2023", en: "ASO program initiated, 6 candidates identified in cellular models", de: "ASO-Programm gestartet, 6 Kandidaten in Zellmodellen identifiziert" },
-  { y: "2024/25", en: "GLP-compliant toxicity study ongoing", de: "GLP-konforme Toxizitätsstudie läuft" },
+  { y: "2017", en: "Simon is born — diagnosis of MCOPS12 (RARB mutation) follows", de: "Simon wird geboren – die Diagnose MCOPS12 (RARB-Mutation) folgt" },
+  { y: "Founding", en: "Cure MCOPS12 founded in Austria by Edith & Reinhard Pell", de: "Cure MCOPS12 in Österreich von Edith & Reinhard Pell gegründet" },
+  { y: "Network", en: "International research network with partners in France, Canada and the US established", de: "Internationales Forschungsnetzwerk mit Partnern in Frankreich, Kanada und den USA aufgebaut" },
+  { y: "Registry", en: "Natural History Study launched — international MCOPS12 patient registry", de: "Natural History Study gestartet – internationales MCOPS12-Patientenregister" },
+  { y: "2023", en: "ASO program initiated — 6 safe candidates identified in cellular models", de: "ASO-Programm gestartet – 6 sichere Kandidaten in Zellmodellen identifiziert" },
+  { y: "Now", en: "Toxicity study underway to select the safest ASO for Simon", de: "Toxizitätsstudie läuft – Auswahl des sichersten ASO für Simon" },
   { y: "Goal", en: "First administration of Simon's ASO therapy", de: "Erste Verabreichung von Simons ASO-Therapie" },
 ];
 
@@ -19,8 +20,8 @@ export default function Achievements({ lang }: { lang: Lang }) {
     <>
       <PageHero eyebrow={de ? "Erfolge" : "Achievements"} title={de ? "Von der Diagnose zum Handeln" : "From Diagnosis to Action"}
         sub={de
-          ? "Nach Simons Diagnose und der Gründung von Cure MCOPS12 im Jahr 2020 haben wir in nur fünf Jahren ein internationales Forschungskonsortium aufgebaut, eine Natural History Study etabliert und ein personalisiertes ASO-Therapieprogramm in die präklinische Endphase gebracht."
-          : "Following Simon's diagnosis and the founding of Cure MCOPS12 in 2020, we have — in just five years — built an international research consortium, established a Natural History Study, and advanced a personalised ASO therapy program into late preclinical development."} />
+          ? "Nach Simons Diagnose und der Gründung von Cure MCOPS12 haben wir ein internationales Forschungsnetzwerk aufgebaut, eine Natural History Study etabliert und ein personalisiertes ASO-Therapieprogramm in die präklinische Endphase gebracht."
+          : "Following Simon's diagnosis and the founding of Cure MCOPS12, we have built an international research network, established a Natural History Study, and advanced a personalised ASO therapy program into late preclinical development."} />
 
       <section className="container-wide py-16">
         <SectionTitle eyebrow={de ? "Bilanz" : "By the numbers"} title={de ? "Was bisher erreicht wurde" : "What we have achieved so far"} />
@@ -49,15 +50,15 @@ export default function Achievements({ lang }: { lang: Lang }) {
           <Reveal>
             <p className="text-lg leading-relaxed text-foreground/80">
               {de
-                ? "Als Reinhard und Edith Pell 2020 die Diagnose ihres Sohnes Simon erhielten, gab es für MCOPS12 weder eine Behandlung noch eine etablierte Forschungsinfrastruktur. Innerhalb weniger Monate gründeten sie Cure MCOPS12 und begannen, Forschende, Kliniker:innen und andere betroffene Familien zu vernetzen – mit dem Ziel, aus einer ultra-seltenen Diagnose ein konkretes Forschungsprogramm zu machen."
-                : "When Reinhard and Edith Pell received their son Simon's diagnosis in 2020, MCOPS12 had no treatment and no established research infrastructure. Within months they founded Cure MCOPS12 and began connecting researchers, clinicians and other affected families — with one goal: to turn an ultra-rare diagnosis into a concrete research program."}
+                ? "Als Reinhard und Edith Pell die Diagnose ihres Sohnes Simon erhielten, gab es für MCOPS12 weder eine Behandlung noch eine etablierte Forschungsinfrastruktur. Innerhalb weniger Monate gründeten sie Cure MCOPS12 und begannen, Forschende, Kliniker:innen und andere betroffene Familien zu vernetzen – mit dem Ziel, aus einer ultra-seltenen Diagnose ein konkretes Forschungsprogramm zu machen."
+                : "When Reinhard and Edith Pell received their son Simon's diagnosis, MCOPS12 had no treatment and no established research infrastructure. Within months they founded Cure MCOPS12 and began connecting researchers, clinicians and other affected families — with one goal: to turn an ultra-rare diagnosis into a concrete research program."}
             </p>
           </Reveal>
           <Reveal delay={150}>
             <p className="text-lg leading-relaxed text-foreground/80">
               {de
-                ? "Heute, fünf Jahre später, koordiniert Cure MCOPS12 ein internationales Konsortium, finanziert präklinische Studien mit, und ist Hauptträger einer personalisierten ASO-Therapie, die in der entscheidenden Toxizitätsphase steht. Jeder Schritt war ein Meilenstein, der ohne ehrenamtliches Engagement, Spender:innen und wissenschaftliche Partner nicht möglich gewesen wäre."
-                : "Five years on, Cure MCOPS12 coordinates an international consortium, co-funds preclinical studies, and is the driving force behind a personalised ASO therapy now in its critical toxicity phase. Every step has been a milestone — none of which would have been possible without volunteers, donors and scientific partners."}
+                ? "Heute koordiniert Cure MCOPS12 ein internationales Forschungsnetzwerk, finanziert präklinische Studien mit und ist Hauptträger einer personalisierten ASO-Therapie, die in der entscheidenden Toxizitätsphase steht. Jeder Schritt war ein Meilenstein, der ohne ehrenamtliches Engagement, Spender:innen und wissenschaftliche Partner nicht möglich gewesen wäre."
+                : "Today, Cure MCOPS12 coordinates an international research network, co-funds preclinical studies, and is the driving force behind a personalised ASO therapy now in its critical toxicity phase. Every step has been a milestone — none of which would have been possible without volunteers, donors and scientific partners."}
             </p>
           </Reveal>
         </div>
@@ -82,14 +83,14 @@ export default function Achievements({ lang }: { lang: Lang }) {
         <SectionTitle eyebrow={de ? "Über das ASO-Programm hinaus" : "Beyond the ASO program"} title={de ? "Weitere Meilensteine" : "Further milestones"} />
         <div className="grid md:grid-cols-3 gap-6">
           {(de ? [
-            { i: NetworkIcon, t: "Internationales Konsortium", d: "Aufbau und Finanzierung von RAinRARE: vier Forschungsgruppen in Frankreich, Kanada und der Schweiz arbeiten koordiniert an Krankheitsmodellen, Wirkstoffen und Biomarkern." },
+            { i: NetworkIcon, t: "Internationales Forschungsnetzwerk", d: "Aufbau eines koordinierten Netzwerks mit Forschungspartnern in Frankreich, Kanada und den USA – gemeinsame Arbeit an Krankheitsmodellen, Wirkstoffen und ASO-Design." },
             { i: Microscope, t: "Natural History Study", d: "Etablierung des ersten internationalen MCOPS12-Patientenregisters – die regulatorische Voraussetzung für jede klinische Studie." },
             { i: FlaskConical, t: "Wirkstoff-Repurposing", d: "Sechs bereits klinisch erprobte Substanzen werden in MCOPS12-Mausmodellen getestet – als möglicher schneller Weg zu Symptomtherapien." },
             { i: Users, t: "Familien-Community", d: "Aufbau einer aktiven globalen Community mit jährlichen Konferenzen, etwa am CHU Sainte-Justine in Montréal." },
             { i: Globe2, t: "Behördliche Anerkennung", d: "Aktive Mitwirkung in nationalen und EU-weiten Allianzen für seltene Erkrankungen (Pro Rare Austria, EURORDIS)." },
             { i: Award, t: "Wissenschaftlicher Beirat", d: "Etablierung eines internationalen Scientific Advisory Boards mit führenden Expert:innen aus Genetik, Neurologie und Wirkstoffentwicklung." },
           ] : [
-            { i: NetworkIcon, t: "International consortium", d: "Built and funded RAinRARE: four research groups in France, Canada and Switzerland working in coordinated fashion on disease models, drugs and biomarkers." },
+            { i: NetworkIcon, t: "International research network", d: "Built a coordinated network with research partners in France, Canada and the United States — working jointly on disease models, drug candidates and ASO design." },
             { i: Microscope, t: "Natural History Study", d: "Established the first international MCOPS12 patient registry — the regulatory prerequisite for any clinical trial." },
             { i: FlaskConical, t: "Drug repurposing", d: "Six clinically validated compounds are being tested in MCOPS12 mouse models as a potential fast track to symptomatic treatments." },
             { i: Users, t: "Family community", d: "Built an active global community with annual conferences, including at CHU Sainte-Justine in Montréal." },
