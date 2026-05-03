@@ -83,7 +83,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
         <SectionTitle eyebrow={de ? "Über das ASO-Programm hinaus" : "Beyond the ASO program"} title={de ? "Weitere Meilensteine" : "Further milestones"} />
         <div className="grid md:grid-cols-3 gap-6">
           {(de ? [
-            { i: NetworkIcon, t: "Internationales Konsortium", d: "Aufbau und Finanzierung von RAinRARE: vier Forschungsgruppen in Frankreich, Kanada und der Schweiz arbeiten koordiniert an Krankheitsmodellen, Wirkstoffen und Biomarkern." },
+            { i: NetworkIcon, t: "Internationales Forschungsnetzwerk", d: "Aufbau eines koordinierten Netzwerks mit Forschungspartnern in Frankreich, Kanada und den USA – gemeinsame Arbeit an Krankheitsmodellen, Wirkstoffen und ASO-Design." },
             { i: Microscope, t: "Natural History Study", d: "Etablierung des ersten internationalen MCOPS12-Patientenregisters – die regulatorische Voraussetzung für jede klinische Studie." },
             { i: FlaskConical, t: "Wirkstoff-Repurposing", d: "Sechs bereits klinisch erprobte Substanzen werden in MCOPS12-Mausmodellen getestet – als möglicher schneller Weg zu Symptomtherapien." },
             { i: Users, t: "Familien-Community", d: "Aufbau einer aktiven globalen Community mit jährlichen Konferenzen, etwa am CHU Sainte-Justine in Montréal." },
