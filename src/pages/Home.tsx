@@ -85,7 +85,7 @@ export default function Home({ lang }: { lang: Lang }) {
                 alt={`Simon & family — slide ${i + 1}`}
                 style={
                   i === 0
-                    ? { transformOrigin: "right center" }
+                    ? { transformOrigin: "left center" }
                     : undefined
                 }
                 className={`absolute inset-0 h-full w-full object-cover ${
