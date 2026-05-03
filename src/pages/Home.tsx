@@ -70,7 +70,21 @@ export default function Home({ lang }: { lang: Lang }) {
   return (
     <>
       {/* HERO */}
-      <section className="relative mt-0 h-[80vh] min-h-[420px] sm:h-[85vh] sm:min-h-[520px] lg:h-[92vh] lg:min-h-[640px] w-full overflow-hidden bg-navy-deep">
+      <section
+        className="relative mt-0 h-[80vh] min-h-[420px] sm:h-[85vh] sm:min-h-[520px] lg:h-[92vh] lg:min-h-[640px] w-full overflow-hidden bg-navy-deep touch-pan-y"
+        onTouchStart={(e) => {
+          (e.currentTarget as any)._touchStartX = e.touches[0].clientX;
+        }}
+        onTouchEnd={(e) => {
+          const startX = (e.currentTarget as any)._touchStartX;
+          if (startX == null) return;
+          const dx = e.changedTouches[0].clientX - startX;
+          if (Math.abs(dx) > 40) {
+            if (dx < 0) setSlide((slide + 1) % slides.length);
+            else setSlide((slide - 1 + slides.length) % slides.length);
+          }
+        }}
+      >
         {slides.map((s, i) => (
           <div
             key={i}
