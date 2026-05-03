@@ -90,7 +90,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
             { i: Globe2, t: "Behördliche Anerkennung", d: "Aktive Mitwirkung in nationalen und EU-weiten Allianzen für seltene Erkrankungen (Pro Rare Austria, EURORDIS)." },
             { i: Award, t: "Wissenschaftlicher Beirat", d: "Etablierung eines internationalen Scientific Advisory Boards mit führenden Expert:innen aus Genetik, Neurologie und Wirkstoffentwicklung." },
           ] : [
-            { i: NetworkIcon, t: "International consortium", d: "Built and funded RAinRARE: four research groups in France, Canada and Switzerland working in coordinated fashion on disease models, drugs and biomarkers." },
+            { i: NetworkIcon, t: "International research network", d: "Built a coordinated network with research partners in France, Canada and the United States — working jointly on disease models, drug candidates and ASO design." },
             { i: Microscope, t: "Natural History Study", d: "Established the first international MCOPS12 patient registry — the regulatory prerequisite for any clinical trial." },
             { i: FlaskConical, t: "Drug repurposing", d: "Six clinically validated compounds are being tested in MCOPS12 mouse models as a potential fast track to symptomatic treatments." },
             { i: Users, t: "Family community", d: "Built an active global community with annual conferences, including at CHU Sainte-Justine in Montréal." },
