@@ -106,8 +106,8 @@ export default function Research({ lang }: { lang: Lang }) {
           <Reveal>
             <p className="text-lg leading-relaxed text-foreground/80 max-w-4xl mb-10">
               {de
-                ? "Unter dem Dach des EU-geförderten Projekts RAinRARE arbeiten vier spezialisierte Forschungsgruppen aus Frankreich, Kanada und der Schweiz eng zusammen. Jede Gruppe bringt eine entscheidende Komponente ein – von klinischer Patientencharakterisierung über Tier- und Zellmodelle bis hin zu Bioinformatik und Biomarkerforschung. Diese Bündelung von Expertise ist bei einer ultra-seltenen Erkrankung kein Luxus, sondern Voraussetzung für jeden echten Fortschritt."
-                : "Under the umbrella of the EU-funded RAinRARE project, four specialised research groups from France, Canada and Switzerland collaborate closely. Each contributes a critical piece — from clinical patient characterisation, to mouse and cell models, to bioinformatics and biomarker research. For an ultra-rare disease, pooling this kind of expertise is not a luxury but a prerequisite for any real progress."}
+                ? "Vier spezialisierte Partner aus Frankreich, Kanada und den USA arbeiten in einem koordinierten Forschungsnetzwerk zusammen. Jeder bringt eine entscheidende Komponente ein – von der klinischen Patientencharakterisierung über Krankheitsmodelle bis hin zum Design der ASO-Therapie. Diese Bündelung von Expertise ist bei einer ultra-seltenen Erkrankung kein Luxus, sondern Voraussetzung für jeden echten Fortschritt."
+                : "Four specialised partners from France, Canada and the United States work together in a coordinated research network. Each contributes a critical piece — from clinical patient characterisation to disease models to ASO design. For an ultra-rare disease, pooling this kind of expertise is not a luxury but a prerequisite for any real progress."}
             </p>
           </Reveal>
           <div className="grid sm:grid-cols-2 gap-6">
