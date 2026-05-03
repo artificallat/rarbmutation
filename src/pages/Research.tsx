@@ -6,10 +6,10 @@ import type { Lang } from "@/content/site";
 import labImage from "@/assets/research-lab.jpg";
 
 const labs = [
-  { n: "Michaud Lab", inst: "CHU Sainte-Justine, Université de Montréal", lead: "Jacques Michaud, MD PhD", focus: { en: "Clinical patient data, mouse phenotyping", de: "Klinische Patientendaten, Phänotypisierung im Mausmodell" } },
-  { n: "Krezel Lab", inst: "IGBMC Illkirch, France", lead: "Wojciech Krezel, PhD", focus: { en: "Mouse striatum analysis, RAR signalling", de: "Analyse des Striatums (Maus), RAR-Signalwege" } },
-  { n: "Taylor Lab", inst: "University of Basel", lead: "Verdon Taylor, PhD", focus: { en: "iPSC-derived striatal neurons, human disease model", de: "iPSC-abgeleitete Striatum-Neuronen, humanes Krankheitsmodell" } },
-  { n: "Poch Lab", inst: "CNRS Strasbourg", lead: "Olivier Poch, PhD", focus: { en: "FAIRification of data, biomarker identification", de: "FAIRifizierung von Daten, Biomarker-Identifikation" } },
+  { n: "CHU Sainte-Justine", inst: "Université de Montréal, Canada", focus: { en: "Clinical patient data and disease characterisation", de: "Klinische Patientendaten und Krankheitscharakterisierung" } },
+  { n: "IGBMC", inst: "Illkirch, France", focus: { en: "RARβ biology, mouse models, RAR signalling", de: "RARβ-Biologie, Mausmodelle, RAR-Signalwege" } },
+  { n: "AlphaRose RareLabs", inst: "United States", focus: { en: "ASO design and personalised RNA therapeutics", de: "ASO-Design und personalisierte RNA-Therapeutika" } },
+  { n: "N=1 Collaborative", inst: "International", focus: { en: "Methodology and ethics for N-of-1 therapies", de: "Methodik und Ethik für N-of-1-Therapien" } },
 ];
 
 export default function Research({ lang }: { lang: Lang }) {
