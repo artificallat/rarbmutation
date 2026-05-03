@@ -100,6 +100,19 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
         </div>
       </section>
 
+      <section className="container-tight pb-16">
+        <div className="rounded-3xl overflow-hidden border border-border">
+          <img
+            src={communityImage}
+            alt={lang === "de" ? "Hände, die sich gegenseitig stützen – Symbol der MCOPS12-Gemeinschaft" : "Hands supporting each other — symbol of the MCOPS12 community"}
+            className="w-full h-auto object-cover"
+            loading="lazy"
+            width={1920}
+            height={1080}
+          />
+        </div>
+      </section>
+
       {/* Featured board */}
       <section className="container-wide py-16">
         <SectionTitle eyebrow={lang === "de" ? "Vorstand" : "Board"} title={lang === "de" ? "Vorstandsmitglieder" : "Board Members"} />
