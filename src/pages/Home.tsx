@@ -4,7 +4,7 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink } from "lucide-reac
 import { t, partners, donationGoal, socials, type Lang } from "@/content/site";
 import { Placeholder, ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { Reveal, Counter } from "@/components/site/Reveal";
-import heroFamily from "@/assets/family-mountains.jpg";
+import heroFamily from "@/assets/family-mountains-wide.jpg";
 import heroPlayground from "@/assets/reinhard-simon-playground.jpg";
 import heroGuitar from "@/assets/edith-simon-guitar.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
@@ -78,26 +78,20 @@ export default function Home({ lang }: { lang: Lang }) {
           >
             <div
               key={`zoom-${i}-${i === slide ? slide : "off"}`}
-              className={`absolute inset-0 ${i === slide ? "animate-slow-zoom" : ""} ${
-                i === 0 ? "sm:left-[18%] lg:left-[22%]" : ""
-              }`}
+              className={`absolute inset-0 ${i === slide ? "animate-slow-zoom" : ""}`}
             >
               <img
                 src={heroImages[i % heroImages.length]}
                 alt={`Simon & family — slide ${i + 1}`}
                 className={`absolute inset-0 h-full w-full object-cover ${
                   i === 0
-                    ? "object-[center_65%] sm:object-[center_40%]"
+                    ? "object-[center_65%] sm:object-[center_25%]"
                     : i === 1
                       ? "object-[center_40%] sm:object-center"
-                      : "object-center"
+                      : "object-[center_30%] sm:object-[75%_30%] lg:object-[80%_30%]"
                 }`}
               />
             </div>
-            {/* On desktop, fill the area to the left of the shifted image with a navy block so background isn't empty */}
-            {i === 0 && (
-              <div className="hidden sm:block absolute inset-y-0 left-0 sm:w-[18%] lg:w-[22%] bg-navy-deep" />
-            )}
             <div
               className="absolute inset-0"
               style={{
