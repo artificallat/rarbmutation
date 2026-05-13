@@ -191,7 +191,7 @@ export const t = {
       ourStory: "Our Story", researchAndDrugDevelopment: "Research & Drug Development",
       vereinsorgane: "Vereinsorgane", scientificAdvisoryBoard: "Scientific Advisory Board",
       gene: "Gene", disease: "Disease",
-      ourStoryFull: "Our Story / Vereinsgründung",
+      ourStoryFull: "Our Story / Foundation",
       fundedRD: "Funded R&D Programs",
       sophiaProgram: "A Cure for Sophia and Friends",
       siennaProgram: "A Cure for Sienna",
