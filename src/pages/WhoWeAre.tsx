@@ -51,7 +51,8 @@ const board = [
             de: "Aus Hagenberg. Bringt ihre Erfahrung als Buchhalterin in einem Bauunternehmen ein. Kindheitsfreundin von Simons Mama. Liebt Gärtnern und das Backen von Brot." },
     linkedin: "https://www.linkedin.com/in/edith-rockenschaub-8272b1231/" },
   { name: "Katri Rouvali", role: { en: "Secretary", de: "Schriftführerin" },
-    bio: { en: "Bio to be added.", de: "Biografie folgt." } },
+    bio: { en: "Katri is a Finnish expatriate based in Salzburg, Austria. Her international career in drug development brought her to the same company as Reinhard, forming a lifelong friendship with the Pell family. She has over 20 years of experience in pharmaceutical product development, having worked as a scientist, project manager, and leader, with specialization in parenteral drug products for both small molecules and biologics. Driven by a passion for turning seemingly impossible challenges into achievable outcomes, she supports Cure MCOPS12. Outside of her professional work, Katri enjoys sports especially alpine skiing, participating in international sports event management, and knitting at home—often while following winter sports or motorsport on television. Despite living abroad, she remains deeply connected to her Finnish roots, which continue to shape her values, resilience, and outlook on life.",
+            de: "Katri ist eine finnische Auswanderin und lebt in Salzburg, Österreich. Ihre internationale Karriere in der Wirkstoffentwicklung führte sie in dasselbe Unternehmen wie Reinhard und begründete eine lebenslange Freundschaft mit der Familie Pell. Sie verfügt über mehr als 20 Jahre Erfahrung in der pharmazeutischen Produktentwicklung – als Wissenschaftlerin, Projektmanagerin und Führungskraft, mit Spezialisierung auf parenterale Arzneiformen für niedermolekulare Wirkstoffe und Biologika. Angetrieben von der Leidenschaft, scheinbar Unmögliches möglich zu machen, unterstützt sie Cure MCOPS12. Privat liebt Katri den Sport, insbesondere alpines Skifahren, engagiert sich im internationalen Sportevent-Management und strickt zu Hause – oft während sie Wintersport oder Motorsport im Fernsehen verfolgt. Trotz ihres Lebens im Ausland bleibt sie ihren finnischen Wurzeln tief verbunden, die ihre Werte, Widerstandskraft und Lebenseinstellung weiterhin prägen." } },
 ];
 
 const volunteers = [
@@ -97,19 +98,6 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
               ? "Unsere Mission ist es, Bewusstsein und Mittel zu schaffen, um wissenschaftliche Forschung und Wirkstoffentwicklung zu unterstützen – mit dem Ziel, eine Therapie für MCOPS12-Patient:innen zu ermöglichen."
               : "Our mission is to raise awareness and funding to support scientific research and drug development that will ultimately result in a cure for MCOPS12 patients."}
           </p>
-        </div>
-      </section>
-
-      <section className="container-tight pb-16">
-        <div className="rounded-3xl overflow-hidden border border-border">
-          <img
-            src={communityImage}
-            alt={lang === "de" ? "Hände, die sich gegenseitig stützen – Symbol der MCOPS12-Gemeinschaft" : "Hands supporting each other — symbol of the MCOPS12 community"}
-            className="w-full h-auto object-cover"
-            loading="lazy"
-            width={1920}
-            height={1080}
-          />
         </div>
       </section>
 
