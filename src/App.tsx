@@ -28,6 +28,7 @@ import RaiseAwareness from "@/pages/RaiseAwareness";
 import Imprint from "@/pages/Imprint";
 import Privacy from "@/pages/Privacy";
 import NotFound from "./pages/NotFound.tsx";
+import type { Lang } from "@/content/site";
 
 const queryClient = new QueryClient();
 
