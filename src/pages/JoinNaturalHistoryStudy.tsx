@@ -2,6 +2,7 @@ import { ClipboardList, Activity, Users, Mail, FileText } from "lucide-react";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
+import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
 import type { Lang } from "@/content/site";
 
 export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
