@@ -21,10 +21,13 @@ import HowToGetInvolved from "@/pages/HowToGetInvolved";
 import FundedRDPrograms from "@/pages/FundedRDPrograms";
 import DrugRepurposing from "@/pages/DrugRepurposing";
 import AsoTherapy from "@/pages/AsoTherapy";
+import OurStory from "@/pages/OurStory";
+import JoinNaturalHistoryStudy from "@/pages/JoinNaturalHistoryStudy";
+import NaturalHistoryStudy from "@/pages/NaturalHistoryStudy";
+import RaiseAwareness from "@/pages/RaiseAwareness";
 import Imprint from "@/pages/Imprint";
 import Privacy from "@/pages/Privacy";
 import NotFound from "./pages/NotFound.tsx";
-import type { Lang } from "@/content/site";
 
 const queryClient = new QueryClient();
 
