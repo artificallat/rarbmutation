@@ -91,19 +91,29 @@ export default function Navbar({ lang }: { lang: Lang }) {
             className="lg:hidden mt-2 rounded-2xl p-4 space-y-1 shadow-[var(--shadow-card)]"
             style={{ backgroundColor: "hsl(var(--navy))", color: "#ffffff" }}
           >
-            {mobileItems.map(l => (
-              <Link
-                key={l.to}
-                to={l.to}
-                onClick={() => setOpen(false)}
-                className={cn(
-                  "flex items-center min-h-[48px] px-4 py-3 rounded-lg text-base font-medium",
-                  isActive(l.to) ? "text-amber" : "text-white"
-                )}
-              >
-                {l.label}
-              </Link>
-            ))}
+            <Link to={`${p}/`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-3 rounded-lg text-base font-medium", isActive(`${p}/`) ? "text-amber" : "text-white")}>{tr.nav.home}</Link>
+
+            <div className="px-4 py-1 mt-2 text-xs font-semibold uppercase tracking-wider opacity-50">{tr.nav.about}</div>
+            <Link to={`${p}/who-we-are`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/who-we-are`) ? "text-amber" : "text-white")}>{tr.nav.whoWeAre}</Link>
+            <Link to={`${p}/what-is-mcops12`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/what-is-mcops12`) ? "text-amber" : "text-white")}>{tr.nav.whatIs}</Link>
+
+            <div className="px-4 py-1 mt-2 text-xs font-semibold uppercase tracking-wider opacity-50">{tr.nav.achievements}</div>
+            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.ourStory}</Link>
+            <Link to={`${p}/research`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/research`) ? "text-amber" : "text-white")}>{tr.nav.researchAndDrugDevelopment}</Link>
+            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.asoTherapy}</Link>
+
+            <div className="px-4 py-1 mt-2 text-xs font-semibold uppercase tracking-wider opacity-50">{tr.nav.families}</div>
+            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.newlyDiagnosed}</Link>
+            <Link to={`${p}/natural-history`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/natural-history`) ? "text-amber" : "text-white")}>{tr.nav.joinNaturalHistory}</Link>
+            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.raiseAwareness}</Link>
+            <Link to={`${p}/meet-our-kids`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/meet-our-kids`) ? "text-amber" : "text-white")}>{tr.nav.kids}</Link>
+
+            <div className="px-4 py-1 mt-2 text-xs font-semibold uppercase tracking-wider opacity-50">{tr.nav.professionals}</div>
+            <Link to={`${p}/research`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/research`) ? "text-amber" : "text-white")}>{tr.nav.research}</Link>
+            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.drugRepurposing}</Link>
+            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.asoTherapy}</Link>
+            <Link to={`${p}/natural-history`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/natural-history`) ? "text-amber" : "text-white")}>{tr.nav.naturalHistory}</Link>
+
             <Link
               to={otherPath}
               onClick={() => setOpen(false)}
