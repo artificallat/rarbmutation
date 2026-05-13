@@ -2,6 +2,7 @@ import { Mail, Database, Microscope, ClipboardList, ShieldCheck, FileSearch } fr
 import { SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
+import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
 import { socials, type Lang } from "@/content/site";
 
 export default function NaturalHistory({ lang }: { lang: Lang }) {
@@ -115,6 +116,27 @@ export default function NaturalHistory({ lang }: { lang: Lang }) {
             </a>
           </div>
         </Reveal>
+      </section>
+
+      <section className="bg-muted/40 py-20">
+        <div className="container-wide">
+          <SectionTitle
+            eyebrow={de ? "Einbettung" : "How it fits in"}
+            title={de ? "Das Register als Fundament der Therapieentwicklung" : "The registry as the foundation of therapy development"}
+          />
+          <div className="space-y-5 text-lg leading-relaxed text-foreground/80 mb-10">
+            <Reveal>
+              <p>
+                {de
+                  ? "Die Natural History Study liefert die klinische Vergleichsbasis, ohne die kein neuer Wirkstoff zugelassen werden kann. Sie greift direkt in den Entwicklungs-Workflow der allelspezifischen ASO-Therapie ein — von der ersten Mutationsanalyse bis zur Bewertung des Behandlungserfolgs in der späteren klinischen Studie."
+                  : "The natural history study provides the clinical baseline that no new therapy can be approved without. It plugs directly into the development workflow of the allele-specific ASO therapy — from the first mutation analysis all the way to assessing treatment effect in the eventual clinical trial."}
+              </p>
+            </Reveal>
+          </div>
+          <Reveal delay={120}>
+            <AsoWorkflowFigure lang={lang} />
+          </Reveal>
+        </div>
       </section>
     </>
   );
