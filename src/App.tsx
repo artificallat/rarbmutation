@@ -26,6 +26,10 @@ import JoinNaturalHistoryStudy from "@/pages/JoinNaturalHistoryStudy";
 import NaturalHistoryStudy from "@/pages/NaturalHistoryStudy";
 import RaiseAwareness from "@/pages/RaiseAwareness";
 import NewlyDiagnosed from "@/pages/NewlyDiagnosed";
+import RarbGene from "@/pages/RarbGene";
+import Mcops12Disease from "@/pages/Mcops12Disease";
+import SophiaAndFriends from "@/pages/SophiaAndFriends";
+import CureForSienna from "@/pages/CureForSienna";
 import Imprint from "@/pages/Imprint";
 import Privacy from "@/pages/Privacy";
 import NotFound from "./pages/NotFound.tsx";
@@ -38,6 +42,8 @@ const pages = (lang: Lang) => (
     <Route index element={<Home lang={lang} />} />
     <Route path="who-we-are" element={<WhoWeAre lang={lang} />} />
     <Route path="what-is-mcops12" element={<WhatIs lang={lang} />} />
+    <Route path="rarb-gene" element={<RarbGene lang={lang} />} />
+    <Route path="mcops12-disease" element={<Mcops12Disease lang={lang} />} />
     <Route path="meet-our-kids" element={<MeetOurKids lang={lang} />} />
     <Route path="achievements" element={<Achievements lang={lang} />} />
     <Route path="research" element={<Research lang={lang} />} />
@@ -51,6 +57,8 @@ const pages = (lang: Lang) => (
     <Route path="plain-language-mcops12" element={<PlainLanguageMcops12 lang={lang} />} />
     <Route path="how-to-get-involved" element={<HowToGetInvolved lang={lang} />} />
     <Route path="funded-rd-programs" element={<FundedRDPrograms lang={lang} />} />
+    <Route path="a-cure-for-sophia-and-friends" element={<SophiaAndFriends lang={lang} />} />
+    <Route path="a-cure-for-sienna" element={<CureForSienna lang={lang} />} />
     <Route path="drug-repurposing" element={<DrugRepurposing lang={lang} />} />
     <Route path="aso-therapy" element={<AsoTherapy lang={lang} />} />
     <Route path="our-story" element={<OurStory lang={lang} />} />
