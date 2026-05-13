@@ -20,6 +20,7 @@ import PlainLanguageMcops12 from "@/pages/PlainLanguageMcops12";
 import HowToGetInvolved from "@/pages/HowToGetInvolved";
 import FundedRDPrograms from "@/pages/FundedRDPrograms";
 import DrugRepurposing from "@/pages/DrugRepurposing";
+import AsoTherapy from "@/pages/AsoTherapy";
 import Imprint from "@/pages/Imprint";
 import Privacy from "@/pages/Privacy";
 import NotFound from "./pages/NotFound.tsx";
@@ -46,6 +47,7 @@ const pages = (lang: Lang) => (
     <Route path="how-to-get-involved" element={<HowToGetInvolved lang={lang} />} />
     <Route path="funded-rd-programs" element={<FundedRDPrograms lang={lang} />} />
     <Route path="drug-repurposing" element={<DrugRepurposing lang={lang} />} />
+    <Route path="aso-therapy" element={<AsoTherapy lang={lang} />} />
     <Route path="imprint" element={<Imprint lang={lang} />} />
     <Route path="privacy" element={<Privacy lang={lang} />} />
   </>
