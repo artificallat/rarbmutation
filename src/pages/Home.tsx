@@ -98,13 +98,14 @@ export default function Home({ lang }: { lang: Lang }) {
               <img
                 src={heroImages[i % heroImages.length]}
                 alt={`Simon & family — slide ${i + 1}`}
-                className={`absolute inset-0 h-full w-full object-cover ${
-                  i === 1
-                    ? "object-[70%_bottom] sm:object-[center_bottom]"
-                    : i === 0
-                    ? "object-[75%_20%] sm:object-[70%_25%]"
-                    : "object-center"
-                }`}
+                className="absolute inset-0 h-full w-full object-contain object-center bg-navy-deep"
+              />
+              {/* blurred fill behind contained image to avoid empty bars */}
+              <img
+                src={heroImages[i % heroImages.length]}
+                alt=""
+                aria-hidden
+                className="absolute inset-0 h-full w-full object-cover scale-110 blur-2xl opacity-60 -z-10"
               />
             </div>
             <div
