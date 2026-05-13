@@ -28,9 +28,22 @@ export default function Navbar({ lang }: { lang: Lang }) {
     return pathname.replace(/^\/de/, "") || "/";
   })();
 
-  const linkCls = ({ isActive }: { isActive: boolean }) =>
-    cn("text-sm font-medium transition-colors hover:text-navy",
-      isActive ? "text-navy" : "text-foreground/70");
+  const isActive = (path: string) => {
+    const current = pathname.replace(/^\/de/, "") || "/";
+    const target = path.replace(/^\/de/, "") || "/";
+    return current === target;
+  };
+
+  const mobileItems = [
+    { to: `${p}/`, label: tr.nav.home },
+    { to: `${p}/who-we-are`, label: tr.nav.whoWeAre },
+    { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
+    { to: `${p}/achievements`, label: tr.nav.achievements },
+    { to: `${p}/meet-our-kids`, label: tr.nav.kids },
+    { to: `${p}/research`, label: tr.nav.research },
+    { to: `${p}/natural-history`, label: tr.nav.naturalHistory },
+    { to: `${p}/news`, label: tr.nav.news },
+  ];
 
   return (
     <header className={cn("sticky top-0 z-40 transition-all", scrolled ? "py-2" : "py-0")}>
@@ -51,11 +64,17 @@ export default function Navbar({ lang }: { lang: Lang }) {
               { to: `${p}/who-we-are`, label: tr.nav.whoWeAre },
               { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
             ]} />
-            <NavLink to={`${p}/meet-our-kids`} className={({isActive}) => cn("px-3 py-2 rounded-full text-sm font-medium hover:bg-muted/60", isActive && "text-navy")}>{tr.nav.kids}</NavLink>
-            <Dropdown label={tr.nav.ourWork} items={[
-              { to: `${p}/achievements`, label: tr.nav.achievements },
-              { to: `${p}/network`, label: tr.nav.network },
+            <NavLink to={`${p}/achievements`} className={({isActive}) => cn("px-3 py-2 rounded-full text-sm font-medium hover:bg-muted/60", isActive && "text-navy")}>{tr.nav.achievements}</NavLink>
+            <Dropdown label={tr.nav.families} items={[
+              { to: "#", label: tr.nav.newlyDiagnosed },
+              { to: `${p}/natural-history`, label: tr.nav.joinNaturalHistory },
+              { to: "#", label: tr.nav.raiseAwareness },
+              { to: `${p}/meet-our-kids`, label: tr.nav.kids },
+            ]} />
+            <Dropdown label={tr.nav.professionals} items={[
               { to: `${p}/research`, label: tr.nav.research },
+              { to: "#", label: tr.nav.drugRepurposing },
+              { to: "#", label: tr.nav.asoTherapy },
               { to: `${p}/natural-history`, label: tr.nav.naturalHistory },
             ]} />
             <NavLink to={`${p}/news`} className={({isActive}) => cn("px-3 py-2 rounded-full text-sm font-medium hover:bg-muted/60", isActive && "text-navy")}>{tr.nav.news}</NavLink>
@@ -79,23 +98,15 @@ export default function Navbar({ lang }: { lang: Lang }) {
             className="lg:hidden mt-2 rounded-2xl p-4 space-y-1 shadow-[var(--shadow-card)]"
             style={{ backgroundColor: "hsl(var(--navy))", color: "#ffffff" }}
           >
-            {[
-              { to: `${p}/`, label: tr.nav.home },
-              { to: `${p}/who-we-are`, label: tr.nav.whoWeAre },
-              { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
-              { to: `${p}/meet-our-kids`, label: tr.nav.kids },
-              { to: `${p}/achievements`, label: tr.nav.achievements },
-              { to: `${p}/network`, label: tr.nav.network },
-              { to: `${p}/research`, label: tr.nav.research },
-              { to: `${p}/natural-history`, label: tr.nav.naturalHistory },
-              { to: `${p}/news`, label: tr.nav.news },
-            ].map(l => (
+            {mobileItems.map(l => (
               <Link
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="flex items-center min-h-[48px] px-4 py-3 rounded-lg text-base font-medium"
-                style={{ color: "#ffffff" }}
+                className={cn(
+                  "flex items-center min-h-[48px] px-4 py-3 rounded-lg text-base font-medium",
+                  isActive(l.to) ? "text-amber" : "text-white"
+                )}
               >
                 {l.label}
               </Link>
@@ -132,7 +143,7 @@ function Dropdown({ label, items }: { label: string; items: { to: string; label:
       <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
         <div className="min-w-[260px] bg-background rounded-2xl border border-border shadow-[var(--shadow-card)] p-2">
           {items.map(i => (
-            <Link key={i.to} to={i.to} className="block px-3 py-2 rounded-xl text-sm hover:bg-muted/70">{i.label}</Link>
+            <Link key={i.label} to={i.to} className="block px-3 py-2 rounded-xl text-sm hover:bg-muted/70">{i.label}</Link>
           ))}
         </div>
       </div>
