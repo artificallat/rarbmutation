@@ -1,11 +1,13 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ChevronDown, Globe, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronRight, Globe, Menu, X } from "lucide-react";
 import { t, type Lang } from "@/content/site";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
 
 function prefix(lang: Lang) { return lang === "de" ? "/de" : ""; }
+
+type NavItem = { to: string; label: string; children?: NavItem[] };
 
 export default function Navbar({ lang }: { lang: Lang }) {
   const tr = t[lang];
@@ -34,6 +36,39 @@ export default function Navbar({ lang }: { lang: Lang }) {
     return current === target;
   };
 
+  const aboutItems: NavItem[] = [
+    { to: `${p}/who-we-are`, label: tr.nav.whoWeAre, children: [
+      { to: `${p}/who-we-are#vereinsorgane`, label: tr.nav.vereinsorgane },
+      { to: `${p}/who-we-are#scientific-advisory-board`, label: tr.nav.scientificAdvisoryBoard },
+    ]},
+    { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs, children: [
+      { to: `${p}/what-is-mcops12#gene`, label: tr.nav.gene },
+      { to: `${p}/what-is-mcops12#disease`, label: tr.nav.disease },
+    ]},
+  ];
+  const achievementsItems: NavItem[] = [
+    { to: "#", label: tr.nav.ourStoryFull },
+    { to: "#", label: tr.nav.fundedRD, children: [
+      { to: "https://www.acureforsophiaandfriends.com/", label: tr.nav.sophiaProgram },
+      { to: "https://www.facebook.com/acureforsienna/", label: tr.nav.siennaProgram },
+    ]},
+    { to: "#", label: tr.nav.asoTherapy },
+  ];
+  const familiesItems: NavItem[] = [
+    { to: "#", label: tr.nav.plainLanguage, children: [
+      { to: "#", label: tr.nav.descriptionMcops12 },
+    ]},
+    { to: "#", label: tr.nav.howToGetInvolved },
+    { to: `${p}/natural-history`, label: tr.nav.joinNaturalHistory },
+    { to: "#", label: tr.nav.raiseAwareness },
+    { to: `${p}/meet-our-kids`, label: tr.nav.kids },
+  ];
+  const professionalsItems: NavItem[] = [
+    { to: `${p}/research`, label: tr.nav.research },
+    { to: `${p}/natural-history`, label: tr.nav.naturalHistory },
+    { to: "#", label: tr.nav.drugRepurposing },
+    { to: "#", label: tr.nav.asoTherapy },
+  ];
 
   return (
     <header className={cn("sticky top-0 z-40 transition-all", scrolled ? "py-2" : "py-0")}>
@@ -50,27 +85,10 @@ export default function Navbar({ lang }: { lang: Lang }) {
 
           <div className="hidden lg:flex items-center gap-1">
             <NavLink to={`${p}/`} end className={({isActive}) => cn("px-3 py-2 rounded-full text-sm font-medium hover:bg-muted/60", isActive && "text-navy")}>{tr.nav.home}</NavLink>
-            <Dropdown label={tr.nav.about} items={[
-              { to: `${p}/who-we-are`, label: tr.nav.whoWeAre },
-              { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
-            ]} />
-            <Dropdown label={tr.nav.achievements} items={[
-              { to: "#", label: tr.nav.ourStory },
-              { to: `${p}/research`, label: tr.nav.researchAndDrugDevelopment },
-              { to: "#", label: tr.nav.asoTherapy },
-            ]} />
-            <Dropdown label={tr.nav.families} items={[
-              { to: "#", label: tr.nav.newlyDiagnosed },
-              { to: `${p}/natural-history`, label: tr.nav.joinNaturalHistory },
-              { to: "#", label: tr.nav.raiseAwareness },
-              { to: `${p}/meet-our-kids`, label: tr.nav.kids },
-            ]} />
-            <Dropdown label={tr.nav.professionals} items={[
-              { to: `${p}/research`, label: tr.nav.research },
-              { to: "#", label: tr.nav.drugRepurposing },
-              { to: "#", label: tr.nav.asoTherapy },
-              { to: `${p}/natural-history`, label: tr.nav.naturalHistory },
-            ]} />
+            <Dropdown label={tr.nav.about} items={aboutItems} />
+            <Dropdown label={tr.nav.achievements} items={achievementsItems} />
+            <Dropdown label={tr.nav.families} items={familiesItems} />
+            <Dropdown label={tr.nav.professionals} items={professionalsItems} />
           </div>
 
           <div className="flex items-center gap-2">
@@ -93,26 +111,10 @@ export default function Navbar({ lang }: { lang: Lang }) {
           >
             <Link to={`${p}/`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-3 rounded-lg text-base font-medium", isActive(`${p}/`) ? "text-amber" : "text-white")}>{tr.nav.home}</Link>
 
-            <div className="px-4 py-1 mt-2 text-xs font-semibold uppercase tracking-wider opacity-50">{tr.nav.about}</div>
-            <Link to={`${p}/who-we-are`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/who-we-are`) ? "text-amber" : "text-white")}>{tr.nav.whoWeAre}</Link>
-            <Link to={`${p}/what-is-mcops12`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/what-is-mcops12`) ? "text-amber" : "text-white")}>{tr.nav.whatIs}</Link>
-
-            <div className="px-4 py-1 mt-2 text-xs font-semibold uppercase tracking-wider opacity-50">{tr.nav.achievements}</div>
-            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.ourStory}</Link>
-            <Link to={`${p}/research`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/research`) ? "text-amber" : "text-white")}>{tr.nav.researchAndDrugDevelopment}</Link>
-            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.asoTherapy}</Link>
-
-            <div className="px-4 py-1 mt-2 text-xs font-semibold uppercase tracking-wider opacity-50">{tr.nav.families}</div>
-            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.newlyDiagnosed}</Link>
-            <Link to={`${p}/natural-history`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/natural-history`) ? "text-amber" : "text-white")}>{tr.nav.joinNaturalHistory}</Link>
-            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.raiseAwareness}</Link>
-            <Link to={`${p}/meet-our-kids`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/meet-our-kids`) ? "text-amber" : "text-white")}>{tr.nav.kids}</Link>
-
-            <div className="px-4 py-1 mt-2 text-xs font-semibold uppercase tracking-wider opacity-50">{tr.nav.professionals}</div>
-            <Link to={`${p}/research`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/research`) ? "text-amber" : "text-white")}>{tr.nav.research}</Link>
-            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.drugRepurposing}</Link>
-            <Link to="#" onClick={() => setOpen(false)} className="flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium text-white">{tr.nav.asoTherapy}</Link>
-            <Link to={`${p}/natural-history`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(`${p}/natural-history`) ? "text-amber" : "text-white")}>{tr.nav.naturalHistory}</Link>
+            <MobileGroup label={tr.nav.about} items={aboutItems} onNavigate={() => setOpen(false)} isActive={isActive} />
+            <MobileGroup label={tr.nav.achievements} items={achievementsItems} onNavigate={() => setOpen(false)} isActive={isActive} />
+            <MobileGroup label={tr.nav.families} items={familiesItems} onNavigate={() => setOpen(false)} isActive={isActive} />
+            <MobileGroup label={tr.nav.professionals} items={professionalsItems} onNavigate={() => setOpen(false)} isActive={isActive} />
 
             <Link
               to={otherPath}
@@ -137,7 +139,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
   );
 }
 
-function Dropdown({ label, items }: { label: string; items: { to: string; label: string }[] }) {
+function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
   return (
     <div className="relative group">
       <button className="px-3 py-2 rounded-full text-sm font-medium hover:bg-muted/60 inline-flex items-center gap-1">
@@ -146,10 +148,54 @@ function Dropdown({ label, items }: { label: string; items: { to: string; label:
       <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
         <div className="min-w-[260px] bg-background rounded-2xl border border-border shadow-[var(--shadow-card)] p-2">
           {items.map(i => (
-            <Link key={i.label} to={i.to} className="block px-3 py-2 rounded-xl text-sm hover:bg-muted/70">{i.label}</Link>
+            <DropdownItem key={i.label} item={i} />
           ))}
         </div>
       </div>
     </div>
+  );
+}
+
+function DropdownItem({ item }: { item: NavItem }) {
+  if (!item.children?.length) {
+    return (
+      <Link to={item.to} className="block px-3 py-2 rounded-xl text-sm hover:bg-muted/70">{item.label}</Link>
+    );
+  }
+  return (
+    <div className="relative group/sub">
+      <Link
+        to={item.to}
+        className="flex items-center justify-between gap-2 px-3 py-2 rounded-xl text-sm hover:bg-muted/70"
+      >
+        {item.label}
+        <ChevronRight className="w-3.5 h-3.5 opacity-60" />
+      </Link>
+      <div className="absolute left-full top-0 pl-2 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all">
+        <div className="min-w-[240px] bg-background rounded-2xl border border-border shadow-[var(--shadow-card)] p-2">
+          {item.children.map(c => (
+            <Link key={c.label} to={c.to} className="block px-3 py-2 rounded-xl text-sm hover:bg-muted/70">{c.label}</Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MobileGroup({ label, items, onNavigate, isActive }: {
+  label: string; items: NavItem[]; onNavigate: () => void; isActive: (p: string) => boolean;
+}) {
+  return (
+    <>
+      <div className="px-4 py-1 mt-2 text-xs font-semibold uppercase tracking-wider opacity-50">{label}</div>
+      {items.map(i => (
+        <div key={i.label}>
+          <Link to={i.to} onClick={onNavigate} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(i.to) ? "text-amber" : "text-white")}>{i.label}</Link>
+          {i.children?.map(c => (
+            <Link key={c.label} to={c.to} onClick={onNavigate} className="flex items-center min-h-[40px] pl-8 pr-4 py-1 rounded-lg text-sm font-medium text-white/80">↳ {c.label}</Link>
+          ))}
+        </div>
+      ))}
+    </>
   );
 }
