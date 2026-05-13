@@ -100,7 +100,7 @@ export default function Home({ lang }: { lang: Lang }) {
                 alt={`Simon & family — slide ${i + 1}`}
                 className={`absolute inset-0 h-full w-full object-cover ${
                   i === 1
-                    ? "object-[70%_center] sm:object-[center_25%]"
+                    ? "object-[70%_top] sm:object-[center_top]"
                     : i === 0
                     ? "object-[75%_20%] sm:object-[70%_25%]"
                     : "object-center"
@@ -114,7 +114,7 @@ export default function Home({ lang }: { lang: Lang }) {
                   "linear-gradient(180deg, hsl(var(--navy-deep)/0.5) 0%, hsl(var(--navy-deep)/0.3) 40%, hsl(var(--navy-deep)/0.85) 100%)",
               }}
             />
-            <div className="relative h-full container-wide flex items-end pb-24 sm:pb-32">
+            <div className={`relative h-full container-wide flex items-end ${i === 0 ? "pb-16 sm:pb-20" : "pb-24 sm:pb-32"}`}>
               {i === slide && (
                 <div className="max-w-3xl text-white fade-in">
                   <h1 className="font-display font-bold leading-[1.05] text-balance text-4xl sm:text-6xl md:text-7xl">
