@@ -34,16 +34,6 @@ export default function Navbar({ lang }: { lang: Lang }) {
     return current === target;
   };
 
-  const mobileItems = [
-    { to: `${p}/`, label: tr.nav.home },
-    { to: `${p}/who-we-are`, label: tr.nav.whoWeAre },
-    { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
-    { to: `${p}/achievements`, label: tr.nav.achievements },
-    { to: `${p}/meet-our-kids`, label: tr.nav.kids },
-    { to: `${p}/research`, label: tr.nav.research },
-    { to: `${p}/natural-history`, label: tr.nav.naturalHistory },
-    { to: `${p}/news`, label: tr.nav.news },
-  ];
 
   return (
     <header className={cn("sticky top-0 z-40 transition-all", scrolled ? "py-2" : "py-0")}>
@@ -64,7 +54,11 @@ export default function Navbar({ lang }: { lang: Lang }) {
               { to: `${p}/who-we-are`, label: tr.nav.whoWeAre },
               { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
             ]} />
-            <NavLink to={`${p}/achievements`} className={({isActive}) => cn("px-3 py-2 rounded-full text-sm font-medium hover:bg-muted/60", isActive && "text-navy")}>{tr.nav.achievements}</NavLink>
+            <Dropdown label={tr.nav.achievements} items={[
+              { to: "#", label: tr.nav.ourStory },
+              { to: `${p}/research`, label: tr.nav.researchAndDrugDevelopment },
+              { to: "#", label: tr.nav.asoTherapy },
+            ]} />
             <Dropdown label={tr.nav.families} items={[
               { to: "#", label: tr.nav.newlyDiagnosed },
               { to: `${p}/natural-history`, label: tr.nav.joinNaturalHistory },
@@ -77,7 +71,6 @@ export default function Navbar({ lang }: { lang: Lang }) {
               { to: "#", label: tr.nav.asoTherapy },
               { to: `${p}/natural-history`, label: tr.nav.naturalHistory },
             ]} />
-            <NavLink to={`${p}/news`} className={({isActive}) => cn("px-3 py-2 rounded-full text-sm font-medium hover:bg-muted/60", isActive && "text-navy")}>{tr.nav.news}</NavLink>
           </div>
 
           <div className="flex items-center gap-2">
