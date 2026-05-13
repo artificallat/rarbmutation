@@ -1,6 +1,7 @@
-import { ExternalLink, Heart, Landmark, CreditCard } from "lucide-react";
+import { ExternalLink, Heart, Landmark, CreditCard, FileSignature } from "lucide-react";
 import { ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
+import { DonationConfirmationForm } from "@/components/site/DonationConfirmationForm";
 import { donationGoal, socials, type Lang } from "@/content/site";
 
 export default function Donate({ lang }: { lang: Lang }) {
@@ -51,6 +52,24 @@ export default function Donate({ lang }: { lang: Lang }) {
             </a>
           </div>
         </div>
+      </section>
+
+      <section className="container-tight pb-16">
+        <SectionTitle
+          eyebrow={de ? "Spendenbestätigung" : "Tax confirmation"}
+          title={de ? "Spendenbestätigung anfordern" : "Request Your Donation Confirmation"}
+        />
+        <div className="-mt-2 mb-8 flex gap-4 items-start text-foreground/85 leading-relaxed">
+          <div className="w-11 h-11 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0">
+            <FileSignature className="w-5 h-5" />
+          </div>
+          <p>
+            {de
+              ? "Als steuerlich absetzbare Organisation in Österreich (FW-22429) sind wir verpflichtet, Spenderdaten ans Finanzamt zu übermitteln. Bitte füllen Sie dieses Formular nach Ihrer Spende aus, damit wir Ihre Spendenbestätigung ausstellen können."
+              : "As a registered tax-deductible organization in Austria (FW-22429), we are required to submit donor information to the Austrian tax authorities. Please fill out this form after your donation so we can process your official donation confirmation (Spendenbestätigung)."}
+          </p>
+        </div>
+        <DonationConfirmationForm lang={lang} />
       </section>
 
       <section className="container-tight pb-20">
