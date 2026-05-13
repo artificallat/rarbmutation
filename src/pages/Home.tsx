@@ -99,9 +99,7 @@ export default function Home({ lang }: { lang: Lang }) {
                 className={`absolute inset-0 h-full w-full object-cover ${
                   i === 0
                     ? "object-[70%_center] sm:object-[center_25%]"
-                    : i === 1
-                      ? "object-[center_40%] sm:object-center"
-                      : "object-center"
+                    : "object-[center_40%] sm:object-center"
                 }`}
               />
             </div>
@@ -129,14 +127,6 @@ export default function Home({ lang }: { lang: Lang }) {
                         className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition-colors shadow-[var(--shadow-amber)]"
                       >
                         {tr.cta.donateNow} <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    )}
-                    {i === 2 && (
-                      <Link
-                        to={`${p}/who-we-are`}
-                        className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-white text-navy font-semibold hover:bg-white/90 transition"
-                      >
-                        {tr.cta.learnMore} <ArrowRight className="w-4 h-4" />
                       </Link>
                     )}
                   </div>
