@@ -6,7 +6,6 @@ import { Placeholder, ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import heroFamily from "@/assets/family-mountains.jpg";
 import heroPlayground from "@/assets/reinhard-simon-playground.jpg";
-import heroGuitar from "@/assets/edith-simon-guitar.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
 import newsLights from "@/assets/simon-fiber-lights.jpg";
 import newsNeujahr from "@/assets/simon-neujahr-2026.jpg";
