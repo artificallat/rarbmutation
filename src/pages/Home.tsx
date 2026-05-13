@@ -53,7 +53,7 @@ const homeNews = [
   },
 ];
 
-const heroImages = [heroFamily, heroPlayground, heroGuitar];
+const heroImages = [heroFamily, heroPlayground];
 
 export default function Home({ lang }: { lang: Lang }) {
   const tr = t[lang];
