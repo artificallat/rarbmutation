@@ -188,6 +188,7 @@ export const t = {
       newlyDiagnosed: "Newly Diagnosed", joinNaturalHistory: "Join the Natural History Study",
       raiseAwareness: "Raise Awareness", drugRepurposing: "Drug Repurposing",
       asoTherapy: "ASO Therapy",
+      ourStory: "Our Story", researchAndDrugDevelopment: "Research & Drug Development",
     },
     cta: { donate: "Donate", donateNow: "Donate Now", learnMore: "Learn More",
       gofundme: "GoFundMe Campaign", viewAll: "View All News", readMore: "Read More",
