@@ -181,7 +181,7 @@ export const t = {
       home: "Home",
       about: "About", whoWeAre: "Who We Are", whatIs: "What is MCOPS12?",
       kids: "Meet Our Kids", ourWork: "Our Work",
-      achievements: "Achievements", research: "Research & Drug Development",
+      achievements: "Achievements", research: "Research",
       naturalHistory: "Natural History Study", network: "The Network",
       news: "News", donate: "Donate",
       families: "Families", professionals: "Professionals",
@@ -196,7 +196,6 @@ export const t = {
       slides: [
         { title: "How far would you go if someone you loved had a rare disease —", sub: "your husband, your wife…", sub2: "…your child?" },
         { title: "A Personalized Medicine for Simon.", sub: "Pioneering RNA Therapies for MCOPS12." },
-        { title: "Together, we are closer than ever.", sub: "Join the families, scientists and supporters working for a cure." },
       ],
       storyTitle: "Our Story",
       storyP1: "Soon after Edith and Reinhard Pell's son Simon was born in 2017, they knew something was wrong. Simon had microphthalmia and did not meet any developmental milestones in his first months of life. In a desperate search for a cause, Simon underwent genetic testing — and was diagnosed with a mutation in the RARB gene causing a disease called Syndromic Microphthalmia 12 (MCOPS12). A severe neurodevelopmental disorder so rare that only 20 patients at the time were known worldwide.",
@@ -229,7 +228,7 @@ export const t = {
       home: "Startseite",
       about: "Über uns", whoWeAre: "Wer wir sind", whatIs: "Was ist MCOPS12?",
       kids: "Unsere Kinder", ourWork: "Unsere Arbeit",
-      achievements: "Erfolge", research: "Forschung & Wirkstoffentwicklung",
+      achievements: "Erfolge", research: "Forschung",
       naturalHistory: "Natural History Study", network: "Das Netzwerk",
       news: "Aktuelles", donate: "Spenden",
       families: "Familien", professionals: "Fachkreise",
@@ -244,7 +243,6 @@ export const t = {
       slides: [
         { title: "Wie weit würdest du gehen –", sub: "für deinen Mann, deine Frau…", sub2: "…dein Kind?" },
         { title: "Eine personalisierte Therapie für Simon.", sub: "Wegweisende RNA-Therapien für MCOPS12." },
-        { title: "Gemeinsam sind wir näher dran als je zuvor.", sub: "Schließen Sie sich den Familien, Forschenden und Unterstützern an." },
       ],
       storyTitle: "Unsere Geschichte",
       storyP1: "Kurz nach der Geburt ihres Sohnes Simon im Jahr 2017 wussten Edith und Reinhard Pell, dass etwas nicht stimmte. Simon hatte Mikrophthalmie und erreichte in seinen ersten Lebensmonaten keine Entwicklungsmeilensteine. Eine genetische Untersuchung brachte schließlich die Diagnose: eine Mutation im RARB-Gen – Syndromale Mikrophthalmie 12 (MCOPS12). Eine schwere neurologische Entwicklungsstörung, von der damals weltweit nur rund 20 Patient:innen bekannt waren.",
