@@ -1,4 +1,6 @@
-import { Dna, Target, FlaskConical, Building2 } from "lucide-react";
+import { FlaskConical, Building2 } from "lucide-react";
+import asoFigure1 from "@/assets/research/aso-figure-1.png";
+import asoFigure2 from "@/assets/research/aso-figure-2.png";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
@@ -74,17 +76,17 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* Figure 1 placeholder */}
+      {/* Figure 1 */}
       <section className="container-tight py-12">
         <Reveal>
-          <figure className="rounded-3xl border-2 border-dashed border-border bg-card p-12 text-center">
-            <Dna className="w-12 h-12 text-teal mx-auto mb-4" />
-            <p className="font-display text-lg font-bold text-navy">{de ? "Abbildung 1" : "Figure 1"}</p>
-            <p className="text-foreground/70 mt-2 max-w-2xl mx-auto">
+          <figure className="rounded-3xl overflow-hidden border border-border bg-card">
+            <img src={asoFigure1} alt={de ? "Abbildung 1 — Mechanismus eines ASO für allelspezifischen mRNA-Knockdown" : "Figure 1 — Mechanism of an ASO for allele-specific mRNA knockdown"} className="w-full h-auto" loading="lazy" />
+            <figcaption className="text-sm text-foreground/70 p-4 border-t border-border">
+              <strong className="text-navy">{de ? "Abbildung 1:" : "Figure 1:"}</strong>{" "}
               {de
-                ? "Mechanismus eines Antisense-Oligonukleotids (ASO) für allelspezifischen mRNA-Knockdown — saubere Bilddatei folgt."
-                : "Mechanism of an antisense oligonucleotide (ASO) for allele-specific mRNA knockdown — clean image to follow."}
-            </p>
+                ? "Mechanismus eines Antisense-Oligonukleotids (ASO) für allelspezifischen mRNA-Knockdown."
+                : "Mechanism of an antisense oligonucleotide (ASO) for allele-specific mRNA knockdown."}
+            </figcaption>
           </figure>
         </Reveal>
       </section>
@@ -182,17 +184,17 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* Figure 2 placeholder */}
+      {/* Figure 2 */}
       <section className="container-tight py-12">
         <Reveal>
-          <figure className="rounded-3xl border-2 border-dashed border-border bg-card p-12 text-center">
-            <Target className="w-12 h-12 text-teal mx-auto mb-4" />
-            <p className="font-display text-lg font-bold text-navy">{de ? "Abbildung 2" : "Figure 2"}</p>
-            <p className="text-foreground/70 mt-2 max-w-2xl mx-auto">
+          <figure className="rounded-3xl overflow-hidden border border-border bg-card">
+            <img src={asoFigure2} alt={de ? "Abbildung 2 — Entwicklungs-Workflow der allelspezifischen ASO-Therapie" : "Figure 2 — Allele-specific ASO therapy development workflow"} className="w-full h-auto" loading="lazy" />
+            <figcaption className="text-sm text-foreground/70 p-4 border-t border-border">
+              <strong className="text-navy">{de ? "Abbildung 2:" : "Figure 2:"}</strong>{" "}
               {de
-                ? "Entwicklungs-Workflow der allelspezifischen ASO-Therapie — personalisiert für Simon, übertragbar auf viele MCOPS12-Patient:innen. Saubere Bilddatei folgt."
-                : "Allele-specific ASO development workflow — personalized for Simon, transferable to many MCOPS12 patients. Clean image to follow."}
-            </p>
+                ? "Entwicklungs-Workflow der allelspezifischen ASO-Therapie — personalisiert für Simon, übertragbar auf viele MCOPS12-Patient:innen."
+                : "Allele-specific ASO development workflow — personalized for Simon, transferable to many MCOPS12 patients."}
+            </figcaption>
           </figure>
         </Reveal>
       </section>
