@@ -102,7 +102,7 @@ export default function Home({ lang }: { lang: Lang }) {
                   i === 1
                     ? "object-[70%_center] sm:object-[center_25%]"
                     : i === 0
-                    ? "object-[center_30%]"
+                    ? "object-[75%_20%] sm:object-[70%_25%]"
                     : "object-center"
                 }`}
               />
