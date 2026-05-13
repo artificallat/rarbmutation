@@ -1,6 +1,7 @@
-import { ExternalLink, Heart, Landmark, CreditCard } from "lucide-react";
+import { ExternalLink, Heart, Landmark, CreditCard, FileSignature } from "lucide-react";
 import { ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
+import { DonationConfirmationForm } from "@/components/site/DonationConfirmationForm";
 import { donationGoal, socials, type Lang } from "@/content/site";
 
 export default function Donate({ lang }: { lang: Lang }) {
