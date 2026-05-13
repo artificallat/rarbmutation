@@ -14,6 +14,12 @@ import Network from "@/pages/Network";
 import NaturalHistory from "@/pages/NaturalHistory";
 import Donate from "@/pages/Donate";
 import News from "@/pages/News";
+import Vereinsorgane from "@/pages/Vereinsorgane";
+import ScientificAdvisoryBoard from "@/pages/ScientificAdvisoryBoard";
+import PlainLanguageMcops12 from "@/pages/PlainLanguageMcops12";
+import HowToGetInvolved from "@/pages/HowToGetInvolved";
+import FundedRDPrograms from "@/pages/FundedRDPrograms";
+import DrugRepurposing from "@/pages/DrugRepurposing";
 import Imprint from "@/pages/Imprint";
 import Privacy from "@/pages/Privacy";
 import NotFound from "./pages/NotFound.tsx";
@@ -33,6 +39,13 @@ const pages = (lang: Lang) => (
     <Route path="natural-history" element={<NaturalHistory lang={lang} />} />
     <Route path="donate" element={<Donate lang={lang} />} />
     <Route path="news" element={<News lang={lang} />} />
+    <Route path="vereinsorgane" element={<Vereinsorgane lang={lang} />} />
+    <Route path="organisation" element={<Vereinsorgane lang={lang} />} />
+    <Route path="scientific-advisory-board" element={<ScientificAdvisoryBoard lang={lang} />} />
+    <Route path="plain-language-mcops12" element={<PlainLanguageMcops12 lang={lang} />} />
+    <Route path="how-to-get-involved" element={<HowToGetInvolved lang={lang} />} />
+    <Route path="funded-rd-programs" element={<FundedRDPrograms lang={lang} />} />
+    <Route path="drug-repurposing" element={<DrugRepurposing lang={lang} />} />
     <Route path="imprint" element={<Imprint lang={lang} />} />
     <Route path="privacy" element={<Privacy lang={lang} />} />
   </>
