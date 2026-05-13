@@ -20,6 +20,7 @@ import PlainLanguageMcops12 from "@/pages/PlainLanguageMcops12";
 import HowToGetInvolved from "@/pages/HowToGetInvolved";
 import FundedRDPrograms from "@/pages/FundedRDPrograms";
 import DrugRepurposing from "@/pages/DrugRepurposing";
+import AsoTherapy from "@/pages/AsoTherapy";
 import Imprint from "@/pages/Imprint";
 import Privacy from "@/pages/Privacy";
 import NotFound from "./pages/NotFound.tsx";
