@@ -238,6 +238,7 @@ export const t = {
       newlyDiagnosed: "Neu diagnostiziert", joinNaturalHistory: "Am Natural History Study teilnehmen",
       raiseAwareness: "Awareness schaffen", drugRepurposing: "Wirkstoff-Neuverwendung",
       asoTherapy: "ASO-Therapie",
+      ourStory: "Unsere Geschichte", researchAndDrugDevelopment: "Forschung & Arzneimittelentwicklung",
     },
     cta: { donate: "Spenden", donateNow: "Jetzt spenden", learnMore: "Mehr erfahren",
       gofundme: "GoFundMe-Kampagne", viewAll: "Alle Beiträge", readMore: "Weiterlesen",
