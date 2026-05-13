@@ -79,6 +79,27 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
         </Reveal>
       </section>
 
+      <section className="bg-muted/40 py-20">
+        <div className="container-wide">
+          <SectionTitle
+            eyebrow={de ? "Einbettung" : "How it fits in"}
+            title={de ? "Vom Register zur Therapie" : "From the registry to a therapy"}
+          />
+          <div className="space-y-5 text-lg leading-relaxed text-foreground/80 mb-10 max-w-3xl">
+            <Reveal>
+              <p>
+                {de
+                  ? "Die Daten der Natural History Study bilden die klinische Vergleichsbasis, ohne die Behörden wie EMA und FDA keine neue Therapie zulassen. Sie speisen direkt den Entwicklungs-Workflow der allelspezifischen ASO-Therapie — von der Mutationsanalyse einzelner Patient:innen bis zur Bewertung des Behandlungseffekts in der späteren klinischen Studie."
+                  : "Data from the natural history study form the clinical baseline without which regulators such as the EMA and FDA cannot approve a new therapy. They feed directly into the allele-specific ASO development workflow — from per-patient mutation analysis to assessing treatment effect in the eventual clinical trial."}
+              </p>
+            </Reveal>
+          </div>
+          <Reveal delay={120}>
+            <AsoWorkflowFigure lang={lang} />
+          </Reveal>
+        </div>
+      </section>
+
       <section className="container-wide pb-20">
         <div className="grid sm:grid-cols-2 gap-6">
           <a
