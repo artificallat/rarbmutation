@@ -25,6 +25,7 @@ import OurStory from "@/pages/OurStory";
 import JoinNaturalHistoryStudy from "@/pages/JoinNaturalHistoryStudy";
 import NaturalHistoryStudy from "@/pages/NaturalHistoryStudy";
 import RaiseAwareness from "@/pages/RaiseAwareness";
+import NewlyDiagnosed from "@/pages/NewlyDiagnosed";
 import Imprint from "@/pages/Imprint";
 import Privacy from "@/pages/Privacy";
 import NotFound from "./pages/NotFound.tsx";
@@ -56,6 +57,7 @@ const pages = (lang: Lang) => (
     <Route path="join-natural-history-study" element={<JoinNaturalHistoryStudy lang={lang} />} />
     <Route path="natural-history-study" element={<NaturalHistoryStudy lang={lang} />} />
     <Route path="raise-awareness" element={<RaiseAwareness lang={lang} />} />
+    <Route path="newly-diagnosed" element={<NewlyDiagnosed lang={lang} />} />
     <Route path="imprint" element={<Imprint lang={lang} />} />
     <Route path="privacy" element={<Privacy lang={lang} />} />
   </>
