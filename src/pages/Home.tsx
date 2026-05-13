@@ -114,15 +114,15 @@ export default function Home({ lang }: { lang: Lang }) {
                   "linear-gradient(180deg, hsl(var(--navy-deep)/0.5) 0%, hsl(var(--navy-deep)/0.3) 40%, hsl(var(--navy-deep)/0.85) 100%)",
               }}
             />
-            <div className="relative h-full container-wide flex items-end pb-24 sm:pb-32">
+            <div className={`relative h-full container-wide flex items-end ${i === 0 ? "pb-10 sm:pb-14" : "pb-24 sm:pb-32"}`}>
               {i === slide && (
                 <div className="max-w-3xl text-white fade-in">
-                  <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold leading-[1.05] text-balance">
+                  <h1 className={`font-display font-bold leading-[1.05] text-balance ${i === 0 ? "text-2xl sm:text-4xl md:text-5xl" : "text-4xl sm:text-6xl md:text-7xl"}`}>
                     {s.title}
                   </h1>
-                  {"sub" in s && s.sub && <p className="mt-4 text-xl sm:text-2xl text-white/90 font-light">{s.sub}</p>}
+                  {"sub" in s && s.sub && <p className={`mt-4 text-white/90 font-light ${i === 0 ? "text-base sm:text-xl" : "text-xl sm:text-2xl"}`}>{s.sub}</p>}
                   {"sub2" in s && (s as any).sub2 && (
-                    <p className="mt-1 text-xl sm:text-2xl text-amber font-medium">{(s as any).sub2}</p>
+                    <p className={`mt-1 text-amber font-medium ${i === 0 ? "text-base sm:text-xl" : "text-xl sm:text-2xl"}`}>{(s as any).sub2}</p>
                   )}
                   <div className="mt-8 flex flex-wrap gap-3">
                     {i === 3 && (
