@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['Rubik', 'system-ui', 'sans-serif'],
+        display: ['Rubik', 'system-ui', 'sans-serif'],
       },
       colors: {
         navy: {
