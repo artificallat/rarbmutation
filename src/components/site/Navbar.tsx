@@ -38,8 +38,8 @@ export default function Navbar({ lang }: { lang: Lang }) {
 
   const aboutItems: NavItem[] = [
     { to: `${p}/who-we-are`, label: tr.nav.whoWeAre, children: [
-      { to: `${p}/who-we-are#vereinsorgane`, label: tr.nav.vereinsorgane },
-      { to: `${p}/who-we-are#scientific-advisory-board`, label: tr.nav.scientificAdvisoryBoard },
+      { to: `${p}/vereinsorgane`, label: tr.nav.vereinsorgane },
+      { to: `${p}/scientific-advisory-board`, label: tr.nav.scientificAdvisoryBoard },
     ]},
     { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs, children: [
       { to: `${p}/what-is-mcops12#gene`, label: tr.nav.gene },
@@ -47,27 +47,27 @@ export default function Navbar({ lang }: { lang: Lang }) {
     ]},
   ];
   const achievementsItems: NavItem[] = [
-    { to: "#", label: tr.nav.ourStoryFull },
-    { to: "#", label: tr.nav.fundedRD, children: [
-      { to: "https://www.acureforsophiaandfriends.com/", label: tr.nav.sophiaProgram },
-      { to: "https://www.facebook.com/acureforsienna/", label: tr.nav.siennaProgram },
+    { to: `${p}/our-story`, label: tr.nav.ourStoryFull },
+    { to: `${p}/funded-rd-programs`, label: tr.nav.fundedRD, children: [
+      { to: `${p}/funded-rd-programs`, label: tr.nav.sophiaProgram },
+      { to: `${p}/funded-rd-programs`, label: tr.nav.siennaProgram },
     ]},
-    { to: "#", label: tr.nav.asoTherapy },
+    { to: `${p}/aso-therapy`, label: tr.nav.asoTherapy },
   ];
   const familiesItems: NavItem[] = [
-    { to: "#", label: tr.nav.plainLanguage, children: [
-      { to: "#", label: tr.nav.descriptionMcops12 },
+    { to: `${p}/plain-language-mcops12`, label: tr.nav.plainLanguage, children: [
+      { to: `${p}/plain-language-mcops12`, label: tr.nav.descriptionMcops12 },
     ]},
-    { to: "#", label: tr.nav.howToGetInvolved },
-    { to: `${p}/natural-history`, label: tr.nav.joinNaturalHistory },
-    { to: "#", label: tr.nav.raiseAwareness },
+    { to: `${p}/how-to-get-involved`, label: tr.nav.howToGetInvolved },
+    { to: `${p}/join-natural-history-study`, label: tr.nav.joinNaturalHistory },
+    { to: `${p}/raise-awareness`, label: tr.nav.raiseAwareness },
     { to: `${p}/meet-our-kids`, label: tr.nav.kids },
   ];
   const professionalsItems: NavItem[] = [
     { to: `${p}/research`, label: tr.nav.research },
-    { to: `${p}/natural-history`, label: tr.nav.naturalHistory },
-    { to: "#", label: tr.nav.drugRepurposing },
-    { to: "#", label: tr.nav.asoTherapy },
+    { to: `${p}/natural-history-study`, label: tr.nav.naturalHistory },
+    { to: `${p}/drug-repurposing`, label: tr.nav.drugRepurposing },
+    { to: `${p}/aso-therapy`, label: tr.nav.asoTherapy },
   ];
 
   return (
