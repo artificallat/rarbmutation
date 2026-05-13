@@ -42,15 +42,15 @@ export default function Navbar({ lang }: { lang: Lang }) {
       { to: `${p}/scientific-advisory-board`, label: tr.nav.scientificAdvisoryBoard },
     ]},
     { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs, children: [
-      { to: `${p}/what-is-mcops12#gene`, label: tr.nav.gene },
-      { to: `${p}/what-is-mcops12#disease`, label: tr.nav.disease },
+      { to: `${p}/rarb-gene`, label: tr.nav.gene },
+      { to: `${p}/mcops12-disease`, label: tr.nav.disease },
     ]},
   ];
   const achievementsItems: NavItem[] = [
     { to: `${p}/our-story`, label: tr.nav.ourStoryFull },
     { to: `${p}/funded-rd-programs`, label: tr.nav.fundedRD, children: [
-      { to: `${p}/funded-rd-programs`, label: tr.nav.sophiaProgram },
-      { to: `${p}/funded-rd-programs`, label: tr.nav.siennaProgram },
+      { to: `${p}/a-cure-for-sophia-and-friends`, label: tr.nav.sophiaProgram },
+      { to: `${p}/a-cure-for-sienna`, label: tr.nav.siennaProgram },
     ]},
     { to: `${p}/aso-therapy`, label: tr.nav.asoTherapy },
   ];
