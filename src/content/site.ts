@@ -195,6 +195,8 @@ export const t = {
     home: {
       slides: [
         { title: "How far would you go if someone you loved had a rare disease —", sub: "your husband, your wife…", sub2: "…your child?" },
+        { title: "as far as possible…" },
+        { title: "…and beyond" },
         { title: "A Personalized Medicine for Simon.", sub: "Pioneering RNA Therapies for MCOPS12." },
       ],
       storyTitle: "Our Story",
@@ -242,6 +244,8 @@ export const t = {
     home: {
       slides: [
         { title: "Wie weit würdest du gehen –", sub: "für deinen Mann, deine Frau…", sub2: "…dein Kind?" },
+        { title: "so weit wie möglich…" },
+        { title: "…und darüber hinaus" },
         { title: "Eine personalisierte Therapie für Simon.", sub: "Wegweisende RNA-Therapien für MCOPS12." },
       ],
       storyTitle: "Unsere Geschichte",
