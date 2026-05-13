@@ -57,7 +57,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
               {de
                 ? "Ein ASO lässt sich so entwerfen, dass es ausschließlich diese fehlerhafte mRNA erkennt. In der Zelle legt es sich daran an wie zwei Hälften eines Reißverschlusses (siehe Abbildung 1, Schritt 2). Ein körpereigenes Enzym namens RNase H1 erkennt diese Paarung und zerlegt die fehlerhafte mRNA — die Bauanleitung für das schädliche Protein wird also entsorgt, bevor es überhaupt entstehen kann. Diesen Mechanismus nennt man "
                 : "An ASO can be designed to recognise only this faulty mRNA. Inside the cell it pairs up with the mRNA like two halves of a zipper (see Figure 1, step 2). A natural enzyme called RNase H1 spots this pair and breaks down the faulty mRNA — so the blueprint for the harmful protein is destroyed before any of it can be built. Scientists call this approach "}
-              <strong>{de ? "„mRNA-Knockdown"" : ""mRNA knockdown""}</strong>.
+              <strong>{de ? "mRNA-Knockdown" : "mRNA knockdown"}</strong>.
             </p>
             <p>
               {de
