@@ -1,9 +1,9 @@
 import { FlaskConical, Building2 } from "lucide-react";
 import asoFigure1 from "@/assets/research/aso-figure-1.png";
-import asoFigure2 from "@/assets/research/aso-figure-2.png";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
+import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
 import type { Lang } from "@/content/site";
 
 export default function AsoTherapy({ lang }: { lang: Lang }) {
@@ -185,17 +185,9 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
       </section>
 
       {/* Figure 2 */}
-      <section className="container-tight py-12">
+      <section className="container-wide py-12">
         <Reveal>
-          <figure className="rounded-3xl overflow-hidden border border-border bg-card">
-            <img src={asoFigure2} alt={de ? "Abbildung 2 — Entwicklungs-Workflow der allelspezifischen ASO-Therapie" : "Figure 2 — Allele-specific ASO therapy development workflow"} className="w-full h-auto" loading="lazy" />
-            <figcaption className="text-sm text-foreground/70 p-4 border-t border-border">
-              <strong className="text-navy">{de ? "Abbildung 2:" : "Figure 2:"}</strong>{" "}
-              {de
-                ? "Entwicklungs-Workflow der allelspezifischen ASO-Therapie — personalisiert für Simon, übertragbar auf viele MCOPS12-Patient:innen."
-                : "Allele-specific ASO development workflow — personalized for Simon, transferable to many MCOPS12 patients."}
-            </figcaption>
-          </figure>
+          <AsoWorkflowFigure lang={lang} />
         </Reveal>
       </section>
 
