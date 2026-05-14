@@ -9,13 +9,13 @@ import heroPlayground from "@/assets/reinhard-simon-playground.jpg";
 import heroHorse from "@/assets/simon-horse-mane.jpg";
 import heroBeyond from "@/assets/simon-and-beyond.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
-import newsLights from "@/assets/simon-fiber-lights.jpg";
-import newsNeujahr from "@/assets/simon-neujahr-2026.jpg";
+import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
+import newsHappyNewYear from "@/assets/news-happy-new-year.jpg";
 import newsWinter from "@/assets/simon-winter-2026.jpg";
 
 const homeNews = [
   {
-    img: newsLights,
+    img: newsRunForRare,
     cat: "Community",
     date: "March 2026",
     en: {
