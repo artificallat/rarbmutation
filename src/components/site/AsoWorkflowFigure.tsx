@@ -118,7 +118,6 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
       : "bg-foreground/40";
 
   const { ref, inView } = useInView<HTMLDivElement>();
-  const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   // Top progress rail (2 of 4 done = 50%)
   const progressPct = 50;
