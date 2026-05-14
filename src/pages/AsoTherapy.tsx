@@ -275,29 +275,30 @@ function WorkflowProgress({ de }: { de: boolean }) {
             return (
               <div
                 key={s.n}
-                className="group relative bg-card border border-border rounded-2xl p-6 h-full hover:border-teal hover:scale-[1.05] hover:shadow-[var(--shadow-card)] hover:z-10 transition-all duration-300 ease-out overflow-hidden"
                 style={{
                   opacity: inView ? 1 : 0,
                   transform: inView ? "translateY(0)" : "translateY(24px)",
-                  transition: `opacity 700ms ease ${i * 150}ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 150}ms, border-color 250ms, box-shadow 250ms, scale 300ms`,
+                  transition: `opacity 700ms ease ${i * 150}ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 150}ms`,
                 }}
               >
-                {/* Top accent bar */}
-                <div
-                  className={`absolute top-0 left-0 right-0 h-1 ${s.done ? "bg-teal" : s.ongoing ? "bg-amber" : "bg-border"} origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}
-                />
-                <div className="flex items-center justify-between mb-4">
-                  <span className="w-11 h-11 rounded-full bg-gradient-to-br from-teal to-amber text-white font-display font-bold flex items-center justify-center shadow-md group-hover:scale-110 group-hover:rotate-3 transition-transform">
-                    {s.n}
-                  </span>
-                  <span className={`inline-flex items-center gap-1.5 text-[11px] uppercase tracking-wider font-semibold rounded-full px-2.5 py-1 ${s.done ? "bg-teal/10 text-teal" : "bg-amber/15 text-amber-deep"}`}>
-                    <StatusIcon className={`w-3 h-3 ${s.ongoing ? "" : ""}`} />
-                    {s.ongoing && <span className="w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />}
-                    {s.done ? (de ? "Abgeschlossen" : "Completed") : s.ongoing ? (de ? "Laufend" : "Ongoing") : (de ? "Geplant" : "Planned")}
-                  </span>
+                <div className="group relative bg-card border border-border rounded-2xl p-6 h-full hover:border-teal hover:scale-[1.05] hover:shadow-[var(--shadow-card)] hover:z-10 transition-all duration-300 ease-out overflow-hidden">
+                  {/* Top accent bar */}
+                  <div
+                    className={`absolute top-0 left-0 right-0 h-1 ${s.done ? "bg-teal" : s.ongoing ? "bg-amber" : "bg-border"} origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}
+                  />
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="w-11 h-11 rounded-full bg-gradient-to-br from-teal to-amber text-white font-display font-bold flex items-center justify-center shadow-md group-hover:rotate-3 transition-transform">
+                      {s.n}
+                    </span>
+                    <span className={`inline-flex items-center gap-1.5 text-[11px] uppercase tracking-wider font-semibold rounded-full px-2.5 py-1 ${s.done ? "bg-teal/10 text-teal" : "bg-amber/15 text-amber-deep"}`}>
+                      <StatusIcon className={`w-3 h-3 ${s.ongoing ? "" : ""}`} />
+                      {s.ongoing && <span className="w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />}
+                      {s.done ? (de ? "Abgeschlossen" : "Completed") : s.ongoing ? (de ? "Laufend" : "Ongoing") : (de ? "Geplant" : "Planned")}
+                    </span>
+                  </div>
+                  <h4 className="font-display text-lg font-bold text-navy">{s.t}</h4>
+                  <p className="text-foreground/75 mt-2 text-sm leading-relaxed">{s.d}</p>
                 </div>
-                <h4 className="font-display text-lg font-bold text-navy">{s.t}</h4>
-                <p className="text-foreground/75 mt-2 text-sm leading-relaxed">{s.d}</p>
               </div>
             );
           })}
