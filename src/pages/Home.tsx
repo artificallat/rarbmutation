@@ -11,9 +11,23 @@ import heroBeyond from "@/assets/simon-and-beyond.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
 import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
 import newsHappyNewYear from "@/assets/news-happy-new-year.jpg";
-import newsWinter from "@/assets/simon-winter-2026.jpg";
+import newsBreakingAso from "@/assets/news-breaking-aso.jpg";
 
 const homeNews = [
+  {
+    img: newsBreakingAso,
+    objectPosition: "center 30%",
+    cat: "Breakthrough",
+    date: "November 2025",
+    en: {
+      t: "BREAKING NEWS: six ASO candidates pass safety testing",
+      e: "Proof-of-concept complete: six allele-specific ASOs silence Simon's mutated RARB while sparing the healthy copy — and all six passed safety in his cell model.",
+    },
+    de: {
+      t: "BREAKING NEWS: sechs ASO-Kandidaten bestehen Sicherheitstests",
+      e: "Proof-of-Concept abgeschlossen: Sechs allelspezifische ASOs legen das mutierte RARB-Gen still und schonen die gesunde Kopie — alle sechs haben die Sicherheitstests in Simons Zellmodell bestanden.",
+    },
+  },
   {
     img: newsRunForRare,
     cat: "Community",
@@ -25,19 +39,6 @@ const homeNews = [
     de: {
       t: "Run for Rare – Run for Simon",
       e: "Unser persönliches Motto beim Rare Diseases Run: Jeder gemeinsam gelaufene Kilometer wird zu Rückenwind für die MCOPS12-Forschung.",
-    },
-  },
-  {
-    img: newsWinter,
-    cat: "Science",
-    date: "March 2026",
-    en: {
-      t: "New RARB-RD preprint: two patient mouse models",
-      e: "Nicolas Zinter (MassGeneral / Harvard) shares a preprint introducing two mouse models carrying patient variants p.R387C and p.L402P — a major step for MCOPS12 research.",
-    },
-    de: {
-      t: "Neues RARB-RD Preprint: zwei Patienten-Mausmodelle",
-      e: "Nicolas Zinter (MassGeneral / Harvard) stellt ein Preprint mit zwei Mausmodellen vor, die die Patientenvarianten p.R387C und p.L402P tragen — ein wichtiger Schritt für die MCOPS12-Forschung.",
     },
   },
   {
@@ -264,24 +265,31 @@ export default function Home({ lang }: { lang: Lang }) {
           <Reveal>
             <SectionTitle eyebrow={lang === "de" ? "Aktuelles" : "Recent"} title={tr.home.newsTitle} />
           </Reveal>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-7">
             {homeNews.map((post, idx) => (
               <Reveal key={idx} delay={idx * 150}>
-                <article className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all duration-200 h-full">
-                  <Placeholder label={`Thumbnail: ${post.cat}`} src={post.img} className="aspect-video !rounded-none" />
-                  <div className="p-6">
+                <article className="group bg-card rounded-3xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] hover:-translate-y-1 hover:border-teal transition-all duration-300 h-full flex flex-col">
+                  <div className="overflow-hidden">
+                    <Placeholder
+                      label={`Thumbnail: ${post.cat}`}
+                      src={post.img}
+                      objectPosition={(post as any).objectPosition || "center"}
+                      className="aspect-[4/3] !rounded-none transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div className="p-6 flex-1 flex flex-col">
                     <p className="text-xs text-teal font-semibold uppercase tracking-wider">
                       {post.cat} · {post.date}
                     </p>
                     <h3 className="font-display text-xl font-bold mt-2">{lang === "de" ? post.de.t : post.en.t}</h3>
-                    <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
+                    <p className="text-sm text-muted-foreground mt-2 line-clamp-3">
                       {lang === "de" ? post.de.e : post.en.e}
                     </p>
                     <Link
                       to={`${p}/news`}
-                      className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal"
+                      className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-teal transition-colors"
                     >
-                      {tr.cta.readMore} <ArrowRight className="w-3.5 h-3.5" />
+                      {tr.cta.readMore} <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </div>
                 </article>
