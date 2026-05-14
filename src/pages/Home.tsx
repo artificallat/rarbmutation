@@ -9,13 +9,13 @@ import heroPlayground from "@/assets/reinhard-simon-playground.jpg";
 import heroHorse from "@/assets/simon-horse-mane.jpg";
 import heroBeyond from "@/assets/simon-and-beyond.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
-import newsLights from "@/assets/simon-fiber-lights.jpg";
-import newsNeujahr from "@/assets/simon-neujahr-2026.jpg";
+import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
+import newsHappyNewYear from "@/assets/news-happy-new-year.jpg";
 import newsWinter from "@/assets/simon-winter-2026.jpg";
 
 const homeNews = [
   {
-    img: newsLights,
+    img: newsRunForRare,
     cat: "Community",
     date: "March 2026",
     en: {
@@ -41,7 +41,7 @@ const homeNews = [
     },
   },
   {
-    img: newsNeujahr,
+    img: newsHappyNewYear,
     cat: "Community",
     date: "January 2026",
     en: {
@@ -100,10 +100,12 @@ export default function Home({ lang }: { lang: Lang }) {
                 alt={`Simon & family — slide ${i + 1}`}
                 className={`absolute inset-0 h-full w-full object-cover ${
                   i === 1
-                    ? "object-[65%_center] sm:object-center"
+                    ? "object-[60%_30%] sm:object-center"
                     : i === 0
-                    ? "object-[75%_20%] sm:object-[70%_25%]"
-                    : "object-center"
+                    ? "object-[60%_20%] sm:object-[70%_25%]"
+                    : i === 2
+                    ? "object-[50%_25%] sm:object-center"
+                    : "object-[50%_20%] sm:object-center"
                 }`}
               />
             </div>
