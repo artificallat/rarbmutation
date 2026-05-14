@@ -7,15 +7,15 @@ import simonNeujahr from "@/assets/simon-neujahr-2026.jpg";
 import simonLights from "@/assets/simon-fiber-lights.jpg";
 
 const posts = [
-  { cat: "Research", date: "March 2026", img: simonLights,
-    en: { t: "ASO toxicity study reaches final phase", e: "Our six lead candidates are now entering the final IND-enabling toxicity assessments — a critical step toward Simon's first dose." },
-    de: { t: "ASO-Toxizitätsstudie in finaler Phase", e: "Unsere sechs Leitkandidaten gehen in die letzten IND-relevanten Sicherheitstests – ein entscheidender Schritt vor Simons erster Dosis." } },
+  { cat: "Community", date: "March 2026", img: simonLights,
+    en: { t: "Run for Rare – Run for Simon", e: "Our personal motto at the Rare Diseases Run: every kilometre run together turns into momentum for MCOPS12 research and a louder voice for Simon and every child living with this ultra-rare disease." },
+    de: { t: "Run for Rare – Run for Simon", e: "Unser persönliches Motto beim Rare Diseases Run: Jeder gemeinsam gelaufene Kilometer wird zu Rückenwind für die MCOPS12-Forschung und zu einer lauteren Stimme für Simon und alle Kinder mit dieser ultra-seltenen Erkrankung." } },
+  { cat: "Science", date: "March 2026", img: simonWinter,
+    en: { t: "New RARB-RD preprint: two patient mouse models", e: "Nicolas Zinter (MassGeneral Hospital / Harvard) shares a preprint introducing two mouse models carrying the patient variants p.R387C and p.L402P. RARB-RD variants were previously classified as gain-of-function or dominant-negative based on in-vitro assays — these new in-vivo models will help clarify what actually happens in the brain." },
+    de: { t: "Neues RARB-RD Preprint: zwei Patienten-Mausmodelle", e: "Nicolas Zinter (MassGeneral / Harvard) stellt ein Preprint mit zwei Mausmodellen vor, die die Patientenvarianten p.R387C und p.L402P tragen. RARB-RD-Varianten wurden bisher anhand von In-vitro-Tests als Gain-of-Function oder dominant-negativ eingestuft — die neuen In-vivo-Modelle helfen zu verstehen, was wirklich im Gehirn passiert." } },
   { cat: "Community", date: "January 2026", img: simonNeujahr,
-    en: { t: "€235,000 milestone reached", e: "Thanks to families, runners, and corporate partners across three continents, we've crossed a major fundraising milestone." },
-    de: { t: "€235.000-Meilenstein erreicht", e: "Dank Familien, Läufer:innen und Unternehmenspartnern auf drei Kontinenten haben wir einen großen Fundraising-Meilenstein erreicht." } },
-  { cat: "Science", date: "November 2025", img: simonWinter,
-    en: { t: "New iPSC striatal neuron model published", e: "The Taylor Lab in Basel has published a new disease model that will accelerate drug screening for MCOPS12." },
-    de: { t: "Neues iPSC-Striatum-Modell publiziert", e: "Das Taylor-Labor in Basel hat ein neues Krankheitsmodell publiziert, das das Wirkstoff-Screening für MCOPS12 beschleunigt." } },
+    en: { t: "Happy New Year from Cure MCOPS12", e: "Stepping into 2026 with heartfelt gratitude to every supporter, family, runner and partner who stood with us in 2025 — and with a clear focus on bringing Simon's ASO therapy closer to the clinic." },
+    de: { t: "Frohes neues Jahr von Cure MCOPS12", e: "Wir starten ins Jahr 2026 mit großer Dankbarkeit an alle Unterstützer:innen, Familien, Läufer:innen und Partner, die 2025 mit uns gegangen sind — und mit klarem Blick darauf, Simons ASO-Therapie näher an die Klinik zu bringen." } },
 ];
 
 export default function News({ lang }: { lang: Lang }) {
