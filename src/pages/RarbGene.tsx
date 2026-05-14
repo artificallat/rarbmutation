@@ -47,7 +47,7 @@ export default function RarbGene({ lang }: { lang: Lang }) {
           <SectionTitle eyebrow={de ? "Mehr erfahren" : "Learn more"} title={de ? "Genetische Referenzen" : "Genetic references"} />
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { label: "NIH National Library of Medicine", href: "https://ghr.nlm.nih.gov/gene/RARB#conditions" },
+              { label: "NIH National Library of Medicine", href: "https://medlineplus.gov/genetics/gene/rarb/" },
               { label: "GeneCards: RARB", href: "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RARB" },
             ].map(ref => (
               <a key={ref.href} href={ref.href} target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-5 flex items-center justify-between hover:border-teal transition">
