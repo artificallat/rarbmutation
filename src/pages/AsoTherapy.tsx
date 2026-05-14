@@ -275,11 +275,11 @@ function WorkflowProgress({ de }: { de: boolean }) {
             return (
               <div
                 key={s.n}
-                className="group relative bg-card border border-border rounded-2xl p-6 h-full hover:border-teal hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all duration-300 overflow-hidden"
+                className="group relative bg-card border border-border rounded-2xl p-6 h-full hover:border-teal hover:scale-[1.05] hover:shadow-[var(--shadow-card)] hover:z-10 transition-all duration-300 ease-out overflow-hidden"
                 style={{
                   opacity: inView ? 1 : 0,
                   transform: inView ? "translateY(0)" : "translateY(24px)",
-                  transition: `opacity 700ms ease ${i * 150}ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 150}ms, border-color 250ms, box-shadow 250ms`,
+                  transition: `opacity 700ms ease ${i * 150}ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 150}ms, border-color 250ms, box-shadow 250ms, scale 300ms`,
                 }}
               >
                 {/* Top accent bar */}

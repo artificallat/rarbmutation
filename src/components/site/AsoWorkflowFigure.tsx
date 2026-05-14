@@ -163,11 +163,11 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
           return (
             <div
               key={c.title}
-              className="group relative p-6 flex flex-col transition-colors hover:bg-muted/30"
+              className="group relative p-6 flex flex-col transition-all duration-300 ease-out hover:bg-muted/30 hover:scale-[1.04] hover:shadow-[var(--shadow-card)] hover:z-20"
               style={{
                 opacity: inView ? 1 : 0,
                 transform: inView ? "translateY(0)" : "translateY(24px)",
-                transition: `opacity 700ms ease ${i * 180}ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 180}ms`,
+                transition: `opacity 700ms ease ${i * 180}ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 180}ms, background-color 300ms, box-shadow 300ms, scale 300ms`,
               }}
             >
               {/* Step number badge */}
