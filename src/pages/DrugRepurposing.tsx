@@ -1,7 +1,7 @@
 import { Mouse, FlaskConical, TestTube2, Pill, BrainCircuit, ScanSearch, CheckCircle2, Clock } from "lucide-react";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
-import { Reveal } from "@/components/site/Reveal";
+import { Reveal, Counter } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
 
 export default function DrugRepurposing({ lang }: { lang: Lang }) {
@@ -150,22 +150,23 @@ export default function DrugRepurposing({ lang }: { lang: Lang }) {
                 : "Known safety profiles shorten the path to treatment — critical for ultra-rare diseases."}
             </h3>
             <div className="mt-6 grid sm:grid-cols-3 gap-4">
-              {(de
-                ? [
-                    { n: "5", l: "Wirkstoffe in der Maus" },
-                    { n: "~10.000", l: "Verbindungen im Screening" },
-                    { n: "2", l: "parallele Programme" },
-                  ]
-                : [
-                    { n: "5", l: "drugs tested in mouse" },
-                    { n: "~10,000", l: "compounds in screening" },
-                    { n: "2", l: "parallel programmes" },
-                  ]
-              ).map(s => (
-                <div key={s.l} className="text-center">
-                  <p className="font-display text-4xl font-bold text-amber">{s.n}</p>
-                  <p className="text-sm text-white/85 mt-1">{s.l}</p>
-                </div>
+              {[
+                { to: 5, prefix: "", l: de ? "Wirkstoffe in der Maus" : "drugs tested in mouse", duration: 1400 },
+                { to: 10000, prefix: "~", l: de ? "Verbindungen im Screening" : "compounds in screening", duration: 2400 },
+                { to: 2, prefix: "", l: de ? "parallele Programme" : "parallel programmes", duration: 1200 },
+              ].map((s, i) => (
+                <Reveal key={s.l} delay={i * 120}>
+                  <div className="text-center">
+                    <Counter
+                      to={s.to}
+                      prefix={s.prefix}
+                      duration={s.duration}
+                      format={(n) => n.toLocaleString(de ? "de-AT" : "en-US")}
+                      className="font-display text-4xl font-bold text-amber"
+                    />
+                    <p className="text-sm text-white/85 mt-1">{s.l}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>

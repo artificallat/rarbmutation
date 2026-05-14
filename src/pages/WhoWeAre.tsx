@@ -212,11 +212,32 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
 
 export function PageHero({ eyebrow, title, sub }: { eyebrow?: string; title: string; sub?: string }) {
   return (
-    <section className="bg-gradient-to-b from-muted/40 to-background pt-16 pb-12">
-      <div className="container-tight">
-        {eyebrow && <p className="text-xs uppercase tracking-[0.2em] text-teal font-semibold mb-3">{eyebrow}</p>}
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-navy text-balance">{title}</h1>
-        {sub && <p className="mt-6 text-lg md:text-xl text-foreground/75 max-w-3xl leading-relaxed">{sub}</p>}
+    <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 to-background pt-16 pb-12">
+      <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-teal/10 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-amber/10 blur-3xl" />
+      <div className="container-tight relative">
+        {eyebrow && (
+          <p
+            className="text-xs uppercase tracking-[0.2em] text-teal font-semibold mb-3 opacity-0 animate-fade-in"
+            style={{ animationDelay: "0ms", animationFillMode: "forwards" }}
+          >
+            {eyebrow}
+          </p>
+        )}
+        <h1
+          className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-navy text-balance opacity-0 animate-fade-in"
+          style={{ animationDelay: "120ms", animationFillMode: "forwards" }}
+        >
+          {title}
+        </h1>
+        {sub && (
+          <p
+            className="mt-6 text-lg md:text-xl text-foreground/75 max-w-3xl leading-relaxed opacity-0 animate-fade-in"
+            style={{ animationDelay: "260ms", animationFillMode: "forwards" }}
+          >
+            {sub}
+          </p>
+        )}
       </div>
     </section>
   );
