@@ -163,51 +163,52 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
           return (
             <div
               key={c.title}
-              className="group relative p-6 flex flex-col transition-all duration-300 ease-out hover:bg-muted/30 hover:scale-[1.04] hover:shadow-[var(--shadow-card)] hover:z-20"
               style={{
                 opacity: inView ? 1 : 0,
                 transform: inView ? "translateY(0)" : "translateY(24px)",
-                transition: `opacity 700ms ease ${i * 180}ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 180}ms, background-color 300ms, box-shadow 300ms, scale 300ms`,
+                transition: `opacity 700ms ease ${i * 180}ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 180}ms`,
               }}
             >
-              {/* Step number badge */}
-              <div className="absolute top-4 right-4 text-[10px] font-display font-bold text-teal/60 tracking-widest">
-                0{i + 1}
-              </div>
+              <div className="group relative p-6 flex flex-col h-full transition-all duration-300 ease-out hover:bg-muted/30 hover:scale-[1.05] hover:shadow-[var(--shadow-card)] hover:z-20 hover:rounded-2xl">
+                {/* Step number badge */}
+                <div className="absolute top-4 right-4 text-[10px] font-display font-bold text-teal/60 tracking-widest">
+                  0{i + 1}
+                </div>
 
-              <h4 className="font-display text-base font-bold text-teal text-center leading-snug min-h-[3rem] pr-6">
-                {c.title}
-              </h4>
+                <h4 className="font-display text-base font-bold text-teal text-center leading-snug min-h-[3rem] pr-6">
+                  {c.title}
+                </h4>
 
-              <div className="my-5 flex justify-center">
-                <div className="relative">
-                  <div
-                    className="absolute inset-0 rounded-2xl bg-teal/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    aria-hidden
-                  />
-                  <div className="relative w-16 h-16 rounded-2xl bg-teal/10 text-teal flex items-center justify-center transition-all duration-300 group-hover:bg-teal group-hover:text-white group-hover:scale-110 group-hover:rotate-3">
-                    <Icon className="w-8 h-8" strokeWidth={1.6} />
+                <div className="my-5 flex justify-center">
+                  <div className="relative">
+                    <div
+                      className="absolute inset-0 rounded-2xl bg-teal/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      aria-hidden
+                    />
+                    <div className="relative w-16 h-16 rounded-2xl bg-teal/10 text-teal flex items-center justify-center transition-all duration-300 group-hover:bg-teal group-hover:text-white group-hover:rotate-3">
+                      <Icon className="w-8 h-8" strokeWidth={1.6} />
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="space-y-4 text-sm text-foreground/80 leading-relaxed flex-1">
-                {c.blocks.map((b, bi) => (
-                  <div
-                    key={bi}
-                    className="border-l-2 border-transparent group-hover:border-teal/40 pl-3 transition-colors duration-300"
-                  >
-                    <p className="font-semibold text-navy">{b.heading}</p>
-                    <p>{b.body}</p>
-                  </div>
-                ))}
-              </div>
+                <div className="space-y-4 text-sm text-foreground/80 leading-relaxed flex-1">
+                  {c.blocks.map((b, bi) => (
+                    <div
+                      key={bi}
+                      className="border-l-2 border-transparent group-hover:border-teal/40 pl-3 transition-colors duration-300"
+                    >
+                      <p className="font-semibold text-navy">{b.heading}</p>
+                      <p>{b.body}</p>
+                    </div>
+                  ))}
+                </div>
 
-              <div
-                className={`mt-5 self-center inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold rounded-full px-3 py-1 border ${statusClass(c.status)}`}
-              >
-                <span className={`w-1.5 h-1.5 rounded-full ${dotClass(c.status)}`} />
-                {c.statusLabel}
+                <div
+                  className={`mt-5 self-center inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold rounded-full px-3 py-1 border ${statusClass(c.status)}`}
+                >
+                  <span className={`w-1.5 h-1.5 rounded-full ${dotClass(c.status)}`} />
+                  {c.statusLabel}
+                </div>
               </div>
             </div>
           );
