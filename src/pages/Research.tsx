@@ -3,7 +3,7 @@ import { SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
-import labImage from "@/assets/research-lab.jpg";
+
 
 const labs = [
   { n: "CHU Sainte-Justine", inst: "Université de Montréal, Canada", focus: { en: "Clinical patient data and disease characterisation", de: "Klinische Patientendaten und Krankheitscharakterisierung" } },
