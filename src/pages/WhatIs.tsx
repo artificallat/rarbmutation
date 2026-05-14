@@ -10,7 +10,7 @@ export default function WhatIs({ lang }: { lang: Lang }) {
 
   const refs = [
     { label: "Srour et al. 2016 — Human Mutation", href: "https://onlinelibrary.wiley.com/doi/10.1002/humu.23004" },
-    { label: "Srour et al. 2013 — original description", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/" },
+    { label: "Srour et al. 2013 — original description", href: "https://pubmed.ncbi.nlm.nih.gov/24075189/" },
     { label: "Caron et al. 2023 — systematic review (52 patients)", href: "https://www.gimjournal.org/article/S1098-3600(23)00869-9/fulltext" },
     { label: "Trieschmann et al. 2023 — clinical features", href: "https://www.sciencedirect.com/science/article/abs/pii/S1769721223001088?via%3Dihub" },
   ];
