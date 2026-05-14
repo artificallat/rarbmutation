@@ -41,7 +41,7 @@ const homeNews = [
     },
   },
   {
-    img: newsNeujahr,
+    img: newsHappyNewYear,
     cat: "Community",
     date: "January 2026",
     en: {
@@ -100,10 +100,12 @@ export default function Home({ lang }: { lang: Lang }) {
                 alt={`Simon & family — slide ${i + 1}`}
                 className={`absolute inset-0 h-full w-full object-cover ${
                   i === 1
-                    ? "object-[65%_center] sm:object-center"
+                    ? "object-[60%_30%] sm:object-center"
                     : i === 0
-                    ? "object-[75%_20%] sm:object-[70%_25%]"
-                    : "object-center"
+                    ? "object-[60%_20%] sm:object-[70%_25%]"
+                    : i === 2
+                    ? "object-[50%_25%] sm:object-center"
+                    : "object-[50%_20%] sm:object-center"
                 }`}
               />
             </div>
