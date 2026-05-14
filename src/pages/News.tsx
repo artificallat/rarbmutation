@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { Placeholder } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
