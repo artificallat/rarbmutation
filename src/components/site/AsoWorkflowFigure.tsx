@@ -123,9 +123,9 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
   const progressPct = 50;
 
   return (
-    <figure ref={ref} className="rounded-3xl border border-border bg-card overflow-hidden shadow-sm">
+    <figure ref={ref} className="rounded-3xl border border-border bg-card shadow-sm">
       {/* Animated top progress rail */}
-      <div className="relative h-2 w-full bg-muted">
+      <div className="relative h-2 w-full bg-muted rounded-t-3xl overflow-hidden">
         <div
           className="absolute inset-y-0 left-0 bg-gradient-to-r from-teal via-teal to-amber"
           style={{
