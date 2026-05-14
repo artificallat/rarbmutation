@@ -32,6 +32,31 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
           : "International patient registry and prospective longitudinal study characterising disease course in MCOPS12 — coordinated at CHU Sainte-Justine, Université de Montréal."}
       />
 
+      {/* Stat strip */}
+      <section className="container-wide pt-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { icon: Users2, to: 52, suffix: "", label: de ? "dokumentierte Fälle weltweit" : "documented cases worldwide" },
+            { icon: CalendarRange, to: 5, suffix: "+", label: de ? "Jahre Beobachtungshorizont" : "year observation horizon" },
+            { icon: Layers, to: 4, suffix: "", label: de ? "Endpunkt-Domänen" : "endpoint domains" },
+            { icon: FlaskConical, to: 3, suffix: "", label: de ? "Partner-Stiftungen" : "partner foundations" },
+          ].map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <Reveal key={s.label} delay={i * 100}>
+                <div className="bg-card border border-border rounded-2xl p-5 text-center hover:-translate-y-1 hover:border-teal hover:shadow-[var(--shadow-card)] transition-all duration-300 group">
+                  <div className="w-11 h-11 mx-auto rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3 group-hover:bg-teal group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <Counter to={s.to} suffix={s.suffix} duration={1600} className="font-display text-3xl font-bold text-navy" />
+                  <p className="text-xs text-foreground/70 mt-1 leading-snug">{s.label}</p>
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
+      </section>
+
       <section className="container-tight pb-12 pt-12">
         <SectionTitle eyebrow={de ? "Hintergrund" : "Background"} title={de ? "Regulatorische Notwendigkeit" : "Regulatory rationale"} />
         <div className="space-y-5 text-lg leading-relaxed text-foreground/85">
@@ -56,24 +81,28 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
         <div className="container-tight">
           <SectionTitle eyebrow={de ? "Studiendesign" : "Study design"} title={de ? "Endpunkte & Datensätze" : "Endpoints & datasets"} />
           <div className="grid sm:grid-cols-2 gap-5">
-            {dataset.map((c, i) => (
-              <Reveal key={c.t} delay={i * 100}>
-                <div className="bg-card border border-border rounded-2xl p-7 h-full hover:-translate-y-1 hover:shadow-xl hover:border-teal transition-all duration-300 group">
-                  <div className="w-14 h-14 rounded-2xl bg-teal/10 text-teal flex items-center justify-center mb-4 group-hover:bg-teal group-hover:text-white transition-colors">
-                    <c.i className="w-7 h-7" />
+            {dataset.map((c, i) => {
+              const accents = ["bg-teal", "bg-[hsl(220_70%_55%)]", "bg-amber", "bg-[hsl(340_70%_60%)]"];
+              return (
+                <Reveal key={c.t} delay={i * 100}>
+                  <div className="relative bg-card border border-border rounded-2xl p-7 h-full hover:-translate-y-1 hover:shadow-[var(--shadow-card)] hover:border-teal transition-all duration-300 group overflow-hidden">
+                    <div className={`absolute top-0 left-0 right-0 h-1 ${accents[i % accents.length]}`} />
+                    <div className="w-14 h-14 rounded-2xl bg-teal/10 text-teal flex items-center justify-center mb-4 group-hover:bg-teal group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                      <c.i className="w-7 h-7" />
+                    </div>
+                    <h4 className="font-display text-xl font-bold text-navy mb-2">{c.t}</h4>
+                    <p className="text-foreground/75 leading-relaxed">{c.d}</p>
                   </div>
-                  <h4 className="font-display text-xl font-bold text-navy mb-2">{c.t}</h4>
-                  <p className="text-foreground/75 leading-relaxed">{c.d}</p>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
 
       <section className="container-tight py-20">
         <SectionTitle eyebrow={de ? "Einschluss" : "Eligibility"} title={de ? "Wer kann eingeschlossen werden?" : "Who can be enrolled?"} />
-        <ul className="space-y-4 text-lg leading-relaxed text-foreground/85">
+        <div className="grid md:grid-cols-2 gap-5">
           {(de
             ? [
                 "Genetisch bestätigte pathogene oder wahrscheinlich pathogene Variante im RARB-Gen (ACMG-Kriterien).",
@@ -88,14 +117,14 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
                 "Existing clinical records may be contributed retrospectively; prospective data collection is annual.",
               ]
           ).map((s, i) => (
-            <Reveal key={i} delay={i * 80}>
-              <li className="flex gap-4 bg-card border border-border rounded-2xl p-5">
-                <span className="font-display text-2xl font-bold text-amber leading-none w-8 shrink-0">{i + 1}</span>
-                <span>{s}</span>
-              </li>
+            <Reveal key={i} delay={i * 90}>
+              <div className="flex gap-4 bg-card border border-border rounded-2xl p-5 hover:border-teal hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all duration-300 group h-full">
+                <CheckCircle2 className="w-6 h-6 text-teal shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                <span className="text-foreground/85 leading-relaxed">{s}</span>
+              </div>
             </Reveal>
           ))}
-        </ul>
+        </div>
       </section>
 
       <section className="bg-muted/40 py-20">
