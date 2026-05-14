@@ -151,60 +151,8 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
       </section>
 
       {/* Workflow steps */}
-      <section className="bg-muted/40 py-16">
-        <div className="container-wide">
-          <SectionTitle eyebrow={de ? "Arbeitsablauf" : "Workflow"} title={de ? "Vom Sequenzierergebnis zur klinischen Anwendung" : "From sequencing result to clinical use"} />
-          <div className="grid md:grid-cols-4 gap-5">
-            {[
-              {
-                n: "01",
-                t: de ? "Zielidentifikation & ASO-Design" : "Target identification & ASO design",
-                d: de
-                  ? "Long-Read-Sequenzierung der RARB-Allele, Suche nach mutationsspezifischen Markern, in-silico-Bewertung möglicher Off-Target-Effekte."
-                  : "Long-read sequencing of the RARB alleles, identification of mutation-specific markers, in-silico screening for off-target effects.",
-                done: true,
-              },
-              {
-                n: "02",
-                t: de ? "Wirksamkeit & Sicherheit im Zellmodell" : "Efficacy & safety in Simon's cell model",
-                d: de
-                  ? "Über 110 ASOs wurden auf allelspezifischen Knockdown sowie auf Immuntoxizität, Zytotoxizität und Off-Target-Effekte getestet."
-                  : "More than 110 ASOs were screened for allele-specific knockdown as well as immunotoxicity, cytotoxicity and off-target effects.",
-                done: true,
-              },
-              {
-                n: "03",
-                t: de ? "In-vivo-Sicherheitsstudien" : "In-vivo safety studies",
-                d: de
-                  ? "Erste Studie: 6 ASO-Kandidaten auf akute Toxizität und Bioverteilung. Folgestudie: chronische Toxizität, Pharmakokinetik und Maximaldosis für die Klinik. Laufend, 2. Hälfte 2026."
-                  : "First study: 6 ASO candidates assessed for acute toxicity and biodistribution. Follow-up: chronic toxicity, pharmacokinetics and maximum tolerated dose for the clinic. Ongoing, second half of 2026.",
-                done: false,
-              },
-              {
-                n: "04",
-                t: de ? "Klinische Studie & erwartete Wirkung" : "Clinical trial & expected outcomes",
-                d: de
-                  ? "Named-Patient-Use-Programm in Österreich, intrathekale Verabreichung. Erwartet werden eine sichere, gut verträgliche Behandlung, verbesserte Hirnfunktion durch Knockdown des mutierten RARB, weniger Bewegungsstörungen und bessere kognitive Fähigkeiten."
-                  : "Named-patient-use programme in Austria, intrathecal administration. Expected: safe and well-tolerated treatment, improved brain function via knockdown of mutant RARB, reduced movement disorders and improved cognitive skills.",
-                done: false,
-              },
-            ].map((s, i) => (
-              <Reveal key={s.n} delay={i * 100}>
-                <div className="bg-card border border-border rounded-2xl p-6 h-full hover:border-teal hover:shadow-xl transition-all">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="font-display text-2xl font-bold text-amber">{s.n}</span>
-                    <span className={`text-xs uppercase tracking-wider font-semibold rounded-full px-3 py-1 ${s.done ? "bg-teal/10 text-teal" : "bg-amber/15 text-amber"}`}>
-                      {s.done ? (de ? "Abgeschlossen" : "Completed") : (de ? "Laufend" : "Ongoing")}
-                    </span>
-                  </div>
-                  <h4 className="font-display text-lg font-bold text-navy">{s.t}</h4>
-                  <p className="text-foreground/75 mt-2 text-base leading-relaxed">{s.d}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WorkflowProgress de={de} />
+
 
       {/* Figure 2 */}
       <section className="container-wide py-12">
