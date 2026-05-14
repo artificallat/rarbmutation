@@ -95,7 +95,7 @@ export default function WhatIs({ lang }: { lang: Lang }) {
         </div>
         <div className="grid sm:grid-cols-2 gap-4 mt-8">
           {[
-            { l: "MedlinePlus Genetics: RARB", h: "https://medlineplus.gov/genetics/gene/rarb/" },
+            { l: "NIH National Library of Medicine: RARB", h: "https://www.ncbi.nlm.nih.gov/gene/5915" },
             { l: "GeneCards: RARB", h: "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RARB" },
           ].map(r => (
             <a key={r.h} href={r.h} target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-5 flex items-center justify-between hover:border-teal transition">
