@@ -68,10 +68,10 @@ export default function RaiseAwareness({ lang }: { lang: Lang }) {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-4">
-          <a href="/donate" className="inline-flex items-center gap-2 rounded-full bg-amber px-7 py-3 font-semibold text-navy hover:brightness-95 transition">
+          <a href={de ? "/de/donate" : "/donate"} className="inline-flex items-center gap-2 rounded-full bg-amber px-7 py-3 font-semibold text-navy hover:brightness-95 transition">
             {de ? "Jetzt spenden" : "Donate now"}
           </a>
-          <a href="https://rarbmutation.org/support-us/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3 font-semibold text-navy hover:border-teal hover:text-teal transition">
+          <a href={de ? "/de/how-to-get-involved" : "/how-to-get-involved"} className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3 font-semibold text-navy hover:border-teal hover:text-teal transition">
             {de ? "Mehr Möglichkeiten zu helfen" : "More ways to support us"}
           </a>
         </div>
