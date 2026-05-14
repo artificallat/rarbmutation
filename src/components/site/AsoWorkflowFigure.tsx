@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import { Dna, Microscope, Rat, Stethoscope, ArrowRight, type LucideIcon } from "lucide-react";
 import { useInView } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
