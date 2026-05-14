@@ -160,7 +160,7 @@ export default function FundedRDPrograms({ lang }: { lang: Lang }) {
                 <button
                   type="button"
                   onClick={() => hasDetails && setOpen(isOpen ? null : i)}
-                  className={`w-full text-left rounded-2xl border border-border bg-card p-5 transition ${hasDetails ? "hover:border-teal cursor-pointer" : "cursor-default"}`}
+                  className={`w-full text-left rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:border-teal hover:-translate-y-1 hover:shadow-xl ${hasDetails ? "cursor-pointer" : "cursor-default"}`}
                 >
                   <p className="text-xs uppercase tracking-[0.2em] text-amber font-semibold">{t.period}</p>
                   <h3 className="font-display text-xl font-bold text-navy mt-1 flex items-center gap-2">
