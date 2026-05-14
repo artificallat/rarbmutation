@@ -207,3 +207,102 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
     </>
   );
 }
+
+function WorkflowProgress({ de }: { de: boolean }) {
+  const { ref, inView } = useInView<HTMLDivElement>();
+  const steps = [
+    {
+      n: "01",
+      t: de ? "Zielidentifikation & ASO-Design" : "Target identification & ASO design",
+      d: de
+        ? "Long-Read-Sequenzierung der RARB-Allele, Suche nach mutationsspezifischen Markern, in-silico-Bewertung möglicher Off-Target-Effekte."
+        : "Long-read sequencing of the RARB alleles, identification of mutation-specific markers, in-silico screening for off-target effects.",
+      done: true,
+    },
+    {
+      n: "02",
+      t: de ? "Wirksamkeit & Sicherheit im Zellmodell" : "Efficacy & safety in Simon's cell model",
+      d: de
+        ? "Über 110 ASOs wurden auf allelspezifischen Knockdown sowie auf Immuntoxizität, Zytotoxizität und Off-Target-Effekte getestet."
+        : "More than 110 ASOs were screened for allele-specific knockdown as well as immunotoxicity, cytotoxicity and off-target effects.",
+      done: true,
+    },
+    {
+      n: "03",
+      t: de ? "In-vivo-Sicherheitsstudien" : "In-vivo safety studies",
+      d: de
+        ? "Erste Studie: 6 ASO-Kandidaten auf akute Toxizität und Bioverteilung. Folgestudie: chronische Toxizität, Pharmakokinetik und Maximaldosis für die Klinik."
+        : "First study: 6 ASO candidates assessed for acute toxicity and biodistribution. Follow-up: chronic toxicity, pharmacokinetics and maximum tolerated dose for the clinic.",
+      done: false,
+      ongoing: true,
+    },
+    {
+      n: "04",
+      t: de ? "Klinische Studie & erwartete Wirkung" : "Clinical trial & expected outcomes",
+      d: de
+        ? "Named-Patient-Use-Programm in Österreich, intrathekale Verabreichung. Erwartet: sichere Behandlung, verbesserte Hirnfunktion, weniger Bewegungsstörungen, bessere Kognition."
+        : "Named-patient-use programme in Austria, intrathecal administration. Expected: safe treatment, improved brain function, reduced movement disorders, improved cognition.",
+      done: false,
+    },
+  ];
+
+  return (
+    <section className="relative bg-gradient-to-b from-teal/5 via-muted/30 to-background py-20 overflow-hidden">
+      <div aria-hidden className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-teal/5 blur-3xl" />
+      <div ref={ref} className="container-wide relative">
+        <SectionTitle eyebrow={de ? "Arbeitsablauf" : "Our path to treatment"} title={de ? "Vom Sequenzierergebnis zur klinischen Anwendung" : "From sequencing result to clinical use"} />
+
+        {/* Progress rail */}
+        <div className="relative hidden md:block mb-10">
+          <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-teal to-amber"
+              style={{
+                width: inView ? "62.5%" : "0%",
+                transition: "width 1800ms cubic-bezier(0.22, 1, 0.36, 1) 200ms",
+              }}
+            />
+          </div>
+          <div className="flex justify-between mt-3 text-xs uppercase tracking-wider font-semibold">
+            <span className="text-teal">{de ? "2 von 4 abgeschlossen" : "2 of 4 completed"}</span>
+            <span className="text-amber-deep">{de ? "Schritt 3 läuft" : "Step 3 in progress"}</span>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-4 gap-5">
+          {steps.map((s, i) => {
+            const StatusIcon = s.done ? CheckCircle2 : Clock;
+            return (
+              <div
+                key={s.n}
+                className="group relative bg-card border border-border rounded-2xl p-6 h-full hover:border-teal hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all duration-300 overflow-hidden"
+                style={{
+                  opacity: inView ? 1 : 0,
+                  transform: inView ? "translateY(0)" : "translateY(24px)",
+                  transition: `opacity 700ms ease ${i * 150}ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 150}ms, border-color 250ms, box-shadow 250ms`,
+                }}
+              >
+                {/* Top accent bar */}
+                <div
+                  className={`absolute top-0 left-0 right-0 h-1 ${s.done ? "bg-teal" : s.ongoing ? "bg-amber" : "bg-border"} origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}
+                />
+                <div className="flex items-center justify-between mb-4">
+                  <span className="w-11 h-11 rounded-full bg-gradient-to-br from-teal to-amber text-white font-display font-bold flex items-center justify-center shadow-md group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                    {s.n}
+                  </span>
+                  <span className={`inline-flex items-center gap-1.5 text-[11px] uppercase tracking-wider font-semibold rounded-full px-2.5 py-1 ${s.done ? "bg-teal/10 text-teal" : "bg-amber/15 text-amber-deep"}`}>
+                    <StatusIcon className={`w-3 h-3 ${s.ongoing ? "" : ""}`} />
+                    {s.ongoing && <span className="w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />}
+                    {s.done ? (de ? "Abgeschlossen" : "Completed") : s.ongoing ? (de ? "Laufend" : "Ongoing") : (de ? "Geplant" : "Planned")}
+                  </span>
+                </div>
+                <h4 className="font-display text-lg font-bold text-navy">{s.t}</h4>
+                <p className="text-foreground/75 mt-2 text-sm leading-relaxed">{s.d}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
