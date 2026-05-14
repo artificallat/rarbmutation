@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import StickyDonate from "./StickyDonate";
+import RouteSeo from "./RouteSeo";
 import type { Lang } from "@/content/site";
 
 export default function Layout({ lang }: { lang: Lang }) {
@@ -12,6 +13,7 @@ export default function Layout({ lang }: { lang: Lang }) {
   }
   return (
     <div className="min-h-screen flex flex-col bg-background" key={pathname}>
+      <RouteSeo lang={lang} />
       <Navbar lang={lang} />
       <main className="flex-1">
         <Outlet />
