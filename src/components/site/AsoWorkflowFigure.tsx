@@ -160,12 +160,10 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
 
         {cols.map((c, i) => {
           const Icon = c.icon;
-          const isOpen = openIdx === i;
           return (
             <div
               key={c.title}
-              className="group relative p-6 flex flex-col cursor-pointer transition-colors hover:bg-muted/30"
-              onClick={() => setOpenIdx(isOpen ? null : i)}
+              className="group relative p-6 flex flex-col transition-colors hover:bg-muted/30"
               style={{
                 opacity: inView ? 1 : 0,
                 transform: inView ? "translateY(0)" : "translateY(24px)",
