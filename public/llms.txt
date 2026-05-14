@@ -1,0 +1,38 @@
+# Cure MCOPS12
+
+> Austrian nonprofit funding RNA therapy research and drug repurposing for Syndromic Microphthalmia 12 (MCOPS12), a rare RARB-linked neurodevelopmental disorder.
+
+Cure MCOPS12 was founded by the family of a child diagnosed with MCOPS12. Together with sister organizations A Cure for Sophia and Friends (US) and A Cure for Sienna (Australia), we fund research at IGBMC (France), CHU Sainte-Justine (Canada), AlphaRose RareLabs and NCATS (US). Our two scientific paths are (1) drug repurposing for symptomatic treatment and (2) an antisense oligonucleotide (ASO) therapy that silences the mutated RARB allele.
+
+## Pages
+
+- [Home](/): Mission and overview.
+- [Who We Are](/who-we-are): The nonprofit and its team.
+- [Our Story](/our-story): How Cure MCOPS12 began.
+- [What is MCOPS12](/what-is-mcops12): The disease in summary.
+- [The RARB Gene](/rarb-gene): Genetic background of MCOPS12.
+- [MCOPS12 Disease](/mcops12-disease): Symptoms and clinical course.
+- [Plain Language MCOPS12](/plain-language-mcops12): Plain-language explanation.
+- [Newly Diagnosed](/newly-diagnosed): Guide for new families.
+- [Meet Our Kids](/meet-our-kids): Children living with MCOPS12.
+- [Achievements](/achievements): Milestones since 2022.
+- [Research](/research): Scientific strategy.
+- [Funded R&D Programs](/funded-rd-programs): Funded research timeline.
+- [Drug Repurposing](/drug-repurposing): Repurposing existing drugs.
+- [ASO Therapy](/aso-therapy): Simon's antisense oligonucleotide program.
+- [Natural History](/natural-history): The MCOPS12 Natural History Study.
+- [Join Natural History Study](/join-natural-history-study): How patients can participate.
+- [Network](/network): Research and clinical partners.
+- [Scientific Advisory Board](/scientific-advisory-board): Our scientific advisors.
+- [A Cure for Sophia and Friends](/a-cure-for-sophia-and-friends): US sister nonprofit.
+- [A Cure for Sienna](/a-cure-for-sienna): Australian sister nonprofit.
+- [News](/news): Latest updates.
+- [How to Get Involved](/how-to-get-involved): Ways to help.
+- [Raise Awareness](/raise-awareness): Awareness materials.
+- [Donate](/donate): Support the research.
+
+## Optional
+
+- [Imprint](/imprint): Legal information.
+- [Privacy](/privacy): Privacy policy.
+- [Vereinsorgane / Organisation](/vereinsorgane): Governance bodies.
