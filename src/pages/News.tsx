@@ -1,4 +1,5 @@
 import { Placeholder } from "@/components/site/Bits";
+import { Reveal } from "@/components/site/Reveal";
 import { PageHero } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
 import simonWinter from "@/assets/simon-winter-2026.jpg";
@@ -6,6 +7,7 @@ import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
 import newsHappyNewYear from "@/assets/news-happy-new-year.jpg";
 import newsN1Group from "@/assets/news-n1-collaborative-group.jpg";
 import newsSimonSmile from "@/assets/news-simon-smile.jpg";
+import newsBreakingAso from "@/assets/news-breaking-aso.jpg";
 
 const posts = [
   { cat: "Community", date: "March 2026", img: newsRunForRare,
