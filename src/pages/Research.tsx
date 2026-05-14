@@ -86,18 +86,6 @@ export default function Research({ lang }: { lang: Lang }) {
           </Reveal>
         </div>
 
-        <Reveal>
-          <div className="mt-12 rounded-3xl overflow-hidden border border-border group">
-            <img
-              src={labImage}
-              alt={de ? "Forschungslabor – Wirkstoffentwicklung für MCOPS12" : "Research laboratory – drug development for MCOPS12"}
-              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-              loading="lazy"
-              width={1920}
-              height={1080}
-            />
-          </div>
-        </Reveal>
       </section>
 
       <section className="bg-muted/40 py-20">
