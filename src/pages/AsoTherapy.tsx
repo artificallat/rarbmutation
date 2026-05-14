@@ -20,28 +20,50 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
       />
 
       {/* Intro / What is an ASO */}
-      <section className="container-tight pb-12">
-        <SectionTitle eyebrow={de ? "Grundlagen" : "The basics"} title={de ? "Was ist eine Antisense-Oligonukleotid- (ASO) Therapie?" : "What is an antisense oligonucleotide (ASO) therapy?"} />
-        <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
-          <p>
-            {de
-              ? "ASOs sind kurze, im Labor synthetisierte Erbgut-Schnipsel — aus denselben Bausteinen wie unsere DNA und RNA. Man kann sie sich wie ein hochpräzises Stück Klebeband vorstellen, das nur an einem ganz bestimmten Ziel im Inneren einer Zelle haftet."
-              : "ASOs are short, lab-made strands of genetic material built from the same building blocks as our own DNA and RNA. The easiest way to picture them is as a tiny, highly precise strip of tape that sticks to one — and only one — target inside a cell."}
-          </p>
-          <p>
-            {de
-              ? "Das Ziel ist die Boten-RNA (mRNA): die kurzlebige Bauanleitung, die eine Zelle abliest, um ein bestimmtes Protein herzustellen. Bindet ein ASO an diese Anleitung, kann es entweder verhindern, dass ein schädliches Protein entsteht, oder dafür sorgen, dass eine fehlende Funktion wiederhergestellt wird."
-              : "The target is messenger RNA (mRNA) — the short-lived blueprint a cell reads to build a specific protein. Once an ASO binds to that blueprint, it can either stop a harmful protein from being produced or help restore a missing function."}
-          </p>
-          <p>
-            {de
-              ? "Genau diese Präzision macht ASOs zu einer der spannendsten Therapieformen für genetische Erkrankungen, insbesondere für seltene Krankheiten (vgl. Lauffer et al. 2024, "
-              : "It is exactly this precision that makes ASOs one of the most promising treatment formats for genetic conditions — especially for rare diseases (see Lauffer et al. 2024, "}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">Nature Communications Medicine</a>
-            {de
-              ? "). Da ASOs an der mRNA und nicht direkt an der DNA ansetzen, ist ihre Wirkung reversibel — Patient:innen brauchen daher regelmäßige Folgegaben."
-              : "). Because ASOs work on mRNA rather than on DNA itself, their effect is reversible — patients need repeated doses to keep the therapy working."}
-          </p>
+      <section className="container-wide pb-12 pt-4">
+        <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-start">
+          <div>
+            <SectionTitle eyebrow={de ? "Grundlagen" : "The basics"} title={de ? "Was ist eine Antisense-Oligonukleotid- (ASO) Therapie?" : "What is an antisense oligonucleotide (ASO) therapy?"} />
+            <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
+              <Reveal><p>
+                {de
+                  ? "ASOs sind kurze, im Labor synthetisierte Erbgut-Schnipsel — aus denselben Bausteinen wie unsere DNA und RNA. Man kann sie sich wie ein hochpräzises Stück Klebeband vorstellen, das nur an einem ganz bestimmten Ziel im Inneren einer Zelle haftet."
+                  : "ASOs are short, lab-made strands of genetic material built from the same building blocks as our own DNA and RNA. The easiest way to picture them is as a tiny, highly precise strip of tape that sticks to one — and only one — target inside a cell."}
+              </p></Reveal>
+              <Reveal delay={120}><p>
+                {de
+                  ? "Das Ziel ist die Boten-RNA (mRNA): die kurzlebige Bauanleitung, die eine Zelle abliest, um ein bestimmtes Protein herzustellen. Bindet ein ASO an diese Anleitung, kann es entweder verhindern, dass ein schädliches Protein entsteht, oder dafür sorgen, dass eine fehlende Funktion wiederhergestellt wird."
+                  : "The target is messenger RNA (mRNA) — the short-lived blueprint a cell reads to build a specific protein. Once an ASO binds to that blueprint, it can either stop a harmful protein from being produced or help restore a missing function."}
+              </p></Reveal>
+              <Reveal delay={240}><p>
+                {de
+                  ? "Genau diese Präzision macht ASOs zu einer der spannendsten Therapieformen für genetische Erkrankungen, insbesondere für seltene Krankheiten (vgl. Lauffer et al. 2024, "
+                  : "It is exactly this precision that makes ASOs one of the most promising treatment formats for genetic conditions — especially for rare diseases (see Lauffer et al. 2024, "}
+                <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">Nature Communications Medicine</a>
+                {de
+                  ? "). Da ASOs an der mRNA und nicht direkt an der DNA ansetzen, ist ihre Wirkung reversibel — Patient:innen brauchen daher regelmäßige Folgegaben."
+                  : "). Because ASOs work on mRNA rather than on DNA itself, their effect is reversible — patients need repeated doses to keep the therapy working."}
+              </p></Reveal>
+            </div>
+          </div>
+
+          {/* Decorative metaphor tile */}
+          <Reveal delay={200}>
+            <div className="hidden lg:flex relative w-72 aspect-square rounded-3xl bg-gradient-to-br from-teal/15 via-teal/5 to-amber/10 border border-border items-center justify-center overflow-hidden">
+              <div aria-hidden className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-teal/20 blur-3xl animate-pulse" />
+              <div aria-hidden className="absolute -bottom-10 -left-10 w-44 h-44 rounded-full bg-amber/20 blur-3xl" />
+              <div className="relative flex flex-col items-center gap-4 text-teal">
+                <Dna className="w-20 h-20" strokeWidth={1.4} />
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-amber" />
+                  <p className="font-display text-xs uppercase tracking-[0.3em] text-navy/70">
+                    {de ? "Präzise. Reversibel." : "Precise. Reversible."}
+                  </p>
+                  <Sparkles className="w-5 h-5 text-amber" />
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
