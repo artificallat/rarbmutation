@@ -1,82 +1,41 @@
-# Verbesserungen quer durch die Website
+## Plan
 
-## 1. Fixes (kleinere, klare Korrekturen)
+### 1. Add LinkedIn post images to News & Home
 
-**Defekte externe Links**
-- `WhatIs.tsx`: Link „NIH National Library of Medicine" (`ghr.nlm.nih.gov/gene/RARB`) → ersetzen durch funktionierende URL `https://medlineplus.gov/genetics/gene/rarb/`.
-- `WhatIs.tsx`: Link „Srour et al. 2013 — original description" (PMC) prüfen und auf funktionierende Quelle umstellen, z. B. PubMed `https://pubmed.ncbi.nlm.nih.gov/24075189/`.
+Copy the user's uploaded images into `src/assets/` and use them in the matching news posts (LinkedIn feed):
 
-**Hero-Bild Slide 2 (Family-Berge) noch oben abgeschnitten**
-- `Home.tsx` Zeile 101–107: Statt `object-[70%_bottom]` ein leicht verkleinertes `object-contain`-Verhalten ist nicht möglich (würde Balken erzeugen). Lösung: `object-cover` beibehalten, aber `object-position` auf `center 30%` (statt `bottom`) setzen, sodass das Bild leicht nach unten rutscht und der obere Beschnitt verschwindet — bei mobilem Hochformat `70% 30%`. Bild bleibt formatfüllend, keine Letterbox-Balken.
+- `user-uploads://image-21.png` → `src/assets/news-run-for-rare-couple.jpg` (parents in "Run for Rare" shirts)
+- `user-uploads://image-22.png` → `src/assets/news-run-for-rare-family.jpg` (family on swing)
+- `user-uploads://image-23.png` → `src/assets/news-happy-new-year.jpg` (Happy New Year wheelchair)
+- `user-uploads://image-24.png` → `src/assets/news-chiesi-group.jpg` (group photo, conference)
+- `user-uploads://image-25.png` → `src/assets/news-simon-smile.jpg` (Simon smiling, eyes closed)
+- `user-uploads://image-26.png` → `src/assets/news-n1-collaborative-group.jpg` (N=1 Collaborative big group)
+- `user-uploads://image-27.png` → `src/assets/news-n1-collaborative-hall.jpg` (N=1 conference hall)
 
-**„More ways to support us" zeigt auf alte Website**
-- `RaiseAwareness.tsx` Zeile 74: Externer Link `https://rarbmutation.org/support-us/` ersetzen durch internen Link auf `/donate` (bzw. `/de/donate`) oder `/how-to-get-involved`. Button-Stil bleibt erhalten.
+Update both `src/pages/Home.tsx` (`homeNews`) and `src/pages/News.tsx` (`posts`):
 
-**KI-Bild in Research entfernen**
-- `Research.tsx` Zeile 89–100: Komplettes `<Reveal>` mit `labImage` löschen. Import von `labImage` entfernen.
+- Replace **"Run for Rare – Run for Simon"** thumbnail with `news-run-for-rare-couple.jpg` (the selfie of both parents in the shirts is the LinkedIn cover image).
+- Replace **"Happy New Year from Cure MCOPS12"** thumbnail with `news-happy-new-year.jpg`.
+- Add a new news entry **"N=1 Collaborative 2025 Annual Meeting"** using `news-n1-collaborative-group.jpg` (the LinkedIn post about the meeting).
+- Add a new news entry **"Simon — moments of joy"** (or similar short post matching the LinkedIn "Behind every BIG..." post) using `news-simon-smile.jpg`.
 
-**ASO Therapy „Large pharma partner" Hover**
-- `AsoTherapy.tsx` Zeile 211–221: `<div>` zu `<div>` mit denselben Hover-Klassen wie die anderen beiden Karten erweitern (`hover:border-teal hover:shadow-xl transition-all`). Da kein öffentlicher Link existiert, bleibt es ein `<div>` (kein `<a>`), aber visuell mit demselben Hover-Effekt.
+`News.tsx` will show all 5 posts in a grid; `Home.tsx` will keep showing the 3 most recent.
 
-## 2. Redesigns (Inhalt bleibt, Darstellung wird interaktiver)
+### 2. Mobile-only hero crop fix
 
-**Our Story** (`OurStory.tsx`)
-- Aus reinem Fließtext eine visuell strukturierte Timeline machen:
-  - 4 Reveal-Cards in einer vertikalen Zeitachse: 2017 (Simons Geburt & Diagnose-Suche), 2018 (RARB-Diagnose), 2019 (Vereinsgründung), heute (internationales Netzwerk).
-  - Jeder Eintrag mit Jahr-Badge (amber), Icon (Heart/Dna/Users/Globe), Titel und kurzem Absatz.
-  - Darunter eine kompakte Stats-Reihe (Familien gefunden, Länder, finanzierte Programme).
-  - Foto-Card (Simon mit Pony oder Familienfoto) als Abschluss.
-- Beibehalten: alle bestehenden Inhalte, beide Sprachen.
+User screenshot shows that on mobile (~390px wide) the **family hero image** crops off faces — the "as far as possible…" slide cuts the heads.
 
-**Plain Language MCOPS12** (`PlainLanguageMcops12.tsx`)
-- Aktuell trockene Liste → interaktiv & kindgerecht:
-  - Großes farbiges Hero-Statement mit kurzer Ein-Satz-Zusammenfassung.
-  - Symptome als 4 Icon-Cards (Auge / Muskel / Bewegung / Sprache+Lernen) mit Hover-Animation und einfacher Sprache.
-  - Aufklapp-Bereich („Wie entsteht das?") mit `details/summary` Akkordeon, Schritt-für-Schritt-Erklärung mit Icons.
-  - „What this means for daily life" / „Was es im Alltag bedeutet" — kleine Karten mit Beispielen.
-  - Call-out Box: „Es gibt noch keine Therapie, aber wir arbeiten daran" mit Link zu Research.
-  - CTA-Karten am Ende: „Mehr Details ansehen" → /what-is-mcops12, „Familien-Hub" → /newly-diagnosed.
+In `src/pages/Home.tsx` lines 101–107, adjust per-slide `object-position` so faces stay in view on mobile, while keeping current desktop framing:
 
-**Drug Repurposing** (`DrugRepurposing.tsx`)
-- Aus 2 Text-Cards interaktive Pfad-Visualisierung:
-  - Großes „Two parallel paths"-Diagramm: 2 Spalten mit jeweils Icon (Mouse/Petri), Step-Pipeline (3–4 Mini-Steps mit Verbindungslinien) und Status-Badge.
-  - Hover-Animation auf den Steps (Skalierung, Farbwechsel von amber/teal).
-  - Zahlen-Highlights (z. B. „5 Wirkstoffe", „~10.000 Verbindungen").
-  - Partner-Logos/Namen als kleine Chips unter jedem Pfad.
-  - Reveal-Animation beim Scrollen.
+- Slide 0 (`heroHorse`): mobile `object-[60%_20%]`, desktop unchanged `sm:object-[70%_25%]`
+- Slide 1 (`heroFamily` — the cropped one): mobile `object-[60%_30%]` to keep mom + Simon faces visible, desktop unchanged `sm:object-center`
+- Slide 2 (`heroBeyond`): mobile `object-[50%_25%]`, desktop unchanged `sm:object-center`
+- Slide 3 (`heroPlayground`): mobile `object-[50%_20%]`, desktop unchanged
 
-## 3. Latest News mit LinkedIn-Posts aktualisieren
+These are face-tested anchor points based on each photo's composition. Only the mobile (default, no-prefix) `object-position` changes; `sm:` overrides preserve current desktop look.
 
-Basierend auf dem hochgeladenen LinkedIn-Screenshot (3 sichtbare Posts) `News.tsx` und `Home.tsx` `homeNews` Array aktualisieren:
+### Files
 
-1. **„RUN FOR RARE – RUN FOR SIMON"** (vor 2 Monaten, Rare Diseases Run)
-2. **„RARB-RD Preprint von Nicolas Zinter"** (Mausmodelle p.R387C / p.L402P) — vor 2 Monaten
-3. **„Happy New Year 2026"** (Community-Rückblick) — vor 4 Monaten
-
-Bestehende Bilder `simon-fiber-lights.jpg`, `simon-neujahr-2026.jpg`, `simon-winter-2026.jpg` weiterverwenden bzw. neu zuordnen.
-- Texte zweisprachig DE/EN.
-- Reihenfolge: Run for Rare (neuester) → Preprint → Neujahr.
-
-## 4. Allgemeine Verschönerungen (Self-Review)
-
-- `News.tsx`: „Read more" `href="#"` ist tot — entfernen oder auf eigenen Permalink-Anker leiten; vorerst entfernen, bis es einzelne Post-Seiten gibt.
-- `News.tsx`: Hover-Lift (`-translate-y-1`) konsistent zu Home-News-Cards hinzufügen.
-
-## Technische Hinweise (für Entwickler)
-
-- Keine neuen Dependencies nötig — alles mit bestehendem `Reveal`, `lucide-react`, Tailwind.
-- Nur Frontend / Presentation, keine Backend-Änderungen.
-- Bilder bleiben unverändert (kein neuer Asset-Import außer dem Entfernen von `labImage`).
-- Externe Link-URLs werden vor dem Speichern verifiziert.
-
-## Geänderte Dateien
-
-- `src/pages/Home.tsx` — Hero-Position, News-Array
-- `src/pages/News.tsx` — Posts-Array, Hover, toter Link
-- `src/pages/WhatIs.tsx` — 2 externe Links
-- `src/pages/RaiseAwareness.tsx` — Link auf interne Seite
-- `src/pages/Research.tsx` — KI-Bild entfernen
-- `src/pages/AsoTherapy.tsx` — Hover für Pharma-Karte
-- `src/pages/OurStory.tsx` — Redesign Timeline
-- `src/pages/PlainLanguageMcops12.tsx` — Redesign interaktiv
-- `src/pages/DrugRepurposing.tsx` — Redesign Pfad-Visualisierung
+- `src/pages/Home.tsx` — update `homeNews` images + per-slide `object-position`
+- `src/pages/News.tsx` — update `posts` images, add 2 new entries
+- `src/assets/news-*.jpg` — new image assets copied from uploads
