@@ -189,7 +189,7 @@ export const t = {
       raiseAwareness: "Raise Awareness", drugRepurposing: "Drug Repurposing",
       asoTherapy: "ASO Therapy",
       ourStory: "Our Story", researchAndDrugDevelopment: "Research & Drug Development",
-      vereinsorgane: "Vereinsorgane", scientificAdvisoryBoard: "Scientific Advisory Board",
+      vereinsorgane: "Association Organs", scientificAdvisoryBoard: "Scientific Advisory Board",
       gene: "Gene", disease: "Disease",
       ourStoryFull: "Our Story / Foundation",
       fundedRD: "Funded R&D Programs",
