@@ -1,41 +1,57 @@
-## Plan
+# Polish & interactivity pass (revised)
 
-### 1. Add LinkedIn post images to News & Home
+## 1. `HowToGetInvolved.tsx` — proper layout
+Rebuild as a designed page with a 2×2 icon-card grid (`HeartHandshake`, `Megaphone`, `Coins`, `Users`), each card with colored icon chip, title, body, inline CTA arrow. `Reveal` stagger entrance, hover lift + border-teal. Keep bottom CTA pill row.
 
-Copy the user's uploaded images into `src/assets/` and use them in the matching news posts (LinkedIn feed):
+## 2. News images bigger + add new LinkedIn post
+- Add new top post (Nov 2025, **BREAKING NEWS — six ASO candidates pass safety testing**, image from `user-uploads://image-29.png` → `src/assets/news-breaking-aso.jpg`) to both `News.tsx` and `Home.tsx` `homeNews`, replacing the duplicate "Simon im Schnee" preprint card on Home.
+- Switch news thumbnails from `aspect-video` to `aspect-[4/3]` with `object-position: top` for portrait shots; on `News.tsx` use `md:grid-cols-2 lg:grid-cols-3` with bigger gap.
 
-- `user-uploads://image-21.png` → `src/assets/news-run-for-rare-couple.jpg` (parents in "Run for Rare" shirts)
-- `user-uploads://image-22.png` → `src/assets/news-run-for-rare-family.jpg` (family on swing)
-- `user-uploads://image-23.png` → `src/assets/news-happy-new-year.jpg` (Happy New Year wheelchair)
-- `user-uploads://image-24.png` → `src/assets/news-chiesi-group.jpg` (group photo, conference)
-- `user-uploads://image-25.png` → `src/assets/news-simon-smile.jpg` (Simon smiling, eyes closed)
-- `user-uploads://image-26.png` → `src/assets/news-n1-collaborative-group.jpg` (N=1 Collaborative big group)
-- `user-uploads://image-27.png` → `src/assets/news-n1-collaborative-hall.jpg` (N=1 conference hall)
+## 3. Figure 2 (`AsoWorkflowFigure.tsx`) — animated & interactive
+Rebuild as an interactive horizontal pipeline:
+- 4 step cards connected by an animated SVG dashed arrow (stroke-dashoffset draws on scroll).
+- Status pills with **pulsing dot** for "Ongoing" (`animate-pulse`).
+- Hover: card lift, soft teal glow, icon tile `scale-110 rotate-3`, bg flips teal→white.
+- Each block heading gets a small chevron that rotates on hover.
+- Mobile: columns stack, connector becomes vertical.
+- `Reveal` cascade left→right.
 
-Update both `src/pages/Home.tsx` (`homeNews`) and `src/pages/News.tsx` (`posts`):
+## 4. `AsoTherapy.tsx` — top-of-page polish
+- Soft teal/5 gradient bg + decorative SVG accent on workflow section.
+- "01–04" become circular gradient badges (teal→amber); status pills with pulsing dot for ongoing; thin teal accent bar slides in at top of card on hover.
+- Horizontal progress rail behind the 4 cards on `md+` (2/4 done, gradient fill).
+- "What is an ASO" intro becomes 2-column on `md+`: text left, stylized DNA + tape icon tile right.
+- `Reveal` per paragraph.
 
-- Replace **"Run for Rare – Run for Simon"** thumbnail with `news-run-for-rare-couple.jpg` (the selfie of both parents in the shirts is the LinkedIn cover image).
-- Replace **"Happy New Year from Cure MCOPS12"** thumbnail with `news-happy-new-year.jpg`.
-- Add a new news entry **"N=1 Collaborative 2025 Annual Meeting"** using `news-n1-collaborative-group.jpg` (the LinkedIn post about the meeting).
-- Add a new news entry **"Simon — moments of joy"** (or similar short post matching the LinkedIn "Behind every BIG..." post) using `news-simon-smile.jpg`.
+## 5. `NaturalHistoryStudy.tsx` — visual upgrade
+- Add **stat strip** under hero (≈52 cases · 5+ year horizon · 4 endpoint domains · multi-centre) using `Counter` for the numerics.
+- Endpoint cards get colored top accent bars (teal/indigo/amber/rose).
+- Eligibility list becomes 2-col `CheckCircle2` card grid with `Reveal` stagger.
 
-`News.tsx` will show all 5 posts in a grid; `Home.tsx` will keep showing the 3 most recent.
+## 6. Counter-up animations on stat numbers (NEW)
+Make all stat numbers count up from 0 when scrolled into view, like the homepage donation counter.
+- `OurStory.tsx` stats array (`50+ families`, `3 continents`, `4 programs`): swap the static `n` strings for `<Counter to={50} suffix="+" />`, `<Counter to={3} />`, `<Counter to={4} />` and add `Reveal` wrapper with stagger.
+- `DrugRepurposing.tsx` bottom stats card (`~10,000 compounds` etc.): parse the numeric portion and use `<Counter to={10000} prefix="~" duration={2200} />` with locale formatting; non-numeric stats stay as is. Each stat wrapped in `Reveal` with stagger.
+- Keep the existing `Counter` component from `src/components/site/Reveal.tsx` (no new component needed).
 
-### 2. Mobile-only hero crop fix
+## 7. Site-wide animation polish (NEW)
+Pass over key pages to make motion feel cohesive and lively without being noisy:
+- Ensure every section uses `Reveal` (or `RevealStagger`) for its title and primary children where missing — `OurStory.tsx`, `DrugRepurposing.tsx`, `AsoTherapy.tsx`, `NaturalHistoryStudy.tsx`, `HowToGetInvolved.tsx`, `News.tsx`.
+- Standardize hover on all interactive cards: `hover:-translate-y-1 hover:shadow-[var(--shadow-card)] hover:border-teal transition-all duration-300`.
+- Icon tiles inside cards: `group-hover:scale-110 group-hover:rotate-3` with color flip to teal/white.
+- Add a subtle `animate-fade-in` on `PageHero` content and an entrance translate on the eyebrow → title → sub sequence.
+- Ensure number/Counter animations are gated on `useInView` (already the case in the existing `Counter`).
 
-User screenshot shows that on mobile (~390px wide) the **family hero image** crops off faces — the "as far as possible…" slide cuts the heads.
+## Files
 
-In `src/pages/Home.tsx` lines 101–107, adjust per-slide `object-position` so faces stay in view on mobile, while keeping current desktop framing:
+- `src/pages/HowToGetInvolved.tsx`
+- `src/pages/News.tsx`
+- `src/pages/Home.tsx`
+- `src/components/site/AsoWorkflowFigure.tsx`
+- `src/pages/AsoTherapy.tsx`
+- `src/pages/NaturalHistoryStudy.tsx`
+- `src/pages/OurStory.tsx` — Counter on stats + Reveal polish
+- `src/pages/DrugRepurposing.tsx` — Counter on stats + Reveal polish
+- `src/assets/news-breaking-aso.jpg` — new asset
 
-- Slide 0 (`heroHorse`): mobile `object-[60%_20%]`, desktop unchanged `sm:object-[70%_25%]`
-- Slide 1 (`heroFamily` — the cropped one): mobile `object-[60%_30%]` to keep mom + Simon faces visible, desktop unchanged `sm:object-center`
-- Slide 2 (`heroBeyond`): mobile `object-[50%_25%]`, desktop unchanged `sm:object-center`
-- Slide 3 (`heroPlayground`): mobile `object-[50%_20%]`, desktop unchanged
-
-These are face-tested anchor points based on each photo's composition. Only the mobile (default, no-prefix) `object-position` changes; `sm:` overrides preserve current desktop look.
-
-### Files
-
-- `src/pages/Home.tsx` — update `homeNews` images + per-slide `object-position`
-- `src/pages/News.tsx` — update `posts` images, add 2 new entries
-- `src/assets/news-*.jpg` — new image assets copied from uploads
+Visual / motion / layout changes only — no content meaning or backend changes.

@@ -1,4 +1,5 @@
 import { Placeholder } from "@/components/site/Bits";
+import { Reveal } from "@/components/site/Reveal";
 import { PageHero } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
 import simonWinter from "@/assets/simon-winter-2026.jpg";
@@ -6,8 +7,12 @@ import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
 import newsHappyNewYear from "@/assets/news-happy-new-year.jpg";
 import newsN1Group from "@/assets/news-n1-collaborative-group.jpg";
 import newsSimonSmile from "@/assets/news-simon-smile.jpg";
+import newsBreakingAso from "@/assets/news-breaking-aso.jpg";
 
 const posts = [
+  { cat: "Breakthrough", date: "November 2025", img: newsBreakingAso, objectPosition: "center 30%",
+    en: { t: "BREAKING NEWS: six ASO candidates pass safety testing", e: "We are thrilled to announce the successful completion of the proof-of-concept study for Simon's personalized antisense oligonucleotide (ASO) therapy. We identified six ASO candidates that selectively silence Simon's mutated RARB gene while preserving the healthy copy — and all six have successfully passed safety testing in Simon's cellular disease model. Next: a general toxicity study to identify the safest lead candidate." },
+    de: { t: "BREAKING NEWS: sechs ASO-Kandidaten bestehen Sicherheitstests", e: "Wir freuen uns sehr, den erfolgreichen Abschluss der Proof-of-Concept-Studie für Simons personalisierte ASO-Therapie bekanntzugeben. Wir haben sechs ASO-Kandidaten identifiziert, die das mutierte RARB-Gen selektiv stilllegen und die gesunde Kopie schonen — alle sechs haben die Sicherheitstests in Simons Zellmodell bestanden. Nächster Schritt: eine allgemeine Toxizitätsstudie zur Auswahl des sichersten Kandidaten." } },
   { cat: "Community", date: "March 2026", img: newsRunForRare,
     en: { t: "Run for Rare – Run for Simon", e: "Our personal motto at the Rare Diseases Run: every kilometre run together turns into momentum for MCOPS12 research and a louder voice for Simon and every child living with this ultra-rare disease." },
     de: { t: "Run for Rare – Run for Simon", e: "Unser persönliches Motto beim Rare Diseases Run: Jeder gemeinsam gelaufene Kilometer wird zu Rückenwind für die MCOPS12-Forschung und zu einer lauteren Stimme für Simon und alle Kinder mit dieser ultra-seltenen Erkrankung." } },
@@ -20,7 +25,7 @@ const posts = [
   { cat: "Community", date: "October 2025", img: newsN1Group,
     en: { t: "N=1 Collaborative – 2025 Annual Meeting", e: "Cure MCOPS12 joined the N=1 Collaborative Annual Meeting — a global gathering of families, scientists and clinicians advancing individualized RNA-based therapies for ultra-rare diseases." },
     de: { t: "N=1 Collaborative – Jahrestagung 2025", e: "Cure MCOPS12 war beim N=1 Collaborative Annual Meeting dabei — ein internationales Treffen von Familien, Wissenschaftler:innen und Kliniker:innen, die individualisierte RNA-Therapien für ultra-seltene Erkrankungen voranbringen." } },
-  { cat: "Community", date: "September 2025", img: newsSimonSmile,
+  { cat: "Community", date: "September 2025", img: newsSimonSmile, objectPosition: "center 25%",
     en: { t: "Behind every BIG mission is a small reason", e: "Simon — the reason for everything we do. A quiet moment of joy that reminds us why we keep pushing for an MCOPS12 therapy." },
     de: { t: "Hinter jeder großen Mission steht ein kleiner Grund", e: "Simon — der Grund für alles, was wir tun. Ein stiller Moment voller Freude, der uns daran erinnert, warum wir für eine MCOPS12-Therapie kämpfen." } },
 ];
@@ -33,16 +38,25 @@ export default function News({ lang }: { lang: Lang }) {
         sub={de ? "Forschungsfortschritte, Geschichten aus unserer Community und Kampagnen-Updates." : "Research progress, community stories, and campaign updates."} />
 
       <section className="container-wide pb-20">
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
           {posts.map((p, i) => (
-            <article key={i} className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all duration-200">
-              <Placeholder label={`Thumbnail: ${p.cat}`} src={p.img} className="aspect-video !rounded-none" />
-              <div className="p-6">
-                <p className="text-xs text-teal font-semibold uppercase tracking-wider">{p.cat} · {p.date}</p>
-                <h3 className="font-display text-xl font-bold text-navy mt-2">{de ? p.de.t : p.en.t}</h3>
-                <p className="text-sm text-foreground/75 mt-2 line-clamp-4">{de ? p.de.e : p.en.e}</p>
-              </div>
-            </article>
+            <Reveal key={i} delay={i * 90}>
+              <article className="group bg-card rounded-3xl border border-border overflow-hidden hover:shadow-[var(--shadow-card)] hover:-translate-y-1 hover:border-teal transition-all duration-300 h-full flex flex-col">
+                <div className="overflow-hidden">
+                  <Placeholder
+                    label={`Thumbnail: ${p.cat}`}
+                    src={p.img}
+                    objectPosition={p.objectPosition || "center"}
+                    className="aspect-[4/3] !rounded-none transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div className="p-6 flex-1 flex flex-col">
+                  <p className="text-xs text-teal font-semibold uppercase tracking-wider">{p.cat} · {p.date}</p>
+                  <h3 className="font-display text-xl font-bold text-navy mt-2">{de ? p.de.t : p.en.t}</h3>
+                  <p className="text-sm text-foreground/75 mt-2 line-clamp-4">{de ? p.de.e : p.en.e}</p>
+                </div>
+              </article>
+            </Reveal>
           ))}
         </div>
       </section>

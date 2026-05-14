@@ -1,6 +1,6 @@
 import { Heart, Dna, Users, Globe2 } from "lucide-react";
 import { PageHero } from "./WhoWeAre";
-import { Reveal } from "@/components/site/Reveal";
+import { Reveal, Counter } from "@/components/site/Reveal";
 import { Placeholder } from "@/components/site/Bits";
 import storyPhoto from "@/assets/simon-pony.jpg";
 import type { Lang } from "@/content/site";
@@ -64,14 +64,14 @@ export default function OurStory({ lang }: { lang: Lang }) {
 
   const stats = de
     ? [
-        { n: "50+", l: "Familien weltweit verbunden" },
-        { n: "3", l: "Kontinente, Schwesterorganisationen" },
-        { n: "4", l: "wissenschaftliche Programme finanziert" },
+        { to: 50, suffix: "+", l: "Familien weltweit verbunden" },
+        { to: 3, suffix: "", l: "Kontinente, Schwesterorganisationen" },
+        { to: 4, suffix: "", l: "wissenschaftliche Programme finanziert" },
       ]
     : [
-        { n: "50+", l: "families connected worldwide" },
-        { n: "3", l: "continents, sister organizations" },
-        { n: "4", l: "scientific programs funded" },
+        { to: 50, suffix: "+", l: "families connected worldwide" },
+        { to: 3, suffix: "", l: "continents, sister organizations" },
+        { to: 4, suffix: "", l: "scientific programs funded" },
       ];
 
   return (
@@ -118,7 +118,12 @@ export default function OurStory({ lang }: { lang: Lang }) {
           {stats.map((s, i) => (
             <Reveal key={s.l} delay={i * 120}>
               <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-2xl p-6 text-center hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
-                <p className="font-display text-4xl sm:text-5xl font-bold text-amber">{s.n}</p>
+                <Counter
+                  to={s.to}
+                  suffix={s.suffix}
+                  duration={1800}
+                  className="font-display text-4xl sm:text-5xl font-bold text-amber"
+                />
                 <p className="mt-2 text-white/85 text-sm">{s.l}</p>
               </div>
             </Reveal>

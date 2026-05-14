@@ -1,8 +1,8 @@
-import { FlaskConical, Building2 } from "lucide-react";
+import { FlaskConical, Building2, Dna, Sparkles, CheckCircle2, Clock } from "lucide-react";
 import asoFigure1 from "@/assets/research/aso-figure-1.png";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
-import { Reveal } from "@/components/site/Reveal";
+import { Reveal, useInView } from "@/components/site/Reveal";
 import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
 import type { Lang } from "@/content/site";
 
@@ -20,28 +20,50 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
       />
 
       {/* Intro / What is an ASO */}
-      <section className="container-tight pb-12">
-        <SectionTitle eyebrow={de ? "Grundlagen" : "The basics"} title={de ? "Was ist eine Antisense-Oligonukleotid- (ASO) Therapie?" : "What is an antisense oligonucleotide (ASO) therapy?"} />
-        <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
-          <p>
-            {de
-              ? "ASOs sind kurze, im Labor synthetisierte Erbgut-Schnipsel — aus denselben Bausteinen wie unsere DNA und RNA. Man kann sie sich wie ein hochpräzises Stück Klebeband vorstellen, das nur an einem ganz bestimmten Ziel im Inneren einer Zelle haftet."
-              : "ASOs are short, lab-made strands of genetic material built from the same building blocks as our own DNA and RNA. The easiest way to picture them is as a tiny, highly precise strip of tape that sticks to one — and only one — target inside a cell."}
-          </p>
-          <p>
-            {de
-              ? "Das Ziel ist die Boten-RNA (mRNA): die kurzlebige Bauanleitung, die eine Zelle abliest, um ein bestimmtes Protein herzustellen. Bindet ein ASO an diese Anleitung, kann es entweder verhindern, dass ein schädliches Protein entsteht, oder dafür sorgen, dass eine fehlende Funktion wiederhergestellt wird."
-              : "The target is messenger RNA (mRNA) — the short-lived blueprint a cell reads to build a specific protein. Once an ASO binds to that blueprint, it can either stop a harmful protein from being produced or help restore a missing function."}
-          </p>
-          <p>
-            {de
-              ? "Genau diese Präzision macht ASOs zu einer der spannendsten Therapieformen für genetische Erkrankungen, insbesondere für seltene Krankheiten (vgl. Lauffer et al. 2024, "
-              : "It is exactly this precision that makes ASOs one of the most promising treatment formats for genetic conditions — especially for rare diseases (see Lauffer et al. 2024, "}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">Nature Communications Medicine</a>
-            {de
-              ? "). Da ASOs an der mRNA und nicht direkt an der DNA ansetzen, ist ihre Wirkung reversibel — Patient:innen brauchen daher regelmäßige Folgegaben."
-              : "). Because ASOs work on mRNA rather than on DNA itself, their effect is reversible — patients need repeated doses to keep the therapy working."}
-          </p>
+      <section className="container-wide pb-12 pt-4">
+        <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-start">
+          <div>
+            <SectionTitle eyebrow={de ? "Grundlagen" : "The basics"} title={de ? "Was ist eine Antisense-Oligonukleotid- (ASO) Therapie?" : "What is an antisense oligonucleotide (ASO) therapy?"} />
+            <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
+              <Reveal><p>
+                {de
+                  ? "ASOs sind kurze, im Labor synthetisierte Erbgut-Schnipsel — aus denselben Bausteinen wie unsere DNA und RNA. Man kann sie sich wie ein hochpräzises Stück Klebeband vorstellen, das nur an einem ganz bestimmten Ziel im Inneren einer Zelle haftet."
+                  : "ASOs are short, lab-made strands of genetic material built from the same building blocks as our own DNA and RNA. The easiest way to picture them is as a tiny, highly precise strip of tape that sticks to one — and only one — target inside a cell."}
+              </p></Reveal>
+              <Reveal delay={120}><p>
+                {de
+                  ? "Das Ziel ist die Boten-RNA (mRNA): die kurzlebige Bauanleitung, die eine Zelle abliest, um ein bestimmtes Protein herzustellen. Bindet ein ASO an diese Anleitung, kann es entweder verhindern, dass ein schädliches Protein entsteht, oder dafür sorgen, dass eine fehlende Funktion wiederhergestellt wird."
+                  : "The target is messenger RNA (mRNA) — the short-lived blueprint a cell reads to build a specific protein. Once an ASO binds to that blueprint, it can either stop a harmful protein from being produced or help restore a missing function."}
+              </p></Reveal>
+              <Reveal delay={240}><p>
+                {de
+                  ? "Genau diese Präzision macht ASOs zu einer der spannendsten Therapieformen für genetische Erkrankungen, insbesondere für seltene Krankheiten (vgl. Lauffer et al. 2024, "
+                  : "It is exactly this precision that makes ASOs one of the most promising treatment formats for genetic conditions — especially for rare diseases (see Lauffer et al. 2024, "}
+                <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">Nature Communications Medicine</a>
+                {de
+                  ? "). Da ASOs an der mRNA und nicht direkt an der DNA ansetzen, ist ihre Wirkung reversibel — Patient:innen brauchen daher regelmäßige Folgegaben."
+                  : "). Because ASOs work on mRNA rather than on DNA itself, their effect is reversible — patients need repeated doses to keep the therapy working."}
+              </p></Reveal>
+            </div>
+          </div>
+
+          {/* Decorative metaphor tile */}
+          <Reveal delay={200}>
+            <div className="hidden lg:flex relative w-72 aspect-square rounded-3xl bg-gradient-to-br from-teal/15 via-teal/5 to-amber/10 border border-border items-center justify-center overflow-hidden">
+              <div aria-hidden className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-teal/20 blur-3xl animate-pulse" />
+              <div aria-hidden className="absolute -bottom-10 -left-10 w-44 h-44 rounded-full bg-amber/20 blur-3xl" />
+              <div className="relative flex flex-col items-center gap-4 text-teal">
+                <Dna className="w-20 h-20" strokeWidth={1.4} />
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-amber" />
+                  <p className="font-display text-xs uppercase tracking-[0.3em] text-navy/70">
+                    {de ? "Präzise. Reversibel." : "Precise. Reversible."}
+                  </p>
+                  <Sparkles className="w-5 h-5 text-amber" />
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -129,60 +151,8 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
       </section>
 
       {/* Workflow steps */}
-      <section className="bg-muted/40 py-16">
-        <div className="container-wide">
-          <SectionTitle eyebrow={de ? "Arbeitsablauf" : "Workflow"} title={de ? "Vom Sequenzierergebnis zur klinischen Anwendung" : "From sequencing result to clinical use"} />
-          <div className="grid md:grid-cols-4 gap-5">
-            {[
-              {
-                n: "01",
-                t: de ? "Zielidentifikation & ASO-Design" : "Target identification & ASO design",
-                d: de
-                  ? "Long-Read-Sequenzierung der RARB-Allele, Suche nach mutationsspezifischen Markern, in-silico-Bewertung möglicher Off-Target-Effekte."
-                  : "Long-read sequencing of the RARB alleles, identification of mutation-specific markers, in-silico screening for off-target effects.",
-                done: true,
-              },
-              {
-                n: "02",
-                t: de ? "Wirksamkeit & Sicherheit im Zellmodell" : "Efficacy & safety in Simon's cell model",
-                d: de
-                  ? "Über 110 ASOs wurden auf allelspezifischen Knockdown sowie auf Immuntoxizität, Zytotoxizität und Off-Target-Effekte getestet."
-                  : "More than 110 ASOs were screened for allele-specific knockdown as well as immunotoxicity, cytotoxicity and off-target effects.",
-                done: true,
-              },
-              {
-                n: "03",
-                t: de ? "In-vivo-Sicherheitsstudien" : "In-vivo safety studies",
-                d: de
-                  ? "Erste Studie: 6 ASO-Kandidaten auf akute Toxizität und Bioverteilung. Folgestudie: chronische Toxizität, Pharmakokinetik und Maximaldosis für die Klinik. Laufend, 2. Hälfte 2026."
-                  : "First study: 6 ASO candidates assessed for acute toxicity and biodistribution. Follow-up: chronic toxicity, pharmacokinetics and maximum tolerated dose for the clinic. Ongoing, second half of 2026.",
-                done: false,
-              },
-              {
-                n: "04",
-                t: de ? "Klinische Studie & erwartete Wirkung" : "Clinical trial & expected outcomes",
-                d: de
-                  ? "Named-Patient-Use-Programm in Österreich, intrathekale Verabreichung. Erwartet werden eine sichere, gut verträgliche Behandlung, verbesserte Hirnfunktion durch Knockdown des mutierten RARB, weniger Bewegungsstörungen und bessere kognitive Fähigkeiten."
-                  : "Named-patient-use programme in Austria, intrathecal administration. Expected: safe and well-tolerated treatment, improved brain function via knockdown of mutant RARB, reduced movement disorders and improved cognitive skills.",
-                done: false,
-              },
-            ].map((s, i) => (
-              <Reveal key={s.n} delay={i * 100}>
-                <div className="bg-card border border-border rounded-2xl p-6 h-full hover:border-teal hover:shadow-xl transition-all">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="font-display text-2xl font-bold text-amber">{s.n}</span>
-                    <span className={`text-xs uppercase tracking-wider font-semibold rounded-full px-3 py-1 ${s.done ? "bg-teal/10 text-teal" : "bg-amber/15 text-amber"}`}>
-                      {s.done ? (de ? "Abgeschlossen" : "Completed") : (de ? "Laufend" : "Ongoing")}
-                    </span>
-                  </div>
-                  <h4 className="font-display text-lg font-bold text-navy">{s.t}</h4>
-                  <p className="text-foreground/75 mt-2 text-base leading-relaxed">{s.d}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WorkflowProgress de={de} />
+
 
       {/* Figure 2 */}
       <section className="container-wide py-12">
@@ -235,5 +205,104 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
         </div>
       </section>
     </>
+  );
+}
+
+function WorkflowProgress({ de }: { de: boolean }) {
+  const { ref, inView } = useInView<HTMLDivElement>();
+  const steps = [
+    {
+      n: "01",
+      t: de ? "Zielidentifikation & ASO-Design" : "Target identification & ASO design",
+      d: de
+        ? "Long-Read-Sequenzierung der RARB-Allele, Suche nach mutationsspezifischen Markern, in-silico-Bewertung möglicher Off-Target-Effekte."
+        : "Long-read sequencing of the RARB alleles, identification of mutation-specific markers, in-silico screening for off-target effects.",
+      done: true,
+    },
+    {
+      n: "02",
+      t: de ? "Wirksamkeit & Sicherheit im Zellmodell" : "Efficacy & safety in Simon's cell model",
+      d: de
+        ? "Über 110 ASOs wurden auf allelspezifischen Knockdown sowie auf Immuntoxizität, Zytotoxizität und Off-Target-Effekte getestet."
+        : "More than 110 ASOs were screened for allele-specific knockdown as well as immunotoxicity, cytotoxicity and off-target effects.",
+      done: true,
+    },
+    {
+      n: "03",
+      t: de ? "In-vivo-Sicherheitsstudien" : "In-vivo safety studies",
+      d: de
+        ? "Erste Studie: 6 ASO-Kandidaten auf akute Toxizität und Bioverteilung. Folgestudie: chronische Toxizität, Pharmakokinetik und Maximaldosis für die Klinik."
+        : "First study: 6 ASO candidates assessed for acute toxicity and biodistribution. Follow-up: chronic toxicity, pharmacokinetics and maximum tolerated dose for the clinic.",
+      done: false,
+      ongoing: true,
+    },
+    {
+      n: "04",
+      t: de ? "Klinische Studie & erwartete Wirkung" : "Clinical trial & expected outcomes",
+      d: de
+        ? "Named-Patient-Use-Programm in Österreich, intrathekale Verabreichung. Erwartet: sichere Behandlung, verbesserte Hirnfunktion, weniger Bewegungsstörungen, bessere Kognition."
+        : "Named-patient-use programme in Austria, intrathecal administration. Expected: safe treatment, improved brain function, reduced movement disorders, improved cognition.",
+      done: false,
+    },
+  ];
+
+  return (
+    <section className="relative bg-gradient-to-b from-teal/5 via-muted/30 to-background py-20 overflow-hidden">
+      <div aria-hidden className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-teal/5 blur-3xl" />
+      <div ref={ref} className="container-wide relative">
+        <SectionTitle eyebrow={de ? "Arbeitsablauf" : "Our path to treatment"} title={de ? "Vom Sequenzierergebnis zur klinischen Anwendung" : "From sequencing result to clinical use"} />
+
+        {/* Progress rail */}
+        <div className="relative hidden md:block mb-10">
+          <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-teal to-amber"
+              style={{
+                width: inView ? "62.5%" : "0%",
+                transition: "width 1800ms cubic-bezier(0.22, 1, 0.36, 1) 200ms",
+              }}
+            />
+          </div>
+          <div className="flex justify-between mt-3 text-xs uppercase tracking-wider font-semibold">
+            <span className="text-teal">{de ? "2 von 4 abgeschlossen" : "2 of 4 completed"}</span>
+            <span className="text-amber-deep">{de ? "Schritt 3 läuft" : "Step 3 in progress"}</span>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-4 gap-5">
+          {steps.map((s, i) => {
+            const StatusIcon = s.done ? CheckCircle2 : Clock;
+            return (
+              <div
+                key={s.n}
+                className="group relative bg-card border border-border rounded-2xl p-6 h-full hover:border-teal hover:-translate-y-1 hover:shadow-[var(--shadow-card)] transition-all duration-300 overflow-hidden"
+                style={{
+                  opacity: inView ? 1 : 0,
+                  transform: inView ? "translateY(0)" : "translateY(24px)",
+                  transition: `opacity 700ms ease ${i * 150}ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 150}ms, border-color 250ms, box-shadow 250ms`,
+                }}
+              >
+                {/* Top accent bar */}
+                <div
+                  className={`absolute top-0 left-0 right-0 h-1 ${s.done ? "bg-teal" : s.ongoing ? "bg-amber" : "bg-border"} origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}
+                />
+                <div className="flex items-center justify-between mb-4">
+                  <span className="w-11 h-11 rounded-full bg-gradient-to-br from-teal to-amber text-white font-display font-bold flex items-center justify-center shadow-md group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                    {s.n}
+                  </span>
+                  <span className={`inline-flex items-center gap-1.5 text-[11px] uppercase tracking-wider font-semibold rounded-full px-2.5 py-1 ${s.done ? "bg-teal/10 text-teal" : "bg-amber/15 text-amber-deep"}`}>
+                    <StatusIcon className={`w-3 h-3 ${s.ongoing ? "" : ""}`} />
+                    {s.ongoing && <span className="w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />}
+                    {s.done ? (de ? "Abgeschlossen" : "Completed") : s.ongoing ? (de ? "Laufend" : "Ongoing") : (de ? "Geplant" : "Planned")}
+                  </span>
+                </div>
+                <h4 className="font-display text-lg font-bold text-navy">{s.t}</h4>
+                <p className="text-foreground/75 mt-2 text-sm leading-relaxed">{s.d}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 }
