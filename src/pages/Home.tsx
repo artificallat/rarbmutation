@@ -16,15 +16,28 @@ import newsWinter from "@/assets/simon-winter-2026.jpg";
 const homeNews = [
   {
     img: newsLights,
-    cat: "Research",
+    cat: "Community",
     date: "March 2026",
     en: {
-      t: "ASO toxicity study reaches final phase",
-      e: "Our six lead candidates are now entering the final IND-enabling toxicity assessments — a critical step toward Simon's first dose.",
+      t: "Run for Rare – Run for Simon",
+      e: "Our personal motto at the Rare Diseases Run: every kilometre run together turns into momentum for MCOPS12 research.",
     },
     de: {
-      t: "ASO-Toxizitätsstudie in finaler Phase",
-      e: "Unsere sechs Leitkandidaten gehen in die letzten IND-relevanten Sicherheitstests – ein entscheidender Schritt vor Simons erster Dosis.",
+      t: "Run for Rare – Run for Simon",
+      e: "Unser persönliches Motto beim Rare Diseases Run: Jeder gemeinsam gelaufene Kilometer wird zu Rückenwind für die MCOPS12-Forschung.",
+    },
+  },
+  {
+    img: newsWinter,
+    cat: "Science",
+    date: "March 2026",
+    en: {
+      t: "New RARB-RD preprint: two patient mouse models",
+      e: "Nicolas Zinter (MassGeneral / Harvard) shares a preprint introducing two mouse models carrying patient variants p.R387C and p.L402P — a major step for MCOPS12 research.",
+    },
+    de: {
+      t: "Neues RARB-RD Preprint: zwei Patienten-Mausmodelle",
+      e: "Nicolas Zinter (MassGeneral / Harvard) stellt ein Preprint mit zwei Mausmodellen vor, die die Patientenvarianten p.R387C und p.L402P tragen — ein wichtiger Schritt für die MCOPS12-Forschung.",
     },
   },
   {
@@ -32,25 +45,12 @@ const homeNews = [
     cat: "Community",
     date: "January 2026",
     en: {
-      t: "€235,000 milestone reached",
-      e: "Thanks to families, runners, and corporate partners across three continents, we've crossed a major fundraising milestone.",
+      t: "Happy New Year from Cure MCOPS12",
+      e: "Stepping into 2026 with heartfelt gratitude to every supporter, family and partner who stood with us — and a clear focus on the year ahead.",
     },
     de: {
-      t: "€235.000-Meilenstein erreicht",
-      e: "Dank Familien, Läufer:innen und Unternehmenspartnern auf drei Kontinenten haben wir einen großen Fundraising-Meilenstein erreicht.",
-    },
-  },
-  {
-    img: newsWinter,
-    cat: "Science",
-    date: "November 2025",
-    en: {
-      t: "New iPSC striatal neuron model published",
-      e: "The Taylor Lab in Basel has published a new disease model that will accelerate drug screening for MCOPS12.",
-    },
-    de: {
-      t: "Neues iPSC-Striatum-Modell publiziert",
-      e: "Das Taylor-Labor in Basel hat ein neues Krankheitsmodell publiziert, das das Wirkstoff-Screening für MCOPS12 beschleunigt.",
+      t: "Frohes neues Jahr von Cure MCOPS12",
+      e: "Wir starten ins Jahr 2026 mit großer Dankbarkeit an alle Unterstützer:innen, Familien und Partner — und mit klarem Blick auf das, was vor uns liegt.",
     },
   },
 ];
@@ -100,7 +100,7 @@ export default function Home({ lang }: { lang: Lang }) {
                 alt={`Simon & family — slide ${i + 1}`}
                 className={`absolute inset-0 h-full w-full object-cover ${
                   i === 1
-                    ? "object-[70%_bottom] sm:object-[center_bottom]"
+                    ? "object-[70%_30%] sm:object-[center_30%]"
                     : i === 0
                     ? "object-[75%_20%] sm:object-[70%_25%]"
                     : "object-center"
