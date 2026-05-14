@@ -1,7 +1,7 @@
-import { FileText, Database, Microscope, Activity, Mail, FlaskConical } from "lucide-react";
+import { FileText, Database, Microscope, Activity, Mail, FlaskConical, CheckCircle2, Users2, CalendarRange, Layers } from "lucide-react";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
-import { Reveal } from "@/components/site/Reveal";
+import { Reveal, Counter } from "@/components/site/Reveal";
 import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
 import type { Lang } from "@/content/site";
 
