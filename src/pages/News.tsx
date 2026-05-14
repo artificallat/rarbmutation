@@ -28,13 +28,12 @@ export default function News({ lang }: { lang: Lang }) {
       <section className="container-wide pb-20">
         <div className="grid md:grid-cols-3 gap-6">
           {posts.map((p, i) => (
-            <article key={i} className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-[var(--shadow-card)] transition-shadow">
+            <article key={i} className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all duration-200">
               <Placeholder label={`Thumbnail: ${p.cat}`} src={p.img} className="aspect-video !rounded-none" />
               <div className="p-6">
                 <p className="text-xs text-teal font-semibold uppercase tracking-wider">{p.cat} · {p.date}</p>
                 <h3 className="font-display text-xl font-bold text-navy mt-2">{de ? p.de.t : p.en.t}</h3>
-                <p className="text-sm text-foreground/75 mt-2 line-clamp-3">{de ? p.de.e : p.en.e}</p>
-                <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal">{de ? "Weiterlesen" : "Read more"} <ArrowRight className="w-3.5 h-3.5"/></a>
+                <p className="text-sm text-foreground/75 mt-2 line-clamp-4">{de ? p.de.e : p.en.e}</p>
               </div>
             </article>
           ))}
