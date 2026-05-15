@@ -32,10 +32,10 @@ export function ProgressBar({ raised, goal }: { raised: number; goal: number }) 
   return (
     <div ref={ref}>
       <div className="flex items-end justify-between mb-2 text-sm font-medium">
-        <span>
-          <Counter to={raised} prefix="€" duration={1500} className="text-2xl font-display font-bold text-navy" />{" "}
-          <span className="text-muted-foreground">raised</span>
-        </span>
+        <div className="flex flex-col">
+          <Counter to={raised} prefix="€" duration={1500} className="text-2xl font-display font-bold text-navy" />
+          <span className="text-muted-foreground mt-0.5">raised</span>
+        </div>
         <span className="text-muted-foreground">of €{goal.toLocaleString("de-AT")} goal</span>
       </div>
       <div className="h-3 rounded-full bg-muted overflow-hidden">
