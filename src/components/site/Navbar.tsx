@@ -106,10 +106,10 @@ export default function Navbar({ lang }: { lang: Lang }) {
 
         {open && (
           <div
-            className="lg:hidden mt-2 rounded-2xl p-4 space-y-1 shadow-[var(--shadow-card)]"
+            className="lg:hidden mt-2 rounded-2xl p-2 shadow-[var(--shadow-card)] max-h-[80vh] overflow-y-auto"
             style={{ backgroundColor: "hsl(var(--navy))", color: "#ffffff" }}
           >
-            <Link to={`${p}/`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-3 rounded-lg text-base font-medium", isActive(`${p}/`) ? "text-amber" : "text-white")}>{tr.nav.home}</Link>
+            <Link to={`${p}/`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[44px] px-3 py-2 rounded-lg text-sm font-medium", isActive(`${p}/`) ? "text-amber" : "text-white")}>{tr.nav.home}</Link>
 
             <MobileGroup label={tr.nav.about} items={aboutItems} onNavigate={() => setOpen(false)} isActive={isActive} />
             <MobileGroup label={tr.nav.achievements} items={achievementsItems} onNavigate={() => setOpen(false)} isActive={isActive} />
@@ -119,7 +119,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
             <Link
               to={otherPath}
               onClick={() => setOpen(false)}
-              className="flex items-center min-h-[48px] px-4 py-3 rounded-lg text-base font-medium"
+              className="flex items-center min-h-[44px] px-3 py-2 mt-1 rounded-lg text-sm font-medium"
               style={{ color: "#ffffff" }}
             >
               🌐 {otherLang.toUpperCase()}
@@ -127,7 +127,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
             <Link
               to={`${p}/donate`}
               onClick={() => setOpen(false)}
-              className="flex items-center justify-center min-h-[48px] px-4 py-3 mt-2 rounded-lg font-semibold text-base"
+              className="flex items-center justify-center min-h-[44px] px-3 py-2 mt-2 rounded-lg font-semibold text-sm"
               style={{ backgroundColor: "hsl(var(--amber))", color: "hsl(var(--navy))" }}
             >
               {tr.cta.donate}
@@ -185,17 +185,55 @@ function DropdownItem({ item }: { item: NavItem }) {
 function MobileGroup({ label, items, onNavigate, isActive }: {
   label: string; items: NavItem[]; onNavigate: () => void; isActive: (p: string) => boolean;
 }) {
+  const [open, setOpen] = useState(false);
   return (
-    <>
-      <div className="px-4 py-1 mt-2 text-xs font-semibold uppercase tracking-wider opacity-50">{label}</div>
-      {items.map(i => (
-        <div key={i.label}>
-          <Link to={i.to} onClick={onNavigate} className={cn("flex items-center min-h-[48px] px-4 py-2 rounded-lg text-base font-medium", isActive(i.to) ? "text-amber" : "text-white")}>{i.label}</Link>
-          {i.children?.map(c => (
-            <Link key={c.label} to={c.to} onClick={onNavigate} className="flex items-center min-h-[40px] pl-8 pr-4 py-1 rounded-lg text-sm font-medium text-white/80">↳ {c.label}</Link>
+    <div className="mt-1">
+      <button
+        type="button"
+        onClick={() => setOpen(o => !o)}
+        className="w-full flex items-center justify-between min-h-[44px] px-3 py-2 rounded-lg text-sm font-semibold uppercase tracking-wider opacity-80"
+      >
+        <span>{label}</span>
+        <ChevronDown className={cn("w-4 h-4 transition-transform", open && "rotate-180")} />
+      </button>
+      {open && (
+        <div className="pl-1">
+          {items.map(i => (
+            <MobileSubGroup key={i.label} item={i} onNavigate={onNavigate} isActive={isActive} />
           ))}
         </div>
-      ))}
-    </>
+      )}
+    </div>
+  );
+}
+
+function MobileSubGroup({ item, onNavigate, isActive }: {
+  item: NavItem; onNavigate: () => void; isActive: (p: string) => boolean;
+}) {
+  const [open, setOpen] = useState(false);
+  if (!item.children?.length) {
+    return (
+      <Link to={item.to} onClick={onNavigate} className={cn("flex items-center min-h-[40px] px-3 py-2 rounded-lg text-sm font-medium", isActive(item.to) ? "text-amber" : "text-white")}>{item.label}</Link>
+    );
+  }
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={() => setOpen(o => !o)}
+        className={cn("w-full flex items-center justify-between min-h-[40px] px-3 py-2 rounded-lg text-sm font-medium", isActive(item.to) ? "text-amber" : "text-white")}
+      >
+        <span>{item.label}</span>
+        <ChevronRight className={cn("w-4 h-4 transition-transform", open && "rotate-90")} />
+      </button>
+      {open && (
+        <div>
+          <Link to={item.to} onClick={onNavigate} className="flex items-center min-h-[36px] pl-7 pr-3 py-1 rounded-lg text-xs font-medium text-white/70">↳ {item.label}</Link>
+          {item.children.map(c => (
+            <Link key={c.label} to={c.to} onClick={onNavigate} className="flex items-center min-h-[36px] pl-7 pr-3 py-1 rounded-lg text-xs font-medium text-white/80">↳ {c.label}</Link>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
