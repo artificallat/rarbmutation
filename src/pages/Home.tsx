@@ -73,7 +73,7 @@ export default function Home({ lang }: { lang: Lang }) {
     <>
       {/* HERO */}
       <section
-        className="relative mt-0 h-[80vh] min-h-[420px] sm:h-[85vh] sm:min-h-[520px] lg:h-[92vh] lg:min-h-[640px] w-full overflow-hidden bg-navy-deep touch-pan-y"
+        className="relative mt-0 h-[100svh] min-h-[420px] sm:h-[85vh] sm:min-h-[520px] lg:h-[92vh] lg:min-h-[640px] w-full overflow-hidden bg-navy-deep touch-pan-y"
         onTouchStart={(e) => {
           (e.currentTarget as any)._touchStartX = e.touches[0].clientX;
         }}
