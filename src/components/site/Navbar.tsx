@@ -106,10 +106,10 @@ export default function Navbar({ lang }: { lang: Lang }) {
 
         {open && (
           <div
-            className="lg:hidden mt-2 rounded-2xl p-4 space-y-1 shadow-[var(--shadow-card)]"
+            className="lg:hidden mt-2 rounded-2xl p-2 shadow-[var(--shadow-card)] max-h-[80vh] overflow-y-auto"
             style={{ backgroundColor: "hsl(var(--navy))", color: "#ffffff" }}
           >
-            <Link to={`${p}/`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[48px] px-4 py-3 rounded-lg text-base font-medium", isActive(`${p}/`) ? "text-amber" : "text-white")}>{tr.nav.home}</Link>
+            <Link to={`${p}/`} onClick={() => setOpen(false)} className={cn("flex items-center min-h-[44px] px-3 py-2 rounded-lg text-sm font-medium", isActive(`${p}/`) ? "text-amber" : "text-white")}>{tr.nav.home}</Link>
 
             <MobileGroup label={tr.nav.about} items={aboutItems} onNavigate={() => setOpen(false)} isActive={isActive} />
             <MobileGroup label={tr.nav.achievements} items={achievementsItems} onNavigate={() => setOpen(false)} isActive={isActive} />
@@ -119,7 +119,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
             <Link
               to={otherPath}
               onClick={() => setOpen(false)}
-              className="flex items-center min-h-[48px] px-4 py-3 rounded-lg text-base font-medium"
+              className="flex items-center min-h-[44px] px-3 py-2 mt-1 rounded-lg text-sm font-medium"
               style={{ color: "#ffffff" }}
             >
               🌐 {otherLang.toUpperCase()}
@@ -127,7 +127,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
             <Link
               to={`${p}/donate`}
               onClick={() => setOpen(false)}
-              className="flex items-center justify-center min-h-[48px] px-4 py-3 mt-2 rounded-lg font-semibold text-base"
+              className="flex items-center justify-center min-h-[44px] px-3 py-2 mt-2 rounded-lg font-semibold text-sm"
               style={{ backgroundColor: "hsl(var(--amber))", color: "hsl(var(--navy))" }}
             >
               {tr.cta.donate}
