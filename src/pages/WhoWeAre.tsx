@@ -127,28 +127,6 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
             </div>
           ))}
         </div>
-        <div className="grid sm:grid-cols-2 gap-6 mt-10">
-          {board.filter(b => !b.featured).map(b => (
-            <div key={b.name} className="bg-card rounded-2xl border border-border p-6 flex flex-col items-center text-center h-full">
-              {photos[b.name] ? (
-                <img
-                  src={photos[b.name]}
-                  alt={b.name}
-                  style={{ width: 120, height: 120, objectFit: "cover", objectPosition: "center top", borderRadius: "9999px", display: "block" }}
-                  className="mb-4"
-                />
-              ) : (
-                <div className="placeholder-img mb-4 text-xs" style={{ width: 120, height: 120, borderRadius: "9999px" }}>
-                  {b.name.split(" ")[0]}
-                </div>
-              )}
-              <h4 className="font-display text-xl font-bold text-navy">{b.name}</h4>
-              <p className="text-teal font-semibold text-sm mt-1">{b.role[lang]}</p>
-              <p className="text-sm text-foreground/75 mt-3 leading-relaxed">{b.bio[lang]}</p>
-              {b.linkedin && <a href={b.linkedin} target="_blank" rel="noreferrer" className="mt-3 self-start inline-flex items-center gap-1 text-xs font-semibold text-navy hover:text-teal"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>}
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* Volunteers */}
