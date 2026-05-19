@@ -6,6 +6,7 @@ const advisors = [
   { name: "Rodney A. Bowling Jr, PhD", title: "Chief Scientific Officer, RareLabs (AlphaRose Therapeutics)", url: "https://hopeatrarelabs.com/" },
   { name: "Jacques L. Michaud, MD, FRCP", title: "Director, Centre de recherche Azrieli du CHU Sainte-Justine; Professor of Pediatrics and Neurosciences, Université de Montréal", url: "https://www.chusj.org/Biography?id=66412bca-6e3c-4bee-b1e6-30d8c88d07d7&lang=en" },
   { name: "Inge Meijer, MD, PhD", title: "Child Neurologist, CHU Sainte-Justine; Assistant Clinical Professor, Université de Montréal", url: "https://www.chusj.org/Biography?id=a9ea81e4-2dfc-4d16-9d9c-fb47fa484f65&lang=en" },
+  { name: "Valerie Chu, MD", title: "Scientific Advisor — RARB Natural History Study" },
 ];
 
 export default function ScientificAdvisoryBoard({ lang }: { lang: Lang }) {
