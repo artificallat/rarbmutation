@@ -1,4 +1,4 @@
-import { ClipboardList, Activity, Users, Mail, FileText } from "lucide-react";
+import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation } from "lucide-react";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
@@ -33,15 +33,31 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
       <section className="container-tight pb-12 space-y-6 text-foreground/85 leading-relaxed text-lg">
         <p>
           {de
-            ? "Eine Natural History Study ist eine medizinische Studie, die untersucht, wie sich eine Erkrankung über die Zeit entwickelt. Sie testet keine neuen Medikamente — stattdessen wird der natürliche Verlauf der Krankheit sorgfältig dokumentiert."
-            : "A natural history study is a type of medical study that helps researchers understand how a disease develops and changes over time. It does not involve testing new drugs — instead, it carefully observes and documents the disease as it naturally progresses."}
+            ? "Eine Natural History Study ist eine medizinische Studie, die Forscher:innen hilft zu verstehen, wie sich eine Erkrankung über die Zeit entwickelt und verändert. Ziel ist es, mehr darüber zu lernen, wie die Erkrankung Betroffene beeinflusst — als Grundlage für eine bessere Versorgung und zukünftige Therapien."
+            : "A natural history study is a type of medical study that helps researchers understand how a disease develops and changes over time in a group of patients. Its purpose is to learn more about how the condition affects individuals, so that better care and treatments can be developed in the future."}
         </p>
         <p>
           {de
-            ? "Gerade bei seltenen Erkrankungen wie MCOPS12 sind solche Studien entscheidend. Da nur wenige Betroffene bekannt sind und die Symptome stark variieren können, schaffen sie die Basis für bessere Versorgung — und liefern die Daten, die für jede zukünftige klinische Studie zwingend gebraucht werden."
-            : "Natural history studies are especially important for rare diseases like MCOPS12. With few affected individuals and widely varying symptoms, they are a promising path to better care and provide the baseline data that any future clinical trial will rely on."}
+            ? "Diese Art von Studie testet keine neuen Medikamente oder Therapien. Stattdessen wird der natürliche Verlauf der Erkrankung sorgfältig beobachtet und dokumentiert."
+            : "This type of study does not involve testing new drugs or treatments. Instead, it focuses on carefully observing and documenting the disease as it naturally progresses."}
+        </p>
+        <p>
+          {de
+            ? "Gerade bei seltenen Erkrankungen wie MCOPS12 sind Natural History Studies besonders wichtig. Da die Zahl der Betroffenen klein ist und die Symptome stark variieren können, sind diese Studien ein vielversprechender Weg, die Erkrankung besser zu verstehen — und sie liefern die Ausgangsdaten für eine klinische Studie."
+            : "Natural history studies are especially important for rare diseases like MCOPS12. Since the number of affected individuals is small and symptoms can vary widely, these studies are a promising path for a better understanding of a disease as well as generating baseline data for a clinical trial."}
+        </p>
+        <p>
+          {de
+            ? "Die MCOPS12 Natural History Study erfasst Basisdaten sowie Beurteilungen der neurologischen Entwicklung und Motorik. Teilnehmen können Personen jeden Alters, aus jedem Land, die pathogene oder wahrscheinlich pathogene Varianten im RARB-Gen tragen."
+            : "The MCOPS12 Natural History Study collects baseline data and assessments of neurodevelopment and motor skills. Individuals of any age, from any country, carrying pathogenic or likely pathogenic variants in the RARB gene are eligible to participate."}
+        </p>
+        <p>
+          {de
+            ? "Die Studie umfasst jährliche Teilnehmer- und Arztfragebögen sowie das Hochladen von MRT-Aufnahmen des Gehirns und Patientenvideos. 2026 wurde die Studie um Biomarker-Forschung erweitert — darunter EEG sowie metabolomische und proteomische Analysen aus Blutplasmaproben."
+            : "The study entails annual participant and physician questionnaires, as well as uploading brain MRIs and participant videos. In 2026, the study was expanded to include biomarker research, comprising EEG as well as metabolomic and proteomic analyses of patient blood plasma samples."}
         </p>
       </section>
+
 
       <section className="container-wide pb-12">
         <div className="grid md:grid-cols-3 gap-6">
@@ -100,6 +116,50 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
         </div>
       </section>
 
+      <section className="container-wide pb-12">
+        <SectionTitle
+          eyebrow={de ? "Materialien" : "Resources"}
+          title={de ? "Flyer & Webinar-Präsentation" : "Flyer & webinar presentation"}
+        />
+        <div className="grid sm:grid-cols-2 gap-6 -mt-2">
+          <a
+            href="/documents/Flyer-RARB-MCOPS12-Natural-History-Study.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
+          >
+            <div className="w-14 h-14 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0 group-hover:bg-teal group-hover:text-white transition-colors">
+              <Download className="w-7 h-7" />
+            </div>
+            <div className="flex-1">
+              <p className="text-xs uppercase tracking-wider font-semibold text-teal mb-1">PDF</p>
+              <h4 className="font-display text-lg font-bold text-navy">
+                {de ? "Studien-Flyer herunterladen" : "Download the study flyer"}
+              </h4>
+              <p className="text-sm text-foreground/70 mt-1">Flyer — RARB (MCOPS12) Natural History Study.pdf</p>
+            </div>
+          </a>
+
+          <a
+            href="/documents/RARB-Natural-History-Study_V-Chu_2024.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
+          >
+            <div className="w-14 h-14 rounded-xl bg-amber/15 text-amber-deep flex items-center justify-center shrink-0 group-hover:bg-amber group-hover:text-navy transition-colors">
+              <Presentation className="w-7 h-7" />
+            </div>
+            <div className="flex-1">
+              <p className="text-xs uppercase tracking-wider font-semibold text-amber-deep mb-1">{de ? "Webinar 2024" : "2024 webinar"}</p>
+              <h4 className="font-display text-lg font-bold text-navy">
+                {de ? "Präsentation des MCOPS12-Familien-Webinars" : "Presentation from our 2024 MCOPS12 families webinar"}
+              </h4>
+              <p className="text-sm text-foreground/70 mt-1">RARB Natural History Study_V. Chu_2024.pdf</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
       <section className="container-wide pb-20">
         <div className="grid sm:grid-cols-2 gap-6">
           <a
@@ -132,6 +192,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
           </a>
         </div>
       </section>
+
     </>
   );
 }
