@@ -173,6 +173,7 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
                 <div>
                   <h4 className="font-display text-xl font-bold text-navy">{s.name}</h4>
                   <p className="text-sm text-foreground/75 mt-2">{s.title}</p>
+                  {(s as any).bio && <p className="text-sm text-foreground/70 mt-3 leading-relaxed">{(s as any).bio}</p>}
                 </div>
               </Tag>
             );
