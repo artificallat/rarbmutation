@@ -120,12 +120,12 @@ export default function Home({ lang }: { lang: Lang }) {
             <div className={`relative h-full container-wide flex items-end ${i === 0 ? "pb-16 sm:pb-20" : "pb-24 sm:pb-32"}`}>
               {i === slide && (
                 <div className="max-w-3xl text-white fade-in">
-                  <h1 className="font-display font-bold leading-[1.05] text-balance text-4xl sm:text-6xl md:text-7xl">
+                  <h1 className="font-display font-bold leading-[1.1] text-balance text-3xl sm:text-5xl md:text-7xl">
                     {s.title}
                   </h1>
-                  {"sub" in s && s.sub && <p className="mt-4 text-white/90 font-light text-xl sm:text-2xl">{s.sub}</p>}
+                  {"sub" in s && s.sub && <p className="mt-4 text-white/90 font-light text-base sm:text-xl md:text-2xl">{s.sub}</p>}
                   {"sub2" in s && (s as any).sub2 && (
-                    <p className="mt-1 text-amber font-medium text-xl sm:text-2xl">{(s as any).sub2}</p>
+                    <p className="mt-1 text-amber font-medium text-base sm:text-xl md:text-2xl">{(s as any).sub2}</p>
                   )}
                   <div className="mt-8 flex flex-wrap gap-3">
                     {i === 3 && (
