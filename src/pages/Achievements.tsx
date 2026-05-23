@@ -66,7 +66,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
 
       <section className="bg-gradient-to-br from-navy to-navy-deep text-white py-20">
         <div className="container-tight">
-          <SectionTitle light eyebrow={de ? "ASO-Programm" : "ASO program"} title={de ? "Simons personalisierte ASO-Therapie – Stand der Dinge" : "Simon's Personalized ASO Therapy — Where We Stand"} />
+          <SectionTitle light eyebrow={de ? "ASO-Programm" : "ASO program"} title={de ? "Forschung & Arzneimittelentwicklung – Meilensteine" : "Research & Drug Development Milestones"} />
           <Reveal>
             <p className="text-lg text-white/85 leading-relaxed max-w-3xl">
               {de
