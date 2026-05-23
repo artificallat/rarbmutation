@@ -242,11 +242,11 @@ export function PageHero({ eyebrow, title, sub }: { eyebrow?: string; title: str
             {eyebrow}
           </p>
         )}
-        <h1 className="font-display sm:text-4xl md:text-5xl font-bold text-balance text-6xl text-navy text-slate-800 animate-fade-in">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-balance text-navy text-slate-800 animate-fade-in">
           {title}
         </h1>
         {sub && (
-          <p className="mt-6 text-lg md:text-xl text-foreground/75 max-w-3xl leading-relaxed animate-fade-in">
+          <p className="mt-5 text-base sm:text-lg md:text-xl text-foreground/75 max-w-3xl leading-relaxed animate-fade-in">
             {sub}
           </p>
         )}
