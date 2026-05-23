@@ -14,7 +14,7 @@ export default function Donate({ lang }: { lang: Lang }) {
           : "With your support, we can move closer to a life-changing therapy. Every donation makes a difference."} />
 
       <section className="container-tight pb-12">
-        <div className="bg-gradient-to-br from-teal/90 to-teal text-white rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
+        <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
           <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
           <p className="text-sm text-white/90 mt-4 leading-relaxed">
             {de
