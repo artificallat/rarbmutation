@@ -152,8 +152,13 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* Workflow steps */}
-      <WorkflowProgress de={de} />
+      {/* Workflow figure */}
+      <section className="container-wide py-16">
+        <Reveal>
+          <AsoWorkflowFigure lang={de ? "de" : "en"} />
+        </Reveal>
+      </section>
+
 
 
 
