@@ -1,6 +1,7 @@
-import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation, Stethoscope } from "lucide-react";
+import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation } from "lucide-react";
 import { SectionTitle, PageHeroIllustrated, LeadParagraph } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
+import chuLogo from "@/assets/chu-sainte-justine-logo.png";
 import type { Lang } from "@/content/site";
 
 
@@ -22,12 +23,13 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
   return (
     <>
       <PageHeroIllustrated
-        eyebrow={de ? "Familien" : "Families"}
+        eyebrow={de ? "Familien" : "For Families"}
         title={de ? "Nimm an der Natural History Study teil" : "Join the Natural History Study"}
         sub={de
           ? "In Zusammenarbeit mit A Cure for Sophia and Friends, A Cure for Sienna und Cure MCOPS12 hat das CHU Sainte-Justine 2024 die MCOPS12 (RARB) Natural History Study gestartet."
           : "In collaboration with A Cure for Sophia and Friends, A Cure for Sienna and Cure MCOPS12, CHU Sainte-Justine launched the MCOPS12 (RARB) Natural History Study in 2024."}
-        icon={Stethoscope}
+        logoSrc={chuLogo}
+        logoAlt="CHU Sainte-Justine — Centre de recherche"
         badgeLabel={de ? "CHU Sainte-Justine · 2024" : "CHU Sainte-Justine · 2024"}
       />
 
