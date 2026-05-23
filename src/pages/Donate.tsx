@@ -9,18 +9,21 @@ export default function Donate({ lang }: { lang: Lang }) {
   return (
     <>
       <PageHero eyebrow={de ? "Spenden" : "Donate"}
-        title={de ? "Ihre Spende gibt Simon – und jedem MCOPS12-Kind – die Chance auf ein besseres Leben." : "Your donation gives Simon — and every MCOPS12 child — a chance at a better life."} />
+        title={de
+          ? "Mit Ihrer Unterstützung kommen wir einer lebensverändernden Therapie näher. Jede Spende macht einen Unterschied."
+          : "With your support, we can move closer to a life-changing therapy. Every donation makes a difference."} />
 
-      <section className="container-tight pb-16">
-        <div className="bg-card rounded-3xl border border-border p-8 sm:p-10 shadow-[var(--shadow-card)]">
+      <section className="container-tight pb-12">
+        <div className="bg-gradient-to-br from-teal/90 to-teal text-white rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
           <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
-          <p className="text-sm text-muted-foreground mt-4">
+          <p className="text-sm text-white/90 mt-4 leading-relaxed">
             {de
-              ? "€600.000–750.000 werden benötigt, um die präklinische Entwicklung abzuschließen und eine klinische Studie / Off-Label-Anwendung vorzubereiten."
-              : "€600,000–750,000 needed to complete preclinical development and prepare for clinical trial / off-label use."}
+              ? "Wir treten nun in die letzte Phase ein — Toxizitätsstudien, um das sicherste ASO-Medikament für Simon zu bestimmen. Diese Therapie ist auf Simon zugeschnitten, doch der zugrunde liegende Entwicklungsansatz lässt sich auf andere MCOPS12-Patient:innen übertragen."
+              : "We are now entering the final step — conducting toxicity studies to determine the safest ASO drug for Simon. While this therapy is tailored to Simon, the underlying development approach is amenable to other MCOPS12 patients."}
           </p>
         </div>
       </section>
+
 
       <section className="container-wide pb-20">
         <SectionTitle eyebrow={de ? "So spenden Sie" : "How to donate"} title={de ? "Drei einfache Wege" : "Three simple ways"} />
