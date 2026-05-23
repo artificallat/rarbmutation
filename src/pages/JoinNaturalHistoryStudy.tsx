@@ -33,15 +33,31 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
       <section className="container-tight pb-12 space-y-6 text-foreground/85 leading-relaxed text-lg">
         <p>
           {de
-            ? "Eine Natural History Study ist eine medizinische Studie, die untersucht, wie sich eine Erkrankung über die Zeit entwickelt. Sie testet keine neuen Medikamente — stattdessen wird der natürliche Verlauf der Krankheit sorgfältig dokumentiert."
-            : "A natural history study is a type of medical study that helps researchers understand how a disease develops and changes over time. It does not involve testing new drugs — instead, it carefully observes and documents the disease as it naturally progresses."}
+            ? "Eine Natural History Study ist eine medizinische Studie, die Forscher:innen hilft zu verstehen, wie sich eine Erkrankung über die Zeit entwickelt und verändert. Ziel ist es, mehr darüber zu lernen, wie die Erkrankung Betroffene beeinflusst — als Grundlage für eine bessere Versorgung und zukünftige Therapien."
+            : "A natural history study is a type of medical study that helps researchers understand how a disease develops and changes over time in a group of patients. Its purpose is to learn more about how the condition affects individuals, so that better care and treatments can be developed in the future."}
         </p>
         <p>
           {de
-            ? "Gerade bei seltenen Erkrankungen wie MCOPS12 sind solche Studien entscheidend. Da nur wenige Betroffene bekannt sind und die Symptome stark variieren können, schaffen sie die Basis für bessere Versorgung — und liefern die Daten, die für jede zukünftige klinische Studie zwingend gebraucht werden."
-            : "Natural history studies are especially important for rare diseases like MCOPS12. With few affected individuals and widely varying symptoms, they are a promising path to better care and provide the baseline data that any future clinical trial will rely on."}
+            ? "Diese Art von Studie testet keine neuen Medikamente oder Therapien. Stattdessen wird der natürliche Verlauf der Erkrankung sorgfältig beobachtet und dokumentiert."
+            : "This type of study does not involve testing new drugs or treatments. Instead, it focuses on carefully observing and documenting the disease as it naturally progresses."}
+        </p>
+        <p>
+          {de
+            ? "Gerade bei seltenen Erkrankungen wie MCOPS12 sind Natural History Studies besonders wichtig. Da die Zahl der Betroffenen klein ist und die Symptome stark variieren können, sind diese Studien ein vielversprechender Weg, die Erkrankung besser zu verstehen — und sie liefern die Ausgangsdaten für eine klinische Studie."
+            : "Natural history studies are especially important for rare diseases like MCOPS12. Since the number of affected individuals is small and symptoms can vary widely, these studies are a promising path for a better understanding of a disease as well as generating baseline data for a clinical trial."}
+        </p>
+        <p>
+          {de
+            ? "Die MCOPS12 Natural History Study erfasst Basisdaten sowie Beurteilungen der neurologischen Entwicklung und Motorik. Teilnehmen können Personen jeden Alters, aus jedem Land, die pathogene oder wahrscheinlich pathogene Varianten im RARB-Gen tragen."
+            : "The MCOPS12 Natural History Study collects baseline data and assessments of neurodevelopment and motor skills. Individuals of any age, from any country, carrying pathogenic or likely pathogenic variants in the RARB gene are eligible to participate."}
+        </p>
+        <p>
+          {de
+            ? "Die Studie umfasst jährliche Teilnehmer- und Arztfragebögen sowie das Hochladen von MRT-Aufnahmen des Gehirns und Patientenvideos. 2026 wurde die Studie um Biomarker-Forschung erweitert — darunter EEG sowie metabolomische und proteomische Analysen aus Blutplasmaproben."
+            : "The study entails annual participant and physician questionnaires, as well as uploading brain MRIs and participant videos. In 2026, the study was expanded to include biomarker research, comprising EEG as well as metabolomic and proteomic analyses of patient blood plasma samples."}
         </p>
       </section>
+
 
       <section className="container-wide pb-12">
         <div className="grid md:grid-cols-3 gap-6">
