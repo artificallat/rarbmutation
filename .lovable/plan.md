@@ -1,62 +1,59 @@
-## 1. Hero-Slider Bildtausch (Home)
+# Plan
 
-- Neues Foto `user-uploads://20190221_103509-3.jpg` → `src/assets/simon-fairy-lights.jpg`
-- In `src/pages/Home.tsx`:
-  - Slide 3 (`heroBeyond` = `simon-and-beyond.jpg`) → neues Fairy-Lights-Foto
-  - Slide 4 (`heroPlayground` = `reinhard-simon-playground.jpg`) → `simon-and-beyond.jpg` (das bisherige Slide-3-Foto)
-- `object-position` für die neue Slide 3 anpassen (Kind ist seitlich/oben-rechts, evtl. `object-[70%_30%]`)
+## 1. ASO Therapy: doppeltes Workflow-Kärtchen entfernen
 
-## 2. Spendenbalken: Gelb → Grün
+In `src/pages/AsoTherapy.tsx`:
 
-In `src/components/site/Bits.tsx` (`ProgressBar`): Gradient von `from-teal to-amber` umstellen auf **Gelb → Grün** (z.B. `from-amber to-emerald-500` bzw. via CSS-Variable). Außerdem laut PDF: das Spenden-Kärtchen mit türkisem Hintergrund hinterlegen (Home-Seite, `bg-teal text-white` Wrapper-Card). Also ersetze die Zahlen die davor im Türkisem Hintergrund hat die nach oben zählen mit dem Kärtchen
+- Den Block `Figure 2` (Section mit `<AsoWorkflowFigure lang={lang} />`, Zeilen ~157–162) **löschen**, weil dieselbe Workflow-Grafik bereits auf der Natural-History-Study-Seite genutzt wird und direkt darüber schon der "From sequencing result to clinical use"-4-Schritte-Block (`WorkflowProgress`) steht.
+- Den Import `AsoWorkflowFigure` aufräumen, falls nicht mehr verwendet.
+
+## 2. Who We Are – Volunteer-Karten: größer + "Read more"-Button
+
+In `src/pages/WhoWeAre.tsx` die Volunteers-Section so umbauen wie auf "Meet Our Kids":
+
+- Grid von `lg:grid-cols-4` auf `md:grid-cols-2` ändern → zwei große Karten pro Reihe (genug Platz für vollen Bio-Text).
+- Foto deutlich größer (z. B. 160×160 px, weiter als Kreis).
+- Hover-Overlay mit Text **entfernen** – stattdessen unter Name/Rolle: kurze Vorschau-Zeile, danach `Read story / Geschichte lesen`-Button mit `ChevronDown` (gleicher Mechanismus wie `KidCard` in `MeetOurKids.tsx`).
+- Beim Aufklappen: vollständiger Bio-Text aus PDF + LinkedIn-Button.
 
 ## 3. Texte 1:1 aus PDF übernehmen
 
-Das PDF enthält Inhalts-Updates für sehr viele Seiten. Vorschlag — in dieser Reihenfolge umsetzen:
+### Volunteers (Page 11 des PDF)
 
-**Home (`src/pages/Home.tsx` + `src/content/site.ts`):**
+- **Ivana Ursić Ivić** – Bio ersetzen durch den vollen Absatz aus dem PDF (Split, Kroatien, Engineer/drug development specialist, Projektmanagerin, Inspiration durch Reinhard, Freizeit: Reisen, Bouldern, Mann + Katzen). DE-Übersetzung 1:1 angepasst.
+- **Kathi Carl** – Bio ersetzen durch den vollen Absatz (Thüringen, Chemikerin, Projektmanagerin, Pell-Familie, als Mutter motiviert, Freizeit: Wandern, Basketball, Lesen).
 
-- „Our Story" Text auf neue Version (Simon 2017, RARB, MCOPS12, Cure MCOPS12 Gründung, ASO ab 2023)
-- ASO-Block: neuer Text „In collaboration with a biotech partner in the US…"
-- Spendenkärtchen mit türkisem Hintergrund
+### Board (Pages 9–10 des PDF)
 
-**Who We Are (`src/pages/WhoWeAre.tsx`):**
+- **Reinhard Pell** – Bio austauschen gegen die PDF-Version (PhD Analytical Chemistry Wien, Pharma-Karriere mit RNA-Therapeutika, Cure MCOPS12 Gründung, Freizeit: Sport/Natur, Alpinwandern, Skifahren, Schwimmen mit Kindern).
+- **Edith Pell** – Bio austauschen gegen die PDF-Version (Master Sozialwissenschaften, Sozialarbeiterin >10 Jahre, zwei Kinder Simon + kleine Schwester, glaubt an Reinhards Drug-Development-Expertise + Familie/Freunde, Freizeit: Wandern/Laufen rund um Salzburg).
+- **Katri Rouvali** – Bio bereits 1:1 aus PDF, bleibt.
+- **Edith Rockenschaub** – Bio austauschen gegen die PDF-Version (Hagenberg, Treasurer, Buchhalterin bei Baufirma, Kindheitsfreundin von Simons Mama, Partner half mit ein, Freizeit: Gärtnern + Brot backen).
 
-- Intro „Cure MCOPS12 is an Austrian nonprofit…"
-- Our Mission Satz
-- Board-Bios Reinhard, Edith Pell, Katri Rouvali, Edith Rockenschaub (volle Texte aus PDF)
-- Volunteers: Ivana, Kathi (volle Bios)
-- Scientific Advisory Board: Wojciech Krezel (Link), Rodney A. Bowling Jr (volle Bio), Jacques L. Michaud, Inge Meijer
+### Scientific Advisory Board (Page 12)
 
-**What is MCOPS12 (`src/pages/WhatIs.tsx` / `Mcops12Disease.tsx`):**
+- **Jacques L. Michaud** – Prefix "Prof." ergänzen (Titel im PDF: "Prof. Jacques L. Michaud, MD, FRCP").
+- **Inge Meijer** – Titel auf "MD, PhD, FRCP" angleichen (PDF schreibt FRCP).
+- Bowling-Bio bereits drin → bleibt.
 
-- Volltext „Syndromic Microphthalmia 12…" inkl. 4 Hyperlinks (Srour 2016, Srour 2013, Caron 2023, Trieschmann 2023)
-- Facts-Liste (8 Bullets) 1:1
-- References-Section
+## Technische Details
 
-**Achievements / Research & Drug Development (`src/pages/Achievements.tsx`):**
+```text
+src/pages/AsoTherapy.tsx
+  - Section "Figure 2" entfernen (~Z. 157–162)
+  - Import AsoWorkflowFigure entfernen, falls ungenutzt
 
-- Intro „In close collaboration with… 600,000 € (as of June 2026)… seven research and drug development programs"
-- Timeline-Titel ändern in **„Research & Drug Development Milestones"**
-- Timeline-Einträge 1:1: 2019–2022 RAinRARE, 2022–2024 Mouse Models & Drug Repurposing (inkl. 2 Publikationen + Links), 2023– Simon's ASO, 2024–2026 Lipidomics, 2024– Natural History Study, 2024– Drug Repurposing iPSC, 2026– Biomarkers
+src/pages/WhoWeAre.tsx
+  - volunteers[]: bio.en/bio.de für Ivana + Kathi mit PDF-Volltext füllen
+  - board[]: bio.en/bio.de für Reinhard, Edith Pell, Edith Rockenschaub mit PDF-Volltext füllen
+  - sab[]: title-Korrektur Michaud + Meijer
+  - Volunteers-Render-Block umbauen:
+    * neue VolunteerCard-Komponente mit useState(open)
+    * grid md:grid-cols-2
+    * Bild 160×160 px, runde Form
+    * Read-more-Toggle analog KidCard (ChevronDown rotiert)
+```
 
-**Network (`src/pages/Network.tsx`):**
-
-- Volltext „We cannot wait…", Partner-Orgs (Sophia & Friends, Sienna), Scientific Network (IGBMC, CHU Sainte-Justine, RareLabs), ProRare + EURORDIS
-
-**ASO Therapy (`src/pages/AsoTherapy.tsx`):**
-
-- Texte aus PDF Seiten 23–25 / 33–35 übernehmen, Hongene-Logo-Block
-
-**Newly Diagnosed, Natural History Study, For Clinicians, Research:**
-
-- Research-Seite: nur Hinweis **„currently under revision"** anzeigen
-  - Andere: Texte aus PDF Seiten 26–32y
-
-**Donate:** laut PDF „DONE 18May26" – nur prüfen, keine Änderung nötig falls schon aktuell.
-
-## Offene Frage
-
-Punkt 3 ist umfangreich (Texte auf ~8 Seiten). Soll ich **alles in einem Schritt** umsetzen, oder bevorzugst du die Reihenfolge **Hero+Balken zuerst (Punkt 1+2), dann Texte seitenweise** (z.B. erst Who We Are + What is MCOPS12, danach Achievements + Network, dann Rest)?
-
-Ich habe fast keine Credits mehr wenn es irgendwie geht dass du es verlässlich übertragst ohne fehler zu machen, dann alles auf einmal einfach so dass du am wenigsten credits verbrauchst danach überprüfe ob du alle texte richtig übertragen hast
+Andere Seiten (Achievements/Research/Network/ASO-Texte/Home) bleiben in diesem Schritt unverändert – falls dort noch Stellen 1:1 anzupassen sind, sag mir bitte konkret welche Absätze, dann nehme ich die in einem nächsten Durchgang dran.  
+  
+Überprüfe noch zusätzlich ob die anderen Texte 1 zu 1 so steht wie im Onenote, wenn nicht bessere es aus analysiere die ganze Seite und übernehme den text weil auch bei ein paar stellen hast du beim Zitat vergessen es abzuschließen

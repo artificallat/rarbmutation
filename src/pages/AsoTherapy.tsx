@@ -3,7 +3,7 @@ import asoFigure1 from "@/assets/research/aso-figure-1.png";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal, useInView } from "@/components/site/Reveal";
-import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
+
 import type { Lang } from "@/content/site";
 
 export default function AsoTherapy({ lang }: { lang: Lang }) {
@@ -144,9 +144,10 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           </p>
           <p>
             {de
-              ? "Das ist gleich in zweifacher Hinsicht wertvoll. Zum einen entstand so überhaupt erst ein gangbarer Weg für Simons Therapie. Zum anderen ist der dabei entwickelte Arbeitsablauf (Abbildung 2) eine Blaupause — er lässt sich für weitere MCOPS12-Kinder mit anderen Mutationen wiederverwenden."
-              : "This matters on two fronts. First, it created a viable path for Simon's therapy in the first place. Second, the workflow we built along the way (Figure 2) is a blueprint — one that can be reused for other MCOPS12 children carrying different mutations."}
+              ? "Das ist gleich in zweifacher Hinsicht wertvoll. Zum einen entstand so überhaupt erst ein gangbarer Weg für Simons Therapie. Zum anderen ist der dabei entwickelte Arbeitsablauf eine Blaupause — er lässt sich für weitere MCOPS12-Kinder mit anderen Mutationen wiederverwenden."
+              : "This matters on two fronts. First, it created a viable path for Simon's therapy in the first place. Second, the workflow we built along the way is a blueprint — one that can be reused for other MCOPS12 children carrying different mutations."}
           </p>
+
         </div>
       </section>
 
@@ -154,12 +155,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
       <WorkflowProgress de={de} />
 
 
-      {/* Figure 2 */}
-      <section className="container-wide py-12">
-        <Reveal>
-          <AsoWorkflowFigure lang={lang} />
-        </Reveal>
-      </section>
+
 
       {/* Partners */}
       <section className="container-wide pb-20">
