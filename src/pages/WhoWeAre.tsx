@@ -65,14 +65,6 @@ const volunteers = [
   { name: "Kathi Carl", role: { en: "Volunteer", de: "Volontärin" },
     bio: { en: "Chemist and project manager from Thuringia, Germany. Motivated as a mother to support families doing everything possible for their children.",
             de: "Chemikerin und Projektmanagerin aus Thüringen. Als Mutter motiviert, Familien zu unterstützen, die alles für ihre Kinder geben." } },
-  { name: "Wittney Sadler", role: { en: "Fundraising Expert", de: "Fundraising-Expertin" },
-    bio: { en: "Based in Vienna, Austria. Passionate about making a difference and giving voice to the voiceless.",
-            de: "Lebt in Wien. Setzt sich leidenschaftlich dafür ein, denen eine Stimme zu geben, die keine haben." },
-    linkedin: "https://www.linkedin.com/in/wittney-sadler-4b4628114" },
-  { name: "Biswadip Sinha", role: { en: "Volunteer", de: "Volontär" },
-    bio: { en: "Pharmacist and team leader in pharmaceutical development, originally from Kolkata, India, based in Thuringia, Germany.",
-            de: "Pharmazeut und Teamleiter in der pharmazeutischen Entwicklung, ursprünglich aus Kolkata, lebt in Thüringen." },
-    linkedin: "https://www.linkedin.com/in/biswadipsinha" },
 ];
 
 const sab = [
@@ -113,8 +105,9 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
               <Placeholder
                 label={b.name}
                 src={photos[b.name]}
-                objectPosition="center top"
-                className="aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] max-h-[280px] sm:max-h-[300px] md:max-h-[320px] !rounded-none shrink-0"
+                objectFit="contain"
+                objectPosition="center"
+                className="aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] max-h-[280px] sm:max-h-[300px] md:max-h-[320px] !rounded-none shrink-0 bg-muted"
               />
               <div className="p-7 flex flex-col flex-1">
                 <h3 className="font-display text-2xl font-bold text-navy">{b.name}</h3>
