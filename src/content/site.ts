@@ -30,7 +30,7 @@ export const socials = {
   email: "rpell@rarbmutation.org",
 };
 
-export const donationGoal = { raised: 235000, goal: 600000 };
+export const donationGoal = { raised: 301000, goal: 950000 };
 
 export const kids = [
   {

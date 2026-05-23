@@ -9,18 +9,21 @@ export default function Donate({ lang }: { lang: Lang }) {
   return (
     <>
       <PageHero eyebrow={de ? "Spenden" : "Donate"}
-        title={de ? "Ihre Spende gibt Simon – und jedem MCOPS12-Kind – die Chance auf ein besseres Leben." : "Your donation gives Simon — and every MCOPS12 child — a chance at a better life."} />
+        title={de
+          ? "Mit Ihrer Unterstützung kommen wir einer lebensverändernden Therapie näher. Jede Spende macht einen Unterschied."
+          : "With your support, we can move closer to a life-changing therapy. Every donation makes a difference."} />
 
-      <section className="container-tight pb-16">
-        <div className="bg-card rounded-3xl border border-border p-8 sm:p-10 shadow-[var(--shadow-card)]">
+      <section className="container-tight pb-12">
+        <div className="bg-gradient-to-br from-teal/90 to-teal text-white rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
           <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
-          <p className="text-sm text-muted-foreground mt-4">
+          <p className="text-sm text-white/90 mt-4 leading-relaxed">
             {de
-              ? "€600.000–750.000 werden benötigt, um die präklinische Entwicklung abzuschließen und eine klinische Studie / Off-Label-Anwendung vorzubereiten."
-              : "€600,000–750,000 needed to complete preclinical development and prepare for clinical trial / off-label use."}
+              ? "Wir treten nun in die letzte Phase ein — Toxizitätsstudien, um das sicherste ASO-Medikament für Simon zu bestimmen. Diese Therapie ist auf Simon zugeschnitten, doch der zugrunde liegende Entwicklungsansatz lässt sich auf andere MCOPS12-Patient:innen übertragen."
+              : "We are now entering the final step — conducting toxicity studies to determine the safest ASO drug for Simon. While this therapy is tailored to Simon, the underlying development approach is amenable to other MCOPS12 patients."}
           </p>
         </div>
       </section>
+
 
       <section className="container-wide pb-20">
         <SectionTitle eyebrow={de ? "So spenden Sie" : "How to donate"} title={de ? "Drei einfache Wege" : "Three simple ways"} />
@@ -85,6 +88,43 @@ export default function Donate({ lang }: { lang: Lang }) {
             className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal underline">BMF Registry <ExternalLink className="w-3.5 h-3.5"/></a>
         </div>
       </section>
+
+      <section className="container-tight pb-20">
+        <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
+          <div className="flex items-center gap-3 mb-4">
+            <Heart className="w-7 h-7 text-amber" />
+            <h3 className="font-display text-2xl md:text-3xl font-bold">
+              {de ? "Danke — und unsere GoFundMe-Kampagne läuft weiter" : "Thank you — and our GoFundMe campaign continues"}
+            </h3>
+          </div>
+          <div className="space-y-4 text-white/90 leading-relaxed">
+            <p>
+              {de
+                ? "Wir können unsere Dankbarkeit für die enorme Unterstützung, die Sie ALLEN MCOPS12-Patient:innen entgegengebracht haben, kaum in Worte fassen. Ihre Großzügigkeit hat es uns ermöglicht, nicht nur den Proof-of-Concept für eine ASO-Therapie zu finanzieren — die Kindern mit MCOPS12 eines Tages erlauben könnte, frei zu sitzen oder sogar zu gehen — sondern auch eine Natural History Study. Diese Studie ist ein entscheidender erster Schritt für die zukünftige Medikamentenentwicklung und Behandlung ALLER MCOPS12-PATIENT:INNEN!"
+                : "We cannot express enough gratitude for the tremendous support you have shown for ALL MCOPS12 patients. Your kindness and generosity have enabled us to not only fund the proof of concept for an ASO therapy — which has the potential to give children with MCOPS12 the ability to sit unassisted or even walk someday — but also a Natural History Study. This study is a crucial first step in future drug development and treatment for ALL MCOPS12 PATIENTS!"}
+            </p>
+            <p className="italic text-amber">
+              {de
+                ? "„Alleine können wir so wenig tun; gemeinsam können wir so viel bewegen.“ — Helen Keller"
+                : "\"Alone, we can do so little; together, we can do so much.\" — Helen Keller"}
+            </p>
+            <p>
+              {de
+                ? "Wir laden Sie ein, unsere gemeinnützige Organisation Cure MCOPS12 weiter zu unterstützen — auf unserer Mission, das Leben ALLER MCOPS12-Patient:innen und ihrer Familien zu verändern. Unsere GoFundMe-Seite bleibt geöffnet, denn dieser Proof-of-Concept und die Natural History Study sind nur die ersten Schritte hin zu einer Therapie, die eines Tages zur Heilung von MCOPS12 führen könnte."
+                : "We invite you to continue supporting our non-profit organization, Cure MCOPS12, in our mission to transform the lives of ALL MCOPS12 patients and their families. Our GoFundMe page remains open and active, as this proof of concept and natural history study are only the initial steps in developing a treatment or therapy that may one day lead to a cure for MCOPS12."}
+            </p>
+          </div>
+          <a
+            href="https://www.gofundme.com/f/seeking-a-cure-for-simon"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition"
+          >
+            {de ? "Seeking A Cure for Simon — auf GoFundMe" : "Seeking A Cure for Simon on GoFundMe"} <ExternalLink className="w-4 h-4" />
+          </a>
+        </div>
+      </section>
+
 
       <section className="bg-muted/40 py-20">
         <div className="container-wide">
