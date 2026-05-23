@@ -173,6 +173,42 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
   );
 }
 
+function VolunteerCard({ v, lang }: { v: typeof volunteers[number]; lang: Lang }) {
+  const [open, setOpen] = useState(false);
+  const photo = volunteerPhotos[v.name];
+  const de = lang === "de";
+  return (
+    <div className="bg-card rounded-3xl border border-border p-8 flex flex-col sm:flex-row gap-6 items-start hover:shadow-[var(--shadow-card)] transition-shadow">
+      {photo ? (
+        <img src={photo} alt={v.name}
+          style={{ width: 160, height: 160, objectFit: "cover", objectPosition: "center top", borderRadius: "9999px" }}
+          className="shrink-0 mx-auto sm:mx-0" />
+      ) : (
+        <div className="placeholder-img shrink-0 mx-auto sm:mx-0 text-xs" style={{ width: 160, height: 160, borderRadius: "9999px" }}>
+          {v.name.split(" ")[0]}
+        </div>
+      )}
+      <div className="flex-1 min-w-0">
+        <h4 className="font-display text-2xl font-bold text-navy">{v.name}</h4>
+        <p className="text-sm text-teal font-semibold mt-1">{v.role[lang]}</p>
+        <div className={`grid transition-all ${open ? "grid-rows-[1fr] mt-4" : "grid-rows-[0fr]"}`}>
+          <div className="overflow-hidden">
+            <p className="text-sm leading-relaxed text-foreground/80 whitespace-pre-line">{v.bio[lang]}</p>
+            {v.linkedin && (
+              <a href={v.linkedin} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-navy hover:text-teal"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>
+            )}
+          </div>
+        </div>
+        <button onClick={() => setOpen(o => !o)} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal">
+          {open ? (de ? "Weniger" : "Show less") : (de ? "Mehr lesen" : "Read more")}
+          <ChevronDown className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} />
+        </button>
+      </div>
+    </div>
+  );
+}
+
+
 export function PageHero({ eyebrow, title, sub }: { eyebrow?: string; title: string; sub?: string }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 to-background pt-16 pb-12">
