@@ -243,7 +243,7 @@ export const t = {
       achievements: "Erfolge", research: "Forschung",
       naturalHistory: "Natural History Study", network: "Das Netzwerk",
       news: "Aktuelles", donate: "Spenden",
-      families: "Familien", professionals: "Fachkreise",
+      families: "Familien", clinicians: "Fachkreise",
       newlyDiagnosed: "Neu diagnostiziert", joinNaturalHistory: "Am Natural History Study teilnehmen",
       raiseAwareness: "Awareness schaffen", drugRepurposing: "Wirkstoff-Neuverwendung",
       asoTherapy: "ASO-Therapie",

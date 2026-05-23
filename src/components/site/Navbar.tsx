@@ -65,7 +65,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
     { to: `${p}/meet-our-kids`, label: tr.nav.kids },
   ];
 
-  const professionalsItems: NavItem[] = [
+  const cliniciansItems: NavItem[] = [
     { to: `${p}/research`, label: tr.nav.research },
     { to: `${p}/natural-history-study`, label: tr.nav.naturalHistory },
     { to: `${p}/drug-repurposing`, label: tr.nav.drugRepurposing },
@@ -90,7 +90,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
             <Dropdown label={tr.nav.about} items={aboutItems} />
             <Dropdown label={tr.nav.achievements} items={achievementsItems} />
             <Dropdown label={tr.nav.families} items={familiesItems} />
-            <Dropdown label={tr.nav.professionals} items={professionalsItems} />
+            <Dropdown label={tr.nav.clinicians} items={cliniciansItems} />
           </div>
 
           <div className="flex items-center gap-2">
@@ -116,7 +116,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
             <MobileGroup label={tr.nav.about} items={aboutItems} onNavigate={() => setOpen(false)} isActive={isActive} />
             <MobileGroup label={tr.nav.achievements} items={achievementsItems} onNavigate={() => setOpen(false)} isActive={isActive} />
             <MobileGroup label={tr.nav.families} items={familiesItems} onNavigate={() => setOpen(false)} isActive={isActive} />
-            <MobileGroup label={tr.nav.professionals} items={professionalsItems} onNavigate={() => setOpen(false)} isActive={isActive} />
+            <MobileGroup label={tr.nav.clinicians} items={cliniciansItems} onNavigate={() => setOpen(false)} isActive={isActive} />
 
             <Link
               to={otherPath}
