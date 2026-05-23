@@ -62,7 +62,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
       <section className="container-tight pb-12">
         <Reveal>
           <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-10 shadow-[var(--shadow-card)]">
-            <SectionTitle eyebrow={de ? "Interessiert?" : "Interested?"} title={de ? "Werde Teil der Studie" : "Become part of the study"} />
+            <SectionTitle eyebrow={de ? "Interessiert?" : "Interested?"} title={de ? "Werde Teil der Studie" : "Become part of the study"} light />
             <p className="text-white/90 leading-relaxed -mt-2">
               {de
                 ? "Kontaktiere Valerie Chu, genetische Beraterin und Studienkoordinatorin am CHU Sainte-Justine."
