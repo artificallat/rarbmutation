@@ -57,7 +57,7 @@ const homeNews = [
   },
 ];
 
-const heroImages = [heroHorse, heroFamily, heroBeyond, heroPlayground];
+const heroImages = [heroHorse, heroFamily, heroFairyLights, heroBeyond];
 
 export default function Home({ lang }: { lang: Lang }) {
   const tr = t[lang];
