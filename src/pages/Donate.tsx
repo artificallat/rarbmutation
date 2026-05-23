@@ -14,9 +14,9 @@ export default function Donate({ lang }: { lang: Lang }) {
           : "With your support, we can move closer to a life-changing therapy. Every donation makes a difference."} />
 
       <section className="container-tight pb-12">
-        <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
+        <div className="bg-white text-navy rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)] border border-border">
           <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
-          <p className="text-sm text-white/90 mt-4 leading-relaxed">
+          <p className="text-sm text-navy/80 mt-4 leading-relaxed">
             {de
               ? "Wir treten nun in die letzte Phase ein — Toxizitätsstudien, um das sicherste ASO-Medikament für Simon zu bestimmen. Diese Therapie ist auf Simon zugeschnitten, doch der zugrunde liegende Entwicklungsansatz lässt sich auf andere MCOPS12-Patient:innen übertragen."
               : "We are now entering the final step — conducting toxicity studies to determine the safest ASO drug for Simon. While this therapy is tailored to Simon, the underlying development approach is amenable to other MCOPS12 patients."}
