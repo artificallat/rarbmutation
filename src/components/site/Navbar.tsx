@@ -58,11 +58,13 @@ export default function Navbar({ lang }: { lang: Lang }) {
     { to: `${p}/plain-language-mcops12`, label: tr.nav.plainLanguage, children: [
       { to: `${p}/plain-language-mcops12`, label: tr.nav.descriptionMcops12 },
     ]},
+    { to: `${p}/newly-diagnosed`, label: tr.nav.newlyDiagnosed },
     { to: `${p}/how-to-get-involved`, label: tr.nav.howToGetInvolved },
     { to: `${p}/join-natural-history-study`, label: tr.nav.joinNaturalHistory },
     { to: `${p}/raise-awareness`, label: tr.nav.raiseAwareness },
     { to: `${p}/meet-our-kids`, label: tr.nav.kids },
   ];
+
   const professionalsItems: NavItem[] = [
     { to: `${p}/research`, label: tr.nav.research },
     { to: `${p}/natural-history-study`, label: tr.nav.naturalHistory },
