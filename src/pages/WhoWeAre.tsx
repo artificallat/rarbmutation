@@ -143,13 +143,55 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
       <section className="container-wide py-20">
         <SectionTitle eyebrow={lang === "de" ? "Wissenschaft" : "Science"} title={lang === "de" ? "Wissenschaftlicher Beirat" : "Scientific Advisory Board"} />
         <div className="grid sm:grid-cols-2 gap-6">
-        <div className="grid sm:grid-cols-2 gap-6">
           {sab.map(s => (
             <SabCard key={s.name} s={s} lang={lang} photo={sabPhotos[s.name]} />
           ))}
         </div>
       </section>
     </>
+  );
+}
+
+function SabCard({ s, lang, photo }: { s: any; lang: Lang; photo?: string }) {
+  const [open, setOpen] = useState(false);
+  const de = lang === "de";
+  const hasBio = !!s.bio;
+  const Tag: any = s.url ? "a" : "div";
+  const props = s.url ? { href: s.url, target: "_blank", rel: "noreferrer" } : {};
+  return (
+    <Tag {...props}
+      className={`bg-card rounded-2xl border border-border p-6 flex gap-5 items-start ${s.url ? "hover:border-teal hover:shadow-[var(--shadow-card)]" : ""} transition`}>
+      {photo ? (
+        <img src={photo} alt={s.name}
+          style={{ width: 88, height: 88, objectFit: "cover", objectPosition: "center top", borderRadius: "9999px" }}
+          className="shrink-0" />
+      ) : (
+        <div className="placeholder-img shrink-0 text-xs" style={{ width: 88, height: 88, borderRadius: "9999px" }}>
+          {s.name.split(" ")[0]}
+        </div>
+      )}
+      <div className="flex-1 min-w-0">
+        <h4 className="font-display text-xl font-bold text-navy">{s.name}</h4>
+        <p className="text-sm text-foreground/75 mt-2">{s.title}</p>
+        {hasBio && (
+          <>
+            <div className={`grid transition-all ${open ? "grid-rows-[1fr] mt-3" : "grid-rows-[0fr]"}`}>
+              <div className="overflow-hidden">
+                <p className="text-sm text-foreground/70 leading-relaxed whitespace-pre-line">{s.bio}</p>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpen(o => !o); }}
+              className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal"
+            >
+              {open ? (de ? "Weniger" : "Show less") : (de ? "Mehr lesen" : "Read more")}
+              <ChevronDown className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} />
+            </button>
+          </>
+        )}
+      </div>
+    </Tag>
   );
 }
 
