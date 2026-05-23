@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Placeholder } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
@@ -55,7 +54,6 @@ export default function MeetOurKids({ lang }: { lang: Lang }) {
 }
 
 function KidCard({ kid, lang }: { kid: typeof kids[number]; lang: Lang }) {
-  const [open, setOpen] = useState(false);
   const de = lang === "de";
   const slug = kid.name
     .toLowerCase()
@@ -65,36 +63,30 @@ function KidCard({ kid, lang }: { kid: typeof kids[number]; lang: Lang }) {
     .replace(/(^-|-$)/g, "");
   const profileHref = `${de ? "/de" : ""}/meet-our-kids/${slug}`;
   return (
-    <article className="bg-card rounded-3xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] transition-shadow">
-      <Link to={profileHref}>
-        <Placeholder label={kid.name} src={kidPhotos[kid.name]} className="aspect-[4/5] !rounded-none" />
+    <article className="group bg-card rounded-3xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] hover:-translate-y-1 transition-all duration-300">
+      <Link to={profileHref} className="block overflow-hidden">
+        <Placeholder
+          label={kid.name}
+          src={kidPhotos[kid.name]}
+          className="aspect-[4/5] !rounded-none transition-transform duration-500 group-hover:scale-105"
+        />
       </Link>
       <div className="p-6">
         <Link to={profileHref}>
-          <h3 className="font-display text-2xl font-bold text-navy hover:text-teal transition-colors">{kid.name}</h3>
+          <h3 className="font-display text-2xl font-bold text-navy group-hover:text-teal transition-colors">{kid.name}</h3>
         </Link>
         <p className="text-teal text-sm font-semibold mt-1">{kid.place} · {de ? "Geboren" : "Born"} {kid.year}</p>
         <dl className="mt-4 space-y-1 text-sm text-foreground/75">
           <div><dt className="inline font-semibold text-navy">{de ? "Eltern: " : "Parents: "}</dt><dd className="inline">{kid.parents}</dd></div>
           {kid.siblings !== "—" && <div><dt className="inline font-semibold text-navy">{de ? "Geschwister: " : "Siblings: "}</dt><dd className="inline">{kid.siblings}</dd></div>}
         </dl>
-        <div className={`grid transition-all ${open ? "grid-rows-[1fr] mt-4" : "grid-rows-[0fr]"}`}>
-          <div className="overflow-hidden">
-            <p className="text-sm leading-relaxed text-foreground/80">{de ? kid.storyDe : kid.storyEn}</p>
-            <p className="mt-4 text-sm font-semibold text-navy">{de ? `Was wir uns für ${kid.name.split(" ")[0]} wünschen:` : `What are our dreams for ${kid.name.split(" ")[0]}?`}</p>
-            <p className="text-sm italic text-foreground/75 mt-1">{de ? kid.dreamDe : kid.dreamEn}</p>
-          </div>
-        </div>
-        <div className="mt-4 flex items-center justify-between gap-3 flex-wrap">
-          <button onClick={() => setOpen(o => !o)} className="inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal">
-            {open ? (de ? "Weniger" : "Show less") : (de ? "Kurzgeschichte" : "Short story")}
-            <ChevronDown className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} />
-          </button>
-          <Link to={profileHref} className="inline-flex items-center gap-1 text-sm font-semibold text-teal hover:underline">
-            {de ? "Vollständige Geschichte" : "Full story"}
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+        <Link
+          to={profileHref}
+          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-teal hover:gap-3 transition-all"
+        >
+          {de ? "Vollständige Geschichte lesen" : "Read full story"}
+          <ArrowRight className="w-4 h-4" />
+        </Link>
       </div>
     </article>
   );

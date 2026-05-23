@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Heart, Sparkles } from "lucide-react";
 import { PageHero } from "@/pages/WhoWeAre";
 import { Placeholder } from "@/components/site/Bits";
 import { kidsProfiles } from "@/content/kidsProfiles";
@@ -38,7 +38,7 @@ const photoBySlug: Record<string, string> = {
 
 export default function KidProfile({ lang }: { lang: Lang }) {
   const { slug } = useParams<{ slug: string }>();
-  const profile = kidsProfiles.find(k => k.slug === slug);
+  const profile = kidsProfiles.find((k) => k.slug === slug);
   const de = lang === "de";
   const backHref = `${de ? "/de" : ""}/meet-our-kids`;
 
@@ -53,6 +53,13 @@ export default function KidProfile({ lang }: { lang: Lang }) {
     );
   }
 
+  const facts: { label: string; value: string }[] = [
+    { label: de ? "Eltern" : "Parents", value: profile.parents },
+    ...(profile.siblings ? [{ label: de ? "Geschwister" : "Siblings", value: profile.siblings }] : []),
+    { label: de ? "Geburtsjahr" : "Year of Birth", value: profile.yearOfBirth },
+    { label: de ? "Heimatort & Land" : "Hometown & Country", value: profile.hometown },
+  ];
+
   return (
     <>
       <PageHero
@@ -60,50 +67,100 @@ export default function KidProfile({ lang }: { lang: Lang }) {
         title={profile.name}
       />
 
-      <section className="container-tight pb-24">
-        <Link to={backHref} className="inline-flex items-center gap-2 text-teal font-semibold mb-8 hover:underline">
+      <section className="container-wide pb-24">
+        <Link
+          to={backHref}
+          className="inline-flex items-center gap-2 text-teal font-semibold mb-10 hover:underline"
+        >
           <ArrowLeft className="w-4 h-4" /> {de ? "Zurück zu Unsere Kinder" : "Back to Meet Our Kids"}
         </Link>
 
-        <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 items-start">
-          <Placeholder
-            label={profile.name}
-            src={photoBySlug[profile.slug]}
-            className="aspect-[4/5] !rounded-3xl"
-          />
-          <dl className="space-y-3 text-base bg-card border border-border rounded-3xl p-6">
-            <Fact label="Parents" value={profile.parents} />
-            {profile.siblings && <Fact label="Siblings" value={profile.siblings} />}
-            <Fact label="Year of Birth" value={profile.yearOfBirth} />
-            <Fact label="Hometown & Country" value={profile.hometown} />
-          </dl>
+        <div className="grid md:grid-cols-12 gap-10 items-start">
+          {/* Sidebar */}
+          <aside className="md:col-span-4 md:sticky md:top-24 space-y-6">
+            <div className="relative">
+              <div aria-hidden className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-teal/20 via-amber/15 to-transparent blur-xl" />
+              <Placeholder
+                label={profile.name}
+                src={photoBySlug[profile.slug]}
+                className="relative aspect-[4/5] !rounded-3xl shadow-[var(--shadow-card)] ring-1 ring-border"
+              />
+            </div>
+
+            <dl className="bg-card border border-border rounded-3xl p-6 shadow-[var(--shadow-soft)]">
+              <p className="text-xs uppercase tracking-[0.2em] text-teal font-semibold mb-4 flex items-center gap-2">
+                <Heart className="w-3.5 h-3.5" />
+                {de ? "Über " : "About "}
+                {profile.name}
+              </p>
+              <div className="grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 text-sm">
+                {facts.map((f, i) => (
+                  <div key={f.label} className="contents">
+                    <dt className="font-semibold text-navy whitespace-nowrap self-start pt-0.5">
+                      {f.label}
+                    </dt>
+                    <dd className="text-foreground/80 leading-relaxed">{f.value}</dd>
+                    {i < facts.length - 1 && (
+                      <div aria-hidden className="col-span-2 h-px bg-border/60" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </dl>
+          </aside>
+
+          {/* Story */}
+          <div className="md:col-span-8 space-y-10">
+            <article>
+              <div className="flex items-start gap-4 mb-6">
+                <div aria-hidden className="mt-2 w-1.5 h-12 rounded-full bg-gradient-to-b from-teal to-amber shrink-0" />
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-navy leading-tight">
+                  {profile.messageTitle}
+                </h2>
+              </div>
+              <div className="space-y-5 max-w-prose">
+                {profile.messageParagraphs.map((p, i) => (
+                  <p
+                    key={i}
+                    className={`leading-relaxed whitespace-pre-line ${
+                      i === 0
+                        ? "text-lg text-foreground/90 font-medium"
+                        : "text-base text-foreground/80"
+                    }`}
+                  >
+                    {p}
+                  </p>
+                ))}
+              </div>
+            </article>
+
+            {profile.dreamsTitle && profile.dreamsParagraphs && (
+              <article className="relative bg-gradient-to-br from-amber/15 via-amber/5 to-transparent border border-amber/30 rounded-3xl p-7 sm:p-9 overflow-hidden">
+                <div aria-hidden className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-amber/20 blur-3xl" />
+                <div className="relative">
+                  <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber-deep font-semibold mb-3">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    {de ? "Unsere Träume" : "Our Dreams"}
+                  </div>
+                  <h3 className="font-display text-2xl md:text-3xl font-bold text-navy mb-5">
+                    {profile.dreamsTitle}
+                  </h3>
+                  <div className="space-y-4 max-w-prose">
+                    {profile.dreamsParagraphs.map((p, i) => (
+                      <p
+                        key={i}
+                        className="text-base md:text-lg text-foreground/85 leading-relaxed whitespace-pre-line italic"
+                      >
+                        {p}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            )}
+          </div>
         </div>
-
-        <article className="prose prose-lg max-w-none mt-12">
-          <h2 className="font-display text-3xl font-bold text-navy">{profile.messageTitle}</h2>
-          {profile.messageParagraphs.map((p, i) => (
-            <p key={i} className="text-foreground/85 leading-relaxed mt-4 whitespace-pre-line">{p}</p>
-          ))}
-
-          {profile.dreamsTitle && profile.dreamsParagraphs && (
-            <>
-              <h3 className="font-display text-2xl font-bold text-navy mt-10">{profile.dreamsTitle}</h3>
-              {profile.dreamsParagraphs.map((p, i) => (
-                <p key={i} className="text-foreground/85 leading-relaxed mt-4 whitespace-pre-line">{p}</p>
-              ))}
-            </>
-          )}
-        </article>
       </section>
     </>
-  );
-}
-
-function Fact({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex flex-col sm:flex-row sm:gap-3">
-      <dt className="font-semibold text-navy min-w-[10rem]">{label}:</dt>
-      <dd className="text-foreground/80">{value}</dd>
-    </div>
   );
 }
