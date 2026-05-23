@@ -1,5 +1,6 @@
 import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation, CheckCircle2, Clock } from "lucide-react";
 import { PageHero } from "./WhoWeAre";
+import { useInView } from "@/components/site/Reveal";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
