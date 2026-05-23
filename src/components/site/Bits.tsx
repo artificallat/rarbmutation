@@ -40,7 +40,7 @@ export function ProgressBar({ raised, goal }: { raised: number; goal: number }) 
       </div>
       <div className="h-3 rounded-full bg-muted overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-amber via-lime-400 to-emerald-500"
+          className="h-full bg-gradient-to-r from-yellow-400 to-emerald-600"
           style={{
             width: inView ? `${pct}%` : "0%",
             transition: "width 1.5s ease-out",
