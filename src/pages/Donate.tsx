@@ -3,6 +3,10 @@ import { ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { DonationConfirmationForm } from "@/components/site/DonationConfirmationForm";
 import { donationGoal, socials, type Lang } from "@/content/site";
+import bankQr from "@/assets/bank-qr.svg";
+
+// TODO: Donorbox-Kampagnen-URL einsetzen sobald verfügbar
+const DONORBOX_URL = "https://donorbox.org/REPLACE-ME";
 
 export default function Donate({ lang }: { lang: Lang }) {
   const de = lang === "de";
@@ -10,16 +14,16 @@ export default function Donate({ lang }: { lang: Lang }) {
     <>
       <PageHero eyebrow={de ? "Spenden" : "Donate"}
         title={de
-          ? "Mit Ihrer Unterstützung kommen wir einer lebensverändernden Therapie näher. Jede Spende macht einen Unterschied."
-          : "With your support, we can move closer to a life-changing therapy. Every donation makes a difference."} />
+          ? "Mit Ihrer Hilfe kommen wir einer lebensverändernden Therapie näher. Jede Spende macht einen Unterschied."
+          : "With your help, we can move closer to a life-changing therapy. Every donation makes a difference."} />
 
       <section className="container-tight pb-12">
-        <div className="bg-white text-navy rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)] border border-border">
-          <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
-          <p className="text-sm text-navy/80 mt-4 leading-relaxed">
+        <div className="bg-teal text-white rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
+          <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} light />
+          <p className="text-sm text-white/90 mt-4 leading-relaxed">
             {de
-              ? "Wir treten nun in die letzte Phase ein — Toxizitätsstudien, um das sicherste ASO-Medikament für Simon zu bestimmen. Diese Therapie ist auf Simon zugeschnitten, doch der zugrunde liegende Entwicklungsansatz lässt sich auf andere MCOPS12-Patient:innen übertragen."
-              : "We are now entering the final step — conducting toxicity studies to determine the safest ASO drug for Simon. While this therapy is tailored to Simon, the underlying development approach is amenable to other MCOPS12 patients."}
+              ? "Mit Ihrer finanziellen Unterstützung können wir die Toxizitätsstudien abschließen und ein ASO-Medikament in klinischer Qualität für Simon herstellen."
+              : "With your financial support, we can complete the toxicology studies and produce a clinical grade ASO drug for Simon."}
           </p>
         </div>
       </section>
@@ -37,6 +41,20 @@ export default function Donate({ lang }: { lang: Lang }) {
               <div><dt className="inline font-semibold text-navy">BIC: </dt>RZOOAT2L060</div>
               <div><dt className="inline font-semibold text-navy">{de ? "Empfänger: " : "Recipient: "}</dt>Cure MCOPS12</div>
             </dl>
+            <div className="mt-5 flex items-center gap-3 pt-5 border-t border-border">
+              <img src={bankQr} alt={de ? "SEPA QR-Code für Banküberweisung" : "SEPA QR code for bank transfer"} className="w-24 h-24 rounded-lg bg-white p-1.5 border border-border" />
+              <p className="text-xs text-foreground/70 leading-relaxed">
+                {de ? "Mit Banking-App scannen – Überweisungsdaten werden automatisch ausgefüllt." : "Scan with your banking app — transfer details fill in automatically."}
+              </p>
+            </div>
+          </div>
+          <div className="bg-card border border-border rounded-2xl p-7">
+            <CreditCard className="w-7 h-7 text-teal" />
+            <h3 className="font-display text-xl font-bold text-navy mt-4">{de ? "Kreditkarte / PayPal" : "Credit Card / PayPal"}</h3>
+            <p className="text-sm text-foreground/75 mt-3">{de ? "Schnell und sicher über Donorbox." : "Fast and secure via Donorbox."}</p>
+            <a href={DONORBOX_URL} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition">
+              {de ? "Online spenden" : "Donate Online"} <ExternalLink className="w-4 h-4"/>
+            </a>
           </div>
           <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-2xl p-7">
             <Heart className="w-7 h-7 text-amber" />
@@ -46,16 +64,9 @@ export default function Donate({ lang }: { lang: Lang }) {
               {de ? "Über GoFundMe spenden" : "Donate via GoFundMe"} <ExternalLink className="w-4 h-4"/>
             </a>
           </div>
-          <div className="bg-card border border-border rounded-2xl p-7">
-            <CreditCard className="w-7 h-7 text-teal" />
-            <h3 className="font-display text-xl font-bold text-navy mt-4">{de ? "Kreditkarte / PayPal" : "Credit Card / PayPal"}</h3>
-            <p className="text-sm text-foreground/75 mt-3">{de ? "Schnell und sicher – über unseren Zahlungsdienstleister." : "Fast and secure via our payment provider."}</p>
-            <a href={socials.gofundme} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition">
-              {de ? "Online spenden" : "Donate Online"} <ExternalLink className="w-4 h-4"/>
-            </a>
-          </div>
         </div>
       </section>
+
 
       <section className="container-tight pb-16">
         <SectionTitle
