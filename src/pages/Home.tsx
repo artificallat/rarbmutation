@@ -210,33 +210,11 @@ export default function Home({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="py-24 bg-teal text-white">
-        <div className="container-wide grid sm:grid-cols-3 gap-8">
-          {tr.home.stats.map((s, i) => {
-            // parse n string to extract prefix/number/suffix
-            const match = s.n.match(/^([^\d]*)([\d.,]+)(.*)$/);
-            const prefix = match?.[1] ?? "";
-            const numStr = match?.[2] ?? s.n;
-            const suffix = match?.[3] ?? "";
-            const num = parseInt(numStr.replace(/[.,]/g, ""), 10);
-            return (
-              <Reveal key={i} delay={i * 150} className="text-center">
-                <p className="font-display text-6xl md:text-7xl font-bold">
-                  {isNaN(num) ? s.n : <Counter to={num} prefix={prefix} suffix={suffix} duration={2000} />}
-                </p>
-                <p className="mt-3 text-white/90 max-w-xs mx-auto">{s.l}</p>
-              </Reveal>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* DONATE BAR */}
-      <section className="py-24">
+      {/* DONATE BAR (replaces stats) */}
+      <section className="py-24 bg-teal">
         <div className="container-tight">
           <Reveal>
-            <div className="bg-card rounded-3xl border border-border p-8 sm:p-12 shadow-[var(--shadow-card)]">
+            <div className="bg-white rounded-3xl border border-border p-8 sm:p-12 shadow-[var(--shadow-card)]">
               <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
               <p className="mt-6 text-lg text-balance">{tr.home.donateBar}</p>
               <div className="mt-6 flex flex-wrap gap-3">
@@ -259,6 +237,7 @@ export default function Home({ lang }: { lang: Lang }) {
           </Reveal>
         </div>
       </section>
+
 
       {/* NEWS */}
       <section className="py-12">
