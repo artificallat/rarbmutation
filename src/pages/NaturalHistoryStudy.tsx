@@ -1,6 +1,7 @@
-import { FileText, Mail, ExternalLink, Presentation, Microscope } from "lucide-react";
+import { FileText, Mail, ExternalLink, Presentation } from "lucide-react";
 import { PageHeroIllustrated, LeadParagraph } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
+import chuLogo from "@/assets/chu-sainte-justine-logo.png";
 import type { Lang } from "@/content/site";
 
 export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
@@ -9,12 +10,13 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
   return (
     <>
       <PageHeroIllustrated
-        eyebrow={de ? "Fachkreise" : "Professionals"}
+        eyebrow={de ? "Fachkreise" : "For Clinicians"}
         title="Natural History Study"
         sub={de
           ? "Eine internationale Studie am CHU Sainte-Justine zur Erfassung des natürlichen Verlaufs der MCOPS12 (RARB)-Erkrankung."
           : "An international study at CHU Sainte-Justine documenting the natural course of MCOPS12 (RARB) disease."}
-        icon={Microscope}
+        logoSrc={chuLogo}
+        logoAlt="CHU Sainte-Justine — Centre de recherche"
         badgeLabel={de ? "RARB · Klinische Forschung" : "RARB · Clinical Research"}
       />
 
