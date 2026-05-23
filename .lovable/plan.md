@@ -1,45 +1,52 @@
-## Was geändert wird
+## Änderungen auf der Donate-Seite
 
-### 1. Kid-Profilseite (`src/pages/KidProfile.tsx`)
-Aktuell ist das Foto links und rechts daneben eine schmale Info-Box — darunter entsteht eine große leere Fläche, und die Werte sind nicht ausgerichtet.
+### 1. Hero-Text (`src/pages/Donate.tsx`)
+- Aktueller Titel "Mit Ihrer Unterstützung … / With your support …" ersetzen durch:
+  - EN: "With your help, we can move closer to a life-changing therapy. Every donation makes a difference."
+  - DE: "Mit Ihrer Hilfe kommen wir einer lebensverändernden Therapie näher. Jede Spende macht einen Unterschied."
 
-Neues Layout:
-- **Sticky Sidebar links** (`md:col-span-4`): Foto in abgerundetem Rahmen mit weichem Schatten und kleinem amber Akzent-Rand. Darunter eine elegante "Fact Card" mit:
-  - Zweispaltigem CSS-Grid (`grid-cols-[auto_1fr] gap-x-4 gap-y-3`) statt flex/sm:flex-row — dadurch sind **Parents**, **Year of Birth** und **Hometown & Country** rechts vertikal in einer sauberen Linie ausgerichtet.
-  - Dezente Trennlinien zwischen den Zeilen, Label in Teal-Uppercase-Eyebrow-Stil.
-- **Story-Spalte rechts** (`md:col-span-8`): Story füllt jetzt die gesamte Breite — keine Lücke mehr. "A Message from … Parents" als großes Display-Heading mit Teal-Akzentbalken links. Absätze in `max-w-prose` mit angenehmer Zeilenlänge. "What are our dreams" Sektion in eigenem Card-Block (warmes Amber-Tinted Background, abgerundet) als emotionaler Abschluss.
-- Hero behält Eyebrow + Name, aber: zusätzliche dezente Dekoration (kleines Herz- oder Stern-Icon in Amber) für Wärme.
+### 2. Spendenbalken-Sektion (`Donate.tsx` + `Bits.tsx` `ProgressBar`)
+- Card-Hintergrund von weiß auf **Teal** (`bg-teal` mit `text-white` Kontrastfarben) umstellen.
+- Farbverlauf des Balkens umkehren: jetzt Emerald → Amber-Deep → Amber. Neu: Amber (Start) → Amber-Deep → Emerald (Ende) — also "von gelb zu grün bei steigender Spendensumme".
+- Begleittext unter dem Balken ersetzen:
+  - EN: "With your financial support, we can complete the toxicology studies and produce a clinical grade ASO drug for Simon."
+  - DE: entsprechende deutsche Version.
+- Hinweis: `donationGoal` in `src/content/site.ts` steht bereits auf `{ raised: 301000, goal: 950000 }` — keine Änderung nötig.
+- `ProgressBar` Text-/Label-Farben so anpassen, dass sie auf Teal lesbar bleiben (weiß / weiß-80).
 
-### 2. "Short story" entfernen (`src/pages/MeetOurKids.tsx`)
-- Den `ChevronDown`-Toggle und den ausklappbaren `open`-Block komplett entfernen.
-- `useState` raus.
-- Stattdessen nur den "Full story" / "Vollständige Geschichte" Link prominent unten in der Karte als CTA-Button.
+### 3. "Three simple ways" — Reihenfolge (`Donate.tsx`)
+Neue Reihenfolge der drei Cards:
+1. Bank Transfer (links, wie bisher)
+2. Credit Card / PayPal (Mitte) — vorher rechts
+3. GoFundMe (rechts) — vorher Mitte
 
-### 3. Reusable Hero-Verbesserung für Info-Seiten
+Bank-Transfer-Card erweitern: unter den IBAN/BIC-Daten ein **QR-Code-Bild** anzeigen, das beim Einscannen die SEPA-Überweisung vorausfüllt (EPC-QR / "GiroCode" Standard). Wird beim Build generiert mit dem `qrcode`-npm-Paket aus den existierenden Bank-Daten (Empfänger "Cure MCOPS12", IBAN AT03 3406 0000 0824 3362, BIC RZOOAT2L060). QR als statische PNG/SVG in `src/assets/bank-qr.svg` ablegen, dann importieren — kein Runtime-Code nötig.
 
-Aktuelles Problem: Auf Seiten wie *Join the Natural History Study* und *Natural History Study* startet sofort eine Textwand nach einem kleinen Hero. Wirkt überladen.
+### 4. Credit Card / PayPal Card — Donorbox-Einbindung
+Aktuell verlinkt die Card auf GoFundMe. Neu:
+- Button-Label & Link auf Donorbox-Spendenformular umstellen.
+- Da der finale Donorbox-Kampagnen-Link noch nicht existiert, **Platzhalter-URL** `https://donorbox.org/REPLACE-ME` verwenden, in einer Konstante am Anfang der Datei (`const DONORBOX_URL = "https://donorbox.org/REPLACE-ME"`) und mit einem `// TODO: Donorbox-Kampagnen-URL einsetzen` Kommentar markieren, damit später leicht auffindbar.
+- Optional kann später das offizielle Donorbox-Embed-Widget eingesetzt werden; für jetzt reicht der Link-Button.
 
-Neue Komponente `PageHeroIllustrated` in `src/components/site/Bits.tsx` (oder erweitern von `PageHero`):
-- Zweispaltiges Hero: Links Eyebrow + Titel + Subtitle + optional CTA. Rechts ein **Icon/Logo-Badge** in einem großen abgerundeten Card (z.B. CHU Sainte-Justine Logo für die NHS-Seiten, ClipboardList-Icon mit Gradient für andere).
-- Größerer vertikaler Padding, sanfter Gradient-Hintergrund (navy/teal/amber soft blur blobs — wie bestehender PageHero, aber prominenter).
-- Auf Mobile stapelt sich das Layout.
+### 5. Steuer-Absetzbarkeit Sektion (`Donate.tsx`)
+- Headline ändern auf "For individuals and companies in Austria — your donation is tax-deductible!" (DE-Variante analog).
+- Das vom User hochgeladene Logo (`Spende steuerlich absetzbar Logo.jpeg`, FW-22429) als Bild in der Card anzeigen — links neben oder über dem Text, in moderater Größe (max 160px). Bild nach Upload in `src/assets/tax-deductible-logo.jpg` ablegen und importieren.
+- Text darunter:
+  - EN: "Cure MCOPS12 is a registered nonprofit organization in Austria and eligible to receive tax-deductible donations (registration number: FW-22429)."
+- Bestehender ausführlicher Text + BMF-Link bleiben darunter erhalten.
 
-Einsatz auf:
-- `JoinNaturalHistoryStudy.tsx` — Hero mit ClipboardList/Stethoscope-Icon Badge rechts. Danach erste Textsektion bekommt eine **"Lead"-Behandlung**: erster Absatz größer, in einem Card-Block mit Teal-Akzent-Border-Left, restliche Absätze danach normal.
-- `NaturalHistoryStudy.tsx` — selbe Hero-Variante mit FileText-Icon, gleiche Lead-Behandlung.
+### 6. Footer (`src/content/site.ts`)
+- Tagline "An Austrian nonprofit racing to find a cure for MCOPS12." komplett aus dem Footer entfernen (Eintrag `tagline` in `t.en.footer` und `t.de.footer` leeren bzw. die `<p>` in `Footer.tsx` ausblenden, wenn leer). Andere Vorkommen von "Austrian" (SEO-Meta, About-Seiten) bleiben unberührt — User hat explizit nur "im Footer" gesagt.
 
-### 4. Visuelle Konsistenz
-- Alle neuen Cards nutzen bestehende Tokens: `bg-card`, `border-border`, `rounded-3xl`, `shadow-[var(--shadow-card)]`, Teal/Amber Akzente aus dem Design-System.
-- Keine neuen Farben — alles über vorhandene HSL-Tokens in `index.css`.
+## Technische Details
+- Neue Dependency: `qrcode` (devDependency) zur einmaligen QR-Generierung via kurzem Node-Skript ODER fertige SVG manuell erzeugen und committen. Bevorzugt: einmal generieren, SVG einchecken — keine Runtime-Dep.
+- EPC-QR Payload-Format: `BCD\n002\n1\nSCT\nRZOOAT2L060\nCure MCOPS12\nAT0334060000008243362\n\n\n\nSpende Cure MCOPS12`
+- Keine neuen Farben — bestehende Tokens `teal`, `amber`, `amber-deep`, `emerald-400` aus dem Design-System.
 
-## Dateien
-- `src/pages/KidProfile.tsx` — Layout-Refactor
-- `src/pages/MeetOurKids.tsx` — Short-story Toggle entfernen
-- `src/components/site/Bits.tsx` — neue `PageHeroIllustrated` Komponente + `LeadParagraph` Helper
-- `src/pages/JoinNaturalHistoryStudy.tsx` — neuen Hero + Lead-Paragraph nutzen
-- `src/pages/NaturalHistoryStudy.tsx` — neuen Hero + Lead-Paragraph nutzen
+## Offene Punkte / vom User benötigt
+- **Donorbox-Link**: User liefert später nach (Platzhalter wird gesetzt).
+- **Steuer-Logo JPEG**: User wird in der nächsten Nachricht hochladen — wird dann an die richtige Stelle kopiert.
 
 ## Was nicht geändert wird
-- Textinhalte (alle 1:1 erhalten)
-- Routing, Daten-Struktur in `kidsProfiles.ts` / `site.ts`
-- Andere Seiten (z.B. Newly Diagnosed, Donate) — falls gewünscht, in Folge-Iteration mit demselben Hero-Pattern.
+- Andere Sektionen (Spendenbestätigungs-Formular, Wirkungs-Sektion, GoFundMe-Dankes-Block, BMF-Registry-Box) bleiben inhaltlich unverändert.
+- Routing, andere Seiten, Navigation.
