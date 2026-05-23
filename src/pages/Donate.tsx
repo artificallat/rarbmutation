@@ -105,7 +105,7 @@ export default function Donate({ lang }: { lang: Lang }) {
             </p>
             <p className="italic text-amber">
               {de
-                ? "„Alleine können wir so wenig tun; gemeinsam können wir so viel bewegen." — Helen Keller"
+                ? "„Alleine können wir so wenig tun; gemeinsam können wir so viel bewegen.“ — Helen Keller"
                 : "\"Alone, we can do so little; together, we can do so much.\" — Helen Keller"}
             </p>
             <p>
