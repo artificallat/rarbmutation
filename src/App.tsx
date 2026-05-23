@@ -8,6 +8,7 @@ import Home from "@/pages/Home";
 import WhoWeAre from "@/pages/WhoWeAre";
 import WhatIs from "@/pages/WhatIs";
 import MeetOurKids from "@/pages/MeetOurKids";
+import KidProfile from "@/pages/KidProfile";
 import Achievements from "@/pages/Achievements";
 import Research from "@/pages/Research";
 import Network from "@/pages/Network";
@@ -45,6 +46,7 @@ const pages = (lang: Lang) => (
     <Route path="rarb-gene" element={<RarbGene lang={lang} />} />
     <Route path="mcops12-disease" element={<Mcops12Disease lang={lang} />} />
     <Route path="meet-our-kids" element={<MeetOurKids lang={lang} />} />
+    <Route path="meet-our-kids/:slug" element={<KidProfile lang={lang} />} />
     <Route path="achievements" element={<Achievements lang={lang} />} />
     <Route path="research" element={<Research lang={lang} />} />
     <Route path="network" element={<Network lang={lang} />} />
