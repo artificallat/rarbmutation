@@ -184,7 +184,7 @@ export const t = {
       achievements: "Achievements", research: "Research",
       naturalHistory: "Natural History Study", network: "The Network",
       news: "News", donate: "Donate",
-      families: "Families", professionals: "Professionals",
+      families: "Families", clinicians: "Clinicians",
       newlyDiagnosed: "Newly Diagnosed", joinNaturalHistory: "Join the Natural History Study",
       raiseAwareness: "Raise Awareness", drugRepurposing: "Drug Repurposing",
       asoTherapy: "ASO Therapy",
