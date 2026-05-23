@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Placeholder } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { kids, type Lang } from "@/content/site";
@@ -56,11 +57,22 @@ export default function MeetOurKids({ lang }: { lang: Lang }) {
 function KidCard({ kid, lang }: { kid: typeof kids[number]; lang: Lang }) {
   const [open, setOpen] = useState(false);
   const de = lang === "de";
+  const slug = kid.name
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+  const profileHref = `${de ? "/de" : ""}/meet-our-kids/${slug}`;
   return (
     <article className="bg-card rounded-3xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] transition-shadow">
-      <Placeholder label={kid.name} src={kidPhotos[kid.name]} className="aspect-[4/5] !rounded-none" />
+      <Link to={profileHref}>
+        <Placeholder label={kid.name} src={kidPhotos[kid.name]} className="aspect-[4/5] !rounded-none" />
+      </Link>
       <div className="p-6">
-        <h3 className="font-display text-2xl font-bold text-navy">{kid.name}</h3>
+        <Link to={profileHref}>
+          <h3 className="font-display text-2xl font-bold text-navy hover:text-teal transition-colors">{kid.name}</h3>
+        </Link>
         <p className="text-teal text-sm font-semibold mt-1">{kid.place} · {de ? "Geboren" : "Born"} {kid.year}</p>
         <dl className="mt-4 space-y-1 text-sm text-foreground/75">
           <div><dt className="inline font-semibold text-navy">{de ? "Eltern: " : "Parents: "}</dt><dd className="inline">{kid.parents}</dd></div>
@@ -73,10 +85,16 @@ function KidCard({ kid, lang }: { kid: typeof kids[number]; lang: Lang }) {
             <p className="text-sm italic text-foreground/75 mt-1">{de ? kid.dreamDe : kid.dreamEn}</p>
           </div>
         </div>
-        <button onClick={() => setOpen(o => !o)} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal">
-          {open ? (de ? "Weniger" : "Show less") : (de ? "Geschichte lesen" : "Read story")}
-          <ChevronDown className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} />
-        </button>
+        <div className="mt-4 flex items-center justify-between gap-3 flex-wrap">
+          <button onClick={() => setOpen(o => !o)} className="inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal">
+            {open ? (de ? "Weniger" : "Show less") : (de ? "Kurzgeschichte" : "Short story")}
+            <ChevronDown className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} />
+          </button>
+          <Link to={profileHref} className="inline-flex items-center gap-1 text-sm font-semibold text-teal hover:underline">
+            {de ? "Vollständige Geschichte" : "Full story"}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
     </article>
   );
