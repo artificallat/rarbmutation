@@ -242,7 +242,7 @@ export function PageHero({ eyebrow, title, sub }: { eyebrow?: string; title: str
             {eyebrow}
           </p>
         )}
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-navy text-balance animate-fade-in">
+        <h1 className="font-display sm:text-4xl md:text-5xl font-bold text-balance text-6xl text-navy text-slate-800 animate-fade-in">
           {title}
         </h1>
         {sub && (
