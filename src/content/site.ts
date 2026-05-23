@@ -226,7 +226,7 @@ export const t = {
       partnersTitle: "Cure MCOPS12 partners with",
     },
     footer: {
-      tagline: "An Austrian nonprofit racing to find a cure for MCOPS12.",
+      tagline: "",
       contact: "Contact us",
       org: "Cure MCOPS12 — Verein zur Förderung einer Therapieentwicklung für MCOPS12 Patienten",
       reg: "ZVR: 1002067031 | 4963 St. Peter am Hart, Austria",
@@ -285,7 +285,7 @@ export const t = {
       partnersTitle: "Cure MCOPS12 kooperiert mit",
     },
     footer: {
-      tagline: "Ein österreichischer Verein im Wettlauf um eine Therapie für MCOPS12.",
+      tagline: "",
       contact: "Kontaktieren Sie uns",
       org: "Cure MCOPS12 – Verein zur Förderung einer Therapieentwicklung für MCOPS12-Patient:innen",
       reg: "ZVR: 1002067031 | 4963 St. Peter am Hart, Österreich",
