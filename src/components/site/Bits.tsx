@@ -40,7 +40,7 @@ export function ProgressBar({ raised, goal }: { raised: number; goal: number }) 
       </div>
       <div className="h-3 rounded-full bg-muted overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-amber via-lime-400 to-emerald-500"
+          className="h-full bg-gradient-to-r from-yellow-400 to-emerald-600"
           style={{
             width: inView ? `${pct}%` : "0%",
             transition: "width 1.5s ease-out",
@@ -58,7 +58,7 @@ export function SectionTitle({ eyebrow, title, center, light }: { eyebrow?: stri
       {eyebrow && (
         <p className={`text-xs uppercase tracking-[0.2em] font-semibold mb-3 ${light ? "text-amber" : "text-teal"}`}>{eyebrow}</p>
       )}
-      <h2 className={`font-display text-3xl sm:text-4xl md:text-5xl font-bold text-balance ${light ? "text-white" : "text-navy"}`}>{title}</h2>
+      <h2 className={`font-display sm:text-4xl md:text-5xl font-bold text-balance text-6xl ${light ? "text-white" : "text-navy text-slate-50"}`}>{title}</h2>
     </div>
   );
 }
