@@ -130,30 +130,14 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
       <section className="bg-muted/40 py-20">
         <div className="container-wide">
           <SectionTitle eyebrow={lang === "de" ? "Team" : "Team"} title={lang === "de" ? "Unsere Volontär:innen" : "Volunteers"} />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {volunteers.map(v => {
-              const photo = volunteerPhotos[v.name];
-              return (
-                <div key={v.name} className="group relative bg-card rounded-2xl border border-border p-6 text-center overflow-hidden">
-                  {photo ? (
-                    <img src={photo} alt={v.name}
-                      style={{ width: 112, height: 112, objectFit: "cover", objectPosition: "center top", borderRadius: "9999px" }}
-                      className="mx-auto mb-4" />
-                  ) : (
-                    <div className="placeholder-img w-28 h-28 mx-auto !rounded-full mb-4 text-xs">{v.name.split(" ")[0]}</div>
-                  )}
-                  <h4 className="font-display text-lg font-bold text-navy">{v.name}</h4>
-                  <p className="text-sm text-teal font-semibold">{v.role[lang]}</p>
-                  <div className="absolute inset-0 bg-navy text-white p-6 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center text-left">
-                    <p className="text-sm leading-relaxed">{v.bio[lang]}</p>
-                    {v.linkedin && <a href={v.linkedin} target="_blank" rel="noreferrer" className="mt-3 self-start inline-flex items-center gap-1 text-xs font-semibold text-amber"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>}
-                  </div>
-                </div>
-              );
-            })}
+          <div className="grid md:grid-cols-2 gap-8">
+            {volunteers.map(v => (
+              <VolunteerCard key={v.name} v={v} lang={lang} />
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* SAB */}
       <section className="container-wide py-20">
