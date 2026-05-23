@@ -96,11 +96,11 @@ export function PageHeroIllustrated({
             {eyebrow && (
               <p className="text-xs uppercase tracking-[0.2em] text-teal font-semibold mb-4">{eyebrow}</p>
             )}
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-balance text-navy leading-[1.05]">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-balance text-navy leading-[1.1]">
               {title}
             </h1>
             {sub && (
-              <p className="mt-6 text-lg md:text-xl text-foreground/75 max-w-2xl leading-relaxed">
+              <p className="mt-5 text-base sm:text-lg md:text-xl text-foreground/75 max-w-2xl leading-relaxed">
                 {sub}
               </p>
             )}
