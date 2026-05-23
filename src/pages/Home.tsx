@@ -8,6 +8,7 @@ import heroFamily from "@/assets/family-mountains.jpg";
 import heroPlayground from "@/assets/reinhard-simon-playground.jpg";
 import heroHorse from "@/assets/simon-horse-mane.jpg";
 import heroBeyond from "@/assets/simon-and-beyond.jpg";
+import heroFairyLights from "@/assets/simon-fairy-lights.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
 import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
 import newsHappyNewYear from "@/assets/news-happy-new-year.jpg";
