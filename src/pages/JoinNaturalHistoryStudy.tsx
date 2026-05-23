@@ -1,4 +1,4 @@
-import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation } from "lucide-react";
+import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation, CheckCircle2, Clock } from "lucide-react";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
