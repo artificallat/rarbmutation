@@ -3,7 +3,7 @@ import asoFigure1 from "@/assets/research/aso-figure-1.png";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal, useInView } from "@/components/site/Reveal";
-import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
+
 import type { Lang } from "@/content/site";
 
 export default function AsoTherapy({ lang }: { lang: Lang }) {
@@ -154,12 +154,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
       <WorkflowProgress de={de} />
 
 
-      {/* Figure 2 */}
-      <section className="container-wide py-12">
-        <Reveal>
-          <AsoWorkflowFigure lang={lang} />
-        </Reveal>
-      </section>
+
 
       {/* Partners */}
       <section className="container-wide pb-20">
