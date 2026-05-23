@@ -1,9 +1,11 @@
-import { ExternalLink, Heart, Landmark, CreditCard, FileSignature } from "lucide-react";
+import { ExternalLink, Heart, Landmark, CreditCard, FileSignature, Maximize2 } from "lucide-react";
 import { ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { DonationConfirmationForm } from "@/components/site/DonationConfirmationForm";
 import { donationGoal, socials, type Lang } from "@/content/site";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import bankQr from "@/assets/bank-qr.svg";
+import taxLogo from "@/assets/tax-deductible-logo.png";
 
 // TODO: Donorbox-Kampagnen-URL einsetzen sobald verfügbar
 const DONORBOX_URL = "https://donorbox.org/REPLACE-ME";
@@ -18,9 +20,9 @@ export default function Donate({ lang }: { lang: Lang }) {
           : "With your help, we can move closer to a life-changing therapy. Every donation makes a difference."} />
 
       <section className="container-tight pb-12">
-        <div className="bg-teal text-white rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
-          <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} light />
-          <p className="text-sm text-white/90 mt-4 leading-relaxed">
+        <div className="bg-card border border-border rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
+          <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
+          <p className="text-sm text-foreground/80 mt-4 leading-relaxed">
             {de
               ? "Mit Ihrer finanziellen Unterstützung können wir die Toxizitätsstudien abschließen und ein ASO-Medikament in klinischer Qualität für Simon herstellen."
               : "With your financial support, we can complete the toxicology studies and produce a clinical grade ASO drug for Simon."}
@@ -42,9 +44,25 @@ export default function Donate({ lang }: { lang: Lang }) {
               <div><dt className="inline font-semibold text-navy">{de ? "Empfänger: " : "Recipient: "}</dt>Cure MCOPS12</div>
             </dl>
             <div className="mt-5 flex items-center gap-3 pt-5 border-t border-border">
-              <img src={bankQr} alt={de ? "SEPA QR-Code für Banküberweisung" : "SEPA QR code for bank transfer"} className="w-24 h-24 rounded-lg bg-white p-1.5 border border-border" />
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button type="button" className="group relative shrink-0" aria-label={de ? "QR-Code vergrößern" : "Enlarge QR code"}>
+                    <img src={bankQr} alt={de ? "SEPA QR-Code für Banküberweisung" : "SEPA QR code for bank transfer"} className="w-24 h-24 rounded-lg bg-white p-1.5 border border-border" />
+                    <span className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-teal text-white flex items-center justify-center shadow-md group-hover:bg-teal-deep transition">
+                      <Maximize2 className="w-3.5 h-3.5" />
+                    </span>
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-md">
+                  <DialogTitle className="font-display text-xl text-navy">{de ? "SEPA QR-Code" : "SEPA QR code"}</DialogTitle>
+                  <DialogDescription>
+                    {de ? "Mit Ihrer Banking-App scannen – alle Überweisungsdaten werden automatisch ausgefüllt." : "Scan with your banking app — all transfer details fill in automatically."}
+                  </DialogDescription>
+                  <img src={bankQr} alt="SEPA QR" className="w-full h-auto rounded-xl bg-white p-4 border border-border" />
+                </DialogContent>
+              </Dialog>
               <p className="text-xs text-foreground/70 leading-relaxed">
-                {de ? "Mit Banking-App scannen – Überweisungsdaten werden automatisch ausgefüllt." : "Scan with your banking app — transfer details fill in automatically."}
+                {de ? "Mit Banking-App scannen – tippen Sie auf den QR-Code, um ihn zu vergrößern." : "Scan with your banking app — tap the QR code to enlarge it."}
               </p>
             </div>
           </div>
@@ -52,6 +70,11 @@ export default function Donate({ lang }: { lang: Lang }) {
             <CreditCard className="w-7 h-7 text-teal" />
             <h3 className="font-display text-xl font-bold text-navy mt-4">{de ? "Kreditkarte / PayPal" : "Credit Card / PayPal"}</h3>
             <p className="text-sm text-foreground/75 mt-3">{de ? "Schnell und sicher über Donorbox." : "Fast and secure via Donorbox."}</p>
+            <div className="mt-4 rounded-xl border-2 border-dashed border-amber/60 bg-amber/10 p-4 text-xs text-foreground/70 leading-relaxed">
+              {de
+                ? "Platzhalter: Donorbox-Kampagne wird hier eingebettet, sobald die URL verfügbar ist."
+                : "Placeholder: the Donorbox campaign will be embedded here once the URL is available."}
+            </div>
             <a href={DONORBOX_URL} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition">
               {de ? "Online spenden" : "Donate Online"} <ExternalLink className="w-4 h-4"/>
             </a>
@@ -88,15 +111,27 @@ export default function Donate({ lang }: { lang: Lang }) {
 
       <section className="container-tight pb-20">
         <div className="bg-amber/20 border border-amber rounded-3xl p-8 sm:p-10">
-          <span className="inline-block px-3 py-1 rounded-full bg-amber text-navy text-xs font-bold tracking-wider">IHRE SPENDE IST STEUERLICH ABSETZBAR</span>
-          <h3 className="font-display text-2xl md:text-3xl font-bold text-navy mt-4">{de ? "Spendenabsetzbarkeit (Österreich)" : "Austrian Tax Deductibility"}</h3>
-          <p className="mt-4 text-foreground/85 leading-relaxed">
-            {de
-              ? "Cure MCOPS12 ist in Österreich als steuerlich begünstigter Spendenempfänger registriert. Registrierungsnummer: FW-22429 (gültig ab 01.01.2024). Spenden an Cure MCOPS12 sind für österreichische Steuerzahler:innen absetzbar – bitte verwenden Sie Ihren Kontoauszug als Nachweis für die Steuererklärung."
-              : "Cure MCOPS12 is registered as a tax-deductible donation recipient in Austria. Registration number: FW-22429 (valid from 01-01-2024). Donations to Cure MCOPS12 are tax-deductible for Austrian taxpayers — please use your bank statement as proof for your tax return."}
-          </p>
-          <a href="https://service.bmf.gv.at/service/allg/spenden/show_mast.asp#aw" target="_blank" rel="noreferrer"
-            className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal underline">BMF Registry <ExternalLink className="w-3.5 h-3.5"/></a>
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
+            <img
+              src={taxLogo}
+              alt={de ? "Ihre Spende ist steuerlich absetzbar – Reg. Nr. FW-22429" : "Your donation is tax-deductible – Reg. No. FW-22429"}
+              className="w-36 h-auto rounded-xl bg-white p-3 border border-border shadow-sm shrink-0"
+            />
+            <div className="flex-1">
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-navy">
+                {de
+                  ? "Für Privatpersonen und Unternehmen in Österreich — Ihre Spende ist steuerlich absetzbar!"
+                  : "For individuals and companies in Austria — your donation is tax-deductible!"}
+              </h3>
+              <p className="mt-4 text-foreground/85 leading-relaxed">
+                {de
+                  ? "Cure MCOPS12 ist in Österreich als steuerlich begünstigter Spendenempfänger registriert. Registrierungsnummer: FW-22429 (gültig ab 01.01.2024). Spenden an Cure MCOPS12 sind für österreichische Steuerzahler:innen absetzbar – bitte verwenden Sie Ihren Kontoauszug als Nachweis für die Steuererklärung."
+                  : "Cure MCOPS12 is registered as a tax-deductible donation recipient in Austria. Registration number: FW-22429 (valid from 01-01-2024). Donations to Cure MCOPS12 are tax-deductible for Austrian taxpayers — please use your bank statement as proof for your tax return."}
+              </p>
+              <a href="https://service.bmf.gv.at/service/allg/spenden/show_mast.asp#aw" target="_blank" rel="noreferrer"
+                className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal underline">BMF Registry <ExternalLink className="w-3.5 h-3.5"/></a>
+            </div>
+          </div>
         </div>
       </section>
 
