@@ -1,8 +1,9 @@
-import { FlaskConical, Building2, Dna, Sparkles, CheckCircle2, Clock } from "lucide-react";
+import { FlaskConical, Building2, Dna, Sparkles } from "lucide-react";
 import asoFigure1 from "@/assets/research/aso-figure-1.png";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
-import { Reveal, useInView } from "@/components/site/Reveal";
+import { Reveal } from "@/components/site/Reveal";
+import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
 
 import type { Lang } from "@/content/site";
 
