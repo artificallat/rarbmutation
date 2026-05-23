@@ -71,16 +71,12 @@ export function PageHeroIllustrated({
   sub,
   icon: Icon,
   badgeLabel,
-  logoSrc,
-  logoAlt,
 }: {
   eyebrow?: string;
   title: string;
   sub?: string;
-  icon?: LucideIcon;
+  icon: LucideIcon;
   badgeLabel?: string;
-  logoSrc?: string;
-  logoAlt?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-muted/50 via-background to-background pt-16 pb-16">
@@ -105,20 +101,12 @@ export function PageHeroIllustrated({
           <div className="hidden md:flex justify-center fade-in fade-in-delay-1">
             <div className="relative">
               <div aria-hidden className="absolute inset-0 -m-6 rounded-[2.5rem] bg-gradient-to-br from-teal/20 via-amber/10 to-transparent blur-2xl" />
-              <div className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-[2.5rem] bg-gradient-to-br from-card to-muted border border-border shadow-[var(--shadow-card)] flex flex-col items-center justify-center gap-4 p-6">
-                {logoSrc ? (
-                  <img
-                    src={logoSrc}
-                    alt={logoAlt || "Logo"}
-                    className="max-w-full max-h-44 object-contain"
-                  />
-                ) : Icon ? (
-                  <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-teal to-teal/70 text-white flex items-center justify-center shadow-[var(--shadow-amber)]">
-                    <Icon className="w-12 h-12" strokeWidth={1.6} />
-                  </div>
-                ) : null}
+              <div className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-[2.5rem] bg-gradient-to-br from-card to-muted border border-border shadow-[var(--shadow-card)] flex flex-col items-center justify-center gap-4">
+                <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-teal to-teal/70 text-white flex items-center justify-center shadow-[var(--shadow-amber)]">
+                  <Icon className="w-12 h-12" strokeWidth={1.6} />
+                </div>
                 {badgeLabel && (
-                  <p className="text-xs uppercase tracking-[0.2em] font-semibold text-teal text-center px-2">
+                  <p className="text-xs uppercase tracking-[0.2em] font-semibold text-teal text-center px-4">
                     {badgeLabel}
                   </p>
                 )}
@@ -130,7 +118,6 @@ export function PageHeroIllustrated({
     </section>
   );
 }
-
 
 export function LeadParagraph({ children }: { children: React.ReactNode }) {
   return (

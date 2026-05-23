@@ -1,5 +1,6 @@
-import { ExternalLink, Heart, Landmark, CreditCard, FileSignature, HandHeart } from "lucide-react";
-import { ProgressBar, SectionTitle, PageHeroIllustrated } from "@/components/site/Bits";
+import { ExternalLink, Heart, Landmark, CreditCard, FileSignature } from "lucide-react";
+import { ProgressBar, SectionTitle } from "@/components/site/Bits";
+import { PageHero } from "@/pages/WhoWeAre";
 import { DonationConfirmationForm } from "@/components/site/DonationConfirmationForm";
 import { donationGoal, socials, type Lang } from "@/content/site";
 
@@ -7,16 +8,10 @@ export default function Donate({ lang }: { lang: Lang }) {
   const de = lang === "de";
   return (
     <>
-      <PageHeroIllustrated
-        eyebrow={de ? "Spenden" : "Donate"}
-        title={de ? "Spenden" : "Donate"}
-        sub={de
+      <PageHero eyebrow={de ? "Spenden" : "Donate"}
+        title={de
           ? "Mit Ihrer Unterstützung kommen wir einer lebensverändernden Therapie näher. Jede Spende macht einen Unterschied."
-          : "With your support, we can move closer to a life-changing therapy. Every donation makes a difference."}
-        icon={HandHeart}
-        badgeLabel={de ? "Cure MCOPS12" : "Cure MCOPS12"}
-      />
-
+          : "With your support, we can move closer to a life-changing therapy. Every donation makes a difference."} />
 
       <section className="container-tight pb-12">
         <div className="bg-white text-navy rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)] border border-border">
