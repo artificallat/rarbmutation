@@ -58,7 +58,7 @@ export function SectionTitle({ eyebrow, title, center, light }: { eyebrow?: stri
       {eyebrow && (
         <p className={`text-xs uppercase tracking-[0.2em] font-semibold mb-3 ${light ? "text-amber" : "text-teal"}`}>{eyebrow}</p>
       )}
-      <h2 className={`font-display sm:text-4xl md:text-5xl font-bold text-balance text-6xl ${light ? "text-white" : "text-navy text-slate-50"}`}>{title}</h2>
+      <h2 className={`font-display sm:text-4xl md:text-5xl font-bold text-balance text-6xl ${light ? "text-white" : "text-navy"}`}>{title}</h2>
     </div>
   );
 }
