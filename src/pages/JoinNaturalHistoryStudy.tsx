@@ -116,6 +116,50 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
         </div>
       </section>
 
+      <section className="container-wide pb-12">
+        <SectionTitle
+          eyebrow={de ? "Materialien" : "Resources"}
+          title={de ? "Flyer & Webinar-Präsentation" : "Flyer & webinar presentation"}
+        />
+        <div className="grid sm:grid-cols-2 gap-6 -mt-2">
+          <a
+            href="/documents/Flyer-RARB-MCOPS12-Natural-History-Study.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
+          >
+            <div className="w-14 h-14 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0 group-hover:bg-teal group-hover:text-white transition-colors">
+              <Download className="w-7 h-7" />
+            </div>
+            <div className="flex-1">
+              <p className="text-xs uppercase tracking-wider font-semibold text-teal mb-1">PDF</p>
+              <h4 className="font-display text-lg font-bold text-navy">
+                {de ? "Studien-Flyer herunterladen" : "Download the study flyer"}
+              </h4>
+              <p className="text-sm text-foreground/70 mt-1">Flyer — RARB (MCOPS12) Natural History Study.pdf</p>
+            </div>
+          </a>
+
+          <a
+            href="/documents/RARB-Natural-History-Study_V-Chu_2024.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
+          >
+            <div className="w-14 h-14 rounded-xl bg-amber/15 text-amber-deep flex items-center justify-center shrink-0 group-hover:bg-amber group-hover:text-navy transition-colors">
+              <Presentation className="w-7 h-7" />
+            </div>
+            <div className="flex-1">
+              <p className="text-xs uppercase tracking-wider font-semibold text-amber-deep mb-1">{de ? "Webinar 2024" : "2024 webinar"}</p>
+              <h4 className="font-display text-lg font-bold text-navy">
+                {de ? "Präsentation des MCOPS12-Familien-Webinars" : "Presentation from our 2024 MCOPS12 families webinar"}
+              </h4>
+              <p className="text-sm text-foreground/70 mt-1">RARB Natural History Study_V. Chu_2024.pdf</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
       <section className="container-wide pb-20">
         <div className="grid sm:grid-cols-2 gap-6">
           <a
@@ -148,6 +192,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
           </a>
         </div>
       </section>
+
     </>
   );
 }
