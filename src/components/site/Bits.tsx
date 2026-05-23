@@ -33,21 +33,21 @@ export function ProgressBar({ raised, goal }: { raised: number; goal: number }) 
     <div ref={ref}>
       <div className="flex items-end justify-between mb-2 text-sm font-medium">
         <div className="flex flex-col">
-          <Counter to={raised} prefix="€" duration={1500} className="text-2xl font-display font-bold text-navy" />
-          <span className="text-navy/70 mt-0.5">raised</span>
+          <Counter to={raised} prefix="€" duration={1500} className="text-2xl font-display font-bold text-white" />
+          <span className="text-white/80 mt-0.5">raised</span>
         </div>
-        <span className="text-navy/70">of €{goal.toLocaleString("de-AT")} goal</span>
+        <span className="text-white/80">of €{goal.toLocaleString("de-AT")} goal</span>
       </div>
-      <div className="h-3 rounded-full bg-white/60 overflow-hidden">
+      <div className="h-3 rounded-full bg-white/20 overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-amber via-amber-deep to-emerald-600"
+          className="h-full bg-gradient-to-r from-amber via-amber-deep to-emerald-400"
           style={{
             width: inView ? `${pct}%` : "0%",
             transition: "width 1.5s ease-out",
           }}
         />
       </div>
-      <p className="text-xs text-navy/70 mt-2">{pct}%</p>
+      <p className="text-xs text-white/80 mt-2">{pct}%</p>
     </div>
   );
 }
