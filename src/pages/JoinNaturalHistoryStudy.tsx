@@ -1,10 +1,9 @@
-import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation, CheckCircle2, Clock } from "lucide-react";
+import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation } from "lucide-react";
 import { PageHero } from "./WhoWeAre";
-import { useInView } from "@/components/site/Reveal";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
-import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
 import type { Lang } from "@/content/site";
+
 
 export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
   const de = lang === "de";
@@ -96,28 +95,8 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
         </Reveal>
       </section>
 
-      <section className="bg-muted/40 py-20">
-        <div className="container-wide">
-          <SectionTitle
-            eyebrow={de ? "Einbettung" : "How it fits in"}
-            title={de ? "Vom Register zur Therapie" : "From the registry to a therapy"}
-          />
-          <div className="space-y-5 text-lg leading-relaxed text-foreground/80 mb-10 max-w-3xl">
-            <Reveal>
-              <p>
-                {de
-                  ? "Die Daten der Natural History Study bilden die klinische Vergleichsbasis, ohne die Behörden wie EMA und FDA keine neue Therapie zulassen. Sie speisen direkt den Entwicklungs-Workflow der allelspezifischen ASO-Therapie — von der Mutationsanalyse einzelner Patient:innen bis zur Bewertung des Behandlungseffekts in der späteren klinischen Studie."
-                  : "Data from the natural history study form the clinical baseline without which regulators such as the EMA and FDA cannot approve a new therapy. They feed directly into the allele-specific ASO development workflow — from per-patient mutation analysis to assessing treatment effect in the eventual clinical trial."}
-              </p>
-            </Reveal>
-          </div>
-          <Reveal delay={120}>
-            <AsoWorkflowFigure lang={lang} />
-          </Reveal>
-        </div>
-      </section>
 
-      <WorkflowProgress de={de} />
+
 
 
       <section className="container-wide pb-12">
@@ -201,100 +180,3 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
   );
 }
 
-function WorkflowProgress({ de }: { de: boolean }) {
-  const { ref, inView } = useInView<HTMLDivElement>();
-  const steps = [
-    {
-      n: "01",
-      t: de ? "Zielidentifikation & ASO-Design" : "Target identification & ASO design",
-      d: de
-        ? "Long-Read-Sequenzierung der RARB-Allele, Suche nach mutationsspezifischen Markern, in-silico-Bewertung möglicher Off-Target-Effekte."
-        : "Long-read sequencing of the RARB alleles, identification of mutation-specific markers, in-silico screening for off-target effects.",
-      done: true,
-    },
-    {
-      n: "02",
-      t: de ? "Wirksamkeit & Sicherheit im Zellmodell" : "Efficacy & safety in Simon's cell model",
-      d: de
-        ? "Über 110 ASOs wurden auf allelspezifischen Knockdown sowie auf Immuntoxizität, Zytotoxizität und Off-Target-Effekte getestet."
-        : "More than 110 ASOs were screened for allele-specific knockdown as well as immunotoxicity, cytotoxicity and off-target effects.",
-      done: true,
-    },
-    {
-      n: "03",
-      t: de ? "In-vivo-Sicherheitsstudien" : "In-vivo safety studies",
-      d: de
-        ? "Erste Studie: 6 ASO-Kandidaten auf akute Toxizität und Bioverteilung. Folgestudie: chronische Toxizität, Pharmakokinetik und Maximaldosis für die Klinik."
-        : "First study: 6 ASO candidates assessed for acute toxicity and biodistribution. Follow-up: chronic toxicity, pharmacokinetics and maximum tolerated dose for the clinic.",
-      done: false,
-      ongoing: true,
-    },
-    {
-      n: "04",
-      t: de ? "Klinische Studie & erwartete Wirkung" : "Clinical trial & expected outcomes",
-      d: de
-        ? "Named-Patient-Use-Programm in Österreich, intrathekale Verabreichung. Erwartet: sichere Behandlung, verbesserte Hirnfunktion, weniger Bewegungsstörungen, bessere Kognition."
-        : "Named-patient-use programme in Austria, intrathecal administration. Expected: safe treatment, improved brain function, reduced movement disorders, improved cognition.",
-      done: false,
-    },
-  ];
-
-  return (
-    <section className="relative bg-gradient-to-b from-teal/5 via-muted/30 to-background py-20 overflow-hidden">
-      <div aria-hidden className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-teal/5 blur-3xl" />
-      <div ref={ref} className="container-wide relative">
-        <SectionTitle eyebrow={de ? "Arbeitsablauf" : "Our path to treatment"} title={de ? "Vom Sequenzierergebnis zur klinischen Anwendung" : "From sequencing result to clinical use"} />
-
-        <div className="relative hidden md:block mb-10">
-          <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-            <div
-              className="h-full bg-gradient-to-r from-teal to-amber"
-              style={{
-                width: inView ? "62.5%" : "0%",
-                transition: "width 1800ms cubic-bezier(0.22, 1, 0.36, 1) 200ms",
-              }}
-            />
-          </div>
-          <div className="flex justify-between mt-3 text-xs uppercase tracking-wider font-semibold">
-            <span className="text-teal">{de ? "2 von 4 abgeschlossen" : "2 of 4 completed"}</span>
-            <span className="text-amber-deep">{de ? "Schritt 3 läuft" : "Step 3 in progress"}</span>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-4 gap-5">
-          {steps.map((s, i) => {
-            const StatusIcon = s.done ? CheckCircle2 : Clock;
-            return (
-              <div
-                key={s.n}
-                style={{
-                  opacity: inView ? 1 : 0,
-                  transform: inView ? "translateY(0)" : "translateY(24px)",
-                  transition: `opacity 700ms ease ${i * 150}ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 150}ms`,
-                }}
-              >
-                <div className="group relative bg-card border border-border rounded-2xl p-6 h-full hover:border-teal hover:scale-[1.05] hover:shadow-[var(--shadow-card)] hover:z-10 transition-all duration-300 ease-out overflow-hidden">
-                  <div
-                    className={`absolute top-0 left-0 right-0 h-1 ${s.done ? "bg-teal" : s.ongoing ? "bg-amber" : "bg-border"} origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}
-                  />
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="w-11 h-11 rounded-full bg-gradient-to-br from-teal to-amber text-white font-display font-bold flex items-center justify-center shadow-md group-hover:rotate-3 transition-transform">
-                      {s.n}
-                    </span>
-                    <span className={`inline-flex items-center gap-1.5 text-[11px] uppercase tracking-wider font-semibold rounded-full px-2.5 py-1 ${s.done ? "bg-teal/10 text-teal" : "bg-amber/15 text-amber-deep"}`}>
-                      <StatusIcon className="w-3 h-3" />
-                      {s.ongoing && <span className="w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />}
-                      {s.done ? (de ? "Abgeschlossen" : "Completed") : s.ongoing ? (de ? "Laufend" : "Ongoing") : (de ? "Geplant" : "Planned")}
-                    </span>
-                  </div>
-                  <h4 className="font-display text-lg font-bold text-navy">{s.t}</h4>
-                  <p className="text-foreground/75 mt-2 text-sm leading-relaxed">{s.d}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
