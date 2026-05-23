@@ -117,6 +117,9 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
         </div>
       </section>
 
+      <WorkflowProgress de={de} />
+
+
       <section className="container-wide pb-12">
         <SectionTitle
           eyebrow={de ? "Materialien" : "Resources"}
