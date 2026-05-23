@@ -5,6 +5,10 @@ import type { Lang } from "@/content/site";
 import rarbProtein from "@/assets/rarb-protein.jpg";
 import rarbMutation from "@/assets/rarb-mutation.jpg";
 
+function Cite({ href, children }: { href: string; children: React.ReactNode }) {
+  return <a href={href} target="_blank" rel="noreferrer" className="text-teal font-semibold hover:underline">{children}</a>;
+}
+
 export default function WhatIs({ lang }: { lang: Lang }) {
   const de = lang === "de";
 
@@ -51,14 +55,68 @@ export default function WhatIs({ lang }: { lang: Lang }) {
       <section id="disease" className="container-tight pb-12">
         <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
           <p>
-            {de
-              ? "MCOPS12 wurde erstmals 2013 in der medizinischen Fachliteratur beschrieben (Srour et al. 2013). Das aktuellste systematische Review aus dem Jahr 2023 konnte klinische Daten von gerade einmal 52 Patient:innen weltweit zusammentragen (Caron et al. 2023). Da viele betroffene Kinder vermutlich gar nicht oder fälschlicherweise mit einer Zerebralparese oder einer unspezifischen Entwicklungsstörung diagnostiziert werden, dürfte die tatsächliche Zahl der Erkrankten höher liegen."
-              : "MCOPS12 was first described in the medical literature in 2013 (Srour et al. 2013). The most recent systematic review, published in 2023, was able to compile clinical data on just 52 individuals worldwide (Caron et al. 2023). Because many affected children are likely undiagnosed or misdiagnosed as having cerebral palsy or an unspecified neurodevelopmental disorder, the real number of people living with MCOPS12 is almost certainly higher."}
+            {de ? (
+              <>
+                Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung, die durch Mutationen im Gen für den Retinsäure-Rezeptor Beta (RARB) verursacht wird (
+                <Cite href="https://onlinelibrary.wiley.com/doi/10.1002/humu.23004">Srour et al. 2016</Cite>
+                ).
+              </>
+            ) : (
+              <>
+                Syndromic Microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder caused by mutations in the retinoic acid receptor beta (RARB) gene (
+                <Cite href="https://onlinelibrary.wiley.com/doi/10.1002/humu.23004">Srour et al. 2016</Cite>
+                ).
+              </>
+            )}
           </p>
           <p>
-            {de
-              ? "Die meisten Kinder zeigen eine charakteristische Kombination aus Augenfehlbildungen — etwa einer Mikrophthalmie, bei der ein oder beide Augen kleiner als üblich angelegt sind —, niedrigem Muskeltonus (Hypotonie) und in den ersten Lebensjahren fortschreitenden Bewegungsstörungen wie Dystonie oder Spastik (Trieschmann et al. 2023). Hinzu können eine globale Entwicklungsverzögerung, Schluckschwierigkeiten sowie Begleitfehlbildungen kommen — beispielsweise am Zwerchfell oder am Herzen. Welche dieser Merkmale auftreten und wie stark sie sind, ist von Kind zu Kind sehr unterschiedlich; nicht jede Patient:in zeigt jedes Symptom."
-              : "Most children present with a characteristic combination of eye anomalies — such as microphthalmia, where one or both eyes develop smaller than usual — together with low muscle tone (hypotonia) and progressive movement disorders such as dystonia or spasticity that emerge during the first years of life (Trieschmann et al. 2023). Some children also experience a global developmental delay, swallowing difficulties and additional anomalies of the diaphragm or heart. Which of these features appear and how severely they manifest differs significantly from child to child; not every patient shows every symptom."}
+            {de ? (
+              <>
+                Sie wurde erstmals 2013 in der medizinischen Fachliteratur beschrieben (
+                <Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>
+                ). Das aktuellste systematische Review aus dem Jahr 2023 fasste klinische Daten von 52 Personen weltweit zusammen und macht MCOPS12 damit zu einer der seltensten bekannten Erkrankungen (
+                <Cite href="https://www.gimjournal.org/article/S1098-3600(23)00869-9/fulltext">Caron et al. 2023</Cite>
+                ). Da viele Kinder mit dieser Erkrankung möglicherweise nicht diagnostiziert oder fälschlicherweise mit einer Zerebralparese oder einer unspezifischen Entwicklungsstörung diagnostiziert werden, ist die tatsächliche Zahl der Personen, die mit MCOPS12 leben, vermutlich höher.
+              </>
+            ) : (
+              <>
+                It was first described in the medical literature in 2013 (
+                <Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>
+                ). The most recent systematic review, published in 2023, compiled clinical data from 52 individuals worldwide, making MCOPS12 one of the rarest disorders known (
+                <Cite href="https://www.gimjournal.org/article/S1098-3600(23)00869-9/fulltext">Caron et al. 2023</Cite>
+                ). Because many children with this condition may be undiagnosed or misdiagnosed as having cerebral palsy or an unspecified neurodevelopmental disorder, the true number of people living with MCOPS12 is likely higher.
+              </>
+            )}
+          </p>
+          <p>
+            {de ? (
+              <>
+                Die meisten Kinder mit MCOPS12 zeigen eine Kombination aus Entwicklungsstörungen der Augen (wie Mikrophthalmie, d. h. ein oder beide Augen sind kleiner als normal), niedrigem Muskeltonus (Hypotonie) und fortschreitenden Bewegungsstörungen (Dystonie und/oder Spastik), die in den ersten Lebensjahren auftreten (
+                <Cite href="https://www.sciencedirect.com/science/article/abs/pii/S1769721223001088?via%3Dihub">Trieschmann et al. 2023</Cite>
+                ). Einige haben außerdem eine globale Entwicklungsverzögerung, Schluckschwierigkeiten und periphere Fehlbildungen wie Zwerchfellanomalien oder angeborene Herzfehler. Das Spektrum der Symptome ist breit und variiert stark in der Ausprägung, und nicht jedes Kind weist jedes Merkmal auf.
+              </>
+            ) : (
+              <>
+                Most children with MCOPS12 show a combination of developmental eye anomalies (such as microphthalmia, meaning one or both eyes are smaller than normal), low muscle tone (hypotonia), and progressive movement disorders (dystonia and/or spasticity) that appear in the first years of life (
+                <Cite href="https://www.sciencedirect.com/science/article/abs/pii/S1769721223001088?via%3Dihub">Trieschmann et al. 2023</Cite>
+                ). Some also have a global developmental delay, swallowing difficulties, and peripheral defects such as diaphragmatic anomalies or congenital heart defects. The range of symptoms is wide and varies strongly in severity, and not every child has every feature.
+              </>
+            )}
+          </p>
+          <p>
+            {de ? (
+              <>
+                MCOPS12 ist in der Regel eine autosomal-dominante Erkrankung, was bedeutet, dass eine Veränderung in nur einer der beiden Kopien des RARB-Gens ausreicht, um die Erkrankung zu verursachen. In den meisten Familien tritt die Genveränderung spontan beim betroffenen Kind auf und ist bei den Eltern nicht vorhanden – dies wird als de-novo-Variante bezeichnet. In einer kleinen Zahl von Familien wird die Variante vererbt. Eine sehr seltene rezessive Form, bei der beide Kopien von RARB betroffen sind, wurde ebenfalls beschrieben (
+                <Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>
+                ).
+              </>
+            ) : (
+              <>
+                MCOPS12 is usually an autosomal dominant condition, meaning that a change in just one of the two copies of the RARB gene is enough to cause the disorder. In most families the gene change happens spontaneously in the affected child and is not present in the parents – this is called a de novo variant. In a small number of families the variant is inherited. A very rare recessive form, in which both copies of RARB are affected, has also been reported (
+                <Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>
+                ).
+              </>
+            )}
           </p>
         </div>
       </section>

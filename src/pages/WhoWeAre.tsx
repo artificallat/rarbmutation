@@ -36,8 +36,8 @@ import valeriePhoto from "@/assets/sab/valerie-chu.jpg";
 const sabPhotos: Record<string, string> = {
   "Dr. Wojciech Krezel": krezelPhoto,
   "Rodney A. Bowling Jr, PhD": bowlingPhoto,
-  "Jacques L. Michaud, MD, FRCP": michaudPhoto,
-  "Inge Meijer, MD, PhD": ingePhoto,
+  "Prof. Jacques L. Michaud, MD, FRCP": michaudPhoto,
+  "Inge Meijer, MD, PhD, FRCP": ingePhoto,
   "Valerie Chu, MD": valeriePhoto,
 };
 
