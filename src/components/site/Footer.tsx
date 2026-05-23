@@ -13,7 +13,7 @@ export default function Footer({ lang }: { lang: Lang }) {
           <Link to={`${p}/`} className="inline-flex items-center mb-4 bg-white rounded-xl px-3 py-2" aria-label="Cure MCOPS12 — Home">
             <img src={logo} alt="Cure MCOPS12" className="h-10 w-auto" />
           </Link>
-          <p className="text-sm leading-relaxed max-w-xs">{tr.tagline}</p>
+          {tr.tagline && <p className="text-sm leading-relaxed max-w-xs">{tr.tagline}</p>}
         </div>
         <div className="text-sm space-y-2">
           <p className="text-white font-sans font-semibold text-base mb-2">{tr.contact}</p>

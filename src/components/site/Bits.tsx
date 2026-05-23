@@ -26,19 +26,22 @@ export function Placeholder({ label, className = "aspect-[4/3]", src, objectPosi
 
 import { useInView, Counter } from "@/components/site/Reveal";
 
-export function ProgressBar({ raised, goal }: { raised: number; goal: number }) {
+export function ProgressBar({ raised, goal, light }: { raised: number; goal: number; light?: boolean }) {
   const pct = Math.min(100, Math.round((raised / goal) * 100));
   const { ref, inView } = useInView<HTMLDivElement>();
+  const textPrimary = light ? "text-white" : "text-navy";
+  const textMuted = light ? "text-white/80" : "text-navy/70";
+  const trackBg = light ? "bg-white/20" : "bg-muted";
   return (
     <div ref={ref}>
       <div className="flex items-end justify-between mb-2 text-sm font-medium">
         <div className="flex flex-col">
-          <Counter to={raised} prefix="€" duration={1500} className="text-2xl font-display font-bold text-navy" />
-          <span className="text-navy/70 mt-0.5">raised</span>
+          <Counter to={raised} prefix="€" duration={1500} className={`text-2xl font-display font-bold ${textPrimary}`} />
+          <span className={`${textMuted} mt-0.5`}>raised</span>
         </div>
-        <span className="text-navy/70">of €{goal.toLocaleString("de-AT")} goal</span>
+        <span className={textMuted}>of €{goal.toLocaleString("de-AT")} goal</span>
       </div>
-      <div className="h-3 rounded-full bg-muted overflow-hidden">
+      <div className={`h-3 rounded-full ${trackBg} overflow-hidden`}>
         <div
           className="h-full bg-gradient-to-r from-amber via-amber-deep to-emerald-400"
           style={{
@@ -47,7 +50,7 @@ export function ProgressBar({ raised, goal }: { raised: number; goal: number }) 
           }}
         />
       </div>
-      <p className="text-xs text-navy/70 mt-2">{pct}%</p>
+      <p className={`text-xs ${textMuted} mt-2`}>{pct}%</p>
     </div>
   );
 }
