@@ -68,11 +68,10 @@ const volunteers = [
 ];
 
 const sab = [
-  { name: "Dr. Wojciech Krezel", title: "Research Director, IGBMC", url: "https://www.igbmc.fr/en/igbmc/a-propos-de-ligbmc/directory/wojciech-krezel" },
-  { name: "Rodney A. Bowling Jr, PhD", title: "Chief Scientific Officer, TCAR Rare Labs (AlphaRose Therapeutics)" },
-  { name: "Jacques L. Michaud, MD, FRCP", title: "Director, Centre de recherche Azrieli du CHU Sainte-Justine; Université de Montréal", url: "https://www.chusj.org/Biography?id=66412bca-6e3c-4bee-b1e6-30d8c88d07d7&lang=en" },
-  { name: "Inge Meijer, MD, PhD", title: "Child Neurologist, CHU Sainte-Justine; Université de Montréal" },
-  { name: "Valerie Chu, MD", title: "Scientific Advisor — RARB Natural History Study" },
+  { name: "Dr. Wojciech Krezel", title: "Research Director, IGBMC", url: "https://www.igbmc.fr/en/recherche/teams/brain-development-and-physiology" },
+  { name: "Rodney A. Bowling Jr, PhD", title: "Chief Scientific Officer, RareLabs (A Division of AlphaRose Therapeutics)", bio: "Dr. Rodney A. Bowling Jr. serves as the Chief Science Officer of RareLabs (A division of AlphaRose Therapeutics) and To Cure A Rose Foundation (TCAR), dedicating his career to leading scientific strategy and therapeutic development for children with rare monogenic diseases. He earned his Ph.D. in Medical Sciences in 2008 from the Texas A&M University Health Science Center, Institute of Biosciences and Technology. Over his career, Dr. Bowling has directed large scientific teams through the complex design, optimization, and advancement of RNA- and gene-based therapies, successfully guiding numerous programs through FDA and international clinical trials. Applying his extensive translational expertise to MCOPS12, Dr. Bowling and his team delivered critical foundational work for Simon's ASO therapy — identifying ideal target sites and screening allele-specific ASOs, resulting in several promising candidates." },
+  { name: "Jacques L. Michaud, MD, FRCP", title: "Director, Centre de recherche Azrieli du CHU Sainte-Justine; Professor of Pediatrics and Neurosciences, Université de Montréal", url: "https://www.chusj.org/Biography?id=66412bca-6e3c-4bee-b1e6-30d8c88d07d7&lang=en" },
+  { name: "Inge Meijer, MD, PhD", title: "Child Neurologist, CHU Sainte-Justine; Assistant Clinical Professor, Department of Neurosciences and Department of Pediatrics, Université de Montréal", url: "https://www.chusj.org/Biography?id=a9ea81e4-2dfc-4d16-9d9c-fb47fa484f65&lang=en" },
 ];
 
 export default function WhoWeAre({ lang }: { lang: Lang }) {
