@@ -62,3 +62,68 @@ export function SectionTitle({ eyebrow, title, center, light }: { eyebrow?: stri
     </div>
   );
 }
+
+import type { LucideIcon } from "lucide-react";
+
+export function PageHeroIllustrated({
+  eyebrow,
+  title,
+  sub,
+  icon: Icon,
+  badgeLabel,
+}: {
+  eyebrow?: string;
+  title: string;
+  sub?: string;
+  icon: LucideIcon;
+  badgeLabel?: string;
+}) {
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-b from-muted/50 via-background to-background pt-16 pb-16">
+      <div aria-hidden className="pointer-events-none absolute -top-32 -right-32 w-96 h-96 rounded-full bg-teal/15 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-amber/15 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/3 w-72 h-72 rounded-full bg-navy/5 blur-3xl" />
+      <div className="container-wide relative">
+        <div className="grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-16 items-center">
+          <div className="fade-in">
+            {eyebrow && (
+              <p className="text-xs uppercase tracking-[0.2em] text-teal font-semibold mb-4">{eyebrow}</p>
+            )}
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-balance text-navy leading-[1.05]">
+              {title}
+            </h1>
+            {sub && (
+              <p className="mt-6 text-lg md:text-xl text-foreground/75 max-w-2xl leading-relaxed">
+                {sub}
+              </p>
+            )}
+          </div>
+          <div className="hidden md:flex justify-center fade-in fade-in-delay-1">
+            <div className="relative">
+              <div aria-hidden className="absolute inset-0 -m-6 rounded-[2.5rem] bg-gradient-to-br from-teal/20 via-amber/10 to-transparent blur-2xl" />
+              <div className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-[2.5rem] bg-gradient-to-br from-card to-muted border border-border shadow-[var(--shadow-card)] flex flex-col items-center justify-center gap-4">
+                <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-teal to-teal/70 text-white flex items-center justify-center shadow-[var(--shadow-amber)]">
+                  <Icon className="w-12 h-12" strokeWidth={1.6} />
+                </div>
+                {badgeLabel && (
+                  <p className="text-xs uppercase tracking-[0.2em] font-semibold text-teal text-center px-4">
+                    {badgeLabel}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function LeadParagraph({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="relative bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-[var(--shadow-soft)] overflow-hidden">
+      <div aria-hidden className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-teal to-amber" />
+      <p className="text-lg md:text-xl text-foreground/85 leading-relaxed pl-3">{children}</p>
+    </div>
+  );
+}
