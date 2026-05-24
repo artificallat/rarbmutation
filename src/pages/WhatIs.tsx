@@ -3,8 +3,6 @@ import { SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
-import rarbProtein from "@/assets/rarb-protein.jpg";
-import rarbMutation from "@/assets/rarb-mutation.jpg";
 
 function Cite({ href, children }: { href: string; children: React.ReactNode }) {
   return <a href={href} target="_blank" rel="noreferrer" className="text-teal font-semibold hover:underline">{children}</a>;
@@ -57,9 +55,10 @@ export default function WhatIs({ lang }: { lang: Lang }) {
         eyebrow={de ? "Die Krankheit" : "The disease"}
         title={de ? "Was ist MCOPS12?" : "What is MCOPS12?"}
         sub={de
-          ? "Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung. Sie wird durch Mutationen im Gen für den Retinsäure-Rezeptor Beta (RARB) verursacht und gehört zu den seltensten bekannten Erkrankungen weltweit."
-          : "Syndromic Microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder. It is caused by mutations in the retinoic acid receptor beta (RARB) gene and ranks among the rarest known conditions worldwide."}
+          ? "Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung, die durch Mutationen im Gen für den Retinsäure-Rezeptor Beta (RARB) verursacht wird."
+          : "Syndromic microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder caused by mutations in the retinoic acid receptor beta (RARB) gene."}
       />
+
 
       {/* Quick stat strip */}
       <section className="container-tight pt-10 pb-16">
@@ -112,33 +111,33 @@ export default function WhatIs({ lang }: { lang: Lang }) {
               {
                 label: de ? "Ursache" : "Cause",
                 body: de ? (
-                  <>Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung, die durch Mutationen im Gen für den Retinsäure-Rezeptor Beta (RARB) verursacht wird (<Cite href="https://onlinelibrary.wiley.com/doi/10.1002/humu.23004">Srour et al. 2016</Cite>). Eine einzige Veränderung in diesem Gen kann weitreichende Auswirkungen auf Augen, Gehirn, Bewegung und Sprache haben.</>
+                  <>Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung, die durch Mutationen im Gen für den Retinsäure-Rezeptor Beta (RARB) verursacht wird (<Cite href="https://onlinelibrary.wiley.com/doi/10.1002/humu.23004">Srour et al. 2016</Cite>).</>
                 ) : (
-                  <>Syndromic microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder caused by mutations in the retinoic acid receptor beta (RARB) gene (<Cite href="https://onlinelibrary.wiley.com/doi/10.1002/humu.23004">Srour et al. 2016</Cite>). A single change in this gene can have far-reaching effects on the eyes, brain, movement and speech.</>
+                  <>Syndromic microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder caused by mutations in the retinoic acid receptor beta (RARB) gene (<Cite href="https://onlinelibrary.wiley.com/doi/10.1002/humu.23004">Srour et al. 2016</Cite>).</>
                 ),
               },
               {
                 label: de ? "Geschichte & Häufigkeit" : "History & prevalence",
                 body: de ? (
-                  <>Die Erkrankung wurde erstmals 2013 beschrieben (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>). Das systematische Review von 2023 fasste klinische Daten von nur 52 Personen weltweit zusammen (<Cite href="https://www.gimjournal.org/article/S1098-3600(23)00869-9/fulltext">Caron et al. 2023</Cite>). Die tatsächliche Zahl ist vermutlich höher — viele Kinder werden nicht oder falsch diagnostiziert.</>
+                  <>Die Erkrankung wurde 2013 erstmals in der medizinischen Literatur beschrieben (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>). Das jüngste systematische Review, veröffentlicht 2023, fasste klinische Daten von 52 Personen weltweit zusammen — MCOPS12 zählt damit zu den seltensten bekannten Erkrankungen (<Cite href="https://www.gimjournal.org/article/S1098-3600(23)00869-9/fulltext">Caron et al. 2023</Cite>). Da viele Kinder mit dieser Erkrankung nicht oder fälschlich als Zerebralparese bzw. unspezifische Entwicklungsstörung diagnostiziert werden, ist die tatsächliche Zahl der Betroffenen vermutlich höher.</>
                 ) : (
-                  <>The condition was first described in 2013 (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>). A 2023 systematic review compiled clinical data from only 52 individuals worldwide (<Cite href="https://www.gimjournal.org/article/S1098-3600(23)00869-9/fulltext">Caron et al. 2023</Cite>). The true number is likely higher — many children remain undiagnosed or misdiagnosed.</>
+                  <>It was first described in the medical literature in 2013 (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>). The most recent systematic review, published in 2023, compiled clinical data from 52 individuals worldwide, making MCOPS12 one of the rarest disorders known (<Cite href="https://www.gimjournal.org/article/S1098-3600(23)00869-9/fulltext">Caron et al. 2023</Cite>). Because many children with this condition may be undiagnosed or misdiagnosed as having cerebral palsy or an unspecified neurodevelopmental disorder, the true number of people living with MCOPS12 is likely higher.</>
                 ),
               },
               {
                 label: de ? "Klinisches Bild" : "Clinical picture",
                 body: de ? (
-                  <>Die meisten Kinder zeigen eine Kombination aus Augenfehlbildungen (z. B. Mikrophthalmie), niedrigem Muskeltonus (Hypotonie) und fortschreitenden Bewegungsstörungen wie Dystonie und/oder Spastik (<Cite href="https://www.sciencedirect.com/science/article/abs/pii/S1769721223001088?via%3Dihub">Trieschmann et al. 2023</Cite>). Manche haben zusätzlich Entwicklungsverzögerungen, Schluckprobleme oder Zwerchfell- bzw. Herzfehlbildungen. Die Ausprägung variiert stark von Kind zu Kind.</>
+                  <>Die meisten Kinder mit MCOPS12 zeigen in den ersten Lebensjahren eine Kombination aus Augenfehlbildungen (wie Mikrophthalmie, d. h. ein oder beide Augen sind kleiner als normal), niedrigem Muskeltonus (Hypotonie) und fortschreitenden Bewegungsstörungen (Dystonie und/oder Spastik) (<Cite href="https://www.sciencedirect.com/science/article/abs/pii/S1769721223001088?via%3Dihub">Trieschmann et al. 2023</Cite>). Manche haben zusätzlich eine globale Entwicklungsverzögerung, Schluckprobleme sowie periphere Auffälligkeiten wie Zwerchfellfehlbildungen oder angeborene Herzfehler. Die Bandbreite der Symptome ist groß und variiert stark in der Ausprägung — nicht jedes Kind hat jedes Merkmal.</>
                 ) : (
-                  <>Most children show a combination of eye anomalies (e.g. microphthalmia), low muscle tone (hypotonia) and progressive movement disorders such as dystonia and/or spasticity (<Cite href="https://www.sciencedirect.com/science/article/abs/pii/S1769721223001088?via%3Dihub">Trieschmann et al. 2023</Cite>). Some also have developmental delay, swallowing difficulties or diaphragmatic and congenital heart defects. Severity varies widely from child to child.</>
+                  <>Most children with MCOPS12 show a combination of developmental eye anomalies (such as microphthalmia, meaning one or both eyes are smaller than normal), low muscle tone (hypotonia), and progressive movement disorders (dystonia and/or spasticity) that appear in the first years of life (<Cite href="https://www.sciencedirect.com/science/article/abs/pii/S1769721223001088?via%3Dihub">Trieschmann et al. 2023</Cite>). Some also have a global developmental delay, swallowing difficulties, and peripheral defects such as diaphragmatic anomalies or congenital heart defects. The range of symptoms is wide and varies strongly in severity, and not every child has every feature.</>
                 ),
               },
               {
                 label: de ? "Vererbung" : "Inheritance",
                 body: de ? (
-                  <>MCOPS12 wird in der Regel autosomal-dominant vererbt: Eine veränderte Kopie des RARB-Gens reicht aus. Meist tritt die Variante neu beim Kind auf (de-novo), selten wird sie vererbt. Eine sehr seltene rezessive Form ist ebenfalls beschrieben (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>).</>
+                  <>MCOPS12 ist in der Regel eine autosomal-dominante Erkrankung — eine Veränderung in nur einer der beiden Kopien des RARB-Gens reicht aus, um die Störung zu verursachen. In den meisten Familien tritt die Genveränderung spontan beim betroffenen Kind auf und ist bei den Eltern nicht vorhanden — dies wird als de-novo-Variante bezeichnet. In einer kleinen Zahl von Familien wird die Variante vererbt. Eine sehr seltene rezessive Form, bei der beide Kopien von RARB betroffen sind, wurde ebenfalls beschrieben (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>).</>
                 ) : (
-                  <>MCOPS12 is usually autosomal dominant: a single altered copy of RARB is enough. The variant most often appears de novo in the child; in a few families it is inherited. A very rare recessive form has also been reported (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>).</>
+                  <>MCOPS12 is usually an autosomal dominant condition, meaning that a change in just one of the two copies of the RARB gene is enough to cause the disorder. In most families the gene change happens spontaneously in the affected child and is not present in the parents — this is called a de novo variant. In a small number of families the variant is inherited. A very rare recessive form, in which both copies of RARB are affected, has also been reported (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>).</>
                 ),
               },
             ].map((b, i) => (
@@ -178,65 +177,6 @@ export default function WhatIs({ lang }: { lang: Lang }) {
         </Reveal>
       </section>
 
-      {/* Gene */}
-      <section id="gene" className="container-tight pb-20">
-        <Reveal><SectionTitle eyebrow="RARB" title={de ? "Das RARB-Gen" : "The RARB gene"} /></Reveal>
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <Reveal>
-            <p className="text-lg leading-relaxed text-foreground/80">
-              {de
-                ? "Das RARB-Gen liegt auf Chromosom 3 (3p24.2) und kodiert das RARβ-Protein — einen Kernrezeptor und Transkriptionsfaktor, der durch Retinsäure (Vitamin-A-Metabolit) aktiviert wird. RARβ steuert zahlreiche Zielgene und ist entscheidend für Augen, Zwerchfell, Herz, Verdauungstrakt — und besonders das Gehirn."
-                : "The RARB gene sits on chromosome 3 (3p24.2) and encodes the RARβ protein — a nuclear receptor and transcription factor activated by retinoic acid, a vitamin A metabolite. RARβ regulates many target genes and is crucial for eyes, diaphragm, heart, digestive tract — and especially the brain."}
-            </p>
-          </Reveal>
-          <Reveal delay={150}>
-            <div className="rounded-2xl overflow-hidden border border-border aspect-square bg-muted group">
-              <img src={rarbProtein} alt={de ? "RARβ-Protein an DNA gebunden" : "RARβ protein bound to DNA"} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" width={1024} height={1024} />
-            </div>
-          </Reveal>
-        </div>
-        <div className="grid sm:grid-cols-2 gap-4 mt-8">
-          {[
-            { l: "NIH National Library of Medicine: RARB", h: "https://www.ncbi.nlm.nih.gov/gene/5915" },
-            { l: "GeneCards: RARB", h: "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RARB" },
-          ].map((r, i) => (
-            <Reveal key={r.h} delay={i * 100}>
-              <a href={r.h} target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-5 flex items-center justify-between hover:border-teal hover:-translate-y-0.5 transition-all duration-300">
-                <span className="font-semibold text-navy">{r.l}</span><ExternalLink className="w-4 h-4 text-teal"/>
-              </a>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* Inheritance / pathophysiology */}
-      <section className="bg-muted/40 py-20">
-        <div className="container-tight">
-          <Reveal><SectionTitle eyebrow={de ? "Vererbung & Pathophysiologie" : "Inheritance & pathophysiology"} title={de ? "Wie entsteht MCOPS12?" : "How does MCOPS12 arise?"} /></Reveal>
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <Reveal>
-              <div className="rounded-2xl overflow-hidden border border-border aspect-square bg-muted group">
-                <img src={rarbMutation} alt={de ? "Punktmutation im RARB-Gen" : "Point mutation in the RARB gene"} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" width={1024} height={1024} />
-              </div>
-            </Reveal>
-            <div className="space-y-4 text-lg leading-relaxed text-foreground/80">
-              {[
-                de
-                  ? "MCOPS12 wird meist autosomal-dominant vererbt: Eine veränderte von beiden RARB-Kopien reicht aus. In den meisten Familien tritt die Mutation neu beim Kind auf (de-novo-Variante)."
-                  : "MCOPS12 is most commonly autosomal dominant: one altered copy of RARB is enough. In most families the mutation appears for the first time in the child (de novo variant).",
-                de
-                  ? "Selten wird die Variante vererbt. Eine sehr seltene rezessive Form mit zwei betroffenen RARB-Kopien ist ebenfalls beschrieben."
-                  : "In rare cases the variant is inherited. A very rare recessive form, with both RARB copies affected, has also been reported.",
-                de
-                  ? "Das veränderte RARβ-Protein stört die Regulation wichtiger Zielgene — besonders im Striatum und präfrontalen Kortex. Das erklärt die charakteristische Kombination aus Bewegungsstörungen und kognitiven Beeinträchtigungen."
-                  : "The mutated RARβ protein disrupts regulation of key target genes — particularly in the striatum and prefrontal cortex. This explains the characteristic combination of movement disorders and cognitive impairment.",
-              ].map((p, i) => (
-                <Reveal key={i} delay={i * 120}><p>{p}</p></Reveal>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* References */}
       <section className="container-tight py-20">
