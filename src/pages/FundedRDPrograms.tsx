@@ -146,10 +146,6 @@ const makeTimeline = (base: string): TimelineItem[] => [
   },
 ];
 
-const sisters = [
-  { name: "A Cure for Sophia and Friends", url: "https://www.acureforsophiaandfriends.com/", logo: sophiaLogo, founded: "2023", country: "USA" },
-  { name: "A Cure for Sienna", url: "https://www.facebook.com/acureforsienna/", logo: siennaLogo, founded: "2022", country: "Australia" },
-];
 
 export default function FundedRDPrograms({ lang }: { lang: Lang }) {
   const [open, setOpen] = useState<number | null>(null);
