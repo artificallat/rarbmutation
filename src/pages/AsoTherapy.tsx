@@ -114,7 +114,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
 
       {/* Simon's path */}
       <section className="container-tight pb-12">
-        <SectionTitle eyebrow={de ? "Personalisiert" : "Personalized"} title={de ? "Simons maßgeschneiderte ASO-Therapie" : "Simon's tailor-made ASO therapy"} />
+        <SectionTitle eyebrow={de ? "Personalisiert" : "Personalized"} title={de ? "Simons personalisierte allelspezifische ASO-Therapie" : "Simon's personalized allele-specific ASO therapy"} />
         <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
           <p>
             {de
