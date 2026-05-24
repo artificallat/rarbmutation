@@ -12,7 +12,7 @@ import sophiaLogo from "@/assets/partners/sophia.png";
 import siennaLogo from "@/assets/partners/sienna.jpg";
 
 export const partners = [
-  { name: "AlphaRose RareLabs", url: "https://www.alpharose.com/", logo: alpharoseLogo },
+  { name: "AlphaRose RareLabs", url: "https://hopeatrarelabs.com/", logo: alpharoseLogo },
   { name: "CHU Sainte-Justine", url: "https://research.chusj.org/en/Home", logo: chusjLogo },
   { name: "IGBMC", url: "https://www.igbmc.fr", logo: igbmcLogo },
   { name: "N=1 Collaborative", url: "https://www.n1collaborative.org/", logo: n1Logo },
@@ -34,8 +34,11 @@ export const donationGoal = { raised: 301000, goal: 950000 };
 
 export const kids = [
   {
-    name: "Simon", year: 2017, place: "Salzburg, Austria",
-    parents: "Edith & Reinhard", siblings: "—",
+    name: "Simon",
+    year: 2017,
+    place: "Salzburg, Austria",
+    parents: "Edith & Reinhard",
+    siblings: "—",
     storyEn:
       "Simon is the heart of our mission. Diagnosed with MCOPS12 shortly after birth, he is a bright, joyful boy who loves swimming with his dad and being held close. His courage drives every step of our work.",
     storyDe:
@@ -44,8 +47,11 @@ export const kids = [
     dreamDe: "Eine Zukunft, in der Simon kommunizieren, sich frei bewegen und in Würde und Freude leben kann.",
   },
   {
-    name: "Rhett", year: 2018, place: "Atlanta, GA, USA",
-    parents: "Matt & Sarah", siblings: "—",
+    name: "Rhett",
+    year: 2018,
+    place: "Atlanta, GA, USA",
+    parents: "Matt & Sarah",
+    siblings: "—",
     storyEn:
       "Rhett brings light into every room. His giggles are contagious and his determination in therapy inspires his whole family every single day.",
     storyDe:
@@ -54,8 +60,11 @@ export const kids = [
     dreamDe: "Rhett dabei zu sehen, wie er Schritte macht, Worte spricht und seinem Bruder durch den Garten nachläuft.",
   },
   {
-    name: "Rayne", year: 2009, place: "New Jersey, USA",
-    parents: "Oren & Emily", siblings: "Isla",
+    name: "Rayne",
+    year: 2009,
+    place: "New Jersey, USA",
+    parents: "Oren & Emily",
+    siblings: "Isla",
     storyEn:
       "Rayne is the eldest in our community — a teenager full of personality, music and love. She has shown families that MCOPS12 children can grow, learn and bring deep joy.",
     storyDe:
@@ -64,8 +73,11 @@ export const kids = [
     dreamDe: "Unabhängigkeit, Kommunikation und eine Therapie, die die Zukunft der nächsten Generation schützt.",
   },
   {
-    name: "Troy", year: 2021, place: "Oak Park, Illinois, USA",
-    parents: "Melissa & Paul", siblings: "—",
+    name: "Troy",
+    year: 2021,
+    place: "Oak Park, Illinois, USA",
+    parents: "Melissa & Paul",
+    siblings: "—",
     storyEn:
       "Troy is curious, snuggly and stubborn — in the best way. His parents fight every day to give him every possible chance.",
     storyDe:
@@ -74,8 +86,11 @@ export const kids = [
     dreamDe: "Eine Therapie, die rechtzeitig den Verlauf seines Lebens verändert.",
   },
   {
-    name: "Sienna", year: 2019, place: "Melbourne, Australia",
-    parents: "Annina & Anthony", siblings: "Ava, Bailey",
+    name: "Sienna",
+    year: 2019,
+    place: "Melbourne, Australia",
+    parents: "Annina & Anthony",
+    siblings: "Ava, Bailey",
     storyEn:
       "Sienna is the spark of her family. Through 'A Cure for Sienna', her parents have rallied an entire community behind MCOPS12 research.",
     storyDe:
@@ -84,8 +99,11 @@ export const kids = [
     dreamDe: "Mit ihren Schwestern zu tanzen und gemeinsam mit ihnen aufzuwachsen.",
   },
   {
-    name: "Zayd", year: 2018, place: "London, UK",
-    parents: "Sadia", siblings: "—",
+    name: "Zayd",
+    year: 2018,
+    place: "London, UK",
+    parents: "Sadia",
+    siblings: "—",
     storyEn:
       "Zayd is gentle, observant and deeply loved. His mother's tireless advocacy is a model of strength for every parent in our network.",
     storyDe:
@@ -94,18 +112,23 @@ export const kids = [
     dreamDe: "Eine Welt, in der 'selten' nicht 'vergessen' bedeutet.",
   },
   {
-    name: "Atle", year: 2015, place: "Norway",
-    parents: "—", siblings: "—",
-    storyEn:
-      "Atle's bright laughter and joy fill every room. His family treasures every milestone and every smile.",
+    name: "Atle",
+    year: 2015,
+    place: "Norway",
+    parents: "—",
+    siblings: "—",
+    storyEn: "Atle's bright laughter and joy fill every room. His family treasures every milestone and every smile.",
     storyDe:
       "Atles helles Lachen und seine Freude erfüllen jeden Raum. Seine Familie schätzt jeden Meilenstein und jedes Lächeln.",
     dreamEn: "A future filled with laughter, learning and possibility.",
     dreamDe: "Eine Zukunft voller Lachen, Lernen und Möglichkeiten.",
   },
   {
-    name: "Josephine", year: 2016, place: "Germany",
-    parents: "Familie Ebert", siblings: "—",
+    name: "Josephine",
+    year: 2016,
+    place: "Germany",
+    parents: "Familie Ebert",
+    siblings: "—",
     storyEn:
       "Josephine has a contagious smile and a heart full of love. Her family is a pillar of the European MCOPS12 community.",
     storyDe:
@@ -114,48 +137,56 @@ export const kids = [
     dreamDe: "Geborgenheit, Kommunikation und eine Therapie, die neue Hoffnung bringt.",
   },
   {
-    name: "Mia", year: 2022, place: "—",
-    parents: "—", siblings: "—",
-    storyEn:
-      "Mia is the family's little princess — curious, sweet and full of light.",
-    storyDe:
-      "Mia ist die kleine Prinzessin der Familie – neugierig, lieb und voller Licht.",
+    name: "Mia",
+    year: 2022,
+    place: "—",
+    parents: "—",
+    siblings: "—",
+    storyEn: "Mia is the family's little princess — curious, sweet and full of light.",
+    storyDe: "Mia ist die kleine Prinzessin der Familie – neugierig, lieb und voller Licht.",
     dreamEn: "A childhood full of joy and a future shaped by science.",
     dreamDe: "Eine Kindheit voller Freude und eine Zukunft, die die Wissenschaft mitgestaltet.",
   },
   {
-    name: "Noé", year: 2018, place: "France",
-    parents: "—", siblings: "—",
-    storyEn:
-      "Noé loves swinging in the mountain air. His joy on the playground is pure magic.",
-    storyDe:
-      "Noé liebt es, in der Bergluft zu schaukeln. Seine Freude am Spielplatz ist pure Magie.",
+    name: "Noé",
+    year: 2018,
+    place: "France",
+    parents: "—",
+    siblings: "—",
+    storyEn: "Noé loves swinging in the mountain air. His joy on the playground is pure magic.",
+    storyDe: "Noé liebt es, in der Bergluft zu schaukeln. Seine Freude am Spielplatz ist pure Magie.",
     dreamEn: "More moments of pure joy — and a treatment to share them longer.",
     dreamDe: "Mehr Momente purer Freude – und eine Therapie, um sie länger zu teilen.",
   },
   {
-    name: "Piper", year: 2020, place: "USA",
-    parents: "—", siblings: "—",
-    storyEn:
-      "Piper's giggles in the sunshine remind us why we fight. Every swing, every laugh is a gift.",
+    name: "Piper",
+    year: 2020,
+    place: "USA",
+    parents: "—",
+    siblings: "—",
+    storyEn: "Piper's giggles in the sunshine remind us why we fight. Every swing, every laugh is a gift.",
     storyDe:
       "Pipers Lachen im Sonnenschein erinnert uns daran, warum wir kämpfen. Jedes Schaukeln, jedes Lachen ist ein Geschenk.",
     dreamEn: "A long, joyful childhood and a treatment within reach.",
     dreamDe: "Eine lange, fröhliche Kindheit und eine Therapie in Reichweite.",
   },
   {
-    name: "Rin", year: 2021, place: "—",
-    parents: "—", siblings: "—",
-    storyEn:
-      "Rin is calm, beautiful and beloved. Her gentle spirit is at the heart of her family.",
-    storyDe:
-      "Rin ist ruhig, wunderschön und geliebt. Ihre sanfte Art ist das Herz ihrer Familie.",
+    name: "Rin",
+    year: 2021,
+    place: "—",
+    parents: "—",
+    siblings: "—",
+    storyEn: "Rin is calm, beautiful and beloved. Her gentle spirit is at the heart of her family.",
+    storyDe: "Rin ist ruhig, wunderschön und geliebt. Ihre sanfte Art ist das Herz ihrer Familie.",
     dreamEn: "Health, peace and a future shaped by progress.",
     dreamDe: "Gesundheit, Frieden und eine Zukunft, geprägt von Fortschritt.",
   },
   {
-    name: "Sophia", year: 2010, place: "USA",
-    parents: "Familie Sutherland", siblings: "—",
+    name: "Sophia",
+    year: 2010,
+    place: "USA",
+    parents: "Familie Sutherland",
+    siblings: "—",
     storyEn:
       "Sophia is bright, brave and beautiful. Her family's foundation 'A Cure for Sophia & Friends' supports MCOPS12 research worldwide.",
     storyDe:
@@ -164,10 +195,12 @@ export const kids = [
     dreamDe: "Eine Therapie, die jedes Jahr ihres Mutes würdigt.",
   },
   {
-    name: "Stella", year: 2020, place: "USA",
-    parents: "—", siblings: "—",
-    storyEn:
-      "Stella is curious, joyful and stylish — her sunglasses say it all. She brings light wherever she goes.",
+    name: "Stella",
+    year: 2020,
+    place: "USA",
+    parents: "—",
+    siblings: "—",
+    storyEn: "Stella is curious, joyful and stylish — her sunglasses say it all. She brings light wherever she goes.",
     storyDe:
       "Stella ist neugierig, fröhlich und stilbewusst – ihre Sonnenbrille sagt alles. Sie bringt Licht, wohin sie auch geht.",
     dreamEn: "Adventures, laughter and a future without limits.",
@@ -179,18 +212,30 @@ export const t = {
   en: {
     nav: {
       home: "Home",
-      about: "About", whoWeAre: "Who We Are", whatIs: "What is MCOPS12?",
-      kids: "Meet Our Kids", ourWork: "Our Work",
-      achievements: "Achievements", research: "Research",
-      naturalHistory: "Natural History Study", network: "The Network",
-      news: "News", donate: "Donate",
-      families: "Families", clinicians: "Clinicians",
-      newlyDiagnosed: "Newly Diagnosed", joinNaturalHistory: "Join the Natural History Study",
-      raiseAwareness: "Raise Awareness", drugRepurposing: "Drug Repurposing",
+      about: "About",
+      whoWeAre: "Who We Are",
+      whatIs: "What is MCOPS12?",
+      kids: "Meet Our Kids",
+      ourWork: "Our Work",
+      achievements: "Achievements",
+      research: "Research",
+      naturalHistory: "Natural History Study",
+      network: "The Network",
+      news: "News",
+      donate: "Donate",
+      families: "Families",
+      clinicians: "Clinicians",
+      newlyDiagnosed: "Newly Diagnosed",
+      joinNaturalHistory: "Join the Natural History Study",
+      raiseAwareness: "Raise Awareness",
+      drugRepurposing: "Drug Repurposing",
       asoTherapy: "ASO Therapy",
-      ourStory: "Our Story", researchAndDrugDevelopment: "Research & Drug Development",
-      vereinsorgane: "Association Organs", scientificAdvisoryBoard: "Scientific Advisory Board",
-      gene: "Gene", disease: "Disease",
+      ourStory: "Our Story",
+      researchAndDrugDevelopment: "Research & Drug Development",
+      vereinsorgane: "Association Organs",
+      scientificAdvisoryBoard: "Scientific Advisory Board",
+      gene: "Gene",
+      disease: "Disease",
       ourStoryFull: "Our Story / Foundation",
       fundedRD: "Funded R&D Programs",
       sophiaProgram: "A Cure for Sophia and Friends",
@@ -199,23 +244,38 @@ export const t = {
       descriptionMcops12: "Description of MCOPS12",
       howToGetInvolved: "How to Get Involved",
     },
-    cta: { donate: "Donate", donateNow: "Donate Now", learnMore: "Learn More",
-      gofundme: "GoFundMe Campaign", viewAll: "View All News", readMore: "Read More",
-      donateOnline: "Donate Online", subscribe: "Subscribe" },
+    cta: {
+      donate: "Donate",
+      donateNow: "Donate Now",
+      learnMore: "Learn More",
+      gofundme: "GoFundMe Campaign",
+      viewAll: "View All News",
+      readMore: "Read More",
+      donateOnline: "Donate Online",
+      subscribe: "Subscribe",
+    },
     home: {
       slides: [
-        { title: "How far would you go if someone you loved had a rare disease —", sub: "your husband, your wife…", sub2: "…your child?" },
+        {
+          title: "How far would you go if someone you loved had a rare disease —",
+          sub: "your husband, your wife…",
+          sub2: "…your child?",
+        },
         { title: "as far as possible…" },
         { title: "…and beyond" },
         { title: "A Personalized Medicine for Simon.", sub: "Pioneering RNA Therapies for MCOPS12." },
       ],
       storyTitle: "Our Story",
-      storyP1: "Soon after Edith and Reinhard Pell's son Simon was born in 2017, they knew something was wrong. Simon had microphthalmia and did not meet any developmental milestones in his first months of life. In a desperate search for a cause, Simon underwent genetic testing — and was diagnosed with a mutation in the RARB gene causing a disease called Syndromic Microphthalmia 12 (MCOPS12). \n\nA severe neurodevelopmental disorder so rare that only 20 patients at the time were known worldwide.",
+      storyP1:
+        "Soon after Edith and Reinhard Pell's son Simon was born in 2017, they knew something was wrong. Simon had microphthalmia and did not meet any developmental milestones in his first months of life. In a desperate search for a cause, Simon underwent genetic testing — and was diagnosed with a mutation in the RARB gene causing a disease called Syndromic Microphthalmia 12 (MCOPS12). \n\nA severe neurodevelopmental disorder so rare that only 20 patients at the time were known worldwide.",
       storyP2: "No options for treatment. No hope.",
-      storyP3: "Reinhard and Edith refused to accept the status quo. Driven by determination, they founded the nonprofit organization Cure MCOPS12, establishing a global scientific network and funding research to decode this complex disease. In 2023 they started their project of a lifetime — developing a patient-customized RNA therapy for Simon to silence his gene mutation. With a dream to create a better and brighter future for not only their son, but for all MCOPS12 patients in the world.",
+      storyP3:
+        "Reinhard and Edith refused to accept the status quo. Driven by determination, they founded the nonprofit organization Cure MCOPS12, establishing a global scientific network and funding research to decode this complex disease. In 2023 they started their project of a lifetime — developing a patient-customized RNA therapy for Simon to silence his gene mutation. With a dream to create a better and brighter future for not only their son, but for all MCOPS12 patients in the world.",
       asoTitle: "Simon's Personalized Antisense Oligonucleotide (ASO) Therapy",
-      asoP1: "In collaboration with a biotech partner in the US and scientists in France and Canada, we are developing a personalized ASO therapy for Simon. This innovative approach is designed to specifically silence the mutation in the RARB gene that causes his condition.  \nIn a tremendous effort, we identified six promising ASO drugs that show strong efficacy and safety in laboratory studies. We are now entering the final step - conducting toxicity studies to determine the safest ASO drug for Simon.",
-      asoP2: "While this therapy is tailored to Simon, the underlying development approach is amenable to other MCOPS12 patients.",
+      asoP1:
+        "In collaboration with a biotech partner in the US and scientists in France and Canada, we are developing a personalized ASO therapy for Simon. This innovative approach is designed to specifically silence the mutation in the RARB gene that causes his condition.  \nIn a tremendous effort, we identified six promising ASO drugs that show strong efficacy and safety in laboratory studies. We are now entering the final step - conducting toxicity studies to determine the safest ASO drug for Simon.",
+      asoP2:
+        "While this therapy is tailored to Simon, the underlying development approach is amenable to other MCOPS12 patients.",
       stats: [
         { n: "52", l: "MCOPS12 patients documented worldwide (2023 systematic review)" },
         { n: "€235,000+", l: "raised for research and drug development" },
@@ -238,18 +298,30 @@ export const t = {
   de: {
     nav: {
       home: "Startseite",
-      about: "Über uns", whoWeAre: "Wer wir sind", whatIs: "Was ist MCOPS12?",
-      kids: "Unsere Kinder", ourWork: "Unsere Arbeit",
-      achievements: "Erfolge", research: "Forschung",
-      naturalHistory: "Natural History Study", network: "Das Netzwerk",
-      news: "Aktuelles", donate: "Spenden",
-      families: "Familien", clinicians: "Fachkreise",
-      newlyDiagnosed: "Neu diagnostiziert", joinNaturalHistory: "Am Natural History Study teilnehmen",
-      raiseAwareness: "Awareness schaffen", drugRepurposing: "Wirkstoff-Neuverwendung",
+      about: "Über uns",
+      whoWeAre: "Wer wir sind",
+      whatIs: "Was ist MCOPS12?",
+      kids: "Unsere Kinder",
+      ourWork: "Unsere Arbeit",
+      achievements: "Erfolge",
+      research: "Forschung",
+      naturalHistory: "Natural History Study",
+      network: "Das Netzwerk",
+      news: "Aktuelles",
+      donate: "Spenden",
+      families: "Familien",
+      clinicians: "Fachkreise",
+      newlyDiagnosed: "Neu diagnostiziert",
+      joinNaturalHistory: "Am Natural History Study teilnehmen",
+      raiseAwareness: "Awareness schaffen",
+      drugRepurposing: "Wirkstoff-Neuverwendung",
       asoTherapy: "ASO-Therapie",
-      ourStory: "Unsere Geschichte", researchAndDrugDevelopment: "Forschung & Arzneimittelentwicklung",
-      vereinsorgane: "Vereinsorgane", scientificAdvisoryBoard: "Scientific Advisory Board",
-      gene: "Gen", disease: "Krankheit",
+      ourStory: "Unsere Geschichte",
+      researchAndDrugDevelopment: "Forschung & Arzneimittelentwicklung",
+      vereinsorgane: "Vereinsorgane",
+      scientificAdvisoryBoard: "Scientific Advisory Board",
+      gene: "Gen",
+      disease: "Krankheit",
       ourStoryFull: "Unsere Geschichte / Vereinsgründung",
       fundedRD: "Geförderte F&E-Programme",
       sophiaProgram: "A Cure for Sophia and Friends",
@@ -258,9 +330,16 @@ export const t = {
       descriptionMcops12: "Beschreibung von MCOPS12",
       howToGetInvolved: "Wie Sie helfen können",
     },
-    cta: { donate: "Spenden", donateNow: "Jetzt spenden", learnMore: "Mehr erfahren",
-      gofundme: "GoFundMe-Kampagne", viewAll: "Alle Beiträge", readMore: "Weiterlesen",
-      donateOnline: "Online spenden", subscribe: "Abonnieren" },
+    cta: {
+      donate: "Spenden",
+      donateNow: "Jetzt spenden",
+      learnMore: "Mehr erfahren",
+      gofundme: "GoFundMe-Kampagne",
+      viewAll: "Alle Beiträge",
+      readMore: "Weiterlesen",
+      donateOnline: "Online spenden",
+      subscribe: "Abonnieren",
+    },
     home: {
       slides: [
         { title: "Wie weit würdest du gehen –", sub: "für deinen Mann, deine Frau…", sub2: "…dein Kind?" },
@@ -269,12 +348,16 @@ export const t = {
         { title: "Eine personalisierte Therapie für Simon.", sub: "Wegweisende RNA-Therapien für MCOPS12." },
       ],
       storyTitle: "Unsere Geschichte",
-      storyP1: "Kurz nach der Geburt ihres Sohnes Simon im Jahr 2017 wussten Edith und Reinhard Pell, dass etwas nicht stimmte. Simon hatte Mikrophthalmie und erreichte in seinen ersten Lebensmonaten keine Entwicklungsmeilensteine. Eine genetische Untersuchung brachte schließlich die Diagnose: eine Mutation im RARB-Gen – Syndromale Mikrophthalmie 12 (MCOPS12). Eine schwere neurologische Entwicklungsstörung, von der damals weltweit nur rund 20 Patient:innen bekannt waren.",
+      storyP1:
+        "Kurz nach der Geburt ihres Sohnes Simon im Jahr 2017 wussten Edith und Reinhard Pell, dass etwas nicht stimmte. Simon hatte Mikrophthalmie und erreichte in seinen ersten Lebensmonaten keine Entwicklungsmeilensteine. Eine genetische Untersuchung brachte schließlich die Diagnose: eine Mutation im RARB-Gen – Syndromale Mikrophthalmie 12 (MCOPS12). Eine schwere neurologische Entwicklungsstörung, von der damals weltweit nur rund 20 Patient:innen bekannt waren.",
       storyP2: "Keine Behandlung. Keine Hoffnung.",
-      storyP3: "Reinhard und Edith wollten den Status quo nicht akzeptieren. Sie gründeten den Verein Cure MCOPS12, bauten ein weltweites Forschungsnetzwerk auf und finanzierten Forschung, um diese komplexe Krankheit zu entschlüsseln. 2023 starteten sie ihr Lebensprojekt – die Entwicklung einer patientenspezifischen RNA-Therapie für Simon. Mit dem Traum von einer besseren Zukunft – nicht nur für ihren Sohn, sondern für alle MCOPS12-Kinder weltweit.",
+      storyP3:
+        "Reinhard und Edith wollten den Status quo nicht akzeptieren. Sie gründeten den Verein Cure MCOPS12, bauten ein weltweites Forschungsnetzwerk auf und finanzierten Forschung, um diese komplexe Krankheit zu entschlüsseln. 2023 starteten sie ihr Lebensprojekt – die Entwicklung einer patientenspezifischen RNA-Therapie für Simon. Mit dem Traum von einer besseren Zukunft – nicht nur für ihren Sohn, sondern für alle MCOPS12-Kinder weltweit.",
       asoTitle: "Simons personalisierte Antisense-Oligonukleotid (ASO) Therapie",
-      asoP1: "In Zusammenarbeit mit einem Biotech-Partner in den USA und Forschenden in Frankreich und Kanada entwickeln wir eine ASO-Therapie, die gezielt die krankheitsauslösende Mutation in Simons RARB-Gen ausschaltet. In einer enormen Anstrengung haben wir sechs wirksame und sichere ASO-Kandidaten in einem zellulären Krankheitsmodell identifiziert. Nun folgt der letzte, entscheidende Schritt – eine Toxizitätsstudie, um den sichersten ASO für Simon auszuwählen.",
-      asoP2: "Obwohl dieses Medikament maßgeschneidert für Simon ist, lässt sich das Entwicklungskonzept auf weitere MCOPS12-Patient:innen übertragen.",
+      asoP1:
+        "In Zusammenarbeit mit einem Biotech-Partner in den USA und Forschenden in Frankreich und Kanada entwickeln wir eine ASO-Therapie, die gezielt die krankheitsauslösende Mutation in Simons RARB-Gen ausschaltet. In einer enormen Anstrengung haben wir sechs wirksame und sichere ASO-Kandidaten in einem zellulären Krankheitsmodell identifiziert. Nun folgt der letzte, entscheidende Schritt – eine Toxizitätsstudie, um den sichersten ASO für Simon auszuwählen.",
+      asoP2:
+        "Obwohl dieses Medikament maßgeschneidert für Simon ist, lässt sich das Entwicklungskonzept auf weitere MCOPS12-Patient:innen übertragen.",
       stats: [
         { n: "52", l: "weltweit dokumentierte MCOPS12-Patient:innen (Review 2023)" },
         { n: "€235.000+", l: "für Forschung und Wirkstoffentwicklung gesammelt" },
