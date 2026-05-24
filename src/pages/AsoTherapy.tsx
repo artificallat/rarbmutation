@@ -33,17 +33,17 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
               </p></Reveal>
               <Reveal delay={120}><p>
                 {de
-                  ? "Das Ziel ist die Boten-RNA (mRNA): die kurzlebige Bauanleitung, die eine Zelle abliest, um ein bestimmtes Protein herzustellen. Bindet ein ASO an diese Anleitung, kann es entweder verhindern, dass ein schädliches Protein entsteht, oder dafür sorgen, dass eine fehlende Funktion wiederhergestellt wird."
-                  : "The target is messenger RNA (mRNA) — the short-lived blueprint a cell reads to build a specific protein. Once an ASO binds to that blueprint, it can either stop a harmful protein from being produced or help restore a missing function."}
+                  ? "Das Ziel ist die Boten-RNA (mRNA): das kurzlebige „Rezept", dem eine Zelle folgt, um ein Protein herzustellen. Bindet ein ASO an eine ausgewählte mRNA, kann es entweder verhindern, dass ein schädliches Protein entsteht, oder das Rezept so korrigieren, dass ein fehlendes Protein wieder funktioniert."
+                  : "That target is messenger RNA (mRNA): the short-lived \"recipe\" a cell follows to make a protein. By binding to a chosen mRNA, an ASO can either stop a harmful protein from being made or correct the recipe so a missing protein works again."}
               </p></Reveal>
               <Reveal delay={240}><p>
                 {de
-                  ? "Genau diese Präzision macht ASOs zu einer der spannendsten Therapieformen für genetische Erkrankungen, insbesondere für seltene Krankheiten (vgl. Lauffer et al. 2024, "
-                  : "It is exactly this precision that makes ASOs one of the most promising treatment formats for genetic conditions — especially for rare diseases (see Lauffer et al. 2024, "}
+                  ? "Genau diese Präzision macht ASOs so vielversprechend für genetische Erkrankungen, einschließlich seltener Krankheiten (Lauffer et al. 2024, "
+                  : "This precision is what makes ASOs so promising for genetic conditions, including rare diseases (Lauffer et al. 2024, "}
                 <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">Nature Communications Medicine</a>
                 {de
-                  ? "). Da ASOs an der mRNA und nicht direkt an der DNA ansetzen, ist ihre Wirkung reversibel — Patient:innen brauchen daher regelmäßige Folgegaben."
-                  : "). Because ASOs work on mRNA rather than on DNA itself, their effect is reversible — patients need repeated doses to keep the therapy working."}
+                  ? "). Da ASOs an der mRNA und nicht an der DNA selbst ansetzen, ist ihre Wirkung vorübergehend — Patient:innen brauchen wiederholte Dosen, damit die Therapie wirksam bleibt."
+                  : "). Because ASOs work on mRNA rather than on DNA itself, their effect is temporary — patients need repeated doses to keep the therapy effective."}
               </p></Reveal>
             </div>
           </div>
