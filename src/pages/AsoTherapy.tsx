@@ -75,23 +75,21 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
             <p>
               {de
-                ? "Die meisten Menschen mit MCOPS12 tragen die Erkrankung nur in einer der beiden Kopien des RARB-Gens. Die zweite Kopie ist gesund. Beide Kopien werden in mRNA übersetzt — aber nur die mutierte Version führt zu einem fehlerhaften RARB-Protein, das die Entwicklung stört."
-                : "Most people living with MCOPS12 carry the condition in just one of their two copies of the RARB gene; the other copy is healthy. Both copies are read into mRNA — but only the mutated version produces a faulty RARB protein that disrupts development."}
+                ? "Bei den meisten Patient:innen mit MCOPS12 ist eine Kopie des RARB-Gens mutiert, während die andere Kopie gesund bleibt. Beide Kopien produzieren mRNA, aber nur die mutierte mRNA führt zur Bildung einer schädlichen Version des RARB-Proteins."
+                : "In most patients with MCOPS12, one copy of the RARB gene is mutated while the other copy stays healthy. Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful version of the RARB protein."}
             </p>
             <p>
               {de
-                ? "Ein ASO lässt sich so entwerfen, dass es ausschließlich diese fehlerhafte mRNA erkennt. In der Zelle legt es sich daran an wie zwei Hälften eines Reißverschlusses (siehe Abbildung 1, Schritt 2). Ein körpereigenes Enzym namens RNase H1 erkennt diese Paarung und zerlegt die fehlerhafte mRNA — die Bauanleitung für das schädliche Protein wird also entsorgt, bevor es überhaupt entstehen kann. Diesen Mechanismus nennt man "
-                : "An ASO can be designed to recognise only this faulty mRNA. Inside the cell it pairs up with the mRNA like two halves of a zipper (see Figure 1, step 2). A natural enzyme called RNase H1 spots this pair and breaks down the faulty mRNA — so the blueprint for the harmful protein is destroyed before any of it can be built. Scientists call this approach "}
-              <strong>{de ? "mRNA-Knockdown" : "mRNA knockdown"}</strong>.
+                ? "Ein ASO kann so entworfen werden, dass es nur die fehlerhafte mRNA erkennt. In der Zelle paart es sich mit dieser mRNA wie zwei Hälften eines Reißverschlusses (Abbildung 1, Panel 2). Ein körpereigenes Enzym namens RNase H1 erkennt diese Paarung und zerstört die fehlerhafte mRNA — so wird das schädliche Protein nie gebildet. Wissenschaftler nennen das "
+                : "An ASO can be designed to recognize only the faulty mRNA. Once inside the cell, it pairs with that mRNA like two halves of a zipper (Figure 1, Panel 2). A natural enzyme called RNase H1 spots this pairing and destroys the faulty mRNA — so the harmful protein never gets made. Scientists call this "}
+              <strong>{de ? "„mRNA-Knockdown"." : "\"mRNA knockdown\"."}</strong>
             </p>
             <p>
-              {de
-                ? "Die zentrale Schwierigkeit: Das ASO muss "
-                : "Here is the catch: the ASO has to be "}
+              {de ? "Der Haken: Das ASO muss " : "The catch: the ASO has to be "}
               <strong>{de ? "allelspezifisch" : "allele-specific"}</strong>
               {de
-                ? " sein. Es darf nur die kranke Genkopie stilllegen und die gesunde unbedingt verschonen. Denn das gesunde RARB-Protein ist für eine normale Hirnentwicklung essenziell — würde man es versehentlich mit ausschalten, würde man genau jene Symptome auslösen, die man eigentlich verhindern will (Ciancia et al. 2022, "
-                : ". It must silence only the diseased copy and leave the healthy one untouched. The healthy RARB protein is essential for normal brain development — accidentally knocking it out would cause the very symptoms we are trying to prevent (Ciancia et al. 2022, "}
+                ? " sein — es darf nur die fehlerhafte Kopie stilllegen und die gesunde unberührt lassen. Denn das gesunde RARB-Protein ist essenziell für eine normale Hirnentwicklung. Es versehentlich auszuschalten würde genau die Symptome verursachen, die wir verhindern wollen (Ciancia et al. 2022, "
+                : " — it must silence only the faulty copy and leave the healthy one untouched. That's because the healthy RARB protein is essential for normal brain development. Knocking it out by mistake would cause the very symptoms we're trying to prevent (Ciancia et al. 2022, "}
               <a className="text-teal font-semibold hover:underline break-all" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">ScienceDirect</a>
               ).
             </p>
