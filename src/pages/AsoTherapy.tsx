@@ -118,33 +118,27 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
         <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
           <p>
             {de
-              ? "Eine allelspezifische ASO-Therapie zu entwickeln, ist von Natur aus eine wissenschaftliche Hochleistungsaufgabe (vgl. Hauser et al. 2022, "
-              : "Developing an allele-specific ASO therapy is, by its nature, a scientific high-wire act (see Hauser et al. 2022, "}
+              ? "Die Entwicklung einer allelspezifischen ASO-Therapie ist von Natur aus herausfordernd (Hauser et al. 2022, "
+              : "The development of an allele-specific ASO therapy is inherently challenging (Hauser et al. 2022, "}
             <a className="text-teal font-semibold hover:underline break-all" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">Pharmaceutics</a>
             ).
           </p>
           <p>
-            {de
-              ? "Simon trägt eine RARB-Mutation namens "
-              : "Simon carries a RARB mutation called "}
+            {de ? "Simon trägt eine RARB-Mutation namens " : "Simon carries a RARB mutation called "}
             <strong>c.1159C&gt;T (p.R387C)</strong>
             {de
-              ? " — dieselbe Veränderung, die etwa 30 % aller MCOPS12-Patient:innen tragen. Computermodelle zeigten leider früh, dass sich genau diese Stelle nicht direkt mit einem ASO ansteuern lässt."
-              : " — the same change found in roughly 30 % of all MCOPS12 patients. Unfortunately, computer modelling showed early on that this exact spot could not be targeted directly by an ASO."}
+              ? ", die etwa 30 % der MCOPS12-Patient:innen teilen. Leider zeigten Computermodelle, dass es nicht funktionieren würde, genau diese Mutation anzusteuern."
+              : ", which is shared by about 30% of MCOPS12 patients. Unfortunately, computer modeling showed that targeting this exact mutation wasn't going to work."}
           </p>
           <p>
             {de
-              ? "Wir haben deshalb einen anderen Weg gewählt. Mit einem modernen Verfahren namens "
-              : "So we took a different route. Using a modern technique called "}
-            <strong>{de ? "Long-Read-Sequenzierung" : "long-read sequencing"}</strong>
-            {de
-              ? " haben wir Simons fehlerhafte RARB-Kopie Buchstabe für Buchstabe entschlüsselt — und dabei dutzende einzigartige Marker gefunden, die ausschließlich auf der mutierten Genkopie vorkommen. Jeder dieser Marker kann als Andockstelle für ein allelspezifisches ASO dienen."
-              : " we mapped Simon's faulty RARB copy letter by letter — and uncovered dozens of unique markers that appear only on the mutant allele. Each of these markers is a potential bullseye for an allele-specific ASO."}
+              ? "Wir haben deshalb einen anderen Weg eingeschlagen. Mit fortschrittlichen genetischen Analysen — der sogenannten Long-Read-Sequenzierung — haben wir Simons fehlerhafte RARB-Kopie (Allel) im Detail kartiert und dabei dutzende zusätzliche einzigartige Marker identifiziert, die nur auf dem mutierten Allel vorkommen. Jeder davon ist ein potenzielles Ziel für ein allelspezifisches ASO."
+              : "So we took a different route. Using advanced genetic analyses called long-read sequencing, we mapped Simon's faulty RARB copy (allele) in detail — and identified dozens of additional unique markers found only on the mutant allele. Each one is a potential bullseye for an allele-specific ASO."}
           </p>
           <p>
             {de
-              ? "Das ist gleich in zweifacher Hinsicht wertvoll. Zum einen entstand so überhaupt erst ein gangbarer Weg für Simons Therapie. Zum anderen ist der dabei entwickelte Arbeitsablauf eine Blaupause — er lässt sich für weitere MCOPS12-Kinder mit anderen Mutationen wiederverwenden."
-              : "This matters on two fronts. First, it created a viable path for Simon's therapy in the first place. Second, the workflow we built along the way is a blueprint — one that can be reused for other MCOPS12 children carrying different mutations."}
+              ? "Das ist in zweifacher Hinsicht spannend. Erstens hat es einen echten Weg für Simons ASO-Therapie eröffnet. Zweitens ist der hier etablierte Arbeitsablauf (Abbildung 2) eine Blaupause — er kann wiederverwendet werden, um personalisierte ASO-Therapien für weitere Kinder mit MCOPS12 zu entwickeln."
+              : "This is exciting on two fronts. First, it opened a real path forward for Simon's ASO therapy. Second, the workflow established here (Figure 2) is a blueprint — one that can be reused to develop personalized ASO therapies for other children with MCOPS12."}
           </p>
 
         </div>
