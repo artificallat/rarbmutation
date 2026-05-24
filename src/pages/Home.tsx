@@ -177,7 +177,7 @@ export default function Home({ lang }: { lang: Lang }) {
           <Reveal>
             <SectionTitle eyebrow={lang === "de" ? "Wie alles begann" : "How it began"} title={tr.home.storyTitle} />
             <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
-              <p>{tr.home.storyP1}</p>
+              <p className="whitespace-pre-line">{tr.home.storyP1}</p>
               <p className="font-display text-2xl text-navy">{tr.home.storyP2}</p>
               <p>{tr.home.storyP3}</p>
             </div>
