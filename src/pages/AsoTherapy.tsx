@@ -33,7 +33,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
               </p></Reveal>
               <Reveal delay={120}><p>
                 {de
-                  ? "Das Ziel ist die Boten-RNA (mRNA): das kurzlebige „Rezept", dem eine Zelle folgt, um ein Protein herzustellen. Bindet ein ASO an eine ausgewählte mRNA, kann es entweder verhindern, dass ein schädliches Protein entsteht, oder das Rezept so korrigieren, dass ein fehlendes Protein wieder funktioniert."
+                  ? "Das Ziel ist die Boten-RNA (mRNA): das kurzlebige Rezept, dem eine Zelle folgt, um ein Protein herzustellen. Bindet ein ASO an eine ausgewählte mRNA, kann es entweder verhindern, dass ein schädliches Protein entsteht, oder das Rezept so korrigieren, dass ein fehlendes Protein wieder funktioniert."
                   : "That target is messenger RNA (mRNA): the short-lived \"recipe\" a cell follows to make a protein. By binding to a chosen mRNA, an ASO can either stop a harmful protein from being made or correct the recipe so a missing protein works again."}
               </p></Reveal>
               <Reveal delay={240}><p>
