@@ -214,8 +214,8 @@ export const t = {
       storyP2: "No options for treatment. No hope.",
       storyP3: "Reinhard and Edith refused to accept the status quo. Driven by determination, they founded the nonprofit organization Cure MCOPS12, establishing a global scientific network and funding research to decode this complex disease. In 2023 they started their project of a lifetime — developing a patient-customized RNA therapy for Simon to silence his gene mutation. With a dream to create a better and brighter future for not only their son, but for all MCOPS12 patients in the world.",
       asoTitle: "Simon's Personalized Antisense Oligonucleotide (ASO) Therapy",
-      asoP1: "In collaboration with a biotech partner in the US and scientists in France and Canada, we are developing an ASO therapy to selectively silence Simon's pathogenic mutation in the RARB gene. In a tremendous effort, we identified six efficacious and safe ASO candidates in a cellular disease model. We are now entering the last and crucial step — performing a toxicity study to identify the safest ASO for Simon.",
-      asoP2: "Though this drug is tailor-made to Simon, the development concept is amenable to other MCOPS12 patients.",
+      asoP1: "In collaboration with a biotech partner in the US and scientists in France and Canada, we are developing a personalized ASO therapy for Simon. This innovative approach is designed to specifically silence the mutation in the RARB gene that causes his condition.\n\nIn a tremendous effort, we identified six promising ASO drugs that show strong efficacy and safety in laboratory studies. We are now entering the final step - conducting toxicity studies to determine the safest ASO drug for Simon.",
+      asoP2: "While this therapy is tailored to Simon, the underlying development approach is amenable to other MCOPS12 patients.",
       stats: [
         { n: "52", l: "MCOPS12 patients documented worldwide (2023 systematic review)" },
         { n: "€235,000+", l: "raised for research and drug development" },
