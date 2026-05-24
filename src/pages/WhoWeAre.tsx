@@ -94,8 +94,8 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
           <p className="text-xs uppercase tracking-[0.2em] text-amber font-semibold">{lang === "de" ? "Unsere Mission" : "Our Mission"}</p>
           <p className="mt-3 font-display text-2xl md:text-3xl leading-snug text-balance">
             {lang === "de"
-              ? "Unsere Mission ist es, Bewusstsein und Mittel zu schaffen, um wissenschaftliche Forschung und Wirkstoffentwicklung zu unterstützen – mit dem Ziel, eine Therapie für MCOPS12-Patient:innen zu ermöglichen."
-              : "Our mission is to raise awareness and funding to support scientific research and drug development that will ultimately result in a cure for MCOPS12 patients."}
+              ? "Unsere Mission ist es, Bewusstsein zu schaffen und Forschung für eine Heilung von MCOPS12 zu finanzieren."
+              : "Our mission is to raise awareness and fund research toward a cure for MCOPS12."}
           </p>
         </div>
       </section>
