@@ -221,7 +221,7 @@ export const t = {
         { n: "€235,000+", l: "raised for research and drug development" },
         { n: "6", l: "safe ASO candidates identified" },
       ],
-      donateBar: "Every euro brings Simon — and every MCOPS12 child — closer to a treatment.",
+      donateBar: "With your support, we can move closer to a life-changing therapy. Every donation makes a difference",
       newsTitle: "Latest News",
       partnersTitle: "Cure MCOPS12 partners with",
     },
