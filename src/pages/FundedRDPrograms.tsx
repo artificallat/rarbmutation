@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal, Counter } from "@/components/site/Reveal";
-import sophiaLogo from "@/assets/partners/sophia.png";
-import siennaLogo from "@/assets/partners/sienna.jpg";
 import rainrareImg from "@/assets/research/rainrare-abstract.png";
-import drugRepurposingImg from "@/assets/research/drug-repurposing-igbmc.png";
 import type { Lang } from "@/content/site";
 
 type TimelineItem = {
