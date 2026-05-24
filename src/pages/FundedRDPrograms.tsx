@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal, Counter } from "@/components/site/Reveal";
-import sophiaLogo from "@/assets/partners/sophia.png";
-import siennaLogo from "@/assets/partners/sienna.jpg";
 import rainrareImg from "@/assets/research/rainrare-abstract.png";
-import drugRepurposingImg from "@/assets/research/drug-repurposing-igbmc.png";
 import type { Lang } from "@/content/site";
 
 type TimelineItem = {
@@ -55,9 +52,6 @@ const makeTimeline = (base: string): TimelineItem[] => [
         <p>
           Research was conducted at IGBMC (group Dr. Wojciech Krezel). A master student and a PhD student were co-financed by Cure MCOPS12.
         </p>
-        <div className="rounded-2xl overflow-hidden border border-border">
-          <img src={drugRepurposingImg} alt="Drug Development: drug repurposing programs I — IGBMC" className="w-full h-auto" loading="lazy" />
-        </div>
         <div>
           <p className="font-semibold text-navy">Results:</p>
           <p className="mt-2 font-semibold">Two publications:</p>
@@ -152,10 +146,6 @@ const makeTimeline = (base: string): TimelineItem[] => [
   },
 ];
 
-const sisters = [
-  { name: "A Cure for Sophia and Friends", url: "https://www.acureforsophiaandfriends.com/", logo: sophiaLogo, founded: "2023", country: "USA" },
-  { name: "A Cure for Sienna", url: "https://www.facebook.com/acureforsienna/", logo: siennaLogo, founded: "2022", country: "Australia" },
-];
 
 export default function FundedRDPrograms({ lang }: { lang: Lang }) {
   const [open, setOpen] = useState<number | null>(null);
@@ -218,24 +208,6 @@ export default function FundedRDPrograms({ lang }: { lang: Lang }) {
         </Reveal>
       </section>
 
-      {/* Sister organisations */}
-      <section className="container-wide pb-12">
-        <div className="grid sm:grid-cols-2 gap-6">
-          {sisters.map((s, i) => (
-            <Reveal key={s.name} delay={i * 120}>
-              <a href={s.url} target="_blank" rel="noreferrer"
-                className="bg-card rounded-2xl border border-border p-6 flex items-center gap-5 hover:border-teal hover:-translate-y-1 hover:shadow-xl transition-all duration-300 h-full">
-                <img src={s.logo} alt={s.name} className="w-20 h-20 object-contain shrink-0" />
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-display text-lg font-bold text-navy">{s.name}</h4>
-                  <p className="text-xs uppercase tracking-[0.18em] text-amber font-semibold mt-1">{s.country} · founded {s.founded}</p>
-                  <p className="text-sm text-teal font-semibold mt-2 break-all">{s.url.replace(/^https?:\/\//, "")}</p>
-                </div>
-              </a>
-            </Reveal>
-          ))}
-        </div>
-      </section>
 
       {/* Timeline */}
       <section className="container-tight pb-24">
