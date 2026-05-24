@@ -20,7 +20,7 @@ export default function NewlyDiagnosed({ lang }: { lang: Lang }) {
         <p className="whitespace-pre-wrap">
           {de
             ? "Liebe frisch diagnostizierte Familie,\n\nwillkommen in der MCOPS12-Community. Diese Diagnose habt ihr euch sicher nicht ausgesucht — aber ihr werdet Teil eines Netzwerks von Familien, die ähnliche Wege gehen. Viele von uns erinnern sich noch genau an den Moment, als wir zum ersten Mal von der RARB-Genmutation gehört haben, und an die vielen Fragen, die mit ihr kamen."
-            : "Dear newly diagnosed family,\n\nwelcome to the MCOPS12 community. This diagnosis is likely not what you expected — but you are joining a network of families who share similar experiences. Many of us still remember the moment we first heard about the RARB gene mutation and the questions that came with it."}
+            : "Dear newly diagnosed family, \n\nwelcome to the MCOPS12 community. This diagnosis is likely not what you expected — but you are joining a network of families who share similar experiences. Many of us still remember the moment we first heard about the RARB gene mutation and the questions that came with it."}
         </p>
         <p>
           {de
