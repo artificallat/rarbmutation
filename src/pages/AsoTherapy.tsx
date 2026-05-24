@@ -33,17 +33,17 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
               </p></Reveal>
               <Reveal delay={120}><p>
                 {de
-                  ? "Das Ziel ist die Boten-RNA (mRNA): die kurzlebige Bauanleitung, die eine Zelle abliest, um ein bestimmtes Protein herzustellen. Bindet ein ASO an diese Anleitung, kann es entweder verhindern, dass ein schädliches Protein entsteht, oder dafür sorgen, dass eine fehlende Funktion wiederhergestellt wird."
-                  : "The target is messenger RNA (mRNA) — the short-lived blueprint a cell reads to build a specific protein. Once an ASO binds to that blueprint, it can either stop a harmful protein from being produced or help restore a missing function."}
+                  ? "Das Ziel ist die Boten-RNA (mRNA): das kurzlebige Rezept, dem eine Zelle folgt, um ein Protein herzustellen. Bindet ein ASO an eine ausgewählte mRNA, kann es entweder verhindern, dass ein schädliches Protein entsteht, oder das Rezept so korrigieren, dass ein fehlendes Protein wieder funktioniert."
+                  : "That target is messenger RNA (mRNA): the short-lived \"recipe\" a cell follows to make a protein. By binding to a chosen mRNA, an ASO can either stop a harmful protein from being made or correct the recipe so a missing protein works again."}
               </p></Reveal>
               <Reveal delay={240}><p>
                 {de
-                  ? "Genau diese Präzision macht ASOs zu einer der spannendsten Therapieformen für genetische Erkrankungen, insbesondere für seltene Krankheiten (vgl. Lauffer et al. 2024, "
-                  : "It is exactly this precision that makes ASOs one of the most promising treatment formats for genetic conditions — especially for rare diseases (see Lauffer et al. 2024, "}
+                  ? "Genau diese Präzision macht ASOs so vielversprechend für genetische Erkrankungen, einschließlich seltener Krankheiten (Lauffer et al. 2024, "
+                  : "This precision is what makes ASOs so promising for genetic conditions, including rare diseases (Lauffer et al. 2024, "}
                 <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">Nature Communications Medicine</a>
                 {de
-                  ? "). Da ASOs an der mRNA und nicht direkt an der DNA ansetzen, ist ihre Wirkung reversibel — Patient:innen brauchen daher regelmäßige Folgegaben."
-                  : "). Because ASOs work on mRNA rather than on DNA itself, their effect is reversible — patients need repeated doses to keep the therapy working."}
+                  ? "). Da ASOs an der mRNA und nicht an der DNA selbst ansetzen, ist ihre Wirkung vorübergehend — Patient:innen brauchen wiederholte Dosen, damit die Therapie wirksam bleibt."
+                  : "). Because ASOs work on mRNA rather than on DNA itself, their effect is temporary — patients need repeated doses to keep the therapy effective."}
               </p></Reveal>
             </div>
           </div>
@@ -75,23 +75,21 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
             <p>
               {de
-                ? "Die meisten Menschen mit MCOPS12 tragen die Erkrankung nur in einer der beiden Kopien des RARB-Gens. Die zweite Kopie ist gesund. Beide Kopien werden in mRNA übersetzt — aber nur die mutierte Version führt zu einem fehlerhaften RARB-Protein, das die Entwicklung stört."
-                : "Most people living with MCOPS12 carry the condition in just one of their two copies of the RARB gene; the other copy is healthy. Both copies are read into mRNA — but only the mutated version produces a faulty RARB protein that disrupts development."}
+                ? "Bei den meisten Patient:innen mit MCOPS12 ist eine Kopie des RARB-Gens mutiert, während die andere Kopie gesund bleibt. Beide Kopien produzieren mRNA, aber nur die mutierte mRNA führt zur Bildung einer schädlichen Version des RARB-Proteins."
+                : "In most patients with MCOPS12, one copy of the RARB gene is mutated while the other copy stays healthy. Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful version of the RARB protein."}
             </p>
             <p>
               {de
-                ? "Ein ASO lässt sich so entwerfen, dass es ausschließlich diese fehlerhafte mRNA erkennt. In der Zelle legt es sich daran an wie zwei Hälften eines Reißverschlusses (siehe Abbildung 1, Schritt 2). Ein körpereigenes Enzym namens RNase H1 erkennt diese Paarung und zerlegt die fehlerhafte mRNA — die Bauanleitung für das schädliche Protein wird also entsorgt, bevor es überhaupt entstehen kann. Diesen Mechanismus nennt man "
-                : "An ASO can be designed to recognise only this faulty mRNA. Inside the cell it pairs up with the mRNA like two halves of a zipper (see Figure 1, step 2). A natural enzyme called RNase H1 spots this pair and breaks down the faulty mRNA — so the blueprint for the harmful protein is destroyed before any of it can be built. Scientists call this approach "}
-              <strong>{de ? "mRNA-Knockdown" : "mRNA knockdown"}</strong>.
+                ? "Ein ASO kann so entworfen werden, dass es nur die fehlerhafte mRNA erkennt. In der Zelle paart es sich mit dieser mRNA wie zwei Hälften eines Reißverschlusses (Abbildung 1, Panel 2). Ein körpereigenes Enzym namens RNase H1 erkennt diese Paarung und zerstört die fehlerhafte mRNA — so wird das schädliche Protein nie gebildet. Wissenschaftler nennen das "
+                : "An ASO can be designed to recognize only the faulty mRNA. Once inside the cell, it pairs with that mRNA like two halves of a zipper (Figure 1, Panel 2). A natural enzyme called RNase H1 spots this pairing and destroys the faulty mRNA — so the harmful protein never gets made. Scientists call this "}
+              <strong>{de ? "mRNA-Knockdown." : "\"mRNA knockdown\"."}</strong>
             </p>
             <p>
-              {de
-                ? "Die zentrale Schwierigkeit: Das ASO muss "
-                : "Here is the catch: the ASO has to be "}
+              {de ? "Der Haken: Das ASO muss " : "The catch: the ASO has to be "}
               <strong>{de ? "allelspezifisch" : "allele-specific"}</strong>
               {de
-                ? " sein. Es darf nur die kranke Genkopie stilllegen und die gesunde unbedingt verschonen. Denn das gesunde RARB-Protein ist für eine normale Hirnentwicklung essenziell — würde man es versehentlich mit ausschalten, würde man genau jene Symptome auslösen, die man eigentlich verhindern will (Ciancia et al. 2022, "
-                : ". It must silence only the diseased copy and leave the healthy one untouched. The healthy RARB protein is essential for normal brain development — accidentally knocking it out would cause the very symptoms we are trying to prevent (Ciancia et al. 2022, "}
+                ? " sein — es darf nur die fehlerhafte Kopie stilllegen und die gesunde unberührt lassen. Denn das gesunde RARB-Protein ist essenziell für eine normale Hirnentwicklung. Es versehentlich auszuschalten würde genau die Symptome verursachen, die wir verhindern wollen (Ciancia et al. 2022, "
+                : " — it must silence only the faulty copy and leave the healthy one untouched. That's because the healthy RARB protein is essential for normal brain development. Knocking it out by mistake would cause the very symptoms we're trying to prevent (Ciancia et al. 2022, "}
               <a className="text-teal font-semibold hover:underline break-all" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">ScienceDirect</a>
               ).
             </p>
@@ -116,37 +114,31 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
 
       {/* Simon's path */}
       <section className="container-tight pb-12">
-        <SectionTitle eyebrow={de ? "Personalisiert" : "Personalized"} title={de ? "Simons maßgeschneiderte ASO-Therapie" : "Simon's tailor-made ASO therapy"} />
+        <SectionTitle eyebrow={de ? "Personalisiert" : "Personalized"} title={de ? "Simons personalisierte allelspezifische ASO-Therapie" : "Simon's personalized allele-specific ASO therapy"} />
         <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
           <p>
             {de
-              ? "Eine allelspezifische ASO-Therapie zu entwickeln, ist von Natur aus eine wissenschaftliche Hochleistungsaufgabe (vgl. Hauser et al. 2022, "
-              : "Developing an allele-specific ASO therapy is, by its nature, a scientific high-wire act (see Hauser et al. 2022, "}
+              ? "Die Entwicklung einer allelspezifischen ASO-Therapie ist von Natur aus herausfordernd (Hauser et al. 2022, "
+              : "The development of an allele-specific ASO therapy is inherently challenging (Hauser et al. 2022, "}
             <a className="text-teal font-semibold hover:underline break-all" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">Pharmaceutics</a>
             ).
           </p>
           <p>
-            {de
-              ? "Simon trägt eine RARB-Mutation namens "
-              : "Simon carries a RARB mutation called "}
+            {de ? "Simon trägt eine RARB-Mutation namens " : "Simon carries a RARB mutation called "}
             <strong>c.1159C&gt;T (p.R387C)</strong>
             {de
-              ? " — dieselbe Veränderung, die etwa 30 % aller MCOPS12-Patient:innen tragen. Computermodelle zeigten leider früh, dass sich genau diese Stelle nicht direkt mit einem ASO ansteuern lässt."
-              : " — the same change found in roughly 30 % of all MCOPS12 patients. Unfortunately, computer modelling showed early on that this exact spot could not be targeted directly by an ASO."}
+              ? ", die etwa 30 % der MCOPS12-Patient:innen teilen. Leider zeigten Computermodelle, dass es nicht funktionieren würde, genau diese Mutation anzusteuern."
+              : ", which is shared by about 30% of MCOPS12 patients. Unfortunately, computer modeling showed that targeting this exact mutation wasn't going to work."}
           </p>
           <p>
             {de
-              ? "Wir haben deshalb einen anderen Weg gewählt. Mit einem modernen Verfahren namens "
-              : "So we took a different route. Using a modern technique called "}
-            <strong>{de ? "Long-Read-Sequenzierung" : "long-read sequencing"}</strong>
-            {de
-              ? " haben wir Simons fehlerhafte RARB-Kopie Buchstabe für Buchstabe entschlüsselt — und dabei dutzende einzigartige Marker gefunden, die ausschließlich auf der mutierten Genkopie vorkommen. Jeder dieser Marker kann als Andockstelle für ein allelspezifisches ASO dienen."
-              : " we mapped Simon's faulty RARB copy letter by letter — and uncovered dozens of unique markers that appear only on the mutant allele. Each of these markers is a potential bullseye for an allele-specific ASO."}
+              ? "Wir haben deshalb einen anderen Weg eingeschlagen. Mit fortschrittlichen genetischen Analysen — der sogenannten Long-Read-Sequenzierung — haben wir Simons fehlerhafte RARB-Kopie (Allel) im Detail kartiert und dabei dutzende zusätzliche einzigartige Marker identifiziert, die nur auf dem mutierten Allel vorkommen. Jeder davon ist ein potenzielles Ziel für ein allelspezifisches ASO."
+              : "So we took a different route. Using advanced genetic analyses called long-read sequencing, we mapped Simon's faulty RARB copy (allele) in detail — and identified dozens of additional unique markers found only on the mutant allele. Each one is a potential bullseye for an allele-specific ASO."}
           </p>
           <p>
             {de
-              ? "Das ist gleich in zweifacher Hinsicht wertvoll. Zum einen entstand so überhaupt erst ein gangbarer Weg für Simons Therapie. Zum anderen ist der dabei entwickelte Arbeitsablauf eine Blaupause — er lässt sich für weitere MCOPS12-Kinder mit anderen Mutationen wiederverwenden."
-              : "This matters on two fronts. First, it created a viable path for Simon's therapy in the first place. Second, the workflow we built along the way is a blueprint — one that can be reused for other MCOPS12 children carrying different mutations."}
+              ? "Das ist in zweifacher Hinsicht spannend. Erstens hat es einen echten Weg für Simons ASO-Therapie eröffnet. Zweitens ist der hier etablierte Arbeitsablauf (Abbildung 2) eine Blaupause — er kann wiederverwendet werden, um personalisierte ASO-Therapien für weitere Kinder mit MCOPS12 zu entwickeln."
+              : "This is exciting on two fronts. First, it opened a real path forward for Simon's ASO therapy. Second, the workflow established here (Figure 2) is a blueprint — one that can be reused to develop personalized ASO therapies for other children with MCOPS12."}
           </p>
 
         </div>
