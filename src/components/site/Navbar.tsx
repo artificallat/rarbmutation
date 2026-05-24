@@ -47,7 +47,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
     ]},
   ];
   const achievementsItems: NavItem[] = [
-    { to: `${p}/our-story`, label: tr.nav.ourStoryFull },
+    { to: `${p}/network`, label: tr.nav.network },
     { to: `${p}/funded-rd-programs`, label: tr.nav.fundedRD, children: [
       { to: `${p}/a-cure-for-sophia-and-friends`, label: tr.nav.sophiaProgram },
       { to: `${p}/a-cure-for-sienna`, label: tr.nav.siennaProgram },
