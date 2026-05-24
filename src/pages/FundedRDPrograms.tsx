@@ -55,9 +55,6 @@ const makeTimeline = (base: string): TimelineItem[] => [
         <p>
           Research was conducted at IGBMC (group Dr. Wojciech Krezel). A master student and a PhD student were co-financed by Cure MCOPS12.
         </p>
-        <div className="rounded-2xl overflow-hidden border border-border">
-          <img src={drugRepurposingImg} alt="Drug Development: drug repurposing programs I — IGBMC" className="w-full h-auto" loading="lazy" />
-        </div>
         <div>
           <p className="font-semibold text-navy">Results:</p>
           <p className="mt-2 font-semibold">Two publications:</p>
