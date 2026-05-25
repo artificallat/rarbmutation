@@ -292,7 +292,7 @@ export const t = {
       reg: "ZVR: 1002067031 | 4963 St. Peter am Hart, Austria",
       rights: "© 2025 Cure MCOPS12",
       imprint: "Imprint",
-      follow: "Follow us on social media",
+      follow: "Follow us on Social Media",
     },
   },
   de: {
