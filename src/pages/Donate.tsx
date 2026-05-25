@@ -7,8 +7,7 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import bankQr from "@/assets/bank-qr.svg";
 import taxLogo from "@/assets/tax-deductible-logo.png";
 
-// TODO: Donorbox-Kampagnen-URL einsetzen sobald verfügbar
-const DONORBOX_URL = "https://donorbox.org/REPLACE-ME";
+const DONORBOX_URL = "https://donorbox.org/cure-mcops12";
 
 export default function Donate({ lang }: { lang: Lang }) {
   const de = lang === "de";
