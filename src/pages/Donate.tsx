@@ -19,9 +19,9 @@ export default function Donate({ lang }: { lang: Lang }) {
           : "With your help, we can move closer to a life-changing therapy. Every donation makes a difference."} />
 
       <section className="container-tight pb-12">
-        <div className="bg-card border border-border rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
-          <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
-          <p className="text-sm text-foreground/80 mt-4 leading-relaxed">
+        <div className="bg-teal rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
+          <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} light />
+          <p className="text-sm text-white/90 mt-4 leading-relaxed">
             {de
               ? "Mit Ihrer finanziellen Unterstützung können wir die Toxizitätsstudien abschließen und ein ASO-Medikament in klinischer Qualität für Simon herstellen."
               : "With your financial support, we can complete the toxicology studies and produce a clinical grade ASO drug for Simon."}
@@ -86,6 +86,35 @@ export default function Donate({ lang }: { lang: Lang }) {
 
 
       <section className="container-tight pb-16">
+        <div className="bg-amber/20 border border-amber rounded-3xl p-8 sm:p-10 mb-12">
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
+            <img
+              src={taxLogo}
+              alt={de ? "Ihre Spende ist steuerlich absetzbar – Reg. Nr. FW-22429" : "Your donation is tax-deductible – Reg. No. FW-22429"}
+              className="w-36 h-auto rounded-xl bg-white p-3 border border-border shadow-sm shrink-0"
+            />
+            <div className="flex-1">
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-navy">
+                {de
+                  ? "Für Privatpersonen und Unternehmen in Österreich — Ihre Spende ist steuerlich absetzbar!"
+                  : "For individuals and companies in Austria — your donation is tax-deductible!"}
+              </h3>
+              <p className="mt-4 text-foreground/85 leading-relaxed">
+                {de
+                  ? "Cure MCOPS12 ist eine in Österreich registrierte gemeinnützige Organisation und ist berechtigt, steuerlich absetzbare Spenden zu empfangen (Registrierungsnummer: FW-22429)."
+                  : "Cure MCOPS12 is a registered nonprofit organization in Austria and is authorized to receive tax-deductible donations (registration number: FW-22429)."}
+              </p>
+              <p className="mt-3 text-foreground/85 leading-relaxed">
+                {de
+                  ? <>Wenn Sie eine <strong>Privatperson</strong> sind, die in Österreich einkommensteuerpflichtig ist, und Ihre Spende geltend machen möchten, füllen Sie bitte das folgende Formular aus:</>
+                  : <>If you are an <strong>individual</strong> liable for income tax in Austria and would like to claim your donation, please complete the following form:</>}
+              </p>
+              <a href="https://service.bmf.gv.at/service/allg/spenden/show_mast.asp#aw" target="_blank" rel="noreferrer"
+                className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal underline">BMF Registry <ExternalLink className="w-3.5 h-3.5"/></a>
+            </div>
+          </div>
+        </div>
+
         <SectionTitle
           eyebrow={de ? "Spendenbestätigung" : "Tax confirmation"}
           title={de ? "Spendenbestätigung anfordern" : "Request Your Donation Confirmation"}
@@ -101,33 +130,19 @@ export default function Donate({ lang }: { lang: Lang }) {
           </p>
         </div>
         <DonationConfirmationForm lang={lang} />
+
+        <p className="mt-8 text-sm text-foreground/75 leading-relaxed">
+          {de
+            ? <>Info: Vorlage von debra Austria: <a href="https://www.debra-austria.org/spenden-helfen/spendenabsetzbarkeit/formular-spendenabsetzbarkeit/" target="_blank" rel="noreferrer" className="text-teal hover:underline">debra-austria.org</a></>
+            : <>Info: Template by debra Austria: <a href="https://www.debra-austria.org/spenden-helfen/spendenabsetzbarkeit/formular-spendenabsetzbarkeit/" target="_blank" rel="noreferrer" className="text-teal hover:underline">debra-austria.org</a></>}
+        </p>
+        <p className="mt-4 text-sm text-foreground/85 leading-relaxed">
+          {de
+            ? <>Wenn Ihr <strong>Unternehmen</strong> in Österreich körperschaftsteuerpflichtig ist und Sie Ihre Spende geltend machen möchten, können Sie diese als Betriebsausgabe in Ihrer jährlichen Steuererklärung absetzen.</>
+            : <>If your <strong>company</strong> is subject to corporate income tax in Austria and you wish to claim your donation, you can deduct it as a business expense ("Betriebsausgabe") in your annual tax return.</>}
+        </p>
       </section>
 
-      <section className="container-tight pb-20">
-        <div className="bg-amber/20 border border-amber rounded-3xl p-8 sm:p-10">
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
-            <img
-              src={taxLogo}
-              alt={de ? "Ihre Spende ist steuerlich absetzbar – Reg. Nr. FW-22429" : "Your donation is tax-deductible – Reg. No. FW-22429"}
-              className="w-36 h-auto rounded-xl bg-white p-3 border border-border shadow-sm shrink-0"
-            />
-            <div className="flex-1">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-navy">
-                {de
-                  ? "Für Privatpersonen und Unternehmen in Österreich — Ihre Spende ist steuerlich absetzbar!"
-                  : "For individuals and companies in Austria — your donation is tax-deductible!"}
-              </h3>
-              <p className="mt-4 text-foreground/85 leading-relaxed">
-                {de
-                  ? "Cure MCOPS12 ist in Österreich als steuerlich begünstigter Spendenempfänger registriert. Registrierungsnummer: FW-22429 (gültig ab 01.01.2024). Spenden an Cure MCOPS12 sind für österreichische Steuerzahler:innen absetzbar – bitte verwenden Sie Ihren Kontoauszug als Nachweis für die Steuererklärung."
-                  : "Cure MCOPS12 is registered as a tax-deductible donation recipient in Austria. Registration number: FW-22429 (valid from 01-01-2024). Donations to Cure MCOPS12 are tax-deductible for Austrian taxpayers — please use your bank statement as proof for your tax return."}
-              </p>
-              <a href="https://service.bmf.gv.at/service/allg/spenden/show_mast.asp#aw" target="_blank" rel="noreferrer"
-                className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal underline">BMF Registry <ExternalLink className="w-3.5 h-3.5"/></a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="container-tight pb-20">
         <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
