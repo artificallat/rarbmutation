@@ -7,8 +7,7 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import bankQr from "@/assets/bank-qr.svg";
 import taxLogo from "@/assets/tax-deductible-logo.png";
 
-// TODO: Donorbox-Kampagnen-URL einsetzen sobald verfügbar
-const DONORBOX_URL = "https://donorbox.org/REPLACE-ME";
+const DONORBOX_URL = "https://donorbox.org/cure-mcops12";
 
 export default function Donate({ lang }: { lang: Lang }) {
   const de = lang === "de";
@@ -70,11 +69,6 @@ export default function Donate({ lang }: { lang: Lang }) {
             <CreditCard className="w-7 h-7 text-teal" />
             <h3 className="font-display text-xl font-bold text-navy mt-4">{de ? "Kreditkarte / PayPal" : "Credit Card / PayPal"}</h3>
             <p className="text-sm text-foreground/75 mt-3">{de ? "Schnell und sicher über Donorbox." : "Fast and secure via Donorbox."}</p>
-            <div className="mt-4 rounded-xl border-2 border-dashed border-amber/60 bg-amber/10 p-4 text-xs text-foreground/70 leading-relaxed">
-              {de
-                ? "Platzhalter: Donorbox-Kampagne wird hier eingebettet, sobald die URL verfügbar ist."
-                : "Placeholder: the Donorbox campaign will be embedded here once the URL is available."}
-            </div>
             <a href={DONORBOX_URL} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition">
               {de ? "Online spenden" : "Donate Online"} <ExternalLink className="w-4 h-4"/>
             </a>
