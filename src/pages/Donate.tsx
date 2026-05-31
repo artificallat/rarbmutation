@@ -55,13 +55,17 @@ export default function Donate({ lang }: { lang: Lang }) {
                 <DialogContent className="max-w-md">
                   <DialogTitle className="font-display text-xl text-navy">{de ? "SEPA QR-Code" : "SEPA QR code"}</DialogTitle>
                   <DialogDescription>
-                    {de ? "Mit Ihrer Banking-App scannen – alle Überweisungsdaten werden automatisch ausgefüllt." : "Scan with your banking app — all transfer details fill in automatically."}
+                    {de
+                      ? "Öffnen Sie Ihre Banking-App (z. B. George, Bank Austria, Erste, Revolut) und nutzen Sie dort die QR-Scan-Funktion. IBAN, BIC und Empfänger werden automatisch ausgefüllt – nur den Betrag tragen Sie selbst ein. Hinweis: Mit Kamera oder Notizen-App wird nur der SEPA-Text angezeigt, keine Überweisung gestartet."
+                      : "Open your banking app (e.g. George, Bank Austria, Erste, Revolut) and use its built-in QR scanner. IBAN, BIC and recipient are filled in automatically — you only enter the amount. Note: a generic Camera or Notes app will only show the raw SEPA text, not start a transfer."}
                   </DialogDescription>
                   <img src={bankQr} alt="SEPA QR" className="w-full h-auto rounded-xl bg-white p-4 border border-border" />
                 </DialogContent>
               </Dialog>
               <p className="text-xs text-foreground/70 leading-relaxed">
-                {de ? "Mit Banking-App scannen – tippen Sie auf den QR-Code, um ihn zu vergrößern." : "Scan with your banking app — tap the QR code to enlarge it."}
+                {de
+                  ? <><strong className="text-navy">Bitte in Ihrer Banking-App scannen</strong> – nicht mit Kamera, Notizen oder einem normalen QR-Scanner. Tippen Sie zum Vergrößern auf den Code.</>
+                  : <><strong className="text-navy">Please scan inside your banking app</strong> — not with the Camera, Notes or a generic QR scanner. Tap the code to enlarge.</>}
               </p>
             </div>
           </div>
