@@ -1,15 +1,15 @@
-## Quick-Fixes
+## Plan: SEPA-QR-Nutzung klarstellen
 
-### 1. Spendenbalken auf der Donate-Seite wieder weiß
-`src/pages/Donate.tsx`: Container von `bg-teal` zurück auf neutralen Card-Hintergrund (`bg-card border border-border`), `ProgressBar` ohne `light`-Prop, Beschreibungstext wieder in Standard-Foreground-Farbe. Nur die Donate-Seite — der Home-Spendenbalken bleibt unverändert.
+Ich ändere nur die Donate-Seite:
 
-### 2. Echter SEPA-EPC QR-Code (EPC069 / Girocode)
-- Neues Skript generiert eine valide EPC-Payload (Service Tag `BCD`, Version `002`, UTF-8, SCT, BIC `RZOOAT2L060`, Name `Cure MCOPS12`, IBAN `AT0334060000008243362`, **Betrag leer**, Verwendungszweck „Spende Cure MCOPS12").
-- Rendert als PNG nach `src/assets/bank-qr.png` (überschreibt das alte SVG-Asset im Import).
-- `Donate.tsx`: Import auf `bank-qr.png` umstellen. Banking-Apps (George, Bank Austria, Erste, Revolut etc.) erkennen den Code und füllen IBAN/BIC/Empfänger automatisch aus; der Spender trägt nur den Betrag ein.
+1. **QR-Hinweistext präzisieren**
+   - Direkt neben/unter dem QR-Code steht klar: „Bitte in der Banking-App scannen – nicht mit Kamera/Notizen/normalem QR-Scanner.“
+   - Englisch entsprechend: “Scan inside your banking app — not with Camera/Notes/a generic QR scanner.”
 
-### 3. Kaputter CHU-Link auf „Join the Natural History Study"
-`src/pages/JoinNaturalHistoryStudy.tsx` Z. 169: `https://www.chusj.org/en/centre-recherche` → 404. Ersetzen durch `https://research.chusj.org/en/Home` (gleicher Link wie auf der Network-Seite).
+2. **Dialog-Text ebenfalls anpassen**
+   - Im vergrößerten QR-Code-Dialog wird erklärt, dass normale Scanner nur den SEPA-Text anzeigen können, Banking-Apps daraus aber eine Überweisung vorbereiten.
 
-## Nicht in diesem Schritt
-PDF-Inhalts-Abgleich aller Seiten und allgemeines Design-/Link-Audit machen wir separat, sobald du grünes Licht gibst.
+3. **QR-Code selbst unverändert lassen**
+   - Der gescannte Inhalt im Screenshot ist ein gültiger SEPA/EPC-Zahlungscode.
+   - Das Verhalten entsteht, weil iOS/Notizen keinen Banktransfer aus SEPA-QR-Codes startet.
+   - Ein QR-Code kann aus dem Browser heraus nicht zuverlässig „direkt“ eine Bank-App öffnen; dafür muss die jeweilige Banking-App den Code scannen.
