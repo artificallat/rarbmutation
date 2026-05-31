@@ -166,7 +166,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
             </div>
           </a>
           <a
-            href="https://www.chusj.org/en/centre-recherche"
+            href="https://research.chusj.org/en/Home"
             target="_blank"
             rel="noreferrer"
             className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"

@@ -4,7 +4,7 @@ import { PageHero } from "@/pages/WhoWeAre";
 import { DonationConfirmationForm } from "@/components/site/DonationConfirmationForm";
 import { donationGoal, socials, type Lang } from "@/content/site";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import bankQr from "@/assets/bank-qr.svg";
+import bankQr from "@/assets/bank-qr.png";
 import taxLogo from "@/assets/tax-deductible-logo.png";
 
 const DONORBOX_URL = "https://donorbox.org/cure-mcops12";
@@ -19,9 +19,9 @@ export default function Donate({ lang }: { lang: Lang }) {
           : "With your help, we can move closer to a life-changing therapy. Every donation makes a difference."} />
 
       <section className="container-tight pb-12">
-        <div className="bg-teal rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
-          <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} light />
-          <p className="text-sm text-white/90 mt-4 leading-relaxed">
+        <div className="bg-card border border-border rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
+          <ProgressBar raised={donationGoal.raised} goal={donationGoal.goal} />
+          <p className="text-sm text-foreground/80 mt-4 leading-relaxed">
             {de
               ? "Mit Ihrer finanziellen Unterstützung können wir die Toxizitätsstudien abschließen und ein ASO-Medikament in klinischer Qualität für Simon herstellen."
               : "With your financial support, we can complete the toxicology studies and produce a clinical grade ASO drug for Simon."}
