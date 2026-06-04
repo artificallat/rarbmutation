@@ -2,6 +2,7 @@ import { Placeholder } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHero } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
+import { geneFmt } from "@/lib/gene";
 import simonWinter from "@/assets/simon-winter-2026.jpg";
 import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
 import newsHappyNewYear from "@/assets/news-happy-new-year.jpg";
