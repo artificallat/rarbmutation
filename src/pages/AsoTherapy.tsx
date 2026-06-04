@@ -75,8 +75,8 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
             <p>
               {de
-                ? "Bei den meisten Patient:innen mit MCOPS12 ist eine Kopie des RARB-Gens mutiert, während die andere Kopie gesund bleibt. Beide Kopien produzieren mRNA, aber nur die mutierte mRNA führt zur Bildung einer schädlichen Version des RARB-Proteins."
-                : "In most patients with MCOPS12, one copy of the RARB gene is mutated while the other copy stays healthy. Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful version of the RARB protein."}
+                ? <>Bei den meisten Patient:innen mit MCOPS12 ist eine Kopie des <em>RARB</em>-Gens mutiert, während die andere Kopie gesund bleibt. Beide Kopien produzieren mRNA, aber nur die mutierte mRNA führt zur Bildung einer schädlichen Version des RARB-Proteins.</>
+                : <>In most patients with MCOPS12, one copy of the <em>RARB</em> gene is mutated while the other copy stays healthy. Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful version of the RARB protein.</>}
             </p>
             <p>
               {de
