@@ -93,7 +93,7 @@ export default function Research({ lang }: { lang: Lang }) {
             </li>
             <li>
               Transcriptomic analysis in the striatum reveals that both models predominantly downregulate
-              putative RARB target genes and display a transcriptional signature more pronounced than that
+              putative <em>RARB</em> target genes and display a transcriptional signature more pronounced than that
               of <em>Rarb</em> knockout (<em>Rarb</em> -/-) mice, supporting a dominant-negative mechanism
               in vivo. Notably, both the transcriptional alterations and the selective vulnerability of D2R
               MSNs overlap with findings in Huntington's disease mouse models, suggesting shared pathways
