@@ -70,9 +70,9 @@ export default function Achievements({ lang }: { lang: Lang }) {
           <SectionTitle light eyebrow={de ? "ASO-Programm" : "ASO program"} title={de ? "Forschung & Arzneimittelentwicklung – Meilensteine" : "Research & Drug Development Milestones"} />
           <Reveal>
             <p className="text-lg text-white/85 leading-relaxed max-w-3xl">
-              {de
+              {geneFmt(de
                 ? "Gemeinsam mit AlphaRose RareLabs (USA), IGBMC (Frankreich) und CHU Sainte-Justine (Kanada) haben wir eine Antisense-Oligonukleotid-Therapie entwickelt, die genau auf Simons RARB-Mutation zielt. Sechs sichere und wirksame Kandidaten wurden im zellulären Modell identifiziert. Aktuell läuft die entscheidende Toxizitätsstudie, in der die Verträglichkeit für die spätere Anwendung am Menschen geprüft wird. Dieser N-of-1-Ansatz dient zugleich als Modell für weitere MCOPS12-Patient:innen weltweit – das Verfahren lässt sich auf andere Mutationen übertragen."
-                : "In collaboration with AlphaRose RareLabs (US), IGBMC (France), and CHU Sainte-Justine (Canada), we have developed an antisense oligonucleotide therapy targeting Simon's specific RARB mutation. Six safe and efficacious ASO candidates were identified in a cellular disease model. We are now conducting the critical toxicity study to identify the safest ASO for first-in-human administration. This N-of-1 approach also serves as a blueprint for other MCOPS12 patients worldwide — the methodology can be adapted to other mutations."}
+                : "In collaboration with AlphaRose RareLabs (US), IGBMC (France), and CHU Sainte-Justine (Canada), we have developed an antisense oligonucleotide therapy targeting Simon's specific RARB mutation. Six safe and efficacious ASO candidates were identified in a cellular disease model. We are now conducting the critical toxicity study to identify the safest ASO for first-in-human administration. This N-of-1 approach also serves as a blueprint for other MCOPS12 patients worldwide — the methodology can be adapted to other mutations.")}
             </p>
           </Reveal>
 
