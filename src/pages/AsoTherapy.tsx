@@ -124,7 +124,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             ).
           </p>
           <p>
-            {de ? "Simon trägt eine RARB-Mutation namens " : "Simon carries a RARB mutation called "}
+            {de ? <>Simon trägt eine <em>RARB</em>-Mutation namens </> : <>Simon carries a <em>RARB</em> mutation called </>}
             <strong>c.1159C&gt;T (p.R387C)</strong>
             {de
               ? ", die etwa 30 % der MCOPS12-Patient:innen teilen. Leider zeigten Computermodelle, dass es nicht funktionieren würde, genau diese Mutation anzusteuern."
