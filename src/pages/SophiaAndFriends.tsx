@@ -24,8 +24,8 @@ export default function SophiaAndFriends({ lang }: { lang: Lang }) {
           <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
             <p>
               {de
-                ? "A Cure for Sophia and Friends entstand aus derselben Dringlichkeit, die alle MCOPS12-Familien verbindet: Forschung schneller voranzubringen, Wissen zu bündeln und Kindern mit RARB-Mutationen eine bessere Zukunft zu ermöglichen."
-                : "A Cure for Sophia and Friends grew from the same urgency shared by MCOPS12 families everywhere: to accelerate research, connect knowledge and create a better future for children affected by RARB mutations."}
+                ? <>A Cure for Sophia and Friends entstand aus derselben Dringlichkeit, die alle MCOPS12-Familien verbindet: Forschung schneller voranzubringen, Wissen zu bündeln und Kindern mit <em>RARB</em>-Mutationen eine bessere Zukunft zu ermöglichen.</>
+                : <>A Cure for Sophia and Friends grew from the same urgency shared by MCOPS12 families everywhere: to accelerate research, connect knowledge and create a better future for children affected by <em>RARB</em> mutations.</>}
             </p>
             <p>
               {de
