@@ -3,6 +3,7 @@ import { Eye, Activity, Footprints, MessageCircle, Sparkles, ArrowRight, HelpCir
 import { PageHero } from "./WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
+import { geneFmt } from "@/lib/gene";
 
 export default function PlainLanguageMcops12({ lang }: { lang: Lang }) {
   const de = lang === "de";
