@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { ChevronDown, Linkedin } from "lucide-react";
 
 import { Placeholder, SectionTitle } from "@/components/site/Bits";
