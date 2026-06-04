@@ -263,7 +263,7 @@ export default function Home({ lang }: { lang: Lang }) {
                     </p>
                     <h3 className="font-display text-xl font-bold mt-2">{lang === "de" ? post.de.t : post.en.t}</h3>
                     <p className="text-sm text-muted-foreground mt-2 line-clamp-3">
-                      {lang === "de" ? post.de.e : post.en.e}
+                      {geneFmt(lang === "de" ? post.de.e : post.en.e)}
                     </p>
                     <Link
                       to={`${p}/news`}
