@@ -197,8 +197,8 @@ export default function Home({ lang }: { lang: Lang }) {
           </Reveal>
           <Reveal delay={150}>
             <div className="space-y-5 text-lg text-white/85 leading-relaxed max-w-3xl">
-              <p>{tr.home.asoP1}</p>
-              <p>{tr.home.asoP2}</p>
+             <p>{geneFmt(tr.home.asoP1)}</p>
+             <p>{geneFmt(tr.home.asoP2)}</p>
             </div>
             <Link
               to={`${p}/achievements`}
