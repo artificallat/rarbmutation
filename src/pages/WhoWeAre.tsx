@@ -4,6 +4,7 @@ import { ChevronDown, Linkedin } from "lucide-react";
 import { Placeholder, SectionTitle } from "@/components/site/Bits";
 import communityImage from "@/assets/whoweare-community.jpg";
 import type { Lang } from "@/content/site";
+import { geneFmt } from "@/lib/gene";
 import reinhardPhoto from "@/assets/reinhard-pell-portrait.jpg";
 import edithPhoto from "@/assets/edith-pell-portrait.jpg";
 import katriPhoto from "@/assets/katri-rouvali.jpg";
