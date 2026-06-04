@@ -70,7 +70,7 @@ export default function WhatIs({ lang }: { lang: Lang }) {
                 <div className="text-3xl sm:text-4xl font-bold text-teal tabular-nums">
                   {typeof s.num === "number"
                     ? <Counter to={s.num} duration={1600} format={(n) => n.toString()} />
-                    : s.k}
+                    : geneFmt(s.k)}
                 </div>
                 <div className="text-xs sm:text-sm text-foreground/70 mt-2">{s.v}</div>
               </div>
