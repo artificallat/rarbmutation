@@ -169,7 +169,7 @@ export default function WhatIs({ lang }: { lang: Lang }) {
                     <span className="shrink-0 w-9 h-9 rounded-lg bg-amber/20 text-amber flex items-center justify-center">
                       <f.icon className="w-4 h-4" />
                     </span>
-                    <span className="text-white/90 text-sm leading-relaxed">{f.text}</span>
+                    <span className="text-white/90 text-sm leading-relaxed">{geneFmt(f.text)}</span>
                   </li>
                 </Reveal>
               ))}
