@@ -3,6 +3,7 @@ import { SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
+import { geneFmt } from "@/lib/gene";
 
 function Cite({ href, children }: { href: string; children: React.ReactNode }) {
   return <a href={href} target="_blank" rel="noreferrer" className="text-teal font-semibold hover:underline">{children}</a>;
