@@ -231,7 +231,7 @@ function VolunteerCard({ v, lang }: { v: typeof volunteers[number]; lang: Lang }
 }
 
 
-export function PageHero({ eyebrow, title, sub }: { eyebrow?: string; title: string; sub?: ReactNode }) {
+export function PageHero({ eyebrow, title, sub }: { eyebrow?: string; title: ReactNode; sub?: ReactNode }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 to-background pt-16 pb-12">
       <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-teal/10 blur-3xl" />
