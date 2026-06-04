@@ -178,7 +178,7 @@ function SabCard({ s, lang, photo }: { s: any; lang: Lang; photo?: string }) {
           <>
             <div className={`grid transition-all ${open ? "grid-rows-[1fr] mt-3" : "grid-rows-[0fr]"}`}>
               <div className="overflow-hidden">
-                <p className="text-sm text-foreground/70 leading-relaxed whitespace-pre-line">{s.bio}</p>
+                <p className="text-sm text-foreground/70 leading-relaxed whitespace-pre-line">{geneFmt(s.bio ?? "")}</p>
               </div>
             </div>
             <button
