@@ -54,7 +54,7 @@ export default function News({ lang }: { lang: Lang }) {
                 <div className="p-6 flex-1 flex flex-col">
                   <p className="text-xs text-teal font-semibold uppercase tracking-wider">{p.cat} · {p.date}</p>
                   <h3 className="font-display text-xl font-bold text-navy mt-2">{de ? p.de.t : p.en.t}</h3>
-                  <p className="text-sm text-foreground/75 mt-2 line-clamp-4">{de ? p.de.e : p.en.e}</p>
+                  <p className="text-sm text-foreground/75 mt-2 line-clamp-4">{geneFmt(de ? p.de.e : p.en.e)}</p>
                 </div>
               </article>
             </Reveal>
