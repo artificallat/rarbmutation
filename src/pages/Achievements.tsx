@@ -3,6 +3,7 @@ import { useInView, Reveal, Counter } from "@/components/site/Reveal";
 import { PageHero } from "@/pages/WhoWeAre";
 import { Trophy, FlaskConical, Target, Users, Globe2, Award, Network as NetworkIcon, Microscope } from "lucide-react";
 import type { Lang } from "@/content/site";
+import { geneFmt } from "@/lib/gene";
 
 const milestones = [
   { y: "2017", en: "Simon is born — diagnosis of MCOPS12 (RARB mutation) follows", de: "Simon wird geboren – die Diagnose MCOPS12 (RARB-Mutation) folgt" },
