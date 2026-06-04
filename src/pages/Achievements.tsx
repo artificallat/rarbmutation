@@ -3,6 +3,7 @@ import { useInView, Reveal, Counter } from "@/components/site/Reveal";
 import { PageHero } from "@/pages/WhoWeAre";
 import { Trophy, FlaskConical, Target, Users, Globe2, Award, Network as NetworkIcon, Microscope } from "lucide-react";
 import type { Lang } from "@/content/site";
+import { geneFmt } from "@/lib/gene";
 
 const milestones = [
   { y: "2017", en: "Simon is born — diagnosis of MCOPS12 (RARB mutation) follows", de: "Simon wird geboren – die Diagnose MCOPS12 (RARB-Mutation) folgt" },
@@ -69,9 +70,9 @@ export default function Achievements({ lang }: { lang: Lang }) {
           <SectionTitle light eyebrow={de ? "ASO-Programm" : "ASO program"} title={de ? "Forschung & Arzneimittelentwicklung – Meilensteine" : "Research & Drug Development Milestones"} />
           <Reveal>
             <p className="text-lg text-white/85 leading-relaxed max-w-3xl">
-              {de
+              {geneFmt(de
                 ? "Gemeinsam mit AlphaRose RareLabs (USA), IGBMC (Frankreich) und CHU Sainte-Justine (Kanada) haben wir eine Antisense-Oligonukleotid-Therapie entwickelt, die genau auf Simons RARB-Mutation zielt. Sechs sichere und wirksame Kandidaten wurden im zellulären Modell identifiziert. Aktuell läuft die entscheidende Toxizitätsstudie, in der die Verträglichkeit für die spätere Anwendung am Menschen geprüft wird. Dieser N-of-1-Ansatz dient zugleich als Modell für weitere MCOPS12-Patient:innen weltweit – das Verfahren lässt sich auf andere Mutationen übertragen."
-                : "In collaboration with AlphaRose RareLabs (US), IGBMC (France), and CHU Sainte-Justine (Canada), we have developed an antisense oligonucleotide therapy targeting Simon's specific RARB mutation. Six safe and efficacious ASO candidates were identified in a cellular disease model. We are now conducting the critical toxicity study to identify the safest ASO for first-in-human administration. This N-of-1 approach also serves as a blueprint for other MCOPS12 patients worldwide — the methodology can be adapted to other mutations."}
+                : "In collaboration with AlphaRose RareLabs (US), IGBMC (France), and CHU Sainte-Justine (Canada), we have developed an antisense oligonucleotide therapy targeting Simon's specific RARB mutation. Six safe and efficacious ASO candidates were identified in a cellular disease model. We are now conducting the critical toxicity study to identify the safest ASO for first-in-human administration. This N-of-1 approach also serves as a blueprint for other MCOPS12 patients worldwide — the methodology can be adapted to other mutations.")}
             </p>
           </Reveal>
 
@@ -139,7 +140,7 @@ function Timeline({ items, de }: { items: typeof milestones; de: boolean }) {
             {i === items.length - 1 ? <Target className="w-3.5 h-3.5 text-navy" /> : null}
           </span>
           <p className="text-amber font-display text-2xl font-bold">{m.y}</p>
-          <p className="text-white/85 mt-1 text-lg">{de ? m.de : m.en}</p>
+          <p className="text-white/85 mt-1 text-lg">{geneFmt(de ? m.de : m.en)}</p>
         </li>
       ))}
     </ol>

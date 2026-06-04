@@ -2,6 +2,7 @@ import { Placeholder } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHero } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
+import { geneFmt } from "@/lib/gene";
 import simonWinter from "@/assets/simon-winter-2026.jpg";
 import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
 import newsHappyNewYear from "@/assets/news-happy-new-year.jpg";
@@ -52,8 +53,8 @@ export default function News({ lang }: { lang: Lang }) {
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <p className="text-xs text-teal font-semibold uppercase tracking-wider">{p.cat} · {p.date}</p>
-                  <h3 className="font-display text-xl font-bold text-navy mt-2">{de ? p.de.t : p.en.t}</h3>
-                  <p className="text-sm text-foreground/75 mt-2 line-clamp-4">{de ? p.de.e : p.en.e}</p>
+                  <h3 className="font-display text-xl font-bold text-navy mt-2">{geneFmt(de ? p.de.t : p.en.t)}</h3>
+                  <p className="text-sm text-foreground/75 mt-2 line-clamp-4">{geneFmt(de ? p.de.e : p.en.e)}</p>
                 </div>
               </article>
             </Reveal>

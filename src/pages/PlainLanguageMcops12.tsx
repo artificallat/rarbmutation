@@ -3,6 +3,7 @@ import { Eye, Activity, Footprints, MessageCircle, Sparkles, ArrowRight, HelpCir
 import { PageHero } from "./WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
+import { geneFmt } from "@/lib/gene";
 
 export default function PlainLanguageMcops12({ lang }: { lang: Lang }) {
   const de = lang === "de";
@@ -55,8 +56,8 @@ export default function PlainLanguageMcops12({ lang }: { lang: Lang }) {
             </p>
             <p className="mt-4 text-white/85 text-lg">
               {de
-                ? "Sie entsteht durch eine kleine Veränderung in einem Gen namens RARB."
-                : "It is caused by a small change in a gene called RARB."}
+                ? <>Sie entsteht durch eine kleine Veränderung in einem Gen namens <em>RARB</em>.</>
+                : <>It is caused by a small change in a gene called <em>RARB</em>.</>}
             </p>
           </div>
         </Reveal>
@@ -110,7 +111,7 @@ export default function PlainLanguageMcops12({ lang }: { lang: Lang }) {
                     <span>{f.q}</span>
                     <span className="w-8 h-8 rounded-full bg-teal/10 text-teal flex items-center justify-center group-open:bg-teal group-open:text-white group-open:rotate-45 transition-all duration-300 text-2xl leading-none">+</span>
                   </summary>
-                  <p className="mt-3 text-foreground/80 leading-relaxed">{f.a}</p>
+                  <p className="mt-3 text-foreground/80 leading-relaxed">{geneFmt(f.a)}</p>
                 </details>
               </Reveal>
             ))}

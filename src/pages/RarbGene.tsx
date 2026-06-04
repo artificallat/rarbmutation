@@ -11,7 +11,7 @@ export default function RarbGene({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow="RARB"
-        title={de ? "Das RARB-Gen" : "The RARB gene"}
+        title={de ? <>Das <em>RARB</em>-Gen</> : <>The <em>RARB</em> gene</>}
         sub={de
           ? "Diese Seite erklärt das Gen hinter MCOPS12: wo es liegt, wofür es codiert und warum es für die frühe Entwicklung so wichtig ist."
           : "This page focuses on the gene behind MCOPS12: where it is located, what it encodes and why it matters during early development."}
@@ -22,8 +22,8 @@ export default function RarbGene({ lang }: { lang: Lang }) {
           <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
             <p>
               {de
-                ? "RARB steht für Retinoic Acid Receptor Beta. Das Gen liegt auf Chromosom 3p24.2 und enthält die Bauanleitung für das RARβ-Protein. Dieses Protein gehört zu den nukleären Rezeptoren: Es wirkt im Zellkern und beeinflusst dort, welche Gene aktiv oder inaktiv sind."
-                : "RARB stands for retinoic acid receptor beta. The gene is located on chromosome 3p24.2 and provides the instructions for making the RARβ protein. This protein belongs to the nuclear receptor family: it acts inside the cell nucleus and influences which genes are switched on or off."}
+                ? <><em>RARB</em> steht für Retinoic Acid Receptor Beta. Das Gen liegt auf Chromosom 3p24.2 und enthält die Bauanleitung für das RARβ-Protein. Dieses Protein gehört zu den nukleären Rezeptoren: Es wirkt im Zellkern und beeinflusst dort, welche Gene aktiv oder inaktiv sind.</>
+                : <><em>RARB</em> stands for retinoic acid receptor beta. The gene is located on chromosome 3p24.2 and provides the instructions for making the RARβ protein. This protein belongs to the nuclear receptor family: it acts inside the cell nucleus and influences which genes are switched on or off.</>}
             </p>
             <p>
               {de
@@ -32,8 +32,8 @@ export default function RarbGene({ lang }: { lang: Lang }) {
             </p>
             <p>
               {de
-                ? "Wenn eine krankheitsverursachende Variante im RARB-Gen vorliegt, kann diese präzise Regulation gestört werden. Genau deshalb kann eine einzelne Veränderung in diesem Gen weitreichende Auswirkungen auf Entwicklung, Bewegung, Sehen, Schlucken und Sprache haben."
-                : "When a disease-causing variant affects RARB, this precise regulation can be disrupted. That is why a single change in this gene can have wide-ranging effects on development, movement, vision, swallowing and speech."}
+                ? <>Wenn eine krankheitsverursachende Variante im <em>RARB</em>-Gen vorliegt, kann diese präzise Regulation gestört werden. Genau deshalb kann eine einzelne Veränderung in diesem Gen weitreichende Auswirkungen auf Entwicklung, Bewegung, Sehen, Schlucken und Sprache haben.</>
+                : <>When a disease-causing variant affects <em>RARB</em>, this precise regulation can be disrupted. That is why a single change in this gene can have wide-ranging effects on development, movement, vision, swallowing and speech.</>}
             </p>
           </div>
           <figure className="rounded-2xl overflow-hidden border border-border bg-muted">

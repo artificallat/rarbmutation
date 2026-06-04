@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { ChevronDown, Linkedin } from "lucide-react";
 
 import { Placeholder, SectionTitle } from "@/components/site/Bits";
 import communityImage from "@/assets/whoweare-community.jpg";
 import type { Lang } from "@/content/site";
+import { geneFmt } from "@/lib/gene";
 import reinhardPhoto from "@/assets/reinhard-pell-portrait.jpg";
 import edithPhoto from "@/assets/edith-pell-portrait.jpg";
 import katriPhoto from "@/assets/katri-rouvali.jpg";
@@ -116,7 +117,7 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
               <div className="p-7 flex flex-col flex-1">
                 <h3 className="font-display text-2xl font-bold text-navy">{b.name}</h3>
                 <p className="text-teal font-semibold mt-1">{b.role[lang]}</p>
-                <p className="text-foreground/75 mt-4 leading-relaxed whitespace-pre-line">{b.bio[lang]}</p>
+                <p className="text-foreground/75 mt-4 leading-relaxed whitespace-pre-line">{geneFmt(b.bio[lang])}</p>
                 {b.linkedin && (
                   <a href={b.linkedin} target="_blank" rel="noreferrer" className="mt-4 self-start inline-flex items-center gap-1 text-xs font-semibold text-navy hover:text-teal"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>
                 )}
@@ -177,7 +178,7 @@ function SabCard({ s, lang, photo }: { s: any; lang: Lang; photo?: string }) {
           <>
             <div className={`grid transition-all ${open ? "grid-rows-[1fr] mt-3" : "grid-rows-[0fr]"}`}>
               <div className="overflow-hidden">
-                <p className="text-sm text-foreground/70 leading-relaxed whitespace-pre-line">{s.bio}</p>
+                <p className="text-sm text-foreground/70 leading-relaxed whitespace-pre-line">{geneFmt(s.bio ?? "")}</p>
               </div>
             </div>
             <button
@@ -215,7 +216,7 @@ function VolunteerCard({ v, lang }: { v: typeof volunteers[number]; lang: Lang }
         <p className="text-sm text-teal font-semibold mt-1">{v.role[lang]}</p>
         <div className={`grid transition-all ${open ? "grid-rows-[1fr] mt-4" : "grid-rows-[0fr]"}`}>
           <div className="overflow-hidden">
-            <p className="text-sm leading-relaxed text-foreground/80 whitespace-pre-line">{v.bio[lang]}</p>
+            <p className="text-sm leading-relaxed text-foreground/80 whitespace-pre-line">{geneFmt(v.bio[lang])}</p>
             {v.linkedin && (
               <a href={v.linkedin} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-navy hover:text-teal"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>
             )}
@@ -231,7 +232,7 @@ function VolunteerCard({ v, lang }: { v: typeof volunteers[number]; lang: Lang }
 }
 
 
-export function PageHero({ eyebrow, title, sub }: { eyebrow?: string; title: string; sub?: string }) {
+export function PageHero({ eyebrow, title, sub }: { eyebrow?: string; title: ReactNode; sub?: ReactNode }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 to-background pt-16 pb-12">
       <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-teal/10 blur-3xl" />

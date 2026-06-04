@@ -4,6 +4,7 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink } from "lucide-reac
 import { t, partners, donationGoal, socials, type Lang } from "@/content/site";
 import { Placeholder, ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
+import { geneFmt } from "@/lib/gene";
 import heroFamily from "@/assets/family-mountains.jpg";
 import heroHorse from "@/assets/simon-horse-mane.jpg";
 import heroBeyond from "@/assets/simon-and-beyond.jpg";
@@ -177,9 +178,9 @@ export default function Home({ lang }: { lang: Lang }) {
           <Reveal>
             <SectionTitle eyebrow={lang === "de" ? "Wie alles begann" : "How it began"} title={tr.home.storyTitle} />
             <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
-              <p className="whitespace-pre-line">{tr.home.storyP1}</p>
-              <p className="font-display text-2xl text-navy">{tr.home.storyP2}</p>
-              <p>{tr.home.storyP3}</p>
+             <p className="whitespace-pre-line">{geneFmt(tr.home.storyP1)}</p>
+             <p className="font-display text-2xl text-navy">{tr.home.storyP2}</p>
+             <p>{geneFmt(tr.home.storyP3)}</p>
             </div>
           </Reveal>
           <Reveal delay={150}>
@@ -196,8 +197,8 @@ export default function Home({ lang }: { lang: Lang }) {
           </Reveal>
           <Reveal delay={150}>
             <div className="space-y-5 text-lg text-white/85 leading-relaxed max-w-3xl">
-              <p>{tr.home.asoP1}</p>
-              <p>{tr.home.asoP2}</p>
+             <p>{geneFmt(tr.home.asoP1)}</p>
+             <p>{geneFmt(tr.home.asoP2)}</p>
             </div>
             <Link
               to={`${p}/achievements`}
@@ -262,7 +263,7 @@ export default function Home({ lang }: { lang: Lang }) {
                     </p>
                     <h3 className="font-display text-xl font-bold mt-2">{lang === "de" ? post.de.t : post.en.t}</h3>
                     <p className="text-sm text-muted-foreground mt-2 line-clamp-3">
-                      {lang === "de" ? post.de.e : post.en.e}
+                      {geneFmt(lang === "de" ? post.de.e : post.en.e)}
                     </p>
                     <Link
                       to={`${p}/news`}

@@ -32,8 +32,8 @@ export default function Mcops12Disease({ lang }: { lang: Lang }) {
           <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
             <p>
               {de
-                ? "Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung. Sie wurde 2013 erstmals medizinisch beschrieben; 2016 wurde RARB als verursachendes Gen bestätigt."
-                : "Syndromic Microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder. It was first described in the medical literature in 2013; in 2016, RARB was confirmed as the disease-causing gene."}
+                ? <>Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung. Sie wurde 2013 erstmals medizinisch beschrieben; 2016 wurde <em>RARB</em> als verursachendes Gen bestätigt.</>
+                : <>Syndromic Microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder. It was first described in the medical literature in 2013; in 2016, <em>RARB</em> was confirmed as the disease-causing gene.</>}
             </p>
             <p>
               {de

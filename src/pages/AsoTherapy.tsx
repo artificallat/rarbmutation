@@ -75,8 +75,8 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
             <p>
               {de
-                ? "Bei den meisten Patient:innen mit MCOPS12 ist eine Kopie des RARB-Gens mutiert, während die andere Kopie gesund bleibt. Beide Kopien produzieren mRNA, aber nur die mutierte mRNA führt zur Bildung einer schädlichen Version des RARB-Proteins."
-                : "In most patients with MCOPS12, one copy of the RARB gene is mutated while the other copy stays healthy. Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful version of the RARB protein."}
+                ? <>Bei den meisten Patient:innen mit MCOPS12 ist eine Kopie des <em>RARB</em>-Gens mutiert, während die andere Kopie gesund bleibt. Beide Kopien produzieren mRNA, aber nur die mutierte mRNA führt zur Bildung einer schädlichen Version des RARB-Proteins.</>
+                : <>In most patients with MCOPS12, one copy of the <em>RARB</em> gene is mutated while the other copy stays healthy. Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful version of the RARB protein.</>}
             </p>
             <p>
               {de
@@ -124,7 +124,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             ).
           </p>
           <p>
-            {de ? "Simon trägt eine RARB-Mutation namens " : "Simon carries a RARB mutation called "}
+            {de ? <>Simon trägt eine <em>RARB</em>-Mutation namens </> : <>Simon carries a <em>RARB</em> mutation called </>}
             <strong>c.1159C&gt;T (p.R387C)</strong>
             {de
               ? ", die etwa 30 % der MCOPS12-Patient:innen teilen. Leider zeigten Computermodelle, dass es nicht funktionieren würde, genau diese Mutation anzusteuern."
@@ -132,8 +132,8 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           </p>
           <p>
             {de
-              ? "Wir haben deshalb einen anderen Weg eingeschlagen. Mit fortschrittlichen genetischen Analysen — der sogenannten Long-Read-Sequenzierung — haben wir Simons fehlerhafte RARB-Kopie (Allel) im Detail kartiert und dabei dutzende zusätzliche einzigartige Marker identifiziert, die nur auf dem mutierten Allel vorkommen. Jeder davon ist ein potenzielles Ziel für ein allelspezifisches ASO."
-              : "So we took a different route. Using advanced genetic analyses called long-read sequencing, we mapped Simon's faulty RARB copy (allele) in detail — and identified dozens of additional unique markers found only on the mutant allele. Each one is a potential bullseye for an allele-specific ASO."}
+              ? <>Wir haben deshalb einen anderen Weg eingeschlagen. Mit fortschrittlichen genetischen Analysen — der sogenannten Long-Read-Sequenzierung — haben wir Simons fehlerhafte <em>RARB</em>-Kopie (Allel) im Detail kartiert und dabei dutzende zusätzliche einzigartige Marker identifiziert, die nur auf dem mutierten Allel vorkommen. Jeder davon ist ein potenzielles Ziel für ein allelspezifisches ASO.</>
+              : <>So we took a different route. Using advanced genetic analyses called long-read sequencing, we mapped Simon's faulty <em>RARB</em> copy (allele) in detail — and identified dozens of additional unique markers found only on the mutant allele. Each one is a potential bullseye for an allele-specific ASO.</>}
           </p>
           <p>
             {de

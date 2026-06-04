@@ -3,6 +3,7 @@ import { SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
+import { geneFmt } from "@/lib/gene";
 
 function Cite({ href, children }: { href: string; children: React.ReactNode }) {
   return <a href={href} target="_blank" rel="noreferrer" className="text-teal font-semibold hover:underline">{children}</a>;
@@ -55,8 +56,8 @@ export default function WhatIs({ lang }: { lang: Lang }) {
         eyebrow={de ? "Die Krankheit" : "The disease"}
         title={de ? "Was ist MCOPS12?" : "What is MCOPS12?"}
         sub={de
-          ? "Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung, die durch Mutationen im Gen für den Retinsäure-Rezeptor Beta (RARB) verursacht wird."
-          : "Syndromic microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder caused by mutations in the retinoic acid receptor beta (RARB) gene."}
+          ? <>Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung, die durch Mutationen im Gen für den Retinsäure-Rezeptor Beta (<em>RARB</em>) verursacht wird.</>
+          : <>Syndromic microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder caused by mutations in the retinoic acid receptor beta (<em>RARB</em>) gene.</>}
       />
 
 
@@ -69,7 +70,7 @@ export default function WhatIs({ lang }: { lang: Lang }) {
                 <div className="text-3xl sm:text-4xl font-bold text-teal tabular-nums">
                   {typeof s.num === "number"
                     ? <Counter to={s.num} duration={1600} format={(n) => n.toString()} />
-                    : s.k}
+                    : geneFmt(s.k)}
                 </div>
                 <div className="text-xs sm:text-sm text-foreground/70 mt-2">{s.v}</div>
               </div>
@@ -111,9 +112,9 @@ export default function WhatIs({ lang }: { lang: Lang }) {
               {
                 label: de ? "Ursache" : "Cause",
                 body: de ? (
-                  <>Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung, die durch Mutationen im Gen für den Retinsäure-Rezeptor Beta (RARB) verursacht wird (<Cite href="https://onlinelibrary.wiley.com/doi/10.1002/humu.23004">Srour et al. 2016</Cite>).</>
+                  <>Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung, die durch Mutationen im Gen für den Retinsäure-Rezeptor Beta (<em>RARB</em>) verursacht wird (<Cite href="https://onlinelibrary.wiley.com/doi/10.1002/humu.23004">Srour et al. 2016</Cite>).</>
                 ) : (
-                  <>Syndromic microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder caused by mutations in the retinoic acid receptor beta (RARB) gene (<Cite href="https://onlinelibrary.wiley.com/doi/10.1002/humu.23004">Srour et al. 2016</Cite>).</>
+                  <>Syndromic microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder caused by mutations in the retinoic acid receptor beta (<em>RARB</em>) gene (<Cite href="https://onlinelibrary.wiley.com/doi/10.1002/humu.23004">Srour et al. 2016</Cite>).</>
                 ),
               },
               {
@@ -135,9 +136,9 @@ export default function WhatIs({ lang }: { lang: Lang }) {
               {
                 label: de ? "Vererbung" : "Inheritance",
                 body: de ? (
-                  <>MCOPS12 ist in der Regel eine autosomal-dominante Erkrankung — eine Veränderung in nur einer der beiden Kopien des RARB-Gens reicht aus, um die Störung zu verursachen. In den meisten Familien tritt die Genveränderung spontan beim betroffenen Kind auf und ist bei den Eltern nicht vorhanden — dies wird als de-novo-Variante bezeichnet. In einer kleinen Zahl von Familien wird die Variante vererbt. Eine sehr seltene rezessive Form, bei der beide Kopien von RARB betroffen sind, wurde ebenfalls beschrieben (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>).</>
+                  <>MCOPS12 ist in der Regel eine autosomal-dominante Erkrankung — eine Veränderung in nur einer der beiden Kopien des <em>RARB</em>-Gens reicht aus, um die Störung zu verursachen. In den meisten Familien tritt die Genveränderung spontan beim betroffenen Kind auf und ist bei den Eltern nicht vorhanden — dies wird als de-novo-Variante bezeichnet. In einer kleinen Zahl von Familien wird die Variante vererbt. Eine sehr seltene rezessive Form, bei der beide Kopien von <em>RARB</em> betroffen sind, wurde ebenfalls beschrieben (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>).</>
                 ) : (
-                  <>MCOPS12 is usually an autosomal dominant condition, meaning that a change in just one of the two copies of the RARB gene is enough to cause the disorder. In most families the gene change happens spontaneously in the affected child and is not present in the parents — this is called a de novo variant. In a small number of families the variant is inherited. A very rare recessive form, in which both copies of RARB are affected, has also been reported (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>).</>
+                  <>MCOPS12 is usually an autosomal dominant condition, meaning that a change in just one of the two copies of the <em>RARB</em> gene is enough to cause the disorder. In most families the gene change happens spontaneously in the affected child and is not present in the parents — this is called a de novo variant. In a small number of families the variant is inherited. A very rare recessive form, in which both copies of <em>RARB</em> are affected, has also been reported (<Cite href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3791254/">Srour et al. 2013</Cite>).</>
                 ),
               },
             ].map((b, i) => (
@@ -168,7 +169,7 @@ export default function WhatIs({ lang }: { lang: Lang }) {
                     <span className="shrink-0 w-9 h-9 rounded-lg bg-amber/20 text-amber flex items-center justify-center">
                       <f.icon className="w-4 h-4" />
                     </span>
-                    <span className="text-white/90 text-sm leading-relaxed">{f.text}</span>
+                    <span className="text-white/90 text-sm leading-relaxed">{geneFmt(f.text)}</span>
                   </li>
                 </Reveal>
               ))}
@@ -187,7 +188,7 @@ export default function WhatIs({ lang }: { lang: Lang }) {
               <a href={r.href} target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-5 flex items-start justify-between gap-4 hover:border-teal hover:-translate-y-0.5 transition-all duration-300 group">
                 <div>
                   <div className="text-xs uppercase tracking-[0.18em] text-teal font-semibold mb-1">{r.authors}</div>
-                  <div className="font-semibold text-navy group-hover:text-teal transition leading-snug">{r.title}</div>
+                  <div className="font-semibold text-navy group-hover:text-teal transition leading-snug">{geneFmt(r.title)}</div>
                 </div>
                 <ExternalLink className="w-4 h-4 text-teal shrink-0 mt-1"/>
               </a>

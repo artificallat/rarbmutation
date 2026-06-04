@@ -42,7 +42,7 @@ export default function Research({ lang }: { lang: Lang }) {
           <SectionTitle eyebrow={de ? "Krankheitsmechanismus" : "Disease mechanism"} title="Genetics and pathophysiology of MCOPS12" />
           <p>
             Pathogenic dominant mutations in the <em>RARB</em> gene cause syndromic microphthalmia 12
-            (MCOPS12), also referred to as RARB-related disorder (RARB-RD). The condition is characterized
+            (MCOPS12), also referred to as <em>RARB</em>-related disorder (<em>RARB</em>-RD). The condition is characterized
             by developmental eye anomalies, hypotonia, and early-onset progressive movement disorders
             (dystonia and/or spasticity).
           </p>
@@ -93,7 +93,7 @@ export default function Research({ lang }: { lang: Lang }) {
             </li>
             <li>
               Transcriptomic analysis in the striatum reveals that both models predominantly downregulate
-              putative RARB target genes and display a transcriptional signature more pronounced than that
+              putative <em>RARB</em> target genes and display a transcriptional signature more pronounced than that
               of <em>Rarb</em> knockout (<em>Rarb</em> -/-) mice, supporting a dominant-negative mechanism
               in vivo. Notably, both the transcriptional alterations and the selective vulnerability of D2R
               MSNs overlap with findings in Huntington's disease mouse models, suggesting shared pathways
