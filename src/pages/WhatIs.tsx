@@ -188,7 +188,7 @@ export default function WhatIs({ lang }: { lang: Lang }) {
               <a href={r.href} target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-5 flex items-start justify-between gap-4 hover:border-teal hover:-translate-y-0.5 transition-all duration-300 group">
                 <div>
                   <div className="text-xs uppercase tracking-[0.18em] text-teal font-semibold mb-1">{r.authors}</div>
-                  <div className="font-semibold text-navy group-hover:text-teal transition leading-snug">{r.title}</div>
+                  <div className="font-semibold text-navy group-hover:text-teal transition leading-snug">{geneFmt(r.title)}</div>
                 </div>
                 <ExternalLink className="w-4 h-4 text-teal shrink-0 mt-1"/>
               </a>
