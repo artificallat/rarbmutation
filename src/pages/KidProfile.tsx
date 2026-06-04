@@ -4,6 +4,7 @@ import { PageHero } from "@/pages/WhoWeAre";
 import { Placeholder } from "@/components/site/Bits";
 import { kidsProfiles } from "@/content/kidsProfiles";
 import type { Lang } from "@/content/site";
+import { geneFmt } from "@/lib/gene";
 import simonPhoto from "@/assets/simon-schulbeginn.jpg";
 import rhettPhoto from "@/assets/kids/rhett.webp";
 import raynePhoto from "@/assets/kids/rayne.webp";
