@@ -128,7 +128,7 @@ export default function KidProfile({ lang }: { lang: Lang }) {
                         : "text-base text-foreground/80"
                     }`}
                   >
-                    {p}
+                    {geneFmt(p)}
                   </p>
                 ))}
               </div>
