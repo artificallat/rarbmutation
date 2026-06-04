@@ -140,7 +140,7 @@ function Timeline({ items, de }: { items: typeof milestones; de: boolean }) {
             {i === items.length - 1 ? <Target className="w-3.5 h-3.5 text-navy" /> : null}
           </span>
           <p className="text-amber font-display text-2xl font-bold">{m.y}</p>
-          <p className="text-white/85 mt-1 text-lg">{de ? m.de : m.en}</p>
+          <p className="text-white/85 mt-1 text-lg">{geneFmt(de ? m.de : m.en)}</p>
         </li>
       ))}
     </ol>
