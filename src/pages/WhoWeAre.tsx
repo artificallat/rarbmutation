@@ -216,7 +216,7 @@ function VolunteerCard({ v, lang }: { v: typeof volunteers[number]; lang: Lang }
         <p className="text-sm text-teal font-semibold mt-1">{v.role[lang]}</p>
         <div className={`grid transition-all ${open ? "grid-rows-[1fr] mt-4" : "grid-rows-[0fr]"}`}>
           <div className="overflow-hidden">
-            <p className="text-sm leading-relaxed text-foreground/80 whitespace-pre-line">{v.bio[lang]}</p>
+            <p className="text-sm leading-relaxed text-foreground/80 whitespace-pre-line">{geneFmt(v.bio[lang])}</p>
             {v.linkedin && (
               <a href={v.linkedin} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-navy hover:text-teal"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>
             )}
