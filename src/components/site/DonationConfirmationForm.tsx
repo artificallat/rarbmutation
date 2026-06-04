@@ -16,9 +16,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import {
   Form, FormControl, FormField, FormItem, FormLabel, FormMessage,
 } from "@/components/ui/form";
+import { supabase } from "@/integrations/supabase/client";
 import type { Lang } from "@/content/site";
-
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/XXXXXXXX";
 
 const schema = z.object({
   firstName: z.string().trim().min(1).max(100),
@@ -88,15 +87,14 @@ export function DonationConfirmationForm({ lang }: { lang: Lang }) {
       dob: format(values.dob, "yyyy-MM-dd"),
       donationDate: format(values.donationDate, "yyyy-MM-dd"),
       method: t.m[values.method],
-      _subject: `Spendenbestätigung – ${values.firstName} ${values.lastName}`,
     };
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload),
+      const { data, error } = await supabase.functions.invoke("send-donation-confirmation", {
+        body: payload,
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (error || (data && (data as { error?: unknown }).error)) {
+        throw new Error(error?.message || "send failed");
+      }
       setSubmitted(true);
       toast.success(t.success);
     } catch {
@@ -110,7 +108,7 @@ export function DonationConfirmationForm({ lang }: { lang: Lang }) {
         `${t.donationDate}: ${format(values.donationDate, "yyyy-MM-dd")}\n` +
         `${t.method}: ${t.m[values.method]}`;
       window.location.href =
-        `mailto:rpell@rarbmutation.org?subject=${encodeURIComponent("Spendenbestätigung – " + values.firstName + " " + values.lastName)}&body=${encodeURIComponent(body)}`;
+        `mailto:rpell@rarbmutation.org,epell@rarbmutation.org?subject=${encodeURIComponent("Spendenbestätigung – " + values.firstName + " " + values.lastName)}&body=${encodeURIComponent(body)}`;
       toast.error(t.error);
     }
   }
