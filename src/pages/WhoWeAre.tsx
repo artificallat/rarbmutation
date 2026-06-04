@@ -117,7 +117,7 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
               <div className="p-7 flex flex-col flex-1">
                 <h3 className="font-display text-2xl font-bold text-navy">{b.name}</h3>
                 <p className="text-teal font-semibold mt-1">{b.role[lang]}</p>
-                <p className="text-foreground/75 mt-4 leading-relaxed whitespace-pre-line">{b.bio[lang]}</p>
+                <p className="text-foreground/75 mt-4 leading-relaxed whitespace-pre-line">{geneFmt(b.bio[lang])}</p>
                 {b.linkedin && (
                   <a href={b.linkedin} target="_blank" rel="noreferrer" className="mt-4 self-start inline-flex items-center gap-1 text-xs font-semibold text-navy hover:text-teal"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>
                 )}
