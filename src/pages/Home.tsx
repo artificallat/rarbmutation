@@ -4,6 +4,7 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink } from "lucide-reac
 import { t, partners, donationGoal, socials, type Lang } from "@/content/site";
 import { Placeholder, ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
+import { geneFmt } from "@/lib/gene";
 import heroFamily from "@/assets/family-mountains.jpg";
 import heroHorse from "@/assets/simon-horse-mane.jpg";
 import heroBeyond from "@/assets/simon-and-beyond.jpg";
