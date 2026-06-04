@@ -56,8 +56,8 @@ export default function PlainLanguageMcops12({ lang }: { lang: Lang }) {
             </p>
             <p className="mt-4 text-white/85 text-lg">
               {de
-                ? "Sie entsteht durch eine kleine Veränderung in einem Gen namens RARB."
-                : "It is caused by a small change in a gene called RARB."}
+                ? <>Sie entsteht durch eine kleine Veränderung in einem Gen namens <em>RARB</em>.</>
+                : <>It is caused by a small change in a gene called <em>RARB</em>.</>}
             </p>
           </div>
         </Reveal>
