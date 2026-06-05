@@ -35,7 +35,7 @@ export default function WhatIs({ lang }: { lang: Lang }) {
     : [
         { icon: Dna, text: "An ultra-rare neurodevelopmental disorder caused by mutations in the RARB gene." },
         { icon: Sparkles, text: "Also referred to as RARB-related disorder." },
-        { icon: Activity, text: "Usually an autosomal dominant condition, meaning that a mutation in just one of the two copies of the RARB gene is enough to cause the disorder.\n" },
+        { icon: Activity, text: "Usually an autosomal dominant condition, meaning that a mutation in just one of the two copies of the RARB gene is enough to cause the disorder." },
         { icon: AlertCircle, text: "Most frequent RARB variant: p.Arg387Cys (p.R387C) - found in ~30% of diagnosed individuals " },
         { icon: Brain, text: "RARB is as a transcription factor activated by retinoic acid, a metabolite of vitamin A, and plays a crucial role in the development of the eyes, diaphragm, heart, and brain." },
         { icon: Eye, text: "Common clinical features include eye defects, hypotonia, progressive dystonia and/or spasticity, language delay, and feeding difficulties." },
