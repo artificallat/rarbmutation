@@ -75,8 +75,8 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
             <p>
               {de
-                ? <>Bei den meisten Patient:innen mit MCOPS12 ist eine Kopie des <em>RARB</em>-Gens mutiert, während die andere Kopie gesund bleibt (Wildtyp = trägt keine Mutation). Beide Kopien produzieren mRNA, aber nur die mutierte mRNA führt zur Bildung einer schädlichen RARB-Proteinvariante. Ein ASO kann so entworfen werden, dass es selektiv die mutierte <em>RARB</em>-mRNA erkennt und daran bindet.</>
-                : <>In most patients with MCOPS12, one copy of the <em>RARB</em> gene is mutated while the other copy stays healthy (wild-type = carries no mutation). Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful RARB protein variant. An ASO can be designed to selectively recognize and bind to the mutant <em>RARB</em> mRNA.</>}
+                ? <>Bei den meisten Patient:innen mit MCOPS12 ist eine Kopie des <em>RARB</em>-Gens mutiert, während die andere Kopie gesund bleibt (Wildtyp = trägt keine Mutation). Beide Kopien produzieren mRNA, aber nur die mutierte mRNA führt zur Bildung einer schädlichen <em>RARB</em>-Proteinvariante. Ein ASO kann so entworfen werden, dass es selektiv die mutierte <em>RARB</em>-mRNA erkennt und daran bindet.</>
+                : <>In most patients with MCOPS12, one copy of the <em>RARB</em> gene is mutated while the other copy stays healthy (wild-type = carries no mutation). Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful <em>RARB</em> protein variant. An ASO can be designed to selectively recognize and bind to the mutant <em>RARB</em> mRNA.</>}
             </p>
             <p>
               {de
@@ -88,8 +88,8 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
               {de ? "Der Haken: Das ASO muss " : "The catch: the ASO has to be "}
               <strong>{de ? "allelspezifisch" : "allele-specific"}</strong>
               {de
-                ? " sein — es darf nur die fehlerhafte Kopie stilllegen und die gesunde unberührt lassen. Denn das gesunde RARB-Protein ist essenziell für eine normale Hirnentwicklung. Es versehentlich auszuschalten würde genau die Symptome verursachen, die wir verhindern wollen (Ciancia et al. 2022, "
-                : " — it must silence only the faulty copy and leave the healthy one untouched. That's because the healthy RARB protein is essential for normal brain development. Knocking it out by mistake would cause the very symptoms we're trying to prevent (Ciancia et al. 2022, "}
+                ? <> sein — es darf nur die fehlerhafte Kopie stilllegen und die gesunde unberührt lassen. Denn das gesunde <em>RARB</em>-Protein ist essenziell für eine normale Hirnentwicklung. Es versehentlich auszuschalten würde genau die Symptome verursachen, die wir verhindern wollen (Ciancia et al. 2022, </>
+                : <> — it must silence only the faulty copy and leave the healthy one untouched. That's because the healthy <em>RARB</em> protein is essential for normal brain development. Knocking it out by mistake would cause the very symptoms we're trying to prevent (Ciancia et al. 2022, </>}
               <a className="text-teal font-semibold hover:underline break-all" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">ScienceDirect</a>
               ).
             </p>
