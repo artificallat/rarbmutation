@@ -125,9 +125,9 @@ export const kids = [
   },
   {
     name: "Josephine",
-    year: 2016,
+    year: 2011,
     place: "Germany",
-    parents: "Familie Ebert",
+    parents: "Claudia & Frank",
     siblings: "—",
     storyEn:
       "Josephine has a contagious smile and a heart full of love. Her family is a pillar of the European MCOPS12 community.",
@@ -138,9 +138,9 @@ export const kids = [
   },
   {
     name: "Mia",
-    year: 2022,
-    place: "—",
-    parents: "—",
+    year: 2021,
+    place: "Italy",
+    parents: "Barbara & Gabriele",
     siblings: "—",
     storyEn: "Mia is the family's little princess — curious, sweet and full of light.",
     storyDe: "Mia ist die kleine Prinzessin der Familie – neugierig, lieb und voller Licht.",
@@ -150,8 +150,8 @@ export const kids = [
   {
     name: "Noé",
     year: 2018,
-    place: "France",
-    parents: "—",
+    place: "Toulouse, France",
+    parents: "Loïc & Chloé",
     siblings: "—",
     storyEn: "Noé loves swinging in the mountain air. His joy on the playground is pure magic.",
     storyDe: "Noé liebt es, in der Bergluft zu schaukeln. Seine Freude am Spielplatz ist pure Magie.",
@@ -160,9 +160,9 @@ export const kids = [
   },
   {
     name: "Piper",
-    year: 2020,
-    place: "USA",
-    parents: "—",
+    year: 2019,
+    place: "Catonsville, MD, USA",
+    parents: "Chelsey & Nathan",
     siblings: "—",
     storyEn: "Piper's giggles in the sunshine remind us why we fight. Every swing, every laugh is a gift.",
     storyDe:
@@ -172,10 +172,10 @@ export const kids = [
   },
   {
     name: "Rin",
-    year: 2021,
-    place: "—",
-    parents: "—",
-    siblings: "—",
+    year: 2018,
+    place: "Tokyo, Japan",
+    parents: "Atsuko & Shinichi",
+    siblings: "Ann",
     storyEn: "Rin is calm, beautiful and beloved. Her gentle spirit is at the heart of her family.",
     storyDe: "Rin ist ruhig, wunderschön und geliebt. Ihre sanfte Art ist das Herz ihrer Familie.",
     dreamEn: "Health, peace and a future shaped by progress.",
@@ -183,9 +183,9 @@ export const kids = [
   },
   {
     name: "Sophia",
-    year: 2010,
-    place: "USA",
-    parents: "Familie Sutherland",
+    year: 2007,
+    place: "Laguna Beach, CA, USA",
+    parents: "Rachel & Gary",
     siblings: "—",
     storyEn:
       "Sophia is bright, brave and beautiful. Her family's foundation 'A Cure for Sophia & Friends' supports MCOPS12 research worldwide.",
@@ -196,10 +196,10 @@ export const kids = [
   },
   {
     name: "Stella",
-    year: 2020,
-    place: "USA",
-    parents: "—",
-    siblings: "—",
+    year: 2018,
+    place: "Madison, WI, USA",
+    parents: "Drew & Erin",
+    siblings: "Lucy",
     storyEn: "Stella is curious, joyful and stylish — her sunglasses say it all. She brings light wherever she goes.",
     storyDe:
       "Stella ist neugierig, fröhlich und stilbewusst – ihre Sonnenbrille sagt alles. Sie bringt Licht, wohin sie auch geht.",
