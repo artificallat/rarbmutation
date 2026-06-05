@@ -71,7 +71,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
       {/* Mechanism for MCOPS12 */}
       <section className="bg-muted/40 py-16">
         <div className="container-tight">
-          <SectionTitle eyebrow="MCOPS12" title={de ? "Wie wirkt eine ASO-Therapie bei Patient:innen mit MCOPS12?" : "How does an ASO therapy work in patients with MCOPS12?"} />
+          <SectionTitle eyebrow="MCOPS12" title={de ? <>Wie wirkt eine ASO-Therapie bei Patient:innen mit MCOPS12?</> : <>How does an ASO therapy work in patients with MCOPS12?</>} />
           <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
             <p>
               {de
