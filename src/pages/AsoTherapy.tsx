@@ -28,8 +28,8 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
               <Reveal><p>
                 {de
-                  ? "ASOs sind kurze, im Labor synthetisierte Erbgut-Schnipsel — aus denselben Bausteinen wie unsere DNA und RNA. Man kann sie sich wie ein hochpräzises Stück Klebeband vorstellen, das nur an einem ganz bestimmten Ziel im Inneren einer Zelle haftet."
-                  : "ASOs are short, lab-made strands of genetic material built from the same building blocks as our own DNA and RNA. The easiest way to picture them is as a tiny, highly precise strip of tape that sticks to one — and only one — target inside a cell."}
+                  ? "ASO-Therapeutika sind kurze, synthetisch hergestellte Nukleotidstränge – die Bausteine von DNA und RNA – mit einer Länge von typischerweise 15 bis 25 Einheiten. Sie gehören zur Klasse der RNA-Therapeutika und sind darauf ausgelegt, mit hoher Spezifität an eine einzelne Boten-RNA (mRNA) zu binden – das kurzlebige „Rezept“, das eine Zelle zur Herstellung eines Proteins verwendet."
+                  : "ASO therapeutics are short, synthetic strands of nucleotides - the building blocks of DNA and RNA - typically 15 to 25 units in length. They are part of the RNA therapeutics class and are designed to bind with high specificity to a single messenger RNA (mRNA), the temporary “recipe” a cell uses to produce a protein."}
               </p></Reveal>
               <Reveal delay={120}><p>
                 {de
