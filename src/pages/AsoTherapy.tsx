@@ -38,12 +38,12 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
               </p></Reveal>
               <Reveal delay={240}><p>
                 {de
-                  ? "Genau diese Präzision macht ASOs so vielversprechend für genetische Erkrankungen, einschließlich seltener Krankheiten (Lauffer et al. 2024, "
-                  : "This precision is what makes ASOs so promising for genetic conditions, including rare diseases (Lauffer et al. 2024, "}
-                <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">Nature Communications Medicine</a>
+                  ? "Dieser hochpräzise Mechanismus macht ASO-Therapeutika zu einem leistungsfähigen Ansatz zur Behandlung einer Vielzahl genetischer Erkrankungen, einschließlich seltener Krankheiten (Lauffer et al. 2024 "
+                  : "This highly precise mechanism makes ASO therapeutics a powerful approach for treating a wide range of genetic disorders, including rare diseases (Lauffer et al. 2024 "}
+                <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">https://www.nature.com/articles/s43856-023-00419-1</a>
                 {de
-                  ? "). Da ASOs an der mRNA und nicht an der DNA selbst ansetzen, ist ihre Wirkung vorübergehend — Patient:innen brauchen wiederholte Dosen, damit die Therapie wirksam bleibt."
-                  : "). Because ASOs work on mRNA rather than on DNA itself, their effect is temporary — patients need repeated doses to keep the therapy effective."}
+                  ? "). Da ASOs auf mRNA und nicht auf DNA wirken, sind ihre Effekte reversibel, was eine wiederholte Dosierung erforderlich macht."
+                  : "). Since ASOs act on mRNA and not on DNA, their effects are reversible, meaning repeated dosing is required."}
               </p></Reveal>
             </div>
           </div>
