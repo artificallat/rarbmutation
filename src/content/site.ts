@@ -263,7 +263,7 @@ export const t = {
         },
         { title: "as far as possible…" },
         { title: "…and beyond" },
-        { title: "A Personalized Medicine for Simon.", sub: "Pioneering RNA Therapies for MCOPS12." },
+        { title: "A Personalized Medicine for Simon.", sub: "Pioneering RNA therapies for MCOPS12." },
       ],
       storyTitle: "Our Story",
       storyP1:
