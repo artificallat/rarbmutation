@@ -41,14 +41,7 @@ Deno.serve(async (req) => {
       ["Vorname", d.firstName],
       ["Nachname", d.lastName],
       ["Geburtsdatum", d.dob],
-      ["Straße", d.street],
-      ["PLZ", d.postalCode],
-      ["Ort", d.city],
-      ["Land", d.country],
       ["E-Mail", d.email],
-      ["Spendenbetrag (€)", String(d.amount)],
-      ["Spendendatum", d.donationDate],
-      ["Zahlungsart", d.method],
     ];
 
     const html = `
