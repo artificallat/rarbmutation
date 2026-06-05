@@ -11,6 +11,7 @@ import chusjLogo from "@/assets/partners/chusj.png";
 import alpharoseLogo from "@/assets/partners/alpharose.png";
 import prorareLogo from "@/assets/partners/prorare.svg";
 import eurordisLogo from "@/assets/partners/eurordis.png";
+import networkHero from "@/assets/network-hero.png.asset.json";
 
 const sisters = [
   { n: "A Cure for Sophia and Friends", u: "https://www.acureforsophiaandfriends.com/", c: "USA", logo: sophiaLogo },
@@ -64,6 +65,18 @@ export default function Network({ lang }: { lang: Lang }) {
           ? "Nach der Gründung von Cure MCOPS12 im Jahr 2020 haben wir ein globales Netzwerk aus betroffenen Familien und Forschenden aufgebaut."
           : "After establishing Cure MCOPS12 in 2020, we built a global network of patient advocates and researchers."}
       />
+
+      {/* Hero image */}
+      <section className="container-tight pt-4 pb-8">
+        <Reveal>
+          <img
+            src={networkHero.url}
+            alt={de ? "Kind mit Schnuller schlafend – ein berührender Moment, der unsere Mission inspiriert" : "Sleeping child with pacifier — a moment that inspires our mission"}
+            className="w-full h-auto rounded-2xl object-cover"
+            loading="lazy"
+          />
+        </Reveal>
+      </section>
 
       {/* Intro */}
       <section className="container-tight pb-16">
