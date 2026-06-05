@@ -11,8 +11,7 @@ import heroBeyond from "@/assets/simon-and-beyond.jpg";
 import heroFairyLights from "@/assets/simon-fairy-lights.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
 import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
-import newsHappyNewYear from "@/assets/news-happy-new-year.jpg";
-import newsBreakingAso from "@/assets/news-breaking-aso.jpg";
+import newsSimonSmile from "@/assets/news-simon-smile.jpg";
 
 const homeNews = [
   {
