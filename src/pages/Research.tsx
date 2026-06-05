@@ -117,14 +117,50 @@ export default function Research({ lang }: { lang: Lang }) {
             aimed at advancing our understanding of disease mechanisms and defining outcome measures and
             biomarkers for future clinical trials.
           </p>
-          <figure className="rounded-2xl overflow-hidden border border-border bg-card">
-            <img
-              src={researchPillars}
-              alt="Three research pillars for MCOPS12: clinical picture, mouse models, and patient iPSC-derived neuronal cell models"
-              className="w-full h-auto"
-              loading="lazy"
-            />
-          </figure>
+          <div className="grid md:grid-cols-3 gap-5 pt-2">
+            <div className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all">
+              <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
+                <Stethoscope className="w-6 h-6" />
+              </div>
+              <h4 className="font-display text-lg font-bold text-navy">
+                {de ? "Klinisches Bild" : "Clinical picture"}
+              </h4>
+              <p className="text-foreground/75 mt-2 text-base">
+                {de
+                  ? "Natural-History-Studie und longitudinale Daten von MCOPS12-Patient:innen, um den Krankheitsverlauf zu charakterisieren und Endpunkte für klinische Studien zu definieren."
+                  : "Natural history study and longitudinal data from MCOPS12 patients to characterize disease progression and define endpoints for future clinical trials."}
+              </p>
+            </div>
+
+            <div className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all">
+              <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
+                <Mouse className="w-6 h-6" />
+              </div>
+              <h4 className="font-display text-lg font-bold text-navy">
+                {de ? "Mausmodelle" : "Mouse models"}
+              </h4>
+              <p className="text-foreground/75 mt-2 text-base">
+                {de
+                  ? "Patientenspezifische Rarb-Mausmodelle, um Krankheitsmechanismen in vivo zu entschlüsseln und Biomarker sowie Therapien zu testen."
+                  : "Patient-specific Rarb mouse models to dissect disease mechanisms in vivo and test biomarkers and candidate therapies."}
+              </p>
+            </div>
+
+            <div className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all">
+              <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
+                <FlaskConical className="w-6 h-6" />
+              </div>
+              <h4 className="font-display text-lg font-bold text-navy">
+                {de ? "Patienten-iPSC-Neuronen" : "Patient iPSC-derived neurons"}
+              </h4>
+              <p className="text-foreground/75 mt-2 text-base">
+                {de
+                  ? "Aus Patientenzellen abgeleitete neuronale Zellmodelle, um RARB-Biologie im menschlichen System zu studieren und Wirkstoffe zu screenen."
+                  : "Neuronal cell models derived from patient iPSCs to study RARB biology in a human system and screen candidate therapeutics."}
+              </p>
+            </div>
+          </div>
+
         </article>
       </section>
     </>
