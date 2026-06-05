@@ -139,8 +139,8 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           </p>
           <p>
             {de
-              ? <>Wir haben deshalb einen anderen Weg eingeschlagen. Mit fortschrittlichen genetischen Analysen — der sogenannten Long-Read-Sequenzierung — haben wir Simons fehlerhafte <em>RARB</em>-Kopie (Allel) im Detail kartiert und dabei dutzende zusätzliche einzigartige Marker identifiziert, die nur auf dem mutierten Allel vorkommen. Jeder davon ist ein potenzielles Ziel für ein allelspezifisches ASO.</>
-              : <>So we took a different route. Using advanced genetic analyses called long-read sequencing, we mapped Simon's faulty <em>RARB</em> copy (allele) in detail — and identified dozens of additional unique markers found only on the mutant allele. Each one is a potential bullseye for an allele-specific ASO.</>}
+              ? <>Daher führten wir fortschrittliche genetische Analysen mittels <strong>Long-Read-Sequenzierung</strong> durch, um <strong>weitere Sequenzvarianten auf Simons mutiertem <em>RARB</em>-Allel zu identifizieren</strong>, die als besser geeignete ASO-Zielstellen dienen könnten. Dieser Ansatz brachte dutzende Varianten (SNPs, Indels) zutage, die ausschließlich auf dem mutierten Allel vorkommen und somit <strong>ideale Ziele für eine allelspezifische ASO-Therapie</strong> darstellen.</>
+              : <>Therefore, we performed advanced genetic analyses using <strong>long-read sequencing</strong> to <strong>identify additional sequence variants on Simon's mutant <em>RARB</em> allele</strong> that could serve as more suitable ASO target sites. This approach revealed dozens of variants (SNPs, indels) that are exclusively present on the mutant allele and thus represent <strong>ideal targets for an allele-specific ASO therapy</strong>.</>}
           </p>
           <p>
             {de
