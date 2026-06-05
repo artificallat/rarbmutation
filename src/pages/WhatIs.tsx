@@ -35,11 +35,11 @@ export default function WhatIs({ lang }: { lang: Lang }) {
     : [
         { icon: Dna, text: "An ultra-rare neurodevelopmental disorder caused by mutations in the RARB gene." },
         { icon: Sparkles, text: "Also referred to as RARB-related disorder." },
-        { icon: Activity, text: "Usually autosomal dominant — one altered copy is enough to cause the condition." },
-        { icon: AlertCircle, text: "Most frequent variant: p.R387C — found in about one-third of diagnosed individuals." },
-        { icon: Brain, text: "RARβ is a transcription factor activated by retinoic acid — crucial for eyes, diaphragm, heart and brain." },
-        { icon: Eye, text: "Common features: eye defects, hypotonia, dystonia/spasticity, language delay, feeding difficulties." },
-        { icon: Sparkles, text: "Severity and combination of features vary widely between children." },
+        { icon: Activity, text: "Usually an autosomal dominant condition, meaning that a mutation in just one of the two copies of the RARB gene is enough to cause the disorder.\n" },
+        { icon: AlertCircle, text: "Most frequent RARB variant: p.Arg387Cys (p.R387C) - found in ~30% of diagnosed individuals " },
+        { icon: Brain, text: "RARB is as a transcription factor activated by retinoic acid, a metabolite of vitamin A, and plays a crucial role in the development of the eyes, diaphragm, heart, and brain." },
+        { icon: Eye, text: "Common clinical features include eye defects, hypotonia, progressive dystonia and/or spasticity, language delay, and feeding difficulties." },
+        { icon: Sparkles, text: "The severity and combination of features vary widely among affected children." },
         { icon: AlertCircle, text: "There is currently no approved treatment for MCOPS12." },
       ];
 
