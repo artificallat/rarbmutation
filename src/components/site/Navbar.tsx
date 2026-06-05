@@ -37,10 +37,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
   };
 
   const aboutItems: NavItem[] = [
-    { to: `${p}/who-we-are`, label: tr.nav.whoWeAre, children: [
-      { to: `${p}/vereinsorgane`, label: tr.nav.vereinsorgane },
-      { to: `${p}/scientific-advisory-board`, label: tr.nav.scientificAdvisoryBoard },
-    ]},
+    { to: `${p}/who-we-are`, label: tr.nav.whoWeAre },
     { to: `${p}/what-is-mcops12`, label: tr.nav.whatIs },
   ];
   const achievementsItems: NavItem[] = [
