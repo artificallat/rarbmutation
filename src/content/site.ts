@@ -113,9 +113,9 @@ export const kids = [
   },
   {
     name: "Atle",
-    year: 2015,
-    place: "Norway",
-    parents: "—",
+    year: 2011,
+    place: "Sweden",
+    parents: "Linnéa & David",
     siblings: "—",
     storyEn: "Atle's bright laughter and joy fill every room. His family treasures every milestone and every smile.",
     storyDe:

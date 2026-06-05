@@ -126,7 +126,7 @@ export const kidsProfiles: KidProfile[] = [
     slug: "sienna",
     name: "Sienna",
     parents: "Annina and Anthony",
-    siblings: "Ava (almost 5), Bailey (16)",
+    siblings: "Ava, Bailey",
     yearOfBirth: "2019",
     hometown: "Melbourne, Australia",
     messageTitle: "A Message from Sienna's Parents:",
