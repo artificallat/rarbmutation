@@ -1,7 +1,8 @@
 import { PageHero } from "@/pages/WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import type { Lang } from "@/content/site";
-import researchPillars from "@/assets/research-pillars.png";
+import { Stethoscope, Mouse, FlaskConical } from "lucide-react";
+
 
 export default function Research({ lang }: { lang: Lang }) {
   const de = lang === "de";
