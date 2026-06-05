@@ -1,9 +1,10 @@
-import { ExternalLink, Heart, Landmark, CreditCard, FileSignature, Maximize2 } from "lucide-react";
+import { ExternalLink, Heart, Landmark, CreditCard, Maximize2, ChevronDown } from "lucide-react";
 import { ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { PageHero } from "@/pages/WhoWeAre";
 import { DonationConfirmationForm } from "@/components/site/DonationConfirmationForm";
 import { donationGoal, socials, type Lang } from "@/content/site";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import bankQr from "@/assets/bank-qr.png";
 import taxLogo from "@/assets/tax-deductible-logo.png";
 
