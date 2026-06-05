@@ -144,8 +144,8 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           </p>
           <p>
             {de
-              ? "Das ist in zweifacher Hinsicht spannend. Erstens hat es einen echten Weg für Simons ASO-Therapie eröffnet. Zweitens ist der hier etablierte Arbeitsablauf (Abbildung 2) eine Blaupause — er kann wiederverwendet werden, um personalisierte ASO-Therapien für weitere Kinder mit MCOPS12 zu entwickeln."
-              : "This is exciting on two fronts. First, it opened a real path forward for Simon's ASO therapy. Second, the workflow established here (Figure 2) is a blueprint — one that can be reused to develop personalized ASO therapies for other children with MCOPS12."}
+              ? <>Diese Ergebnisse sind sehr ermutigend, bedeuten aber auch, dass die resultierende ASO-Therapie hochgradig auf Simon zugeschnitten ist. Wichtig ist jedoch: Der hier etablierte ASO-Entwicklungs-Workflow (Abbildung 2) liefert eine robuste <strong>Blaupause</strong>, die auf die Entwicklung personalisierter ASO-Therapien <strong>für weitere Patient:innen mit MCOPS12</strong> übertragen werden kann.</>
+              : <>While these results are very encouraging, they also imply that the resulting ASO therapy is highly customized to Simon. Importantly, however, the ASO development workflow established here (Figure 2) provides a robust <strong>blueprint</strong> that can be applied to the development of personalized ASO therapies <strong>for other patients with MCOPS12</strong>.</>}
           </p>
 
         </div>
