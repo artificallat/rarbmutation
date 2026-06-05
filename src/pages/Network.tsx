@@ -66,6 +66,18 @@ export default function Network({ lang }: { lang: Lang }) {
           : "After establishing Cure MCOPS12 in 2020, we built a global network of patient advocates and researchers."}
       />
 
+      {/* Hero image */}
+      <section className="container-tight pt-4 pb-8">
+        <Reveal>
+          <img
+            src={networkHero.url}
+            alt={de ? "Kind mit Schnuller schlafend – ein berührender Moment, der unsere Mission inspiriert" : "Sleeping child with pacifier — a moment that inspires our mission"}
+            className="w-full h-auto rounded-2xl object-cover"
+            loading="lazy"
+          />
+        </Reveal>
+      </section>
+
       {/* Intro */}
       <section className="container-tight pb-16">
         <Reveal>
