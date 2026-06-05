@@ -1,4 +1,5 @@
-import { Megaphone, Share2, Users, Heart } from "lucide-react";
+import { Megaphone, Share2, Users, Heart, Linkedin, Facebook } from "lucide-react";
+import { socials } from "@/content/site";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
@@ -56,12 +57,29 @@ export default function RaiseAwareness({ lang }: { lang: Lang }) {
         <div className="grid md:grid-cols-3 gap-6">
           {ways.map((w, i) => (
             <Reveal key={w.title} delay={i * 120}>
-              <div className="bg-card border border-border rounded-2xl p-7 h-full hover:-translate-y-1 hover:shadow-xl hover:border-teal transition-all duration-300 group">
+              <div className="bg-card border border-border rounded-2xl p-7 h-full hover:-translate-y-1 hover:shadow-xl hover:border-teal transition-all duration-300 group flex flex-col">
                 <div className="w-14 h-14 rounded-2xl bg-teal/10 text-teal flex items-center justify-center mb-4 group-hover:bg-teal group-hover:text-white transition-colors">
                   <w.icon className="w-7 h-7" />
                 </div>
                 <h3 className="font-display text-xl font-bold text-navy">{w.title}</h3>
                 <p className="text-foreground/80 mt-3 leading-relaxed">{w.body}</p>
+                {i === 0 && (
+                  <div className="mt-5 flex gap-3">
+                    <a href={socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-11 h-11 rounded-full bg-teal/10 text-teal flex items-center justify-center hover:bg-teal hover:text-white transition-colors">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a href={socials.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="w-11 h-11 rounded-full bg-teal/10 text-teal flex items-center justify-center hover:bg-teal hover:text-white transition-colors">
+                      <Facebook className="w-5 h-5" />
+                    </a>
+                  </div>
+                )}
+                {i === 2 && (
+                  <div className="mt-5">
+                    <a href={de ? "/de/donate" : "/donate"} className="inline-flex items-center gap-2 rounded-full bg-amber px-5 py-2.5 font-semibold text-navy hover:brightness-95 transition">
+                      {de ? "Jetzt spenden" : "Donate now"}
+                    </a>
+                  </div>
+                )}
               </div>
             </Reveal>
           ))}
