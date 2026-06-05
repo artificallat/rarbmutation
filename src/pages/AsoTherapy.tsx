@@ -71,17 +71,17 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
       {/* Mechanism for MCOPS12 */}
       <section className="bg-muted/40 py-16">
         <div className="container-tight">
-          <SectionTitle eyebrow="MCOPS12" title={de ? "Wie wirkt eine ASO-Therapie bei MCOPS12?" : "How does an ASO therapy work in MCOPS12?"} />
+          <SectionTitle eyebrow="MCOPS12" title={de ? "Wie wirkt eine ASO-Therapie bei Patient:innen mit MCOPS12?" : "How does an ASO therapy work in patients with MCOPS12?"} />
           <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
             <p>
               {de
-                ? <>Bei den meisten Patient:innen mit MCOPS12 ist eine Kopie des <em>RARB</em>-Gens mutiert, während die andere Kopie gesund bleibt. Beide Kopien produzieren mRNA, aber nur die mutierte mRNA führt zur Bildung einer schädlichen Version des RARB-Proteins.</>
-                : <>In most patients with MCOPS12, one copy of the <em>RARB</em> gene is mutated while the other copy stays healthy. Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful version of the RARB protein.</>}
+                ? <>Bei den meisten Patient:innen mit MCOPS12 ist eine Kopie des <em>RARB</em>-Gens mutiert, während die andere Kopie gesund bleibt (Wildtyp = trägt keine Mutation). Beide Kopien produzieren mRNA, aber nur die mutierte mRNA führt zur Bildung einer schädlichen RARB-Proteinvariante. Ein ASO kann so entworfen werden, dass es selektiv die mutierte <em>RARB</em>-mRNA erkennt und daran bindet.</>
+                : <>In most patients with MCOPS12, one copy of the <em>RARB</em> gene is mutated while the other copy stays healthy (wild-type = carries no mutation). Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful RARB protein variant. An ASO can be designed to selectively recognize and bind to the mutant <em>RARB</em> mRNA.</>}
             </p>
             <p>
               {de
-                ? "Ein ASO kann so entworfen werden, dass es nur die fehlerhafte mRNA erkennt. In der Zelle paart es sich mit dieser mRNA wie zwei Hälften eines Reißverschlusses (Abbildung 1, Panel 2). Ein körpereigenes Enzym namens RNase H1 erkennt diese Paarung und zerstört die fehlerhafte mRNA — so wird das schädliche Protein nie gebildet. Wissenschaftler nennen das "
-                : "An ASO can be designed to recognize only the faulty mRNA. Once inside the cell, it pairs with that mRNA like two halves of a zipper (Figure 1, Panel 2). A natural enzyme called RNase H1 spots this pairing and destroys the faulty mRNA — so the harmful protein never gets made. Scientists call this "}
+                ? "In der Zelle paart es sich mit dieser mRNA wie zwei Hälften eines Reißverschlusses (Abbildung 1, Panel 2). Ein körpereigenes Enzym namens RNase H1 erkennt diese Paarung und zerstört die fehlerhafte mRNA — so wird das schädliche Protein nie gebildet. Wissenschaftler nennen das "
+                : "Once inside the cell, it pairs with that mRNA like two halves of a zipper (Figure 1, Panel 2). A natural enzyme called RNase H1 spots this pairing and destroys the faulty mRNA — so the harmful protein never gets made. Scientists call this "}
               <strong>{de ? "mRNA-Knockdown." : "\"mRNA knockdown\"."}</strong>
             </p>
             <p>
