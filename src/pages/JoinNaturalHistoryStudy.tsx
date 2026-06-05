@@ -2,6 +2,8 @@ import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation,
 import { SectionTitle, PageHeroIllustrated, LeadParagraph } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
+import flyerAsset from "@/assets/nhs-flyer.pdf.asset.json";
+import presentationAsset from "@/assets/nhs-presentation.pdf.asset.json";
 
 
 export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
@@ -112,7 +114,8 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
         />
         <div className="grid sm:grid-cols-2 gap-6 -mt-2">
           <a
-            href="/documents/Flyer-RARB-MCOPS12-Natural-History-Study.pdf"
+            href={flyerAsset.url}
+            download
             target="_blank"
             rel="noreferrer"
             className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
@@ -130,7 +133,8 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
           </a>
 
           <a
-            href="/documents/RARB-Natural-History-Study_V-Chu_2024.pdf"
+            href={presentationAsset.url}
+            download
             target="_blank"
             rel="noreferrer"
             className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
