@@ -34,7 +34,7 @@ export default function Research({ lang }: { lang: Lang }) {
           <p>
             Tight regulation of the retinoic acid pathway is critical for the development of multiple organs
             in both humans and animals, with particularly important roles in eye development and formation
-            of striatal projection systems in the brain (Rataj-Baniowska et al., 2015).
+            of striatal projection systems in the brain (<a className="text-teal font-semibold hover:underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6605468/" target="_blank" rel="noreferrer">Rataj-Baniowska et al., 2015</a>).
           </p>
         </article>
 
