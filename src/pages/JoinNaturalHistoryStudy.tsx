@@ -3,7 +3,9 @@ import { SectionTitle, PageHeroIllustrated, LeadParagraph } from "@/components/s
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
 import flyerAsset from "@/assets/nhs-flyer.pdf.asset.json";
+import flyerThumb from "@/assets/nhs-flyer-thumb.jpg.asset.json";
 import presentationAsset from "@/assets/nhs-presentation.pdf.asset.json";
+
 
 
 export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
