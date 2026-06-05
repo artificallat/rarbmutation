@@ -267,7 +267,7 @@ export const t = {
       ],
       storyTitle: "Our Story",
       storyP1:
-        "Soon after Edith and Reinhard Pell's son Simon was born in 2017, they knew something was wrong. Simon had microphthalmia and did not meet any developmental milestones in his first months of life. In a desperate search for a cause, Simon underwent genetic testing — and was diagnosed with a mutation in the RARB gene causing a disease called Syndromic Microphthalmia 12 (MCOPS12). \n\nA severe neurodevelopmental disorder so rare that only 20 patients at the time were known worldwide.",
+        "Soon after their son Simon was born in 2017, Edith and Reinhard knew that something was wrong. Simon had microphthalmia and did not meet any developmental milestones in his first months of life. In a desperate search for answers, Simon underwent genetic testing — and was diagnosed with a mutation in the RARB gene causing a disease called Syndromic Microphthalmia 12 (MCOPS12).   A severe neurodevelopmental disorder so rare that only 20 patients at the time were known worldwide.",
       storyP2: "No options for treatment. No hope.",
       storyP3:
         "Reinhard and Edith refused to accept the status quo. Driven by determination, they founded the nonprofit organization Cure MCOPS12, establishing a global scientific network and funding research to decode this complex disease. In 2023 they started their project of a lifetime — developing a patient-customized RNA therapy for Simon to silence his gene mutation. With a dream to create a better and brighter future for not only their son, but for all MCOPS12 patients in the world.",
