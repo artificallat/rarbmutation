@@ -11,6 +11,7 @@ import chusjLogo from "@/assets/partners/chusj.png";
 import alpharoseLogo from "@/assets/partners/alpharose.png";
 import prorareLogo from "@/assets/partners/prorare.svg";
 import eurordisLogo from "@/assets/partners/eurordis.png";
+import networkHero from "@/assets/network-hero.png.asset.json";
 
 const sisters = [
   { n: "A Cure for Sophia and Friends", u: "https://www.acureforsophiaandfriends.com/", c: "USA", logo: sophiaLogo },
