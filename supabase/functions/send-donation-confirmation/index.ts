@@ -7,14 +7,7 @@ const BodySchema = z.object({
   firstName: z.string().trim().min(1).max(100),
   lastName: z.string().trim().min(1).max(100),
   dob: z.string().min(1).max(20),
-  street: z.string().trim().min(1).max(200),
-  postalCode: z.string().trim().min(1).max(20),
-  city: z.string().trim().min(1).max(100),
-  country: z.string().trim().min(1).max(100),
   email: z.string().trim().email().max(255),
-  amount: z.number().positive().max(1_000_000),
-  donationDate: z.string().min(1).max(20),
-  method: z.string().min(1).max(50),
 });
 
 const esc = (s: string) =>
