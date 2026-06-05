@@ -74,7 +74,7 @@ export default function Research({ lang }: { lang: Lang }) {
           </p>
           <p>
             Generation and comprehensive analysis of four patient-specific <em>Rarb</em> mouse models
-            (<em>Rarb</em> -/-, <em>Rarb</em> R387C/+, <em>Rarb</em> L402P/+, and <em>Rarb</em> +/-) yielded
+            (<em>Rarb</em><sup>-/-</sup>, <em>Rarb</em><sup>R387C/+</sup>, <em>Rarb</em><sup>L402P/+</sup>, and <em>Rarb</em><sup>+/-</sup>) yielded
             several key findings (
             <a href="https://www.biorxiv.org/content/10.64898/2026.02.20.706764v1" target="_blank" rel="noreferrer" className="text-teal underline">
               Zinter et al. 2026
