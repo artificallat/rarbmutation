@@ -37,6 +37,23 @@ export default function Imprint({ lang }: { lang: Lang }) {
             ? "Förderung von Bewusstsein, Forschung und Wirkstoffentwicklung für eine Therapie der ultra-seltenen genetischen Erkrankung MCOPS12 (Syndromic Microphthalmia 12)."
             : "Raising awareness, research and drug development for a therapy of the ultra-rare genetic disease MCOPS12 (Syndromic Microphthalmia 12)."}
         </p>
+        <p className="mt-4">
+          {de
+            ? "Der Verein Cure MCOPS12, dessen Tätigkeit nicht auf Gewinn gerichtet ist, verfolgt ausschließlich und unmittelbar:"
+            : "The association Cure MCOPS12, whose activities are not-for-profit, pursues exclusively and directly:"}
+        </p>
+        <ul className="list-disc pl-6 mt-2 space-y-2">
+          <li>
+            {de
+              ? "den gemeinnützigen Zweck der Unterstützung von Personen, die an Microphthalmia Syndromic 12 (MCOPS12) leiden, sowie"
+              : "the charitable purpose of supporting individuals suffering from Microphthalmia Syndromic 12 (MCOPS12), and"}
+          </li>
+          <li>
+            {de
+              ? "den Zweck der Förderung wissenschaftlicher Forschung und Therapieentwicklung zur Behandlung und/oder Heilung von MCOPS12."
+              : "the purpose of promoting scientific research and therapy development for the treatment and/or cure of MCOPS12."}
+          </li>
+        </ul>
 
         <h2 className="font-display text-2xl font-bold text-navy mt-8">{de ? "Haftungsausschluss" : "Disclaimer"}</h2>
         <p>
