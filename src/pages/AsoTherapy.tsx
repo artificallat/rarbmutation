@@ -85,11 +85,11 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
               <strong>{de ? "mRNA-Knockdown bezeichnet." : "mRNA knockdown."}</strong>
             </p>
             <p>
-              {de ? "Der Haken: Das ASO muss " : "The catch: the ASO has to be "}
-              <strong>{de ? "allelspezifisch" : "allele-specific"}</strong>
+              {de ? <>Bei MCOPS12 muss das ASO </> : <>For MCOPS12, the ASO must be </>}
+              <strong>{de ? "allelspezifisch" : "\"allele-specific\""}</strong>
               {de
-                ? <> sein — es darf nur die fehlerhafte Kopie stilllegen und die gesunde unberührt lassen. Denn das gesunde <em>RARB</em>-Protein ist essenziell für eine normale Hirnentwicklung. Es versehentlich auszuschalten würde genau die Symptome verursachen, die wir verhindern wollen (Ciancia et al. 2022, </>
-                : <> — it must silence only the faulty copy and leave the healthy one untouched. That's because the healthy <em>RARB</em> protein is essential for normal brain development. Knocking it out by mistake would cause the very symptoms we're trying to prevent (Ciancia et al. 2022, </>}
+                ? <> sein — das heißt, es reduziert selektiv die mutierte <em>RARB</em>-mRNA, während die gesunde mRNA unberührt bleibt. Diese Selektivität ist essenziell, da das RARB-Protein eine zentrale Rolle in der normalen Hirnentwicklung spielt. Eine Eliminierung des gesunden Proteins würde zu Symptomen führen, die jenen von MCOPS12 selbst ähneln (Ciancia et al. 2022, </>
+                : <> – meaning it selectively reduces the mutant <em>RARB</em> mRNA while leaving the healthy mRNA untouched. This selectivity is essential because the RARB protein plays a key role in normal brain development. Eliminating the healthy protein would lead to symptoms similar to those seen in MCOPS12 itself (Ciancia et al. 2022, </>}
               <a className="text-teal font-semibold hover:underline break-all" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">ScienceDirect</a>
               ).
             </p>
