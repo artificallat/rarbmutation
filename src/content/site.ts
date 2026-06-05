@@ -30,7 +30,7 @@ export const socials = {
   email: "rpell@rarbmutation.org",
 };
 
-export const donationGoal = { raised: 301000, goal: 950000 };
+export const donationGoal = { raised: 301000, goal: 850000 };
 
 export const kids = [
   {
@@ -281,7 +281,7 @@ export const t = {
         { n: "€235,000+", l: "raised for research and drug development" },
         { n: "6", l: "safe ASO candidates identified" },
       ],
-      donateBar: "With your support, we can move closer to a life-changing therapy. Every donation makes a difference",
+      donateBar: "With your support, we can move closer to a life-changing therapy. Every donation makes a difference.",
       newsTitle: "Latest News",
       partnersTitle: "Cure MCOPS12 partners with",
     },
