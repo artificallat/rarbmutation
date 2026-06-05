@@ -42,10 +42,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
   ];
   const achievementsItems: NavItem[] = [
     { to: `${p}/network`, label: tr.nav.network },
-    { to: `${p}/funded-rd-programs`, label: tr.nav.fundedRD, children: [
-      { to: `${p}/a-cure-for-sophia-and-friends`, label: tr.nav.sophiaProgram },
-      { to: `${p}/a-cure-for-sienna`, label: tr.nav.siennaProgram },
-    ]},
+    { to: `${p}/funded-rd-programs`, label: tr.nav.fundedRD },
     { to: `${p}/aso-therapy`, label: tr.nav.asoTherapy },
   ];
   const familiesItems: NavItem[] = [
