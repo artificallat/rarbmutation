@@ -80,9 +80,9 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             </p>
             <p>
               {de
-                ? "In der Zelle paart es sich mit dieser mRNA wie zwei Hälften eines Reißverschlusses (Abbildung 1, Panel 2). Ein körpereigenes Enzym namens RNase H1 erkennt diese Paarung und zerstört die fehlerhafte mRNA — so wird das schädliche Protein nie gebildet. Wissenschaftler nennen das "
-                : "Once inside the cell, it pairs with that mRNA like two halves of a zipper (Figure 1, Panel 2). A natural enzyme called RNase H1 spots this pairing and destroys the faulty mRNA — so the harmful protein never gets made. Scientists call this "}
-              <strong>{de ? "mRNA-Knockdown." : "\"mRNA knockdown\"."}</strong>
+                ? "Nach dem Eintritt in die Zelle bindet das ASO über Watson–Crick-Basenpaarung an seine Ziel-mRNA und bildet einen kurzen RNA–DNA-Duplex (Abbildung 1, Panel 2). Dieser Duplex wird von einem körpereigenen Enzym namens RNase H1 erkannt, das die mRNA schneidet und abbaut. Dadurch kann das mutierte Protein nicht mehr produziert werden. Dieser Mechanismus wird als "
+                : "After entering the cell, the ASO binds to its target mRNA through Watson–Crick base pairing, forming a short RNA–DNA duplex (Figure 1, Panel 2). This duplex is detected by a natural enzyme called RNase H1, which cuts and degrades the mRNA. As a result, the mutant protein can no longer be produced. This mechanism is known as "}
+              <strong>{de ? "mRNA-Knockdown bezeichnet." : "mRNA knockdown."}</strong>
             </p>
             <p>
               {de ? "Der Haken: Das ASO muss " : "The catch: the ASO has to be "}
