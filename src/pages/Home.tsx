@@ -11,7 +11,7 @@ import heroBeyond from "@/assets/simon-and-beyond.jpg";
 import heroFairyLights from "@/assets/simon-fairy-lights.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
 import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
-import newsHappyNewYear from "@/assets/news-happy-new-year.jpg";
+import newsSimonSmile from "@/assets/news-simon-smile.jpg";
 import newsBreakingAso from "@/assets/news-breaking-aso.jpg";
 
 const homeNews = [
@@ -43,16 +43,17 @@ const homeNews = [
     },
   },
   {
-    img: newsHappyNewYear,
+    img: newsSimonSmile,
+    objectPosition: "center 25%",
     cat: "Community",
     date: "January 2026",
     en: {
-      t: "Happy New Year from Cure MCOPS12",
-      e: "Stepping into 2026 with heartfelt gratitude to every supporter, family and partner who stood with us — and a clear focus on the year ahead.",
+      t: "Simon's Science Night",
+      e: "An evening dedicated to Simon — bringing together families, scientists, and supporters to share progress and hope for MCOPS12 research.",
     },
     de: {
-      t: "Frohes neues Jahr von Cure MCOPS12",
-      e: "Wir starten ins Jahr 2026 mit großer Dankbarkeit an alle Unterstützer:innen, Familien und Partner — und mit klarem Blick auf das, was vor uns liegt.",
+      t: "Simon's Science Night",
+      e: "Ein Abend, der Simon gewidmet ist — Familien, Wissenschaftler:innen und Unterstützer:innen kommen zusammen, um Fortschritte und Hoffnung für die MCOPS12-Forschung zu teilen.",
     },
   },
 ];
@@ -275,14 +276,6 @@ export default function Home({ lang }: { lang: Lang }) {
                 </article>
               </Reveal>
             ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link
-              to={`${p}/news`}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-navy text-navy font-semibold hover:bg-navy hover:text-white transition"
-            >
-              {tr.cta.viewAll}
-            </Link>
           </div>
         </div>
       </section>
