@@ -3,7 +3,9 @@ import { SectionTitle, PageHeroIllustrated, LeadParagraph } from "@/components/s
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
 import flyerAsset from "@/assets/nhs-flyer.pdf.asset.json";
+import flyerThumb from "@/assets/nhs-flyer-thumb.jpg.asset.json";
 import presentationAsset from "@/assets/nhs-presentation.pdf.asset.json";
+
 
 
 export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
@@ -102,6 +104,61 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
           </div>
         </Reveal>
       </section>
+
+      <section className="container-tight pb-12">
+        <Reveal>
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-10 shadow-[var(--shadow-card)]">
+            <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center">
+              <div>
+                <SectionTitle
+                  eyebrow={de ? "Für Fachkreise" : "For physicians"}
+                  title={de ? "Behandeln Sie eine:n Patient:in mit MCOPS12?" : "Do you treat a patient diagnosed with MCOPS12?"}
+                />
+                <p className="text-foreground/85 leading-relaxed -mt-2">
+                  {de
+                    ? "Bitte kontaktieren Sie Valerie Chu, genetische Beraterin und Studienkoordinatorin am CHU Sainte-Justine."
+                    : "Please contact Valerie Chu, genetic counsellor and study coordinator at CHU Sainte-Justine."}
+                </p>
+                <a
+                  href="mailto:valerie.chu.hsj@ssss.gouv.qc.ca"
+                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-teal px-6 py-3 font-semibold text-white hover:brightness-110 transition"
+                >
+                  <Mail className="w-4 h-4" />
+                  valerie.chu.hsj@ssss.gouv.qc.ca
+                </a>
+                <p className="text-sm text-foreground/70 mt-5">
+                  {de ? "Klicken Sie auf den Flyer, um ihn zu öffnen:" : "Click the flyer to open it:"}
+                </p>
+              </div>
+
+              <a
+                href={flyerAsset.url}
+                target="_blank"
+                rel="noreferrer"
+                className="group block shrink-0 mx-auto"
+                aria-label={de ? "Studien-Flyer öffnen" : "Open study flyer"}
+              >
+                <div className="relative w-44 rounded-xl overflow-hidden border border-border shadow-lg group-hover:shadow-2xl group-hover:-translate-y-1 transition-all bg-white">
+                  <img
+                    src={flyerThumb.url}
+                    alt={de ? "Vorschau des Studien-Flyers" : "Study flyer preview"}
+                    className="w-full h-auto block"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/30 transition-colors flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white text-navy rounded-full p-3 shadow-lg">
+                      <Download className="w-5 h-5" />
+                    </div>
+                  </div>
+                </div>
+                <p className="text-xs text-center text-teal font-semibold mt-2 uppercase tracking-wider">PDF</p>
+              </a>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+
 
 
 
