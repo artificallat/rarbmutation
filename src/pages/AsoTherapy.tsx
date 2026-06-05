@@ -124,11 +124,13 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             ).
           </p>
           <p>
-            {de ? <>Simon trägt eine <em>RARB</em>-Mutation namens </> : <>Simon carries a <em>RARB</em> mutation called </>}
+            {de ? <>Simon trägt die pathogene <em>RARB</em>-Variante </> : <>Simon carries the pathogenic <em>RARB</em> variant </>}
             <strong>c.1159C&gt;T (p.R387C)</strong>
             {de
-              ? ", die etwa 30 % der MCOPS12-Patient:innen teilen. Leider zeigten Computermodelle, dass es nicht funktionieren würde, genau diese Mutation anzusteuern."
-              : ", which is shared by about 30% of MCOPS12 patients. Unfortunately, computer modeling showed that targeting this exact mutation wasn't going to work."}
+              ? <>, die bei etwa 30 % aller MCOPS12-Patient:innen vorkommt und in vivo als dominant-negativ charakterisiert wurde (Zinter et al. 2026, </>
+              : <>, which is present in approximately 30% of all MCOPS12 patients, and characterized as dominant-negative in vivo (Zinter et al. 2026, </>}
+            <a className="text-teal font-semibold hover:underline break-all" href="https://www.biorxiv.org/content/10.64898/2026.02.20.706764v1" target="_blank" rel="noreferrer">bioRxiv</a>
+            ).
           </p>
           <p>
             {de
