@@ -83,7 +83,7 @@ export default function Research({ lang }: { lang: Lang }) {
           </p>
           <ul className="list-disc pl-6 space-y-3">
             <li>
-              Behavioral analyses of <em>Rarb</em> R387C/+ and <em>Rarb</em> L402P/+ mice exhibit
+              Behavioral analyses of <em>Rarb</em><sup>R387C/+</sup> and <em>Rarb</em><sup>L402P/+</sup> mice exhibit
               progressive motor deficits, hyperactivity and cognitive impairment, closely recapitulating
               the clinical phenotypes observed in MCOPS12 patients carrying these variants.
             </li>
@@ -94,13 +94,13 @@ export default function Research({ lang }: { lang: Lang }) {
             <li>
               Transcriptomic analysis in the striatum reveals that both models predominantly downregulate
               putative <em>RARB</em> target genes and display a transcriptional signature more pronounced than that
-              of <em>Rarb</em> knockout (<em>Rarb</em> -/-) mice, supporting a dominant-negative mechanism
+              of <em>Rarb</em> knockout (<em>Rarb</em><sup>-/-</sup>) mice, supporting a dominant-negative mechanism
               in vivo. Notably, both the transcriptional alterations and the selective vulnerability of D2R
               MSNs overlap with findings in Huntington's disease mouse models, suggesting shared pathways
               of striatal dysfunction between Huntington's disease and MCOPS12.
             </li>
             <li>
-              In contrast, <em>Rarb</em> +/- mice show no detectable phenotypes, consistent with
+              In contrast, <em>Rarb</em><sup>+/-</sup> mice show no detectable phenotypes, consistent with
               observations in individuals carrying only one functional <em>RARB</em> allele. This supports
               the concept that allele-specific knockdown of mutant <em>RARB</em> — such as via an ASO
               therapy — represents a promising therapeutic strategy for MCOPS12.
