@@ -116,7 +116,7 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
 
           <Reveal delay={100}>
             <a
-              href="/documents/RARB-Natural-History-Study_V-Chu_2024.pdf"
+              href="/documents/RARB-Natural-History-Study-V-Chu-2024.pdf"
               target="_blank"
               rel="noreferrer"
               className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4 h-full"
