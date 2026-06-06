@@ -26,7 +26,7 @@ export default function HowToGetInvolved({ lang }: { lang: Lang }) {
       body: de
         ? "Teilen Sie unsere Geschichte in den sozialen Medien und sprechen Sie über MCOPS12. Jeder Beitrag hilft uns, neu diagnostizierte Familien und neue Unterstützer:innen zu erreichen."
         : "Share our story on social media and tell others about MCOPS12. Every share helps us reach newly diagnosed families and new supporters.",
-      page: { label: de ? "So unterstützen Sie" : "Awareness toolkit", to: `${p}/raise-awareness` },
+      page: { label: de ? "So unterstützen Sie" : "Awareness toolkit", to: `${p}/how-to-get-involved` },
     },
     {
       icon: Coins,
@@ -114,8 +114,8 @@ export default function HowToGetInvolved({ lang }: { lang: Lang }) {
               <Link to={`${p}/natural-history`} className="px-5 py-3 rounded-full bg-teal text-white font-semibold hover:opacity-90 transition">
                 {de ? "Naturverlaufsstudie" : "Natural History Study"}
               </Link>
-              <Link to={`${p}/raise-awareness`} className="px-5 py-3 rounded-full bg-white/10 border border-white/30 text-white font-semibold hover:bg-white/20 transition">
-                {de ? "Bewusstsein schaffen" : "Raise Awareness"}
+              <Link to={`${p}/newly-diagnosed`} className="px-5 py-3 rounded-full bg-white/10 border border-white/30 text-white font-semibold hover:bg-white/20 transition">
+                {de ? "Neu diagnostiziert" : "Newly Diagnosed"}
               </Link>
               <Link to={`${p}/donate`} className="px-5 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition">
                 {de ? "Spenden" : "Donate"}

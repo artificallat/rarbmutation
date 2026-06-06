@@ -25,7 +25,7 @@ import AsoTherapy from "@/pages/AsoTherapy";
 import OurStory from "@/pages/OurStory";
 import JoinNaturalHistoryStudy from "@/pages/JoinNaturalHistoryStudy";
 import NaturalHistoryStudy from "@/pages/NaturalHistoryStudy";
-import RaiseAwareness from "@/pages/RaiseAwareness";
+
 import NewlyDiagnosed from "@/pages/NewlyDiagnosed";
 import RarbGene from "@/pages/RarbGene";
 import Mcops12Disease from "@/pages/Mcops12Disease";
@@ -66,7 +66,7 @@ const pages = (lang: Lang) => (
     <Route path="our-story" element={<OurStory lang={lang} />} />
     <Route path="join-natural-history-study" element={<JoinNaturalHistoryStudy lang={lang} />} />
     <Route path="natural-history-study" element={<NaturalHistoryStudy lang={lang} />} />
-    <Route path="raise-awareness" element={<RaiseAwareness lang={lang} />} />
+    <Route path="raise-awareness" element={<HowToGetInvolved lang={lang} />} />
     <Route path="newly-diagnosed" element={<NewlyDiagnosed lang={lang} />} />
     <Route path="imprint" element={<Imprint lang={lang} />} />
     <Route path="privacy" element={<Privacy lang={lang} />} />
