@@ -18,7 +18,6 @@ import News from "@/pages/News";
 import Vereinsorgane from "@/pages/Vereinsorgane";
 import ScientificAdvisoryBoard from "@/pages/ScientificAdvisoryBoard";
 import PlainLanguageMcops12 from "@/pages/PlainLanguageMcops12";
-import HowToGetInvolved from "@/pages/HowToGetInvolved";
 import FundedRDPrograms from "@/pages/FundedRDPrograms";
 import DrugRepurposing from "@/pages/DrugRepurposing";
 import AsoTherapy from "@/pages/AsoTherapy";
@@ -57,7 +56,6 @@ const pages = (lang: Lang) => (
     <Route path="organisation" element={<Vereinsorgane lang={lang} />} />
     <Route path="scientific-advisory-board" element={<ScientificAdvisoryBoard lang={lang} />} />
     <Route path="plain-language-mcops12" element={<PlainLanguageMcops12 lang={lang} />} />
-    <Route path="how-to-get-involved" element={<HowToGetInvolved lang={lang} />} />
     <Route path="funded-rd-programs" element={<FundedRDPrograms lang={lang} />} />
     <Route path="a-cure-for-sophia-and-friends" element={<SophiaAndFriends lang={lang} />} />
     <Route path="a-cure-for-sienna" element={<CureForSienna lang={lang} />} />
@@ -66,7 +64,6 @@ const pages = (lang: Lang) => (
     <Route path="our-story" element={<OurStory lang={lang} />} />
     <Route path="join-natural-history-study" element={<JoinNaturalHistoryStudy lang={lang} />} />
     <Route path="natural-history-study" element={<NaturalHistoryStudy lang={lang} />} />
-    <Route path="raise-awareness" element={<HowToGetInvolved lang={lang} />} />
     <Route path="newly-diagnosed" element={<NewlyDiagnosed lang={lang} />} />
     <Route path="imprint" element={<Imprint lang={lang} />} />
     <Route path="privacy" element={<Privacy lang={lang} />} />
