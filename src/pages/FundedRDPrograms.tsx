@@ -83,7 +83,7 @@ const makeTimeline = (base: string): TimelineItem[] => [
     short: (
       <>
         Our project of a lifetime. For more information please visit{" "}
-        <Link to={`${base}/aso-therapy`} className="text-teal font-semibold hover:underline">Simon's ASO therapy</Link>.
+        <Link to={`${base}/achievements`} className="text-teal font-semibold hover:underline">Simon's ASO therapy</Link>.
       </>
     ),
   },
@@ -201,7 +201,7 @@ export default function FundedRDPrograms({ lang }: { lang: Lang }) {
               <h3 className="font-display font-bold text-navy text-lg leading-snug">RNA therapy (ASO)</h3>
               <p className="text-foreground/80 mt-2 text-base">
                 A disease-modifying <strong>antisense oligonucleotide (ASO)</strong> to tackle the genetic root cause of MCOPS12 and improve neurological symptoms. To learn more, click here:{" "}
-                <Link to={`${base}/aso-therapy`} className="text-teal font-semibold hover:underline">Simon's ASO therapy</Link>.
+                <Link to={`${base}/achievements`} className="text-teal font-semibold hover:underline">Simon's ASO therapy</Link>.
               </p>
             </div>
           </div>

@@ -1,36 +1,32 @@
-## Goal
+# Split "Simon's ASO Therapy" (Achievements) and "N-of-1 ASO Therapy" (Clinicians)
 
-Currently both `/achievements` and `/aso-therapy` (Clinicians area) show very similar ASO content. Make them distinct, with the exact text provided.
+## Problem
+Both the Achievements menu and the Clinicians menu link to the same route `/aso-therapy`, which renders the clinical `AsoTherapy.tsx` page. The lay-friendly "Simon's ASO Therapy" content created earlier for Achievements is never reachable from the navbar.
 
-## Page 1 — Achievements (`src/pages/Achievements.tsx`)
+## Changes
 
-Keep the lay-friendly "Simon´s ASO Therapy" version (already in place from last turn). Verify text is verbatim:
+### 1. New route `/simons-aso-therapy`
+- Create `src/pages/SimonsAsoTherapy.tsx` containing the lay-friendly "Simon's ASO Therapy" content (the verbatim text previously placed in `Achievements.tsx`: date Sonntag 19. April 2026 · 11:30, ASO intro, MCOPS12 mechanism, Figure 1, personalized therapy section, Figure 2, partners block).
+- Register the route in `src/App.tsx` (alongside `/aso-therapy`) for both `/` and `/de` language trees.
+- Add SEO entry in `src/components/site/RouteSeo.tsx` for `simons-aso-therapy`.
 
-- Title: **Simon´s ASO Therapy**
-- Date line: **Sonntag, 19. April 2026 · 11:30**
-- Section "What is an Antisense Oligonucleotide (ASO) Therapy?" — 3 paragraphs (tape metaphor, mRNA recipe, Lauffer 2024 link).
-- Section "How does an ASO therapy work in patients with MCOPS12?" — 3 paragraphs (mutant/healthy copy, zipper/RNase H1 + "mRNA knockdown", "The catch" allele-specific + Ciancia 2022 link).
-- Figure 1 (existing `aso-figure-1.png`) with caption "Figure 1:".
-- Section "Simon´s personalized allele-specific ASO therapy" — 4 paragraphs (Hauser 2022 link, c.1159C>T mutation, long-read sequencing route, blueprint for other children).
-- Figure 2: existing `AsoWorkflowFigure` component.
-- Closing partner block: RareLabs (link), large pharma undisclosed, Hongene Biotech (link) — verbatim sentences.
+### 2. Restore `Achievements.tsx`
+- Revert `src/pages/Achievements.tsx` back to the original achievements landing page (milestones overview), since the ASO content now lives on its own dedicated page.
 
-## Page 2 — Clinicians / AsoTherapy (`src/pages/AsoTherapy.tsx`)
+### 3. Keep `/aso-therapy` as the clinical "N-of-1 ASO Therapy"
+- No changes to `src/pages/AsoTherapy.tsx` — it already contains the clinical content.
 
-Rewrite to the clinical **"N-of-1 ASO Therapy"** version with the exact text provided:
+### 4. Navbar link split (`src/components/site/Navbar.tsx`)
+- `achievementsItems`: change the ASO entry from `/aso-therapy` → `/simons-aso-therapy`, label "Simon's ASO Therapy".
+- `cliniciansItems`: keep `/aso-therapy`, label "N-of-1 ASO Therapy".
+- Add a label key `simonsAsoTherapy` (and update `asoTherapy` label to "N-of-1 ASO Therapy") in `src/content/site.ts` for EN + DE.
+- Mobile nav uses the same arrays, so it updates automatically.
 
-- Title: **N-of-1 ASO Therapy**
-- Date line: **Montag, 13. April 2026 · 00:47**
-- Section "What is an Antisense Oligonucleotide (ASO) Therapy?" — clinical paragraph: "ASO therapeutics are short, synthetic strands of nucleotides … 15 to 25 units in length …" plus second paragraph ending with Lauffer 2024 link and "Since ASOs act on mRNA and not on DNA, their effects are reversible, meaning repeated dosing is required."
-- Section "How does an ASO therapy work in patients with MCOPS12?" — 3 paragraphs (wild-type explanation, Watson–Crick base pairing + RNase H1 + "mRNA knockdown", allele-specific clinical wording + Ciancia 2022 link).
-- Figure 1 (existing `aso-figure-1.png`) with caption "Figure 1:" and small label "Personalized".
-- Section "Simon´s personalized allele-specific ASO therapy" — clinical version with Hauser 2022 link, c.1159C>T (p.R387C) + Zinter 2026 bioRxiv link "dominant-negative in vivo", long-read sequencing for ideal targets, blueprint statement for other MCOPS12 patients.
-- Figure 2: keep existing `AsoWorkflowFigure` component.
-- Closing partner block: same three partners (RareLabs link, large pharma undisclosed, Hongene Biotech link) — verbatim sentences.
+### 5. Internal links
+- `FundedRDPrograms.tsx` (2 occurrences) currently links to `/aso-therapy` with text "Simon's ASO therapy" — repoint to `/simons-aso-therapy`.
+- `Home.tsx` link to `/aso-therapy` — leave as-is (clinical) unless you'd prefer it point to the lay page; please confirm.
 
-## Technical notes
-
-- Both pages keep the same shell (`PageHero`, `Reveal`, section spacing) so they remain visually consistent with the rest of the site but with clearly different text/tone.
-- Text is supplied 1:1 in English (as the user provided). German `lang === "de"` will display the same English text for both, since the user requested verbatim copy and provided no German translation.
-- No route, navigation, or other page changes — only the contents of `Achievements.tsx` and `AsoTherapy.tsx`.
-- Reuse existing assets: `@/assets/research/aso-figure-1.png` and `AsoWorkflowFigure` component. No new dependencies.
+## Result
+- Achievements ▸ "Simon's ASO Therapy" → `/simons-aso-therapy` (lay-friendly version)
+- Clinicians ▸ "N-of-1 ASO Therapy" → `/aso-therapy` (clinical version)
+- Achievements page itself goes back to its original milestones layout.
