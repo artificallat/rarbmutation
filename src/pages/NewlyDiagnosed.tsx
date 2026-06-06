@@ -145,10 +145,10 @@ export default function NewlyDiagnosed({ lang }: { lang: Lang }) {
                 : "The largest impacts our families can make are by spreading awareness and by fundraising. Since MCOPS12 is ultra-rare, it is up to us to make it known — and research needs funding to keep moving forward."}
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="/raise-awareness" className="inline-flex items-center gap-2 rounded-full bg-teal px-6 py-3 font-semibold text-white hover:brightness-95 transition">
+              <a href={de ? "/de/how-to-get-involved" : "/how-to-get-involved"} className="inline-flex items-center gap-2 rounded-full bg-teal px-6 py-3 font-semibold text-white hover:brightness-95 transition">
                 <Users className="w-4 h-4" /> {de ? "Awareness schaffen" : "Raise Awareness"}
               </a>
-              <a href="/donate" className="inline-flex items-center gap-2 rounded-full bg-amber px-6 py-3 font-semibold text-navy hover:brightness-95 transition">
+              <a href={de ? "/de/donate" : "/donate"} className="inline-flex items-center gap-2 rounded-full bg-amber px-6 py-3 font-semibold text-navy hover:brightness-95 transition">
                 {de ? "Jetzt spenden" : "Donate"}
               </a>
             </div>
