@@ -66,8 +66,8 @@ export default function Network({ lang }: { lang: Lang }) {
           : "After establishing Cure MCOPS12 in 2020, we built a global network of patient advocates and researchers."}
       />
 
-      {/* Hero image */}
-      <section className="container-tight pt-4 pb-8">
+      {/* Hero image — desktop shows the wide composition with baked-in quote */}
+      <section className="container-tight pt-4 pb-8 hidden md:block">
         <Reveal>
           <img
             src={networkHero.url}
@@ -75,6 +75,34 @@ export default function Network({ lang }: { lang: Lang }) {
             className="w-full h-auto rounded-2xl object-cover"
             loading="lazy"
           />
+        </Reveal>
+      </section>
+
+      {/* Mobile: cropped baby image + readable HTML quote card */}
+      <section className="container-tight pt-4 pb-8 md:hidden">
+        <Reveal>
+          <div className="rounded-2xl overflow-hidden border border-border bg-card">
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src={networkHero.url}
+                alt={de ? "Kind mit Schnuller schlafend" : "Sleeping child with pacifier"}
+                className="w-full h-full object-cover object-left"
+                loading="lazy"
+              />
+            </div>
+            <div className="p-5">
+              <p className="font-display text-lg text-navy leading-snug">
+                {de
+                  ? "„Wir können nicht warten, bis jemand anderes eine Behandlung entwickelt – also tun wir es selbst."
+                  : "“We cannot wait for someone else to develop a treatment — so we do it ourselves."}
+              </p>
+              <p className="text-sm text-foreground/75 mt-3 leading-relaxed">
+                {de
+                  ? "Was als persönliche Suche zweier Eltern begann, ist heute eine internationale Forschungsinitiative – getragen von Familien, Wissenschaftler:innen und Unterstützer:innen weltweit."
+                  : "What began as the personal search of two parents has become an international research effort — carried by families, scientists and supporters all over the world."}
+              </p>
+            </div>
+          </div>
         </Reveal>
       </section>
 
