@@ -88,7 +88,6 @@ export default function Network({ lang }: { lang: Lang }) {
               className="aspect-square w-full bg-cover bg-no-repeat"
               style={{ backgroundImage: `url(${networkHero.url})`, backgroundPosition: "left center", backgroundSize: "auto 100%" }}
             />
-            </div>
             <div className="p-5">
               <p className="font-display text-lg text-navy leading-snug">
                 {de
