@@ -96,10 +96,10 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
             </p>
             <a
               href="mailto:valerie.chu.hsj@ssss.gouv.qc.ca"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-amber px-7 py-3 font-semibold text-navy hover:brightness-95 transition"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-amber px-5 sm:px-7 py-3 font-semibold text-navy hover:brightness-95 transition max-w-full break-all text-sm sm:text-base"
             >
-              <Mail className="w-4 h-4" />
-              valerie.chu.hsj@ssss.gouv.qc.ca
+              <Mail className="w-4 h-4 shrink-0" />
+              <span className="break-all">valerie.chu.hsj@ssss.gouv.qc.ca</span>
             </a>
           </div>
         </Reveal>
@@ -121,10 +121,10 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
                 </p>
                 <a
                   href="mailto:valerie.chu.hsj@ssss.gouv.qc.ca"
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-teal px-6 py-3 font-semibold text-white hover:brightness-110 transition"
+                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-teal px-5 sm:px-6 py-3 font-semibold text-white hover:brightness-110 transition max-w-full break-all text-sm sm:text-base"
                 >
-                  <Mail className="w-4 h-4" />
-                  valerie.chu.hsj@ssss.gouv.qc.ca
+                  <Mail className="w-4 h-4 shrink-0" />
+                  <span className="break-all">valerie.chu.hsj@ssss.gouv.qc.ca</span>
                 </a>
                 <p className="text-sm text-foreground/70 mt-5">
                   {de ? "Klicken Sie auf den Flyer, um ihn zu öffnen:" : "Click the flyer to open it:"}
