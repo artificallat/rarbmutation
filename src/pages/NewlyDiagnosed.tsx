@@ -8,38 +8,37 @@ export default function NewlyDiagnosed({ lang }: { lang: Lang }) {
   const de = lang === "de";
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-navy via-navy-deep to-navy text-white">
-        <div aria-hidden className="pointer-events-none absolute -top-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-teal/25 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -bottom-40 -left-32 w-[32rem] h-[32rem] rounded-full bg-amber/20 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+      {/* Hero — light themed */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 via-background to-background">
+        <div aria-hidden className="pointer-events-none absolute -top-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-teal/15 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-40 -left-32 w-[32rem] h-[32rem] rounded-full bg-amber/15 blur-3xl" />
 
         <div className="container-wide relative pt-20 pb-24 md:pt-24 md:pb-28">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6 animate-fade-in">
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 px-4 py-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-amber" />
-                <span className="text-xs uppercase tracking-[0.2em] font-semibold text-white/90">{de ? "Familien" : "Families"}</span>
+              <div className="inline-flex items-center gap-2 rounded-full bg-white border border-teal/30 px-4 py-1.5 shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-teal" />
+                <span className="text-xs uppercase tracking-[0.2em] font-semibold text-teal">{de ? "Familien" : "Families"}</span>
               </div>
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-balance">
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-balance text-navy">
                 {de ? "Frisch " : "Newly "}
                 <span className="relative inline-block">
                   <span className="relative z-10 bg-gradient-to-r from-amber to-amber/70 bg-clip-text text-transparent">
                     {de ? "diagnostiziert" : "Diagnosed"}
                   </span>
                 </span>
-                <span className="text-white">?</span>
+                <span className="text-navy">?</span>
               </h1>
-              <p className="text-lg sm:text-xl text-white/80 max-w-xl leading-relaxed">
+              <p className="text-lg sm:text-xl text-foreground/75 max-w-xl leading-relaxed">
                 {de
                   ? "Willkommen in der MCOPS12-Community — ihr seid nicht allein. Hier sind die ersten Schritte, die anderen Familien geholfen haben."
                   : "Welcome to the MCOPS12 community — you are not alone. Here are the first steps that have helped other families."}
               </p>
               <div className="flex flex-wrap gap-3 pt-2">
-                <a href="#connect" className="inline-flex items-center gap-2 rounded-full bg-amber px-6 py-3 font-semibold text-navy hover:brightness-95 transition shadow-lg shadow-amber/20">
+                <a href="#connect" className="inline-flex items-center gap-2 rounded-full bg-amber px-6 py-3 font-semibold text-navy hover:brightness-95 transition shadow-lg shadow-amber/30">
                   <Users className="w-4 h-4" /> {de ? "Mit der Community vernetzen" : "Connect with the community"}
                 </a>
-                <a href="#next-steps" className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 font-semibold text-white hover:bg-white/15 transition">
+                <a href="#next-steps" className="inline-flex items-center gap-2 rounded-full bg-white border border-navy/20 px-6 py-3 font-semibold text-navy hover:border-navy/40 hover:bg-muted/40 transition">
                   <ArrowDown className="w-4 h-4" /> {de ? "Nächste Schritte" : "See next steps"}
                 </a>
               </div>
@@ -47,25 +46,25 @@ export default function NewlyDiagnosed({ lang }: { lang: Lang }) {
 
             {/* Reassurance card */}
             <div className="lg:col-span-5 animate-fade-in">
-              <div className="relative rounded-3xl bg-white/[0.07] backdrop-blur-md border border-white/15 p-8 shadow-2xl">
-                <Quote className="w-10 h-10 text-amber/70 mb-4" />
-                <p className="font-display text-2xl md:text-3xl font-bold leading-snug text-white text-balance">
+              <div className="relative rounded-3xl bg-white border border-border p-8 shadow-xl">
+                <Quote className="w-10 h-10 text-teal mb-4" />
+                <p className="font-display text-2xl md:text-3xl font-bold leading-snug text-navy text-balance">
                   {de
                     ? "Das Wichtigste: Ihr seid damit nicht allein."
                     : "Most importantly, you are not facing this alone."}
                 </p>
-                <div className="mt-8 pt-6 border-t border-white/15 grid grid-cols-3 gap-4 text-center">
+                <div className="mt-8 pt-6 border-t border-border grid grid-cols-3 gap-4 text-center">
                   <div>
-                    <div className="font-display text-2xl font-bold text-amber">3</div>
-                    <div className="text-[11px] uppercase tracking-wider text-white/70 mt-1">{de ? "Organisationen" : "Organisations"}</div>
+                    <div className="font-display text-2xl font-bold text-teal">3</div>
+                    <div className="text-[11px] uppercase tracking-wider text-foreground/60 mt-1">{de ? "Organisationen" : "Organisations"}</div>
                   </div>
-                  <div className="border-x border-white/10">
-                    <div className="font-display text-2xl font-bold text-amber">1</div>
-                    <div className="text-[11px] uppercase tracking-wider text-white/70 mt-1">{de ? "Community" : "Community"}</div>
+                  <div className="border-x border-border">
+                    <div className="font-display text-2xl font-bold text-teal">1</div>
+                    <div className="text-[11px] uppercase tracking-wider text-foreground/60 mt-1">{de ? "Community" : "Community"}</div>
                   </div>
                   <div>
-                    <div className="font-display text-2xl font-bold text-amber">∞</div>
-                    <div className="text-[11px] uppercase tracking-wider text-white/70 mt-1">{de ? "Support" : "Support"}</div>
+                    <div className="font-display text-2xl font-bold text-teal">∞</div>
+                    <div className="text-[11px] uppercase tracking-wider text-foreground/60 mt-1">{de ? "Support" : "Support"}</div>
                   </div>
                 </div>
               </div>
