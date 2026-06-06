@@ -1,4 +1,5 @@
-import { Users, FlaskConical, Heart, Mail, Facebook } from "lucide-react";
+import { FlaskConical, Heart, Mail, Facebook, Linkedin, HandHeart } from "lucide-react";
+import { socials } from "@/content/site";
 import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
