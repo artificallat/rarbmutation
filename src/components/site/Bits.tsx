@@ -66,7 +66,7 @@ export function SectionTitle({ eyebrow, title, center, light }: { eyebrow?: stri
   );
 }
 
-import type { LucideIcon } from "lucide-react";
+import { Sparkles, type LucideIcon } from "lucide-react";
 
 export function PageHeroIllustrated({
   eyebrow,
