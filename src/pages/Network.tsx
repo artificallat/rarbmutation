@@ -82,11 +82,11 @@ export default function Network({ lang }: { lang: Lang }) {
       <section className="container-tight pt-4 pb-8 md:hidden">
         <Reveal>
           <div className="rounded-2xl overflow-hidden border border-border bg-card">
-            <div className="aspect-[4/3] overflow-hidden">
+            <div className="aspect-square overflow-hidden">
               <img
                 src={networkHero.url}
                 alt={de ? "Kind mit Schnuller schlafend" : "Sleeping child with pacifier"}
-                className="w-full h-full object-cover object-left"
+                className="h-full w-auto max-w-none object-cover object-left"
                 loading="lazy"
               />
             </div>
