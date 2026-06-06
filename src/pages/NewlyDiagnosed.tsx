@@ -133,25 +133,79 @@ export default function NewlyDiagnosed({ lang }: { lang: Lang }) {
       <section className="container-wide pb-20">
         <SectionTitle eyebrow="03" title={de ? "Awareness schaffen" : "Raise awareness"} />
         <Reveal>
-          <div className="bg-card border border-border rounded-3xl p-8 space-y-5">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-teal/10 text-teal flex items-center justify-center">
-                <Heart className="w-7 h-7" />
+          <div className="space-y-6">
+            <div className="bg-card border border-border rounded-3xl p-8 space-y-5">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-2xl bg-teal/10 text-teal flex items-center justify-center">
+                  <Heart className="w-7 h-7" />
+                </div>
+                <h3 className="font-display text-2xl font-bold text-navy">{de ? "Awareness und Fundraising" : "Awareness and fundraising"}</h3>
               </div>
-              <h3 className="font-display text-2xl font-bold text-navy">{de ? "Awareness und Fundraising" : "Awareness and fundraising"}</h3>
+              <p className="text-foreground/85 leading-relaxed">
+                {de
+                  ? "Den größten Hebel haben unsere Familien beim Sichtbar-Machen der Erkrankung und beim Sammeln von Spenden. Da MCOPS12 ultra-selten ist, liegt es an uns, sie bekannt zu machen — und Forschung braucht Mittel, um voranzukommen."
+                  : "The largest impacts our families can make are by spreading awareness and by fundraising. Since MCOPS12 is ultra-rare, it is up to us to make it known — and research needs funding to keep moving forward."}
+              </p>
             </div>
-            <p className="text-foreground/85 leading-relaxed">
-              {de
-                ? "Den größten Hebel haben unsere Familien beim Sichtbar-Machen der Erkrankung und beim Sammeln von Spenden. Da MCOPS12 ultra-selten ist, liegt es an uns, sie bekannt zu machen — und Forschung braucht Mittel, um voranzukommen."
-                : "The largest impacts our families can make are by spreading awareness and by fundraising. Since MCOPS12 is ultra-rare, it is up to us to make it known — and research needs funding to keep moving forward."}
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a href={de ? "/de/meet-our-kids" : "/meet-our-kids"} className="inline-flex items-center gap-2 rounded-full bg-teal px-6 py-3 font-semibold text-white hover:brightness-95 transition">
-                <Users className="w-4 h-4" /> {de ? "Awareness schaffen" : "Raise Awareness"}
-              </a>
-              <a href={de ? "/de/donate" : "/donate"} className="inline-flex items-center gap-2 rounded-full bg-amber px-6 py-3 font-semibold text-navy hover:brightness-95 transition">
-                {de ? "Jetzt spenden" : "Donate"}
-              </a>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Share our story */}
+              <div className="group relative bg-gradient-to-br from-teal/5 to-teal/10 border border-teal/20 rounded-3xl p-8 space-y-5 hover:shadow-lg hover:-translate-y-1 transition-all">
+                <div className="w-14 h-14 rounded-2xl bg-teal/15 text-teal flex items-center justify-center">
+                  <HandHeart className="w-7 h-7" />
+                </div>
+                <h4 className="font-display text-xl font-bold text-navy">
+                  {de ? "Teile unsere Geschichte" : "Share our story"}
+                </h4>
+                <p className="text-foreground/80 text-sm leading-relaxed">
+                  {de
+                    ? "Folgt uns auf LinkedIn und Facebook und teilt unsere Beiträge. Jeder neue Kontakt kann der nächste Unterstützer sein."
+                    : "Follow us on LinkedIn and Facebook and share our posts with your network. Every new contact could be the next supporter."}
+                </p>
+                <div className="flex gap-3 pt-2">
+                  <a
+                    href={socials.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="LinkedIn"
+                    className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-navy text-white hover:bg-teal transition"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a
+                    href={socials.facebook}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Facebook"
+                    className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-navy text-white hover:bg-teal transition"
+                  >
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Back our campaign */}
+              <div className="group relative bg-gradient-to-br from-amber/10 to-amber/20 border border-amber/30 rounded-3xl p-8 space-y-5 hover:shadow-lg hover:-translate-y-1 transition-all">
+                <div className="w-14 h-14 rounded-2xl bg-amber/25 text-navy flex items-center justify-center">
+                  <Heart className="w-7 h-7" />
+                </div>
+                <h4 className="font-display text-xl font-bold text-navy">
+                  {de ? "Unterstütze unsere Kampagne" : "Back our campaign"}
+                </h4>
+                <p className="text-foreground/80 text-sm leading-relaxed">
+                  {de
+                    ? "Jede Spende bringt uns der Heilung näher. Hilf mit, die Forschung zu MCOPS12 voranzubringen."
+                    : "Every donation brings us closer to a cure. Help fund the research that drives MCOPS12 forward."}
+                </p>
+                <div className="pt-2">
+                  <a
+                    href={de ? "/de/donate" : "/donate"}
+                    className="inline-flex items-center gap-2 rounded-full bg-amber px-6 py-3 font-semibold text-navy hover:brightness-95 transition shadow-sm"
+                  >
+                    {de ? "Jetzt spenden" : "Donate now"}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </Reveal>
