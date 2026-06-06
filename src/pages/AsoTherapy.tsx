@@ -1,10 +1,8 @@
-import { FlaskConical, Building2, Dna, Sparkles } from "lucide-react";
+import { FlaskConical, Building2 } from "lucide-react";
 import asoFigure1 from "@/assets/research/aso-figure-1.png";
-import { PageHero } from "./WhoWeAre";
-import { SectionTitle } from "@/components/site/Bits";
+import { PageHero } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
-
 import type { Lang } from "@/content/site";
 
 export default function AsoTherapy({ lang }: { lang: Lang }) {
@@ -13,84 +11,50 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
   return (
     <>
       <PageHero
-        eyebrow={de ? "Erfolge / Fachkreise" : "Achievements / Professionals"}
-        title={de ? "Simons ASO-Therapie" : "Simon's ASO Therapy"}
+        eyebrow={de ? "Montag, 13. April 2026 · 00:47" : "Monday, 13 April 2026 · 00:47"}
+        title={"N-of-1 ASO Therapy"}
         sub={de
-          ? "Eine maßgeschneiderte RNA-Therapie für Simon — und gleichzeitig eine Vorlage, die anderen MCOPS12-Kindern weltweit zugutekommen kann."
-          : "A bespoke RNA therapy designed for Simon — and at the same time a template that can benefit other MCOPS12 children worldwide."}
+          ? "Eine allelspezifische Antisense-Oligonukleotid-Therapie — entwickelt für Simon, als Blaupause für weitere MCOPS12-Patient:innen."
+          : "An allele-specific antisense oligonucleotide therapy — developed for Simon, as a blueprint for other MCOPS12 patients."}
       />
 
-      {/* Intro / What is an ASO */}
-      <section className="container-wide pb-12 pt-4">
-        <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-start">
-          <div>
-            <SectionTitle eyebrow={de ? "Grundlagen" : "The basics"} title={de ? "Was ist eine Antisense-Oligonukleotid- (ASO) Therapie?" : "What is an antisense oligonucleotide (ASO) therapy?"} />
-            <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
-              <Reveal><p>
-                {de
-                  ? "ASO-Therapeutika sind kurze, synthetisch hergestellte Nukleotidstränge – die Bausteine von DNA und RNA – mit einer Länge von typischerweise 15 bis 25 Einheiten. Sie gehören zur Klasse der RNA-Therapeutika und sind darauf ausgelegt, mit hoher Spezifität an eine einzelne Boten-RNA (mRNA) zu binden – das kurzlebige „Rezept“, das eine Zelle zur Herstellung eines Proteins verwendet."
-                  : "ASO therapeutics are short, synthetic strands of nucleotides - the building blocks of DNA and RNA - typically 15 to 25 units in length. They are part of the RNA therapeutics class and are designed to bind with high specificity to a single messenger RNA (mRNA), the temporary “recipe” a cell uses to produce a protein."}
-              </p></Reveal>
-              <Reveal delay={120}><p>
-                {de
-                  ? "Das Ziel ist die Boten-RNA (mRNA): das kurzlebige Rezept, dem eine Zelle folgt, um ein Protein herzustellen. Bindet ein ASO an eine ausgewählte mRNA, kann es entweder verhindern, dass ein schädliches Protein entsteht, oder das Rezept so korrigieren, dass ein fehlendes Protein wieder funktioniert."
-                  : "That target is messenger RNA (mRNA): the short-lived \"recipe\" a cell follows to make a protein. By binding to a chosen mRNA, an ASO can either stop a harmful protein from being made or correct the recipe so a missing protein works again."}
-              </p></Reveal>
-              <Reveal delay={240}><p>
-                {de
-                  ? "Dieser hochpräzise Mechanismus macht ASO-Therapeutika zu einem leistungsfähigen Ansatz zur Behandlung einer Vielzahl genetischer Erkrankungen, einschließlich seltener Krankheiten (Lauffer et al. 2024 "
-                  : "This highly precise mechanism makes ASO therapeutics a powerful approach for treating a wide range of genetic disorders, including rare diseases (Lauffer et al. 2024 "}
-                <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">https://www.nature.com/articles/s43856-023-00419-1</a>
-                {de
-                  ? "). Da ASOs auf mRNA und nicht auf DNA wirken, sind ihre Effekte reversibel, was eine wiederholte Dosierung erforderlich macht."
-                  : "). Since ASOs act on mRNA and not on DNA, their effects are reversible, meaning repeated dosing is required."}
-              </p></Reveal>
-            </div>
-          </div>
-
-          {/* Decorative metaphor tile */}
-          <Reveal delay={200}>
-            <div className="hidden lg:flex relative w-72 aspect-square rounded-3xl bg-gradient-to-br from-teal/15 via-teal/5 to-amber/10 border border-border items-center justify-center overflow-hidden">
-              <div aria-hidden className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-teal/20 blur-3xl animate-pulse" />
-              <div aria-hidden className="absolute -bottom-10 -left-10 w-44 h-44 rounded-full bg-amber/20 blur-3xl" />
-              <div className="relative flex flex-col items-center gap-4 text-teal">
-                <Dna className="w-20 h-20" strokeWidth={1.4} />
-                <div className="flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-amber" />
-                  <p className="font-display text-xs uppercase tracking-[0.3em] text-navy/70">
-                    {de ? "Präzise. Reversibel." : "Precise. Reversible."}
-                  </p>
-                  <Sparkles className="w-5 h-5 text-amber" />
-                </div>
-              </div>
-            </div>
-          </Reveal>
+      {/* What is an ASO */}
+      <section className="container-tight pb-12 pt-4">
+        <h2 className="font-display text-3xl font-bold text-navy mb-6">
+          What is an Antisense Oligonucleotide (ASO) Therapy?
+        </h2>
+        <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
+          <p>
+            ASO therapeutics are short, synthetic strands of nucleotides - the building blocks of DNA and RNA - typically 15 to 25 units in length. They are part of the RNA therapeutics class and are designed to bind with high specificity to a single messenger RNA (mRNA), the temporary "recipe" a cell uses to produce a protein.
+          </p>
+          <p>
+            By binding to their target mRNA, ASOs can either block the production of disease‑causing proteins or modify the mRNA in a way that restores normal protein function when it would otherwise be lost. This highly precise mechanism makes ASO therapeutics a powerful approach for treating a wide range of genetic disorders, including rare diseases (Lauffer et al. 2024{" "}
+            <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">
+              https://www.nature.com/articles/s43856-023-00419-1
+            </a>
+            ). Since ASOs act on mRNA and not on DNA, their effects are reversible, meaning repeated dosing is required.
+          </p>
         </div>
       </section>
 
-      {/* Mechanism for MCOPS12 */}
+      {/* How does an ASO work in MCOPS12 */}
       <section className="bg-muted/40 py-16">
         <div className="container-tight">
-          <SectionTitle eyebrow="MCOPS12" title={de ? "Wie wirkt eine ASO-Therapie bei Patient:innen mit MCOPS12?" : "How does an ASO therapy work in patients with MCOPS12?"} />
-          <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
+          <h2 className="font-display text-3xl font-bold text-navy mb-6">
+            How does an ASO therapy work in patients with MCOPS12?
+          </h2>
+          <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
             <p>
-              {de
-                ? <>Bei den meisten Patient:innen mit MCOPS12 ist eine Kopie des <em>RARB</em>-Gens mutiert, während die andere Kopie gesund bleibt (Wildtyp = trägt keine Mutation). Beide Kopien produzieren mRNA, aber nur die mutierte mRNA führt zur Bildung einer schädlichen <em>RARB</em>-Proteinvariante. Ein ASO kann so entworfen werden, dass es selektiv die mutierte <em>RARB</em>-mRNA erkennt und daran bindet.</>
-                : <>In most patients with MCOPS12, one copy of the <em>RARB</em> gene is mutated while the other copy stays healthy (wild-type = carries no mutation). Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful <em>RARB</em> protein variant. An ASO can be designed to selectively recognize and bind to the mutant <em>RARB</em> mRNA.</>}
+              In most patients with MCOPS12, one copy of the <em>RARB</em> gene is mutated while the other copy stays healthy (wild-type = carries no mutation). Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful RARB protein variant. An ASO can be designed to selectively recognize and bind to the mutant <em>RARB</em> mRNA.
             </p>
             <p>
-              {de
-                ? "Nach dem Eintritt in die Zelle bindet das ASO über Watson–Crick-Basenpaarung an seine Ziel-mRNA und bildet einen kurzen RNA–DNA-Duplex (Abbildung 1, Panel 2). Dieser Duplex wird von einem körpereigenen Enzym namens RNase H1 erkannt, das die mRNA schneidet und abbaut. Dadurch kann das mutierte Protein nicht mehr produziert werden. Dieser Mechanismus wird als "
-                : "After entering the cell, the ASO binds to its target mRNA through Watson–Crick base pairing, forming a short RNA–DNA duplex (Figure 1, Panel 2). This duplex is detected by a natural enzyme called RNase H1, which cuts and degrades the mRNA. As a result, the mutant protein can no longer be produced. This mechanism is known as "}
-              <strong>{de ? "mRNA-Knockdown bezeichnet." : "mRNA knockdown."}</strong>
+              After entering the cell, the ASO binds to its target mRNA through Watson–Crick base pairing, forming a short RNA–DNA duplex (Figure 1, Panel 2). This duplex is detected by a natural enzyme called RNase H1, which cuts and degrades the mRNA. As a result, the mutant protein can no longer be produced. This mechanism is known as <strong>mRNA knockdown</strong>.
             </p>
             <p>
-              {de ? <>Bei MCOPS12 muss das ASO </> : <>For MCOPS12, the ASO must be </>}
-              <strong>{de ? "allelspezifisch" : "\"allele-specific\""}</strong>
-              {de
-                ? <> sein — das heißt, es reduziert selektiv die mutierte <em>RARB</em>-mRNA, während die gesunde mRNA unberührt bleibt. Diese Selektivität ist essenziell, da das RARB-Protein eine zentrale Rolle in der normalen Hirnentwicklung spielt. Eine Eliminierung des gesunden Proteins würde zu Symptomen führen, die jenen von MCOPS12 selbst ähneln (Ciancia et al. 2022, </>
-                : <> – meaning it selectively reduces the mutant <em>RARB</em> mRNA while leaving the healthy mRNA untouched. This selectivity is essential because the RARB protein plays a key role in normal brain development. Eliminating the healthy protein would lead to symptoms similar to those seen in MCOPS12 itself (Ciancia et al. 2022, </>}
-              <a className="text-teal font-semibold hover:underline break-all" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">ScienceDirect</a>
+              For MCOPS12, the ASO must be "allele-specific" - meaning it selectively reduces the mutant <em>RARB</em> mRNA while leaving the healthy mRNA untouched. This selectivity is essential because the RARB protein plays a key role in normal brain development. Eliminating the healthy protein would lead to symptoms similar to those seen in MCOPS12 itself. (Ciancia et al. 2022{" "}
+              <a className="text-teal font-semibold hover:underline break-all" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">
+                https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub
+              </a>
               ).
             </p>
           </div>
@@ -101,93 +65,71 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
       <section className="container-tight py-12">
         <Reveal>
           <figure className="rounded-3xl overflow-hidden border border-border bg-card">
-            <img src={asoFigure1} alt={de ? "Abbildung 1 — Mechanismus eines ASO für allelspezifischen mRNA-Knockdown" : "Figure 1 — Mechanism of an ASO for allele-specific mRNA knockdown"} className="w-full h-auto" loading="lazy" />
+            <img src={asoFigure1} alt="Mechanism of antisense oligonucleotide (ASO) for allele-specific mRNA knockdown" className="w-full h-auto" loading="lazy" />
             <figcaption className="text-sm text-foreground/70 p-4 border-t border-border">
-              <strong className="text-navy">{de ? "Abbildung 1:" : "Figure 1:"}</strong>{" "}
-              {de
-                ? "Mechanismus eines Antisense-Oligonukleotids (ASO) für allelspezifischen mRNA-Knockdown."
-                : "Mechanism of an antisense oligonucleotide (ASO) for allele-specific mRNA knockdown."}
+              <strong className="text-navy">Figure 1:</strong> Mechanism of antisense oligonucleotide (ASO) for allele-specific mRNA knockdown.
             </figcaption>
           </figure>
+          <p className="text-sm text-foreground/70 mt-3">Personalized</p>
         </Reveal>
       </section>
 
-      {/* Simon's path */}
+      {/* Simon's personalized therapy */}
       <section className="container-tight pb-12">
-        <SectionTitle eyebrow={de ? "Personalisiert" : "Personalized"} title={de ? "Simons personalisierte allelspezifische ASO-Therapie" : "Simon's personalized allele-specific ASO therapy"} />
-        <div className="space-y-5 -mt-2 text-foreground/85 leading-relaxed text-lg">
+        <h2 className="font-display text-3xl font-bold text-navy mb-6">
+          Simon´s personalized allele-specific ASO therapy
+        </h2>
+        <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
           <p>
-            {de
-              ? "Die Entwicklung einer allelspezifischen ASO-Therapie ist von Natur aus herausfordernd (Hauser et al. 2022, "
-              : "The development of an allele-specific ASO therapy is inherently challenging (Hauser et al. 2022, "}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">Pharmaceutics</a>
-            ).
+            The development of an allele‑specific ASO therapy is inherently challenging (Hauser at al. 2022{" "}
+            <a className="text-teal font-semibold hover:underline break-all" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">
+              https://www.mdpi.com/1999-4923/14/8/1708
+            </a>
+            ). Simon carries the pathogenic <em>RARB</em> variant c.1159C&gt;T (p.R387C), which is present in approximately 30% of all MCOPS12 patients, and characterized as dominant-negative in vivo (Zinter et al. 2026, Link:{" "}
+            <a className="text-teal font-semibold hover:underline break-all" href="https://www.biorxiv.org/content/10.64898/2026.02.20.706764v1" target="_blank" rel="noreferrer">
+              https://www.biorxiv.org/content/10.64898/2026.02.20.706764v1
+            </a>
+            ). Based on computational analyses, the design of an ASO that selectively targets this specific mutation was not considered promising.
           </p>
           <p>
-            {de ? <>Simon trägt die pathogene <em>RARB</em>-Variante </> : <>Simon carries the pathogenic <em>RARB</em> variant </>}
-            <strong>c.1159C&gt;T (p.R387C)</strong>
-            {de
-              ? <>, die bei etwa 30 % aller MCOPS12-Patient:innen vorkommt und in vivo als dominant-negativ charakterisiert wurde (Zinter et al. 2026, </>
-              : <>, which is present in approximately 30% of all MCOPS12 patients, and characterized as dominant-negative in vivo (Zinter et al. 2026, </>}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.biorxiv.org/content/10.64898/2026.02.20.706764v1" target="_blank" rel="noreferrer">bioRxiv</a>
-            ).
+            Therefore, we performed advanced genetic analyses using <strong>long‑read sequencing</strong> to <strong>identify additional sequence variants on Simon's mutant <em>RARB</em> allele</strong> that could serve as more suitable ASO target sites. This approach revealed dozens of variants (SNPs, indels) that are exclusively present on the mutant allele and thus represent <strong>ideal targets for an allele‑specific ASO therapy</strong>.
           </p>
           <p>
-            {de
-              ? "Auf Basis computergestützter Analysen wurde die Entwicklung eines ASO, das selektiv genau diese Mutation adressiert, nicht als erfolgversprechend eingestuft."
-              : "Based on computational analyses, the design of an ASO that selectively targets this specific mutation was not considered promising."}
+            While these results are very encouraging, they also imply that the resulting ASO therapy is highly customized to Simon. Importantly, however, the ASO development workflow established here (Figure 2) provides a robust <strong>blueprint</strong> that can be applied to the development of personalized ASO therapies <strong>for other patients with MCOPS12</strong>.
           </p>
-          <p>
-            {de
-              ? <>Daher führten wir fortschrittliche genetische Analysen mittels <strong>Long-Read-Sequenzierung</strong> durch, um <strong>weitere Sequenzvarianten auf Simons mutiertem <em>RARB</em>-Allel zu identifizieren</strong>, die als besser geeignete ASO-Zielstellen dienen könnten. Dieser Ansatz brachte dutzende Varianten (SNPs, Indels) zutage, die ausschließlich auf dem mutierten Allel vorkommen und somit <strong>ideale Ziele für eine allelspezifische ASO-Therapie</strong> darstellen.</>
-              : <>Therefore, we performed advanced genetic analyses using <strong>long-read sequencing</strong> to <strong>identify additional sequence variants on Simon's mutant <em>RARB</em> allele</strong> that could serve as more suitable ASO target sites. This approach revealed dozens of variants (SNPs, indels) that are exclusively present on the mutant allele and thus represent <strong>ideal targets for an allele-specific ASO therapy</strong>.</>}
-          </p>
-          <p>
-            {de
-              ? <>Diese Ergebnisse sind sehr ermutigend, bedeuten aber auch, dass die resultierende ASO-Therapie hochgradig auf Simon zugeschnitten ist. Wichtig ist jedoch: Der hier etablierte ASO-Entwicklungs-Workflow (Abbildung 2) liefert eine robuste <strong>Blaupause</strong>, die auf die Entwicklung personalisierter ASO-Therapien <strong>für weitere Patient:innen mit MCOPS12</strong> übertragen werden kann.</>
-              : <>While these results are very encouraging, they also imply that the resulting ASO therapy is highly customized to Simon. Importantly, however, the ASO development workflow established here (Figure 2) provides a robust <strong>blueprint</strong> that can be applied to the development of personalized ASO therapies <strong>for other patients with MCOPS12</strong>.</>}
-          </p>
-
         </div>
       </section>
 
-      {/* Workflow figure */}
-      <section className="container-wide py-16">
+      {/* Figure 2 — Workflow */}
+      <section className="container-wide py-12">
         <Reveal>
           <AsoWorkflowFigure lang={de ? "de" : "en"} />
         </Reveal>
       </section>
 
-
-
-
-
       {/* Partners */}
-      <section className="container-wide pb-20">
-        <SectionTitle eyebrow={de ? "Partner" : "Partners"} title={de ? "Wo die Arbeit stattfindet" : "Where the work is done"} />
+      <section className="container-tight pb-20">
+        <div className="space-y-5 text-foreground/85 leading-relaxed text-lg mb-8">
+          <p>
+            Target identification, ASO design and efficacy screening was performed at RareLabs (a division of AlphaRose Therapeutics)
+          </p>
+        </div>
         <div className="grid md:grid-cols-3 gap-5">
           <a href="https://hopeatrarelabs.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all">
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
               <FlaskConical className="w-6 h-6" />
             </div>
             <h4 className="font-display text-lg font-bold text-navy">RareLabs (AlphaRose Therapeutics)</h4>
-            <p className="text-foreground/75 mt-2 text-base">
-              {de
-                ? "Zielidentifikation, ASO-Design und Wirksamkeits-Screening."
-                : "Target identification, ASO design and efficacy screening."}
-            </p>
-            <p className="text-sm text-teal font-semibold mt-3 break-all">hopeatrarelabs.com</p>
+            <p className="text-sm text-teal font-semibold mt-3 break-all">https://hopeatrarelabs.com/</p>
           </a>
 
-          <div className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all">
+          <div className="bg-card border border-border rounded-2xl p-6">
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
               <Building2 className="w-6 h-6" />
             </div>
-            <h4 className="font-display text-lg font-bold text-navy">{de ? "Großes Pharmaunternehmen" : "Large pharma partner"}</h4>
+            <h4 className="font-display text-lg font-bold text-navy">Large pharma company (undisclosed)</h4>
             <p className="text-foreground/75 mt-2 text-base">
-              {de
-                ? "Zusätzliche ASO-Designs sowie Sicherheitstests in Simons Zellmodell (Name nicht öffentlich)."
-                : "Additional ASO designs and safety testing in Simon's cell model (name undisclosed)."}
+              Additional designs of ASOs and safety testing in Simon´s cell model was performed at a large pharma company (undisclosed).
             </p>
           </div>
 
@@ -197,15 +139,12 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             </div>
             <h4 className="font-display text-lg font-bold text-navy">Hongene Biotech</h4>
             <p className="text-foreground/75 mt-2 text-base">
-              {de
-                ? "Herstellung der ASO-Wirkstoffe für die In-vivo-Sicherheitsstudien."
-                : "Manufacturing of the ASO drug substance for the in-vivo safety studies."}
+              ASO drugs for in vivo safety studies were produced at Hongene Biotech.
             </p>
-            <p className="text-sm text-teal font-semibold mt-3 break-all">hongene.com</p>
+            <p className="text-sm text-teal font-semibold mt-3 break-all">https://www.hongene.com/</p>
           </a>
         </div>
       </section>
     </>
   );
 }
-
