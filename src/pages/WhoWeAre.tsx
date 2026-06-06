@@ -180,6 +180,45 @@ function SabCard({ s, lang, photo }: { s: any; lang: Lang; photo?: string }) {
   );
 }
 
+function BoardCard({ b, lang }: { b: typeof board[number]; lang: Lang }) {
+  const [open, setOpen] = useState(false);
+  const de = lang === "de";
+  const bioText = b.bio[lang];
+  const collapsed = bioText.length > 220 ? bioText.slice(0, 220).trimEnd() + "…" : bioText;
+  const needsToggle = bioText.length > 220;
+  return (
+    <div className="bg-card rounded-3xl overflow-hidden border border-border flex flex-col h-full">
+      <Placeholder
+        label={b.name}
+        src={photos[b.name]}
+        objectFit="contain"
+        objectPosition="center"
+        className="aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] max-h-[280px] sm:max-h-[300px] md:max-h-[320px] !rounded-none shrink-0 bg-muted"
+      />
+      <div className="p-7 flex flex-col flex-1">
+        <h3 className="font-display text-2xl font-bold text-navy">{b.name}</h3>
+        <p className="text-teal font-semibold mt-1">{b.role[lang]}</p>
+        <p className="text-foreground/75 mt-4 leading-relaxed whitespace-pre-line">
+          {geneFmt(needsToggle && !open ? collapsed : bioText)}
+        </p>
+        {needsToggle && (
+          <button
+            type="button"
+            onClick={() => setOpen(o => !o)}
+            className="mt-3 self-start inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal"
+          >
+            {open ? (de ? "Weniger" : "Show less") : (de ? "Mehr lesen" : "Read more")}
+            <ChevronDown className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} />
+          </button>
+        )}
+        {b.linkedin && (
+          <a href={b.linkedin} target="_blank" rel="noreferrer" className="mt-4 self-start inline-flex items-center gap-1 text-xs font-semibold text-navy hover:text-teal"><Linkedin className="w-3.5 h-3.5"/> LinkedIn</a>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function VolunteerCard({ v, lang }: { v: typeof volunteers[number]; lang: Lang }) {
   const [open, setOpen] = useState(false);
   const photo = volunteerPhotos[v.name];
