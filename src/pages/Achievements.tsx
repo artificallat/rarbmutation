@@ -1,148 +1,151 @@
-import { SectionTitle } from "@/components/site/Bits";
-import { useInView, Reveal, Counter } from "@/components/site/Reveal";
+import { FlaskConical, Building2 } from "lucide-react";
+import asoFigure1 from "@/assets/research/aso-figure-1.png";
 import { PageHero } from "@/pages/WhoWeAre";
-import { Trophy, FlaskConical, Target, Users, Globe2, Award, Network as NetworkIcon, Microscope } from "lucide-react";
+import { Reveal } from "@/components/site/Reveal";
+import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
 import type { Lang } from "@/content/site";
-import { geneFmt } from "@/lib/gene";
-
-const milestones = [
-  { y: "2017", en: "Simon is born — diagnosis of MCOPS12 (RARB mutation) follows", de: "Simon wird geboren – die Diagnose MCOPS12 (RARB-Mutation) folgt" },
-  { y: "Founding", en: "Cure MCOPS12 founded in Austria by Edith & Reinhard Pell", de: "Cure MCOPS12 in Österreich von Edith & Reinhard Pell gegründet" },
-  { y: "Network", en: "International research network with partners in France, Canada and the US established", de: "Internationales Forschungsnetzwerk mit Partnern in Frankreich, Kanada und den USA aufgebaut" },
-  { y: "Registry", en: "Natural History Study launched — international MCOPS12 patient registry", de: "Natural History Study gestartet – internationales MCOPS12-Patientenregister" },
-  { y: "2023", en: "ASO program initiated — 6 safe candidates identified in cellular models", de: "ASO-Programm gestartet – 6 sichere Kandidaten in Zellmodellen identifiziert" },
-  { y: "Now", en: "Toxicity study underway to select the safest ASO for Simon", de: "Toxizitätsstudie läuft – Auswahl des sichersten ASO für Simon" },
-  { y: "Goal", en: "First administration of Simon's ASO therapy", de: "Erste Verabreichung von Simons ASO-Therapie" },
-];
 
 export default function Achievements({ lang }: { lang: Lang }) {
   const de = lang === "de";
+
   return (
     <>
-      <PageHero eyebrow={de ? "Erfolge" : "Achievements"} title={de ? "Von der Diagnose zum Handeln" : "From Diagnosis to Action"}
+      <PageHero
+        eyebrow={de ? "Sonntag, 19. April 2026 · 11:30" : "Sunday, 19 April 2026 · 11:30"}
+        title={"Simon´s ASO Therapy"}
         sub={de
-          ? "Nach Simons Diagnose und der Gründung von Cure MCOPS12 haben wir ein internationales Forschungsnetzwerk aufgebaut, eine Natural History Study etabliert und ein personalisiertes ASO-Therapieprogramm in die präklinische Endphase gebracht."
-          : "Following Simon's diagnosis and the founding of Cure MCOPS12, we have built an international research network, established a Natural History Study, and advanced a personalised ASO therapy program into late preclinical development."} />
+          ? "Eine maßgeschneiderte RNA-Therapie für Simon — und gleichzeitig eine Vorlage für andere MCOPS12-Kinder."
+          : "A bespoke RNA therapy for Simon — and a blueprint for other MCOPS12 children."}
+      />
 
-      <section className="container-wide py-16">
-        <SectionTitle eyebrow={de ? "Bilanz" : "By the numbers"} title={de ? "Was bisher erreicht wurde" : "What we have achieved so far"} />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
-          {[
-            { icon: Trophy, prefix: "€", to: 235, suffix: "k+", l: de ? "Spendenmittel mobilisiert (Mai 2026)" : "Funds mobilised (May 2026)" },
-            { icon: NetworkIcon, prefix: "", to: 4, suffix: "", l: de ? "Akademische Forschungspartner" : "Academic research partners" },
-            { icon: FlaskConical, prefix: "", to: 6, suffix: "", l: de ? "ASO-Kandidaten identifiziert" : "ASO candidates identified" },
-            { icon: Users, prefix: "", to: 52, suffix: "+", l: de ? "Familien im Register weltweit" : "Families in the registry worldwide" },
-          ].map((s, i) => (
-            <Reveal key={s.l} delay={i * 120}>
-              <div className="bg-card border border-border rounded-2xl p-7 h-full hover:-translate-y-2 hover:shadow-xl hover:border-amber transition-all duration-300 group">
-                <div className="w-16 h-16 rounded-2xl bg-amber/15 text-amber flex items-center justify-center mb-4 group-hover:bg-amber group-hover:text-navy group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                  <s.icon className="w-8 h-8" />
-                </div>
-                <p className="font-display text-4xl font-bold text-navy">
-                  {s.prefix}<Counter to={s.to} duration={2000} />{s.suffix}
-                </p>
-                <p className="text-sm text-foreground/70 mt-2 leading-snug">{s.l}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl">
-          <Reveal>
-            <p className="text-lg leading-relaxed text-foreground/80">
-              {de
-                ? "Als Reinhard und Edith Pell die Diagnose ihres Sohnes Simon erhielten, gab es für MCOPS12 weder eine Behandlung noch eine etablierte Forschungsinfrastruktur. Innerhalb weniger Monate gründeten sie Cure MCOPS12 und begannen, Forschende, Kliniker:innen und andere betroffene Familien zu vernetzen – mit dem Ziel, aus einer ultra-seltenen Diagnose ein konkretes Forschungsprogramm zu machen."
-                : "When Reinhard and Edith Pell received their son Simon's diagnosis, MCOPS12 had no treatment and no established research infrastructure. Within months they founded Cure MCOPS12 and began connecting researchers, clinicians and other affected families — with one goal: to turn an ultra-rare diagnosis into a concrete research program."}
-            </p>
-          </Reveal>
-          <Reveal delay={150}>
-            <p className="text-lg leading-relaxed text-foreground/80">
-              {de
-                ? "Heute koordiniert Cure MCOPS12 ein internationales Forschungsnetzwerk, finanziert präklinische Studien mit und ist Hauptträger einer personalisierten ASO-Therapie, die in der entscheidenden Toxizitätsphase steht. Jeder Schritt war ein Meilenstein, der ohne ehrenamtliches Engagement, Spender:innen und wissenschaftliche Partner nicht möglich gewesen wäre."
-                : "Today, Cure MCOPS12 coordinates an international research network, co-funds preclinical studies, and is the driving force behind a personalised ASO therapy now in its critical toxicity phase. Every step has been a milestone — none of which would have been possible without volunteers, donors and scientific partners."}
-            </p>
-          </Reveal>
+      {/* What is an ASO */}
+      <section className="container-tight pb-12 pt-4">
+        <h2 className="font-display text-3xl font-bold text-navy mb-6">
+          What is an Antisense Oligonucleotide (ASO) Therapy?
+        </h2>
+        <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
+          <p>
+            ASOs are short, lab-made strands of genetic material built from the same building blocks as our own DNA and RNA. The easiest way to picture them is as a tiny, highly precise strip of tape that sticks to one — and only one — target inside a cell.
+          </p>
+          <p>
+            That target is messenger RNA (mRNA): the short-lived "recipe" a cell follows to make a protein. By binding to a chosen mRNA, an ASO can either stop a harmful protein from being made or correct the recipe so a missing protein works again.
+          </p>
+          <p>
+            This precision is what makes ASOs so promising for genetic conditions, including rare diseases (Lauffer et al. 2024{" "}
+            <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">
+              https://www.nature.com/articles/s43856-023-00419-1
+            </a>
+            ). Because ASOs work on mRNA rather than on DNA itself, their effect is temporary - patients need repeated doses to keep the therapy effective.
+          </p>
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-navy to-navy-deep text-white py-20">
+      {/* How does an ASO work in MCOPS12 */}
+      <section className="bg-muted/40 py-16">
         <div className="container-tight">
-          <SectionTitle light eyebrow={de ? "ASO-Programm" : "ASO program"} title={de ? "Forschung & Arzneimittelentwicklung – Meilensteine" : "Research & Drug Development Milestones"} />
-          <Reveal>
-            <p className="text-lg text-white/85 leading-relaxed max-w-3xl">
-              {geneFmt(de
-                ? "Gemeinsam mit AlphaRose RareLabs (USA), IGBMC (Frankreich) und CHU Sainte-Justine (Kanada) haben wir eine Antisense-Oligonukleotid-Therapie entwickelt, die genau auf Simons RARB-Mutation zielt. Sechs sichere und wirksame Kandidaten wurden im zellulären Modell identifiziert. Aktuell läuft die entscheidende Toxizitätsstudie, in der die Verträglichkeit für die spätere Anwendung am Menschen geprüft wird. Dieser N-of-1-Ansatz dient zugleich als Modell für weitere MCOPS12-Patient:innen weltweit – das Verfahren lässt sich auf andere Mutationen übertragen."
-                : "In collaboration with AlphaRose RareLabs (US), IGBMC (France), and CHU Sainte-Justine (Canada), we have developed an antisense oligonucleotide therapy targeting Simon's specific RARB mutation. Six safe and efficacious ASO candidates were identified in a cellular disease model. We are now conducting the critical toxicity study to identify the safest ASO for first-in-human administration. This N-of-1 approach also serves as a blueprint for other MCOPS12 patients worldwide — the methodology can be adapted to other mutations.")}
+          <h2 className="font-display text-3xl font-bold text-navy mb-6">
+            How does an ASO therapy work in patients with MCOPS12?
+          </h2>
+          <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
+            <p>
+              In most patients with MCOPS12, <strong>one copy of the <em>RARB</em> gene is mutated</strong> while the <strong>other copy stays healthy</strong>. Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful version of the RARB protein.
             </p>
-          </Reveal>
-
-          <Timeline items={milestones} de={de} />
+            <p>
+              An ASO can be designed to recognize only the faulty mRNA. Once inside the cell, it pairs with that mRNA like two halves of a zipper (Figure 1, Panel 2). A natural enzyme called RNase H1 spots this pairing and destroys the faulty mRNA — so the harmful protein never gets made. Scientists call this <strong>"mRNA knockdown"</strong>.
+            </p>
+            <p>
+              <strong>The catch:</strong> the ASO has to be <strong>allele-specific</strong> — it must silence only the faulty copy and leave the healthy one untouched. That's because the healthy RARB protein is essential for normal brain development. Knocking it out by mistake would cause the very symptoms we're trying to prevent. (Ciancia et al. 2022{" "}
+              <a className="text-teal font-semibold hover:underline break-all" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">
+                https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub
+              </a>
+              ).
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="container-wide py-20">
-        <SectionTitle eyebrow={de ? "Über das ASO-Programm hinaus" : "Beyond the ASO program"} title={de ? "Weitere Meilensteine" : "Further milestones"} />
-        <div className="grid md:grid-cols-3 gap-6">
-          {(de ? [
-            { i: NetworkIcon, t: "Internationales Forschungsnetzwerk", d: "Aufbau eines koordinierten Netzwerks mit Forschungspartnern in Frankreich, Kanada und den USA – gemeinsame Arbeit an Krankheitsmodellen, Wirkstoffen und ASO-Design." },
-            { i: Microscope, t: "Natural History Study", d: "Etablierung des ersten internationalen MCOPS12-Patientenregisters – die regulatorische Voraussetzung für jede klinische Studie." },
-            { i: FlaskConical, t: "Wirkstoff-Repurposing", d: "Sechs bereits klinisch erprobte Substanzen werden in MCOPS12-Mausmodellen getestet – als möglicher schneller Weg zu Symptomtherapien." },
-            { i: Users, t: "Familien-Community", d: "Aufbau einer aktiven globalen Community mit jährlichen Konferenzen, etwa am CHU Sainte-Justine in Montréal." },
-            { i: Globe2, t: "Behördliche Anerkennung", d: "Aktive Mitwirkung in nationalen und EU-weiten Allianzen für seltene Erkrankungen (Pro Rare Austria, EURORDIS)." },
-            { i: Award, t: "Wissenschaftlicher Beirat", d: "Etablierung eines internationalen Scientific Advisory Boards mit führenden Expert:innen aus Genetik, Neurologie und Wirkstoffentwicklung." },
-          ] : [
-            { i: NetworkIcon, t: "International research network", d: "Built a coordinated network with research partners in France, Canada and the United States — working jointly on disease models, drug candidates and ASO design." },
-            { i: Microscope, t: "Natural History Study", d: "Established the first international MCOPS12 patient registry — the regulatory prerequisite for any clinical trial." },
-            { i: FlaskConical, t: "Drug repurposing", d: "Six clinically validated compounds are being tested in MCOPS12 mouse models as a potential fast track to symptomatic treatments." },
-            { i: Users, t: "Family community", d: "Built an active global community with annual conferences, including at CHU Sainte-Justine in Montréal." },
-            { i: Globe2, t: "Regulatory voice", d: "Active participation in national and EU-wide rare-disease alliances (Pro Rare Austria, EURORDIS)." },
-            { i: Award, t: "Scientific Advisory Board", d: "Established an international Scientific Advisory Board with leading experts in genetics, neurology and drug development." },
-          ]).map((b, i) => (
-            <Reveal key={b.t} delay={i * 100}>
-              <div className="bg-card border border-border rounded-2xl p-7 h-full hover:-translate-y-2 hover:shadow-xl hover:border-teal transition-all duration-300 group">
-                <div className="w-16 h-16 rounded-2xl bg-teal/10 text-teal flex items-center justify-center mb-4 group-hover:bg-teal group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                  <b.i className="w-8 h-8" />
-                </div>
-                <h4 className="font-display text-xl font-bold text-navy mb-2">{b.t}</h4>
-                <p className="text-foreground/75 leading-relaxed">{b.d}</p>
-              </div>
-            </Reveal>
-          ))}
+      {/* Figure 1 */}
+      <section className="container-tight py-12">
+        <Reveal>
+          <figure className="rounded-3xl overflow-hidden border border-border bg-card">
+            <img src={asoFigure1} alt="Mechanism of antisense oligonucleotide (ASO) for allele-specific mRNA knockdown" className="w-full h-auto" loading="lazy" />
+            <figcaption className="text-sm text-foreground/70 p-4 border-t border-border">
+              <strong className="text-navy">Figure 1:</strong> Mechanism of antisense oligonucleotide (ASO) for allele-specific mRNA knockdown.
+            </figcaption>
+          </figure>
+        </Reveal>
+      </section>
+
+      {/* Simon's personalized therapy */}
+      <section className="container-tight pb-12">
+        <h2 className="font-display text-3xl font-bold text-navy mb-6">
+          Simon´s personalized allele-specific ASO therapy
+        </h2>
+        <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
+          <p>
+            The development of an allele-specific ASO therapy is inherently challenging (Hauser at al. 2022{" "}
+            <a className="text-teal font-semibold hover:underline break-all" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">
+              https://www.mdpi.com/1999-4923/14/8/1708
+            </a>
+            ).
+          </p>
+          <p>
+            Simon carries a <em>RARB</em> mutation called c.1159C&gt;T (p.R387C), which is shared by about 30% of MCOPS12 patients. Unfortunately, computer modeling showed that targeting this exact mutation wasn't going to work.
+          </p>
+          <p>
+            So we took a different route. Using advanced genetic analyses called long-read sequencing, we mapped Simon's faulty <em>RARB</em> copy (allele) in detail — and identified dozens of additional unique markers found only on the mutant allele. Each one is a potential bullseye for an allele-specific ASO.
+          </p>
+          <p>
+            This is exciting on two fronts. First, it opened a real path forward for Simon`s ASO therapy. Second, the workflow established here (Figure 2) is a blueprint - one that can be reused to develop personalized ASO therapies for other children with MCOPS12.
+          </p>
+        </div>
+      </section>
+
+      {/* Figure 2 — Workflow */}
+      <section className="container-wide py-12">
+        <Reveal>
+          <AsoWorkflowFigure lang={de ? "de" : "en"} />
+        </Reveal>
+      </section>
+
+      {/* Partners */}
+      <section className="container-tight pb-20">
+        <div className="space-y-5 text-foreground/85 leading-relaxed text-lg mb-8">
+          <p>
+            Target identification, ASO design and efficacy screening was performed at RareLabs (a division of AlphaRose Therapeutics)
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-5">
+          <a href="https://hopeatrarelabs.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all">
+            <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
+              <FlaskConical className="w-6 h-6" />
+            </div>
+            <h4 className="font-display text-lg font-bold text-navy">RareLabs (AlphaRose Therapeutics)</h4>
+            <p className="text-sm text-teal font-semibold mt-3 break-all">https://hopeatrarelabs.com/</p>
+          </a>
+
+          <div className="bg-card border border-border rounded-2xl p-6">
+            <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
+              <Building2 className="w-6 h-6" />
+            </div>
+            <h4 className="font-display text-lg font-bold text-navy">Large pharma company (undisclosed)</h4>
+            <p className="text-foreground/75 mt-2 text-base">
+              Additional designs of ASOs and safety testing in Simon´s cell model was performed at a large pharma company (undisclosed).
+            </p>
+          </div>
+
+          <a href="https://www.hongene.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all">
+            <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
+              <FlaskConical className="w-6 h-6" />
+            </div>
+            <h4 className="font-display text-lg font-bold text-navy">Hongene Biotech</h4>
+            <p className="text-foreground/75 mt-2 text-base">
+              ASO drugs for in vivo safety studies were produced at Hongene Biotech.
+            </p>
+            <p className="text-sm text-teal font-semibold mt-3 break-all">https://www.hongene.com/</p>
+          </a>
         </div>
       </section>
     </>
-  );
-}
-
-function Timeline({ items, de }: { items: typeof milestones; de: boolean }) {
-  const { ref, inView } = useInView<HTMLOListElement>({ threshold: 0.1 });
-  return (
-    <ol ref={ref} className="mt-12 relative pl-8 space-y-10">
-      <span
-        aria-hidden
-        className="absolute left-0 top-0 w-[3px] bg-gradient-to-b from-amber to-amber/30 rounded-full"
-        style={{
-          height: inView ? "100%" : "0%",
-          transition: `height ${items.length * 300 + 400}ms ease-out`,
-        }}
-      />
-      {items.map((m, i) => (
-        <li
-          key={m.y}
-          className="relative"
-          style={{
-            opacity: inView ? 1 : 0,
-            transform: inView ? "translateX(0)" : "translateX(-40px)",
-            transition: `opacity 0.6s ease-out ${i * 300}ms, transform 0.6s ease-out ${i * 300}ms`,
-          }}
-        >
-          <span className="absolute -left-[38px] top-0 w-7 h-7 rounded-full bg-amber border-4 border-navy-deep shadow-[0_0_0_4px_hsl(var(--amber)/0.25)] flex items-center justify-center">
-            {i === items.length - 1 ? <Target className="w-3.5 h-3.5 text-navy" /> : null}
-          </span>
-          <p className="text-amber font-display text-2xl font-bold">{m.y}</p>
-          <p className="text-white/85 mt-1 text-lg">{geneFmt(de ? m.de : m.en)}</p>
-        </li>
-      ))}
-    </ol>
   );
 }
