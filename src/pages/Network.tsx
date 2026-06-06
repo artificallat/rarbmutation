@@ -12,6 +12,7 @@ import alpharoseLogo from "@/assets/partners/alpharose.png";
 import prorareLogo from "@/assets/partners/prorare.svg";
 import eurordisLogo from "@/assets/partners/eurordis.png";
 import networkHero from "@/assets/network-hero.png.asset.json";
+import babyHero from "@/assets/network-baby.png.asset.json";
 
 const sisters = [
   { n: "A Cure for Sophia and Friends", u: "https://www.acureforsophiaandfriends.com/", c: "USA", logo: sophiaLogo },
@@ -82,14 +83,12 @@ export default function Network({ lang }: { lang: Lang }) {
       <section className="container-tight pt-4 pb-8 md:hidden">
         <Reveal>
           <div className="rounded-2xl overflow-hidden border border-border bg-card">
-            <div className="aspect-[4/3] overflow-hidden">
-              <img
-                src={networkHero.url}
-                alt={de ? "Kind mit Schnuller schlafend" : "Sleeping child with pacifier"}
-                className="w-full h-full object-cover object-left"
-                loading="lazy"
-              />
-            </div>
+            <img
+              src={babyHero.url}
+              alt={de ? "Kind mit Schnuller schlafend" : "Sleeping child with pacifier"}
+              className="w-full aspect-square object-cover"
+              loading="lazy"
+            />
             <div className="p-5">
               <p className="font-display text-lg text-navy leading-snug">
                 {de
