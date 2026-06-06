@@ -1,45 +1,36 @@
+## Goal
 
-## Ausgangslage
+Currently both `/achievements` and `/aso-therapy` (Clinicians area) show very similar ASO content. Make them distinct, with the exact text provided.
 
-- Es existiert noch keine Resend-Funktion im Projekt. Das Spendenformular (`DonationConfirmationForm.tsx`) sendet aktuell an einen Formspree-Platzhalter (`XXXXXXXX`) und fällt im Fehlerfall auf `mailto:` zurück.
-- Lovable Cloud ist aktiv, der Resend-API-Key wird als Secret gespeichert (nicht im Code).
-- Empfängerdomain bestätigt: `rarbmutation.org`.
+## Page 1 — Achievements (`src/pages/Achievements.tsx`)
 
-## Was umgesetzt wird
+Keep the lay-friendly "Simon´s ASO Therapy" version (already in place from last turn). Verify text is verbatim:
 
-1. **Resend-API-Key als Secret speichern**  
-   `RESEND_API_KEY` über das Secret-Tool hinterlegen (der Key wird sicher gespeichert und nur in Edge Functions verwendet, niemals im Frontend).
+- Title: **Simon´s ASO Therapy**
+- Date line: **Sonntag, 19. April 2026 · 11:30**
+- Section "What is an Antisense Oligonucleotide (ASO) Therapy?" — 3 paragraphs (tape metaphor, mRNA recipe, Lauffer 2024 link).
+- Section "How does an ASO therapy work in patients with MCOPS12?" — 3 paragraphs (mutant/healthy copy, zipper/RNase H1 + "mRNA knockdown", "The catch" allele-specific + Ciancia 2022 link).
+- Figure 1 (existing `aso-figure-1.png`) with caption "Figure 1:".
+- Section "Simon´s personalized allele-specific ASO therapy" — 4 paragraphs (Hauser 2022 link, c.1159C>T mutation, long-read sequencing route, blueprint for other children).
+- Figure 2: existing `AsoWorkflowFigure` component.
+- Closing partner block: RareLabs (link), large pharma undisclosed, Hongene Biotech (link) — verbatim sentences.
 
-2. **Neue Edge Function `send-donation-confirmation`**  
-   - Liegt unter `supabase/functions/send-donation-confirmation/index.ts`.
-   - CORS-Header, OPTIONS-Handling, Zod-Validierung der Felder aus dem Spendenformular.
-   - Ruft die Resend-API direkt auf (`https://api.resend.com/emails`) mit:
-     ```ts
-     to: ["rpell@rarbmutation.org", "epell@rarbmutation.org"]
-     ```
-     Beide Adressen in einem Array, also ein einziger Versand an beide Empfänger.
-   - `from`: `onboarding@resend.dev` (Resend-Test-Absender), bis eine eigene verifizierte Domain hinterlegt ist.
-   - `reply_to`: die E-Mail-Adresse aus dem Formular, damit Antworten direkt an den Spender gehen.
-   - Betreff: `Spendenbestätigung – {Vorname} {Nachname}`.
-   - HTML-Body mit allen übermittelten Feldern (Name, Geburtsdatum, Adresse, E-Mail, Betrag, Spendendatum, Zahlungsart).
+## Page 2 — Clinicians / AsoTherapy (`src/pages/AsoTherapy.tsx`)
 
-3. **Formular umstellen**  
-   `DonationConfirmationForm.tsx`:
-   - Formspree-Aufruf ersetzen durch `supabase.functions.invoke("send-donation-confirmation", { body: payload })`.
-   - `mailto`-Fallback bleibt erhalten, falls der Aufruf fehlschlägt.
-   - Erfolgs-/Fehler-Toasts unverändert.
+Rewrite to the clinical **"N-of-1 ASO Therapy"** version with the exact text provided:
 
-4. **Deployen und testen**  
-   - Edge Function deployen.
-   - Testaufruf an die Funktion mit Dummy-Daten, prüfen dass Resend HTTP 200 zurückgibt und beide Empfänger in der Antwort enthalten sind.
+- Title: **N-of-1 ASO Therapy**
+- Date line: **Montag, 13. April 2026 · 00:47**
+- Section "What is an Antisense Oligonucleotide (ASO) Therapy?" — clinical paragraph: "ASO therapeutics are short, synthetic strands of nucleotides … 15 to 25 units in length …" plus second paragraph ending with Lauffer 2024 link and "Since ASOs act on mRNA and not on DNA, their effects are reversible, meaning repeated dosing is required."
+- Section "How does an ASO therapy work in patients with MCOPS12?" — 3 paragraphs (wild-type explanation, Watson–Crick base pairing + RNase H1 + "mRNA knockdown", allele-specific clinical wording + Ciancia 2022 link).
+- Figure 1 (existing `aso-figure-1.png`) with caption "Figure 1:" and small label "Personalized".
+- Section "Simon´s personalized allele-specific ASO therapy" — clinical version with Hauser 2022 link, c.1159C>T (p.R387C) + Zinter 2026 bioRxiv link "dominant-negative in vivo", long-read sequencing for ideal targets, blueprint statement for other MCOPS12 patients.
+- Figure 2: keep existing `AsoWorkflowFigure` component.
+- Closing partner block: same three partners (RareLabs link, large pharma undisclosed, Hongene Biotech link) — verbatim sentences.
 
-## Technische Details
+## Technical notes
 
-- Kein Konnektor-Gateway, sondern Direktaufruf der Resend-API mit `Authorization: Bearer ${RESEND_API_KEY}`. Grund: Sie haben den Key explizit selbst bereitgestellt und einen eigenen Resend-Account; das ist der einfachste Weg.
-- Validierung serverseitig (Zod), damit kein Müll an Resend geht.
-- Keine Datenbanktabellen, keine Authentifizierung nötig (öffentliches Formular).
-
-## Nicht im Scope
-
-- Eigene verifizierte Sender-Domain in Resend (kann später ergänzt werden, dann `from` umstellen).
-- Speicherung der Spendenbestätigungen in der Datenbank (nur E-Mail-Versand).
+- Both pages keep the same shell (`PageHero`, `Reveal`, section spacing) so they remain visually consistent with the rest of the site but with clearly different text/tone.
+- Text is supplied 1:1 in English (as the user provided). German `lang === "de"` will display the same English text for both, since the user requested verbatim copy and provided no German translation.
+- No route, navigation, or other page changes — only the contents of `Achievements.tsx` and `AsoTherapy.tsx`.
+- Reuse existing assets: `@/assets/research/aso-figure-1.png` and `AsoWorkflowFigure` component. No new dependencies.
