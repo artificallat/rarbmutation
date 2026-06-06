@@ -82,13 +82,12 @@ export default function Network({ lang }: { lang: Lang }) {
       <section className="container-tight pt-4 pb-8 md:hidden">
         <Reveal>
           <div className="rounded-2xl overflow-hidden border border-border bg-card">
-            <div className="aspect-square overflow-hidden">
-              <img
-                src={networkHero.url}
-                alt={de ? "Kind mit Schnuller schlafend" : "Sleeping child with pacifier"}
-                className="h-full w-auto max-w-none object-cover object-left"
-                loading="lazy"
-              />
+            <div
+              role="img"
+              aria-label={de ? "Kind mit Schnuller schlafend" : "Sleeping child with pacifier"}
+              className="aspect-square w-full bg-cover bg-no-repeat"
+              style={{ backgroundImage: `url(${networkHero.url})`, backgroundPosition: "left center", backgroundSize: "auto 100%" }}
+            />
             </div>
             <div className="p-5">
               <p className="font-display text-lg text-navy leading-snug">
