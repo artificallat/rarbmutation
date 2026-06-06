@@ -1,6 +1,5 @@
-import { FlaskConical, Heart, Mail, Facebook, Linkedin, HandHeart } from "lucide-react";
+import { FlaskConical, Heart, Mail, Facebook, Linkedin, HandHeart, Users, Sparkles, ArrowDown, Quote } from "lucide-react";
 import { socials } from "@/content/site";
-import { PageHero } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
@@ -9,30 +8,113 @@ export default function NewlyDiagnosed({ lang }: { lang: Lang }) {
   const de = lang === "de";
   return (
     <>
-      <PageHero
-        eyebrow={de ? "Familien" : "Families"}
-        title={de ? "Frisch diagnostiziert" : "Newly Diagnosed"}
-        sub={de
-          ? "Willkommen in der MCOPS12-Community — du bist nicht allein."
-          : "Welcome to the MCOPS12 community — you are not alone."}
-      />
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-navy via-navy-deep to-navy text-white">
+        <div aria-hidden className="pointer-events-none absolute -top-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-teal/25 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-40 -left-32 w-[32rem] h-[32rem] rounded-full bg-amber/20 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
 
-      <section className="container-tight pb-12 space-y-5 text-foreground/85 leading-relaxed text-lg">
-        <p>{de ? "Liebe frisch diagnostizierte Familie," : "Dear newly diagnosed family,"}</p>
-        <p>
-          {de
-            ? <>Willkommen in der MCOPS12-Community. Auch wenn diese Diagnose vielleicht nicht das war, was ihr erwartet habt, werdet ihr Teil eines Netzwerks von Familien, die ähnliche Erfahrungen und Wissen teilen. Viele von uns erinnern sich noch genau an den Moment, als wir die MCOPS12-Diagnose (<em>RARB</em>-Genmutation) erhalten haben, und an die Fragen und Unsicherheiten, die damit einhergingen. Auch wenn das Leben jetzt eine andere Richtung nimmt als ursprünglich geplant, finden viele Familien entlang des Weges wertvolle Verbindungen und Unterstützung.</>
-            : <>Welcome to the MCOPS12 community. While this diagnosis may not be something you anticipated, you are joining a network of families who share similar experiences and knowledge. Many of us remember the moment of receiving a MCOPS12 (<em>RARB</em> gene mutation) diagnosis and the questions and uncertainties that came with it. Although life may now take a different direction than originally planned, many families find meaningful connections and valuable support along the way.</>}
-        </p>
-        <p className="font-bold text-navy">
-          {de ? "Das Wichtigste: Ihr seid damit nicht allein." : "Most importantly, you are not facing this alone."}
-        </p>
-        <p>
-          {de
-            ? "Wie geht es weiter? Im Folgenden findet ihr Informationen und Schritte, die vielen MCOPS12-Familien früh geholfen haben."
-            : "What comes next? Below you will find information and steps that many MCOPS12 families have found helpful early on."}
-        </p>
+        <div className="container-wide relative pt-20 pb-24 md:pt-24 md:pb-28">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div className="lg:col-span-7 space-y-6 animate-fade-in">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 px-4 py-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-amber" />
+                <span className="text-xs uppercase tracking-[0.2em] font-semibold text-white/90">{de ? "Familien" : "Families"}</span>
+              </div>
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-balance">
+                {de ? "Frisch " : "Newly "}
+                <span className="relative inline-block">
+                  <span className="relative z-10 bg-gradient-to-r from-amber to-amber/70 bg-clip-text text-transparent">
+                    {de ? "diagnostiziert" : "Diagnosed"}
+                  </span>
+                </span>
+                <span className="text-white">?</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-white/80 max-w-xl leading-relaxed">
+                {de
+                  ? "Willkommen in der MCOPS12-Community — ihr seid nicht allein. Hier sind die ersten Schritte, die anderen Familien geholfen haben."
+                  : "Welcome to the MCOPS12 community — you are not alone. Here are the first steps that have helped other families."}
+              </p>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <a href="#connect" className="inline-flex items-center gap-2 rounded-full bg-amber px-6 py-3 font-semibold text-navy hover:brightness-95 transition shadow-lg shadow-amber/20">
+                  <Users className="w-4 h-4" /> {de ? "Mit der Community vernetzen" : "Connect with the community"}
+                </a>
+                <a href="#next-steps" className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 font-semibold text-white hover:bg-white/15 transition">
+                  <ArrowDown className="w-4 h-4" /> {de ? "Nächste Schritte" : "See next steps"}
+                </a>
+              </div>
+            </div>
+
+            {/* Reassurance card */}
+            <div className="lg:col-span-5 animate-fade-in">
+              <div className="relative rounded-3xl bg-white/[0.07] backdrop-blur-md border border-white/15 p-8 shadow-2xl">
+                <Quote className="w-10 h-10 text-amber/70 mb-4" />
+                <p className="font-display text-2xl md:text-3xl font-bold leading-snug text-white text-balance">
+                  {de
+                    ? "Das Wichtigste: Ihr seid damit nicht allein."
+                    : "Most importantly, you are not facing this alone."}
+                </p>
+                <div className="mt-8 pt-6 border-t border-white/15 grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <div className="font-display text-2xl font-bold text-amber">3</div>
+                    <div className="text-[11px] uppercase tracking-wider text-white/70 mt-1">{de ? "Organisationen" : "Organisations"}</div>
+                  </div>
+                  <div className="border-x border-white/10">
+                    <div className="font-display text-2xl font-bold text-amber">1</div>
+                    <div className="text-[11px] uppercase tracking-wider text-white/70 mt-1">{de ? "Community" : "Community"}</div>
+                  </div>
+                  <div>
+                    <div className="font-display text-2xl font-bold text-amber">∞</div>
+                    <div className="text-[11px] uppercase tracking-wider text-white/70 mt-1">{de ? "Support" : "Support"}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+
+      {/* Intro letter — refined */}
+      <section id="next-steps" className="container-tight py-16 md:py-20">
+        <Reveal>
+          <div className="grid md:grid-cols-12 gap-8 items-start">
+            <div className="md:col-span-3">
+              <div className="md:sticky md:top-28">
+                <p className="text-xs uppercase tracking-[0.2em] text-teal font-semibold">{de ? "Ein Brief" : "A letter"}</p>
+                <p className="font-display text-xl text-navy font-bold mt-2">
+                  {de ? "An eure Familie" : "To your family"}
+                </p>
+                <div className="hidden md:block mt-4 h-px w-12 bg-teal" />
+              </div>
+            </div>
+            <div className="md:col-span-9 space-y-5 text-foreground/85 leading-relaxed text-lg">
+              <p className="font-display text-xl text-navy font-semibold">
+                {de ? "Liebe frisch diagnostizierte Familie," : "Dear newly diagnosed family,"}
+              </p>
+              <p>
+                {de
+                  ? <>Willkommen in der MCOPS12-Community. Auch wenn diese Diagnose vielleicht nicht das war, was ihr erwartet habt, werdet ihr Teil eines Netzwerks von Familien, die ähnliche Erfahrungen und Wissen teilen. Viele von uns erinnern sich noch genau an den Moment, als wir die MCOPS12-Diagnose (<em>RARB</em>-Genmutation) erhalten haben, und an die Fragen und Unsicherheiten, die damit einhergingen.</>
+                  : <>Welcome to the MCOPS12 community. While this diagnosis may not be something you anticipated, you are joining a network of families who share similar experiences and knowledge. Many of us remember the moment of receiving a MCOPS12 (<em>RARB</em> gene mutation) diagnosis and the questions and uncertainties that came with it.</>}
+              </p>
+              <p>
+                {de
+                  ? "Auch wenn das Leben jetzt eine andere Richtung nimmt als ursprünglich geplant, finden viele Familien entlang des Weges wertvolle Verbindungen und Unterstützung."
+                  : "Although life may now take a different direction than originally planned, many families find meaningful connections and valuable support along the way."}
+              </p>
+              <div className="border-l-4 border-amber bg-amber/5 rounded-r-2xl px-6 py-4">
+                <p className="font-display text-lg md:text-xl font-bold text-navy">
+                  {de
+                    ? "Wie geht es weiter? Im Folgenden findet ihr Informationen und Schritte, die vielen MCOPS12-Familien früh geholfen haben."
+                    : "What comes next? Below you will find information and steps that many MCOPS12 families have found helpful early on."}
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      <div id="connect" />
+
 
       <section className="container-wide pb-12">
         <SectionTitle eyebrow="01" title={de ? "Vernetzt euch mit der Community" : "Connect with the community"} />
