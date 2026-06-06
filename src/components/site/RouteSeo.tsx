@@ -71,10 +71,6 @@ const meta: Record<string, { en: Meta; de: Meta }> = {
     en: { title: "MCOPS12 in Plain Language", description: "A clear, plain-language introduction to MCOPS12 for families, friends and supporters — without medical jargon." },
     de: { title: "MCOPS12 einfach erklärt", description: "Eine verständliche Einführung zu MCOPS12 für Familien, Freunde und Unterstützer — ohne Fachjargon." },
   },
-  "how-to-get-involved": {
-    en: { title: "How to Get Involved — Cure MCOPS12", description: "Donate, fundraise, raise awareness, or join the patient community. Concrete ways to help cure MCOPS12." },
-    de: { title: "So kannst du helfen — Cure MCOPS12", description: "Spende, sammle Spenden, schaffe Bewusstsein oder werde Teil der Community. Konkrete Wege, MCOPS12 zu heilen." },
-  },
   "funded-rd-programs": {
     en: { title: "Funded R&D Programs — Cure MCOPS12", description: "Research and drug-development programs funded by Cure MCOPS12, A Cure for Sophia and Friends, and A Cure for Sienna since 2019." },
     de: { title: "Geförderte Forschungsprogramme — Cure MCOPS12", description: "Forschungs- und Wirkstoffentwicklungs­programme, die von Cure MCOPS12 und Schwestervereinen seit 2019 finanziert werden." },
@@ -106,10 +102,6 @@ const meta: Record<string, { en: Meta; de: Meta }> = {
   "natural-history-study": {
     en: { title: "Natural History Study — MCOPS12", description: "Goals, design and partners of the international MCOPS12 Natural History Study, the foundation for future clinical trials." },
     de: { title: "Natural History Study — MCOPS12", description: "Ziele, Design und Partner der internationalen MCOPS12 Natural History Study, Grundlage für klinische Studien." },
-  },
-  "raise-awareness": {
-    en: { title: "Raise Awareness for MCOPS12", description: "Tools, materials and ideas to help raise awareness for MCOPS12 — a rare disease most clinicians have never seen." },
-    de: { title: "Aufmerksamkeit für MCOPS12 schaffen", description: "Materialien und Ideen, um Bewusstsein für MCOPS12 zu schaffen — eine seltene Erkrankung, die kaum jemand kennt." },
   },
   "newly-diagnosed": {
     en: { title: "Newly Diagnosed with MCOPS12 — A Family Guide", description: "A practical guide for families just receiving an MCOPS12 diagnosis: first steps, resources, community and hope." },
