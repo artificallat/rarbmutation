@@ -83,7 +83,7 @@ export default function Network({ lang }: { lang: Lang }) {
         <Reveal>
           <div className="rounded-2xl overflow-hidden border border-border bg-card">
             <img
-              src={new URL("../assets/network-baby.png.asset.json", import.meta.url) ? babyHero.url : ""}
+              src={babyHero.url}
               alt={de ? "Kind mit Schnuller schlafend" : "Sleeping child with pacifier"}
               className="w-full aspect-square object-cover"
               loading="lazy"
