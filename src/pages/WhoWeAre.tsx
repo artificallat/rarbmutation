@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { ChevronDown, Linkedin } from "lucide-react";
+import { ChevronDown, Linkedin, Sparkles } from "lucide-react";
 
 import { Placeholder, SectionTitle } from "@/components/site/Bits";
 import communityImage from "@/assets/whoweare-community.jpg";
@@ -255,25 +255,37 @@ function VolunteerCard({ v, lang }: { v: typeof volunteers[number]; lang: Lang }
 }
 
 
-export function PageHero({ eyebrow, title, sub }: { eyebrow?: string; title: ReactNode; sub?: ReactNode }) {
+export function PageHero({ eyebrow, title, sub, tags }: { eyebrow?: string; title: ReactNode; sub?: ReactNode; tags?: string[] }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 to-background pt-16 pb-12">
-      <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-teal/10 blur-3xl" />
-      <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-amber/10 blur-3xl" />
-      <div className="container-tight relative">
-        {eyebrow && (
-          <p className="text-xs uppercase tracking-[0.2em] text-teal font-semibold mb-3 animate-fade-in">
-            {eyebrow}
-          </p>
-        )}
-        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-balance text-navy text-slate-800 animate-fade-in">
-          {title}
-        </h1>
-        {sub && (
-          <p className="mt-5 text-base sm:text-lg md:text-xl text-foreground/75 max-w-3xl leading-relaxed animate-fade-in">
-            {sub}
-          </p>
-        )}
+    <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 via-background to-background">
+      <div aria-hidden className="pointer-events-none absolute -top-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-teal/15 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-40 -left-32 w-[32rem] h-[32rem] rounded-full bg-amber/15 blur-3xl" />
+      <div className="container-wide relative pt-20 pb-20 md:pt-24 md:pb-24">
+        <div className="max-w-3xl space-y-6 animate-fade-in">
+          {eyebrow && (
+            <div className="inline-flex items-center gap-2 rounded-full bg-white border border-teal/30 px-4 py-1.5 shadow-sm">
+              <Sparkles className="w-3.5 h-3.5 text-teal" />
+              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-teal">{eyebrow}</span>
+            </div>
+          )}
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-balance text-navy">
+            {title}
+          </h1>
+          {sub && (
+            <p className="text-lg sm:text-xl text-foreground/75 max-w-2xl leading-relaxed">
+              {sub}
+            </p>
+          )}
+          {tags && tags.length > 0 && (
+            <div className="flex flex-wrap gap-2 pt-2">
+              {tags.map((b) => (
+                <span key={b} className="inline-flex items-center gap-1.5 rounded-full bg-white border border-border px-3 py-1 text-xs font-semibold text-navy">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal" /> {b}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

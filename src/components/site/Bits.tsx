@@ -66,7 +66,7 @@ export function SectionTitle({ eyebrow, title, center, light }: { eyebrow?: stri
   );
 }
 
-import type { LucideIcon } from "lucide-react";
+import { Sparkles, type LucideIcon } from "lucide-react";
 
 export function PageHeroIllustrated({
   eyebrow,
@@ -94,7 +94,10 @@ export function PageHeroIllustrated({
         <div className="grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-16 items-center">
           <div className="fade-in">
             {eyebrow && (
-              <p className="text-xs uppercase tracking-[0.2em] text-teal font-semibold mb-4">{eyebrow}</p>
+              <div className="inline-flex items-center gap-2 rounded-full bg-white border border-teal/30 px-4 py-1.5 shadow-sm mb-4">
+                <Sparkles className="w-3.5 h-3.5 text-teal" />
+                <span className="text-xs uppercase tracking-[0.2em] font-semibold text-teal">{eyebrow}</span>
+              </div>
             )}
             <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-balance text-navy leading-[1.1]">
               {title}
