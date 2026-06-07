@@ -224,7 +224,7 @@ function VolunteerCard({ v, lang }: { v: typeof volunteers[number]; lang: Lang }
   const photo = volunteerPhotos[v.name];
   const de = lang === "de";
   return (
-    <div className="bg-card rounded-3xl border border-border p-8 flex flex-col sm:flex-row gap-6 items-start hover:shadow-[var(--shadow-card)] transition-shadow">
+    <div className="bg-card rounded-3xl border border-border p-8 flex flex-col sm:flex-row gap-6 items-start overflow-hidden break-words hover:shadow-[var(--shadow-card)] transition-shadow">
       {photo ? (
         <img src={photo} alt={v.name}
           style={{ width: 160, height: 160, objectFit: "cover", objectPosition: "center top", borderRadius: "9999px" }}
