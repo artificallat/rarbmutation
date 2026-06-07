@@ -255,6 +255,14 @@ function VolunteerCard({ v, lang }: { v: typeof volunteers[number]; lang: Lang }
 }
 
 
+export function HeroAccent({ children }: { children: ReactNode }) {
+  return (
+    <span className="bg-gradient-to-r from-amber to-amber/70 bg-clip-text text-transparent">
+      {children}
+    </span>
+  );
+}
+
 export function PageHero({ eyebrow, title, sub, tags }: { eyebrow?: string; title: ReactNode; sub?: ReactNode; tags?: string[] }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-muted/40 via-background to-background">
