@@ -124,7 +124,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
             <p className="text-sm text-teal font-semibold mt-3 break-all">https://hopeatrarelabs.com/</p>
           </a>
 
-          <div className="bg-card border border-border rounded-2xl p-6">
+          <div className="bg-card border border-border rounded-2xl p-6 overflow-hidden break-words">
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
               <Building2 className="w-6 h-6" />
             </div>
