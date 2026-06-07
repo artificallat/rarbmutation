@@ -11,7 +11,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
   return (
     <>
       <PageHero
-        eyebrow={de ? "Montag, 13. April 2026 · 00:47" : "Monday, 13 April 2026 · 00:47"}
+        eyebrow={de ? "Personalisierte Gentherapie" : "Personalized gene therapy"}
         title={<>N-of-1 <HeroAccent>ASO Therapy</HeroAccent></>}
         sub={de
           ? "Eine allelspezifische Antisense-Oligonukleotid-Therapie — entwickelt für Simon, als Blaupause für weitere MCOPS12-Patient:innen."
