@@ -187,16 +187,17 @@ export default function Network({ lang }: { lang: Lang }) {
           <div className="grid sm:grid-cols-2 gap-6">
             {memberships.map((p, i) => (
               <Reveal key={p.n} delay={i * 120}>
-                <a href={p.u} target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 flex items-center gap-5 hover:border-teal hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group h-full">
+                <a href={p.u} target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 hover:border-teal hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group h-full overflow-hidden">
                   <div className="w-20 h-20 shrink-0 rounded-xl bg-white border border-border flex items-center justify-center overflow-hidden">
                     <img src={p.logo} alt={p.n} className="max-w-full max-h-full object-contain p-2" loading="lazy" />
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-display font-semibold text-navy">{p.n}</p>
-                    <p className="text-xs text-teal mt-1 truncate group-hover:underline">{p.u.replace(/^https?:\/\//, "")}</p>
+                  <div className="flex-1 min-w-0 w-full">
+                    <p className="font-display font-semibold text-navy break-words">{p.n}</p>
+                    <p className="text-xs text-teal mt-1 break-all group-hover:underline">{p.u.replace(/^https?:\/\//, "")}</p>
                   </div>
-                  <ExternalLink className="w-5 h-5 text-teal shrink-0 group-hover:translate-x-1 transition-transform" />
+                  <ExternalLink className="hidden sm:block w-5 h-5 text-teal shrink-0 group-hover:translate-x-1 transition-transform" />
                 </a>
+
               </Reveal>
             ))}
           </div>
