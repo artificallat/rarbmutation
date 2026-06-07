@@ -145,7 +145,7 @@ export default function NewlyDiagnosed({ lang }: { lang: Lang }) {
                   { name: "A Cure for Sophia and Friends", contacts: [{ label: "", email: "Outreach@aCureforSophiaandFriends.com" }] },
                   { name: "A Cure for Sienna", contacts: [{ label: "", email: "acureforsienna@gmail.com" }] },
                 ].map(o => (
-                  <div key={o.name} className="rounded-2xl border border-border p-4">
+                  <div key={o.name} className="rounded-2xl border border-border p-4 overflow-hidden break-words">
                     <p className="font-display font-bold text-navy">{o.name}</p>
                     <ul className="mt-2 space-y-1">
                       {o.contacts.map(c => (
