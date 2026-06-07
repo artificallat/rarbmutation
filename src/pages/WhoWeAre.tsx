@@ -145,7 +145,7 @@ function SabCard({ s, lang, photo }: { s: any; lang: Lang; photo?: string }) {
   const props = s.url ? { href: s.url, target: "_blank", rel: "noreferrer" } : {};
   return (
     <Tag {...props}
-      className={`bg-card rounded-2xl border border-border p-6 flex gap-5 items-start ${s.url ? "hover:border-teal hover:shadow-[var(--shadow-card)]" : ""} transition`}>
+      className={`bg-card rounded-2xl border border-border p-6 flex gap-5 items-start overflow-hidden break-words ${s.url ? "hover:border-teal hover:shadow-[var(--shadow-card)]" : ""} transition`}>
       {photo ? (
         <img src={photo} alt={s.name}
           style={{ width: 88, height: 88, objectFit: "cover", objectPosition: "center top", borderRadius: "9999px" }}
