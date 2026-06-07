@@ -7,7 +7,7 @@ export default function Privacy({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Rechtliches" : "Legal"}
-        title={de ? "Datenschutz" : "Privacy Policy"}
+        title={de ? <><HeroAccent>Datenschutz</HeroAccent></> : <><HeroAccent>Privacy Policy</HeroAccent></>}
         sub={de
           ? "Wir nehmen den Schutz Ihrer personenbezogenen Daten ernst und behandeln diese gemäß DSGVO und österreichischem Datenschutzgesetz."
           : "We take the protection of your personal data seriously and process it in accordance with the GDPR and Austrian data protection law."}
