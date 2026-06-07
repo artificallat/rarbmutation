@@ -23,7 +23,7 @@ export default function ScientificAdvisoryBoard({ lang }: { lang: Lang }) {
         <div className="grid sm:grid-cols-2 gap-6">
           {advisors.map(a => (
             <a key={a.name} href={a.url} target="_blank" rel="noreferrer"
-              className="bg-card rounded-2xl border border-border p-6 hover:border-teal hover:shadow-[var(--shadow-card)] transition block">
+              className="bg-card rounded-2xl border border-border p-6 hover:border-teal hover:shadow-[var(--shadow-card)] transition block overflow-hidden break-words">
               <h4 className="font-display text-xl font-bold text-navy">{a.name}</h4>
               <p className="text-sm text-foreground/75 mt-2">{a.title}</p>
             </a>
