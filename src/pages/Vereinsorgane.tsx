@@ -56,7 +56,7 @@ export default function Vereinsorgane({ lang }: { lang: Lang }) {
         sub="Cure MCOPS12 — Verein zur Förderung einer Therapieentwicklung für MCOPS12 Patienten."
       />
       <section className="container-tight pb-12">
-        <div className="bg-card rounded-2xl border border-border p-6 text-foreground/80 leading-relaxed">
+        <div className="bg-card rounded-2xl border border-border p-6 text-foreground/80 leading-relaxed overflow-hidden break-words">
           <p><strong>ZVR-Zahl:</strong> 1002067031</p>
           <p><strong>Address:</strong> 4963 St. Peter am Hart, Austria</p>
           <p><strong>Founded:</strong> 2020</p>
