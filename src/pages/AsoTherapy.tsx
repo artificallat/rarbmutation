@@ -115,7 +115,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
-          <a href="https://hopeatrarelabs.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all">
+          <a href="https://hopeatrarelabs.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all overflow-hidden break-words">
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
               <FlaskConical className="w-6 h-6" />
             </div>
