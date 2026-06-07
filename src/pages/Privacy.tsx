@@ -1,4 +1,4 @@
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
 
 export default function Privacy({ lang }: { lang: Lang }) {
