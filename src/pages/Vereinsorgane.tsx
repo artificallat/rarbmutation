@@ -32,7 +32,7 @@ const volunteers = [
 
 function Card({ name, role, linkedin }: { name: string; role: string; linkedin?: string }) {
   return (
-    <div className="bg-card rounded-2xl border border-border p-6 flex flex-col items-center text-center">
+    <div className="bg-card rounded-2xl border border-border p-6 flex flex-col items-center text-center overflow-hidden break-words">
       {photos[name] ? (
         <img src={photos[name]} alt={name}
           style={{ width: 120, height: 120, objectFit: "cover", objectPosition: "center top", borderRadius: "9999px" }}
