@@ -1,7 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SectionTitle } from "@/components/site/Bits";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
 import sophiaLogo from "@/assets/partners/sophia.png";
@@ -61,7 +61,7 @@ export default function Network({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Gemeinsam stark" : "Stronger together"}
-        title={de ? "Das Netzwerk" : "The Network"}
+        title={de ? <>Das <HeroAccent>Netzwerk</HeroAccent></> : <>The <HeroAccent>Network</HeroAccent></>}
         sub={de
           ? "Nach der Gründung von Cure MCOPS12 im Jahr 2020 haben wir ein globales Netzwerk aus betroffenen Familien und Forschenden aufgebaut."
           : "After establishing Cure MCOPS12 in 2020, we built a global network of patient advocates and researchers."}

@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Placeholder } from "@/components/site/Bits";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { kids, type Lang } from "@/content/site";
 import simonPhoto from "@/assets/simon-schulbeginn.jpg";
 import rhettPhoto from "@/assets/kids/rhett.webp";
@@ -39,7 +39,7 @@ export default function MeetOurKids({ lang }: { lang: Lang }) {
   const de = lang === "de";
   return (
     <>
-      <PageHero eyebrow={de ? "Unsere Kinder" : "Our kids"} title={de ? "Unsere Kinder" : "Meet Our Kids"}
+      <PageHero eyebrow={de ? "Unsere Kinder" : "Our kids"} title={de ? <>Unsere <HeroAccent>Kinder</HeroAccent></> : <>Meet Our <HeroAccent>Kids</HeroAccent></>}
         sub={de
           ? "Das sind die Gesichter hinter unserer Mission. Jedes Kind mit MCOPS12 hat seine eigene Geschichte – und jede dieser Geschichten ist der Grund, warum wir kämpfen."
           : "These are the faces behind our mission. Every child with MCOPS12 has a unique story — and every story is why we fight."} />

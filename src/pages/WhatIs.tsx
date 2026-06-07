@@ -1,6 +1,6 @@
 import { ExternalLink, Eye, Activity, Brain, Dna, Sparkles, AlertCircle } from "lucide-react";
 import { SectionTitle } from "@/components/site/Bits";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
 import { geneFmt } from "@/lib/gene";
@@ -54,7 +54,7 @@ export default function WhatIs({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Die Krankheit" : "The disease"}
-        title={de ? "Was ist MCOPS12?" : "What is MCOPS12?"}
+        title={de ? <>Was ist <HeroAccent>MCOPS12</HeroAccent>?</> : <>What is <HeroAccent>MCOPS12</HeroAccent>?</>}
         sub={de
           ? <>Syndromale Mikrophthalmie 12 (MCOPS12) ist eine ultra-seltene neurologische Entwicklungsstörung, die durch Mutationen im Gen für den Retinsäure-Rezeptor Beta (<em>RARB</em>) verursacht wird.</>
           : <>Syndromic microphthalmia 12 (MCOPS12) is an ultra-rare neurodevelopmental disorder caused by mutations in the retinoic acid receptor beta (<em>RARB</em>) gene.</>}

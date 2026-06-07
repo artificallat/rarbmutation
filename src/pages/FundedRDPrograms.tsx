@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { PageHero } from "./WhoWeAre";
+import { PageHero, HeroAccent } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import rainrareImg from "@/assets/research/rainrare-abstract.png";
@@ -156,7 +156,7 @@ export default function FundedRDPrograms({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={lang === "de" ? "Forschung & Wirkstoffentwicklung" : "Research"}
-        title="Research and Drug Development"
+        title={<>Research and <HeroAccent>Drug Development</HeroAccent></>}
         sub="In close collaboration with our sister non-profit organizations A Cure for Sophia and Friends in the United States (founded in 2023) and A Cure for Sienna in Australia (founded in 2022), we've fundraised 600,000 € (as of June 2026) and are supporting seven research and drug development programs."
       />
 

@@ -1,6 +1,6 @@
 import { FlaskConical, Building2 } from "lucide-react";
 import asoFigure1 from "@/assets/research/aso-figure-1.png";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
 import type { Lang } from "@/content/site";
@@ -12,7 +12,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Montag, 13. April 2026 · 00:47" : "Monday, 13 April 2026 · 00:47"}
-        title={"N-of-1 ASO Therapy"}
+        title={<>N-of-1 <HeroAccent>ASO Therapy</HeroAccent></>}
         sub={de
           ? "Eine allelspezifische Antisense-Oligonukleotid-Therapie — entwickelt für Simon, als Blaupause für weitere MCOPS12-Patient:innen."
           : "An allele-specific antisense oligonucleotide therapy — developed for Simon, as a blueprint for other MCOPS12 patients."}

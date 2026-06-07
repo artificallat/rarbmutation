@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
 import siennaLogo from "@/assets/partners/sienna.jpg";
 
@@ -10,7 +10,7 @@ export default function CureForSienna({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Schwesterorganisation" : "Sister organization"}
-        title="A Cure for Sienna"
+        title={<>A Cure for <HeroAccent>Sienna</HeroAccent></>}
         sub={de
           ? "Die australische Non-Profit-Organisation wurde 2022 gegründet und ist ein zentraler Teil der internationalen MCOPS12-Community."
           : "This Australian non-profit was founded in 2022 and is a central part of the international MCOPS12 community."}

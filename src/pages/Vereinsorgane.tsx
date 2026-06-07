@@ -1,5 +1,5 @@
 import { Linkedin } from "lucide-react";
-import { PageHero } from "./WhoWeAre";
+import { PageHero, HeroAccent } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import type { Lang } from "@/content/site";
 import reinhardPhoto from "@/assets/reinhard-pell-portrait.jpg";
@@ -52,7 +52,7 @@ export default function Vereinsorgane({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={lang === "de" ? "Über uns" : "About us"}
-        title={lang === "de" ? "Verein / Organisation" : "Association Organs"}
+        title={lang === "de" ? <>Verein / <HeroAccent>Organisation</HeroAccent></> : <>Association <HeroAccent>Organs</HeroAccent></>}
         sub="Cure MCOPS12 — Verein zur Förderung einer Therapieentwicklung für MCOPS12 Patienten."
       />
       <section className="container-tight pb-12">

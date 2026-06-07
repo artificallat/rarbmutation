@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Eye, Activity, Footprints, MessageCircle, Sparkles, ArrowRight, HelpCircle } from "lucide-react";
-import { PageHero } from "./WhoWeAre";
+import { PageHero, HeroAccent } from "./WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
 import { geneFmt } from "@/lib/gene";
@@ -41,7 +41,7 @@ export default function PlainLanguageMcops12({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Familien" : "Families"}
-        title={de ? "Was ist MCOPS12? — Leicht verständlich" : "What is MCOPS12? — In Plain Language"}
+        title={de ? <>Was ist <HeroAccent>MCOPS12</HeroAccent>? — Leicht verständlich</> : <>What is <HeroAccent>MCOPS12</HeroAccent>? — In Plain Language</>}
       />
 
       {/* Hero statement */}

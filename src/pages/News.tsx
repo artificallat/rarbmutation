@@ -1,6 +1,6 @@
 import { Placeholder } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
 import { geneFmt } from "@/lib/gene";
 import simonWinter from "@/assets/simon-winter-2026.jpg";
@@ -35,7 +35,7 @@ export default function News({ lang }: { lang: Lang }) {
   const de = lang === "de";
   return (
     <>
-      <PageHero eyebrow={de ? "Aktuelles" : "News"} title={de ? "Neuigkeiten & Updates" : "News & Updates"}
+      <PageHero eyebrow={de ? "Aktuelles" : "News"} title={de ? <>Neuigkeiten & <HeroAccent>Updates</HeroAccent></> : <>News & <HeroAccent>Updates</HeroAccent></>}
         sub={de ? "Forschungsfortschritte, Geschichten aus unserer Community und Kampagnen-Updates." : "Research progress, community stories, and campaign updates."} />
 
       <section className="container-wide pb-20">

@@ -1,5 +1,5 @@
 import { Mouse, FlaskConical, TestTube2, Pill, BrainCircuit, ScanSearch, CheckCircle2, Clock } from "lucide-react";
-import { PageHero } from "./WhoWeAre";
+import { PageHero, HeroAccent } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
@@ -71,7 +71,7 @@ export default function DrugRepurposing({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Fachkreise" : "Professionals"}
-        title="Drug Repurposing"
+        title={<>Drug <HeroAccent>Repurposing</HeroAccent></>}
         sub={de
           ? "Wirkstoff-Repurposing identifiziert neue therapeutische Anwendungen für bereits zugelassene oder klinisch getestete Medikamente. Bei ultra-seltenen Erkrankungen wie MCOPS12 verkürzt der bekannte Sicherheitsstatus den Weg zur Behandlung dramatisch."
           : "Drug repurposing identifies new therapeutic uses for already approved or clinically tested drugs. For ultra-rare diseases like MCOPS12, known safety profiles dramatically shorten the path to treatment."}
