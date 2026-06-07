@@ -81,7 +81,7 @@ export default function NaturalHistory({ lang }: { lang: Lang }) {
             { n: "4", t: "Re-contact", d: "Families are re-contacted as new findings emerge — for instance to join clinical trials or to share newly identified phenotypes." },
           ]).map((s, i) => (
             <Reveal key={s.n} delay={i * 120}>
-              <li className="flex gap-5 bg-card border border-border rounded-2xl p-6 hover:border-amber hover:-translate-x-1 transition-all duration-300">
+              <li className="flex gap-5 bg-card border border-border rounded-2xl p-6 hover:border-amber hover:-translate-x-1 transition-all duration-300 overflow-hidden break-words">
                 <span className="font-display text-5xl font-bold text-amber w-16 flex-shrink-0 leading-none">{s.n}</span>
                 <div>
                   <h4 className="font-display text-xl font-bold text-navy mb-1">{s.t}</h4>
