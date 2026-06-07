@@ -74,7 +74,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
         <div className="grid md:grid-cols-3 gap-6">
           {features.map((f, i) => (
             <Reveal key={f.t} delay={i * 120}>
-              <div className="bg-card border border-border rounded-2xl p-6 h-full hover:-translate-y-1 hover:shadow-xl hover:border-teal transition-all duration-300 group">
+              <div className="bg-card border border-border rounded-2xl p-6 h-full hover:-translate-y-1 hover:shadow-xl hover:border-teal transition-all duration-300 group overflow-hidden break-words">
                 <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-4 group-hover:bg-teal group-hover:text-white transition-colors">
                   <f.icon className="w-6 h-6" />
                 </div>
@@ -176,7 +176,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
             download
             target="_blank"
             rel="noreferrer"
-            className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
+            className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4 overflow-hidden break-words"
           >
             <div className="w-14 h-14 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0 group-hover:bg-teal group-hover:text-white transition-colors">
               <Download className="w-7 h-7" />
@@ -195,7 +195,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
             download
             target="_blank"
             rel="noreferrer"
-            className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
+            className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4 overflow-hidden break-words"
           >
             <div className="w-14 h-14 rounded-xl bg-amber/15 text-amber-deep flex items-center justify-center shrink-0 group-hover:bg-amber group-hover:text-navy transition-colors">
               <Presentation className="w-7 h-7" />
@@ -217,7 +217,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
             href="https://ern-ithaca.eu/our-research-activities/calls-for-collaboration/rarb-natural-history-study/"
             target="_blank"
             rel="noreferrer"
-            className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
+            className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4 overflow-hidden break-words"
           >
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0">
               <FileText className="w-6 h-6" />
@@ -231,7 +231,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
             href="https://research.chusj.org/en/Home"
             target="_blank"
             rel="noreferrer"
-            className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
+            className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4 overflow-hidden break-words"
           >
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0">
               <FileText className="w-6 h-6" />

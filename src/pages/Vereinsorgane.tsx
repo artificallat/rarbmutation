@@ -32,7 +32,7 @@ const volunteers = [
 
 function Card({ name, role, linkedin }: { name: string; role: string; linkedin?: string }) {
   return (
-    <div className="bg-card rounded-2xl border border-border p-6 flex flex-col items-center text-center">
+    <div className="bg-card rounded-2xl border border-border p-6 flex flex-col items-center text-center overflow-hidden break-words">
       {photos[name] ? (
         <img src={photos[name]} alt={name}
           style={{ width: 120, height: 120, objectFit: "cover", objectPosition: "center top", borderRadius: "9999px" }}
@@ -56,7 +56,7 @@ export default function Vereinsorgane({ lang }: { lang: Lang }) {
         sub="Cure MCOPS12 — Verein zur Förderung einer Therapieentwicklung für MCOPS12 Patienten."
       />
       <section className="container-tight pb-12">
-        <div className="bg-card rounded-2xl border border-border p-6 text-foreground/80 leading-relaxed">
+        <div className="bg-card rounded-2xl border border-border p-6 text-foreground/80 leading-relaxed overflow-hidden break-words">
           <p><strong>ZVR-Zahl:</strong> 1002067031</p>
           <p><strong>Address:</strong> 4963 St. Peter am Hart, Austria</p>
           <p><strong>Founded:</strong> 2020</p>

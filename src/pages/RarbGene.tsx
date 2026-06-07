@@ -1,6 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { SectionTitle } from "@/components/site/Bits";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
 import rarbProtein from "@/assets/rarb-protein.jpg";
 
@@ -11,7 +11,7 @@ export default function RarbGene({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow="RARB"
-        title={de ? <>Das <em>RARB</em>-Gen</> : <>The <em>RARB</em> gene</>}
+        title={de ? <>Das <HeroAccent>RARB-Gen</HeroAccent></> : <>The <HeroAccent>RARB gene</HeroAccent></>}
         sub={de
           ? "Diese Seite erklärt das Gen hinter MCOPS12: wo es liegt, wofür es codiert und warum es für die frühe Entwicklung so wichtig ist."
           : "This page focuses on the gene behind MCOPS12: where it is located, what it encodes and why it matters during early development."}

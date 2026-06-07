@@ -115,7 +115,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
-          <a href="https://hopeatrarelabs.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all">
+          <a href="https://hopeatrarelabs.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all overflow-hidden break-words">
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
               <FlaskConical className="w-6 h-6" />
             </div>
@@ -123,7 +123,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             <p className="text-sm text-teal font-semibold mt-3 break-all">https://hopeatrarelabs.com/</p>
           </a>
 
-          <div className="bg-card border border-border rounded-2xl p-6">
+          <div className="bg-card border border-border rounded-2xl p-6 overflow-hidden break-words">
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
               <Building2 className="w-6 h-6" />
             </div>
@@ -133,7 +133,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             </p>
           </div>
 
-          <a href="https://www.hongene.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all">
+          <a href="https://www.hongene.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all overflow-hidden break-words">
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
               <FlaskConical className="w-6 h-6" />
             </div>

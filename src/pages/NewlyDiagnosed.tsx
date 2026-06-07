@@ -145,7 +145,7 @@ export default function NewlyDiagnosed({ lang }: { lang: Lang }) {
                   { name: "A Cure for Sophia and Friends", contacts: [{ label: "", email: "Outreach@aCureforSophiaandFriends.com" }] },
                   { name: "A Cure for Sienna", contacts: [{ label: "", email: "acureforsienna@gmail.com" }] },
                 ].map(o => (
-                  <div key={o.name} className="rounded-2xl border border-border p-4">
+                  <div key={o.name} className="rounded-2xl border border-border p-4 overflow-hidden break-words">
                     <p className="font-display font-bold text-navy">{o.name}</p>
                     <ul className="mt-2 space-y-1">
                       {o.contacts.map(c => (
@@ -168,7 +168,7 @@ export default function NewlyDiagnosed({ lang }: { lang: Lang }) {
       <section className="container-wide pb-12">
         <SectionTitle eyebrow="02" title={de ? "An der Forschung teilnehmen" : "Participate in research"} />
         <Reveal>
-          <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-8 md:p-10 space-y-5">
+          <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-8 md:p-10 space-y-5 overflow-hidden break-words">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 rounded-2xl bg-amber/20 text-amber flex items-center justify-center">
                 <FlaskConical className="w-7 h-7" />

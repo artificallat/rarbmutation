@@ -53,7 +53,7 @@ export default function NaturalHistory({ lang }: { lang: Lang }) {
               { i: ShieldCheck, t: "Quality of life (PROs)", d: "Parent-reported outcomes on care burden, pain, sleep, social participation and family life." },
             ]).map((c, i) => (
               <Reveal key={c.t} delay={i * 120}>
-                <div className="bg-card border border-border rounded-2xl p-7 h-full hover:-translate-y-2 hover:shadow-xl hover:border-teal transition-all duration-300 group">
+                <div className="bg-card border border-border rounded-2xl p-7 h-full hover:-translate-y-2 hover:shadow-xl hover:border-teal transition-all duration-300 group overflow-hidden break-words">
                   <div className="w-16 h-16 rounded-2xl bg-teal/10 text-teal flex items-center justify-center mb-4 group-hover:bg-teal group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                     <c.i className="w-8 h-8" />
                   </div>
@@ -81,7 +81,7 @@ export default function NaturalHistory({ lang }: { lang: Lang }) {
             { n: "4", t: "Re-contact", d: "Families are re-contacted as new findings emerge — for instance to join clinical trials or to share newly identified phenotypes." },
           ]).map((s, i) => (
             <Reveal key={s.n} delay={i * 120}>
-              <li className="flex gap-5 bg-card border border-border rounded-2xl p-6 hover:border-amber hover:-translate-x-1 transition-all duration-300">
+              <li className="flex gap-5 bg-card border border-border rounded-2xl p-6 hover:border-amber hover:-translate-x-1 transition-all duration-300 overflow-hidden break-words">
                 <span className="font-display text-5xl font-bold text-amber w-16 flex-shrink-0 leading-none">{s.n}</span>
                 <div>
                   <h4 className="font-display text-xl font-bold text-navy mb-1">{s.t}</h4>
@@ -93,7 +93,7 @@ export default function NaturalHistory({ lang }: { lang: Lang }) {
         </ol>
 
         <Reveal>
-          <div className="mt-10 bg-navy text-white rounded-2xl p-7 sm:p-8 flex gap-5 items-start">
+          <div className="mt-10 bg-navy text-white rounded-2xl p-7 sm:p-8 flex gap-5 items-start overflow-hidden break-words">
             <div className="w-14 h-14 rounded-2xl bg-amber/20 text-amber flex items-center justify-center flex-shrink-0">
               <FileSearch className="w-7 h-7" />
             </div>

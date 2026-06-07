@@ -1,4 +1,4 @@
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
 
 export default function Imprint({ lang }: { lang: Lang }) {
@@ -7,7 +7,7 @@ export default function Imprint({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Rechtliches" : "Legal"}
-        title={de ? "Impressum" : "Imprint"}
+        title={de ? <><HeroAccent>Impressum</HeroAccent></> : <><HeroAccent>Imprint</HeroAccent></>}
         sub={de ? "Angaben gemäß § 5 ECG und § 25 MedienG." : "Information pursuant to § 5 ECG and § 25 MedienG (Austrian law)."}
       />
       <section className="container-tight pb-24 prose prose-slate max-w-none">
