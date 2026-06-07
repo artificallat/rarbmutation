@@ -11,7 +11,7 @@ export default function NaturalHistory({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Patientenregister" : "Patient registry"}
-        title={de ? "Natural History Study" : "Natural History Study"}
+        title={<>Natural History <HeroAccent>Study</HeroAccent></>}
         sub={de
           ? "Eine umfassende Längsschnittstudie, die medizinische Daten von MCOPS12-Familien weltweit sammelt – als wissenschaftliche und regulatorische Grundlage für klinische Studien und neue Therapien."
           : "A comprehensive longitudinal study collecting medical data from MCOPS12 families worldwide — the scientific and regulatory foundation for clinical trials and new therapies."}

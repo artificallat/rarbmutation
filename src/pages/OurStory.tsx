@@ -78,7 +78,7 @@ export default function OurStory({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Erfolge" : "Achievements"}
-        title={de ? "Unsere Geschichte / Vereinsgründung" : "Our Story / Foundation"}
+        title={de ? <>Unsere <HeroAccent>Geschichte</HeroAccent> / Vereinsgründung</> : <>Our <HeroAccent>Story</HeroAccent> / Foundation</>}
         sub={de
           ? "Aus Simons Diagnose entstand eine internationale Mission: Forschung ermöglichen, Familien verbinden und eine Therapie für MCOPS12 voranbringen."
           : "From Simon's diagnosis grew an international mission: enabling research, connecting families and advancing a therapy for MCOPS12."}

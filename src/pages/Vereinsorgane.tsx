@@ -52,7 +52,7 @@ export default function Vereinsorgane({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={lang === "de" ? "Über uns" : "About us"}
-        title={lang === "de" ? "Verein / Organisation" : "Association Organs"}
+        title={lang === "de" ? <>Verein / <HeroAccent>Organisation</HeroAccent></> : <>Association <HeroAccent>Organs</HeroAccent></>}
         sub="Cure MCOPS12 — Verein zur Förderung einer Therapieentwicklung für MCOPS12 Patienten."
       />
       <section className="container-tight pb-12">

@@ -35,7 +35,7 @@ export default function News({ lang }: { lang: Lang }) {
   const de = lang === "de";
   return (
     <>
-      <PageHero eyebrow={de ? "Aktuelles" : "News"} title={de ? "Neuigkeiten & Updates" : "News & Updates"}
+      <PageHero eyebrow={de ? "Aktuelles" : "News"} title={de ? <>Neuigkeiten & <HeroAccent>Updates</HeroAccent></> : <>News & <HeroAccent>Updates</HeroAccent></>}
         sub={de ? "Forschungsfortschritte, Geschichten aus unserer Community und Kampagnen-Updates." : "Research progress, community stories, and campaign updates."} />
 
       <section className="container-wide pb-20">

@@ -12,7 +12,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Sonntag, 19. April 2026 · 11:30" : "Sunday, 19 April 2026 · 11:30"}
-        title={"Simon´s ASO Therapy"}
+        title={<>Simon´s <HeroAccent>ASO Therapy</HeroAccent></>}
         sub={de
           ? "Eine maßgeschneiderte RNA-Therapie für Simon — und gleichzeitig eine Vorlage für andere MCOPS12-Kinder."
           : "A bespoke RNA therapy for Simon — and a blueprint for other MCOPS12 children."}

@@ -14,7 +14,7 @@ export default function ScientificAdvisoryBoard({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={lang === "de" ? "Wissenschaft" : "Science"}
-        title="Scientific Advisory Board"
+        title={<>Scientific <HeroAccent>Advisory</HeroAccent> Board</>}
         sub={lang === "de"
           ? "Biografien und Porträtfotos folgen in Kürze."
           : "Biographies and portrait photos will be added soon."}

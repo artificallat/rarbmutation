@@ -21,7 +21,7 @@ export default function Mcops12Disease({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Die Krankheit" : "The disease"}
-        title={de ? "MCOPS12 als Erkrankung" : "MCOPS12 as a disease"}
+        title={de ? <><HeroAccent>MCOPS12</HeroAccent> als Erkrankung</> : <><HeroAccent>MCOPS12</HeroAccent> as a disease</>}
         sub={de
           ? "Diese Seite beschreibt, wie sich MCOPS12 zeigt, was bisher wissenschaftlich bekannt ist und warum die Erkrankung oft schwer zu erkennen ist."
           : "This page explains how MCOPS12 presents clinically, what is known from the literature and why the condition is often difficult to recognize."}

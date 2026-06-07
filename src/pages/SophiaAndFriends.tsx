@@ -10,7 +10,7 @@ export default function SophiaAndFriends({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Schwesterorganisation" : "Sister organization"}
-        title="A Cure for Sophia and Friends"
+        title={<>A Cure for <HeroAccent>Sophia</HeroAccent> and Friends</>}
         sub={de
           ? "Die US-amerikanische Non-Profit-Organisation wurde 2023 gegründet und unterstützt MCOPS12-Forschung gemeinsam mit Cure MCOPS12 und A Cure for Sienna."
           : "This US-based non-profit was founded in 2023 and supports MCOPS12 research together with Cure MCOPS12 and A Cure for Sienna."}
