@@ -53,7 +53,7 @@ export default function NaturalHistory({ lang }: { lang: Lang }) {
               { i: ShieldCheck, t: "Quality of life (PROs)", d: "Parent-reported outcomes on care burden, pain, sleep, social participation and family life." },
             ]).map((c, i) => (
               <Reveal key={c.t} delay={i * 120}>
-                <div className="bg-card border border-border rounded-2xl p-7 h-full hover:-translate-y-2 hover:shadow-xl hover:border-teal transition-all duration-300 group">
+                <div className="bg-card border border-border rounded-2xl p-7 h-full hover:-translate-y-2 hover:shadow-xl hover:border-teal transition-all duration-300 group overflow-hidden break-words">
                   <div className="w-16 h-16 rounded-2xl bg-teal/10 text-teal flex items-center justify-center mb-4 group-hover:bg-teal group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                     <c.i className="w-8 h-8" />
                   </div>
