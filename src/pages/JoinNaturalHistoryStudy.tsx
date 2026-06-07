@@ -1,5 +1,6 @@
-import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation, Stethoscope } from "lucide-react";
-import { SectionTitle, PageHeroIllustrated, LeadParagraph } from "@/components/site/Bits";
+import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation } from "lucide-react";
+import { SectionTitle, LeadParagraph } from "@/components/site/Bits";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
 import flyerAsset from "@/assets/nhs-flyer.pdf.asset.json";
@@ -25,14 +26,14 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
 
   return (
     <>
-      <PageHeroIllustrated
+      <PageHero
         eyebrow={de ? "Familien" : "Families"}
-        title={de ? "Nimm an der Natural History Study teil" : "Join the Natural History Study"}
+        title={de
+          ? <>Nimm an der Natural History <HeroAccent>Study</HeroAccent> teil</>
+          : <>Join the Natural History <HeroAccent>Study</HeroAccent></>}
         sub={de
           ? "In Zusammenarbeit mit A Cure for Sophia and Friends, A Cure for Sienna und Cure MCOPS12 hat das CHU Sainte-Justine 2024 die MCOPS12 (RARB) Natural History Study gestartet."
           : "In collaboration with A Cure for Sophia and Friends, A Cure for Sienna and Cure MCOPS12, CHU Sainte-Justine launched the MCOPS12 (RARB) Natural History Study in 2024."}
-        icon={Stethoscope}
-        badgeLabel={de ? "CHU Sainte-Justine · 2024" : "CHU Sainte-Justine · 2024"}
       />
 
       <section className="container-tight pt-12 pb-12 space-y-6">
