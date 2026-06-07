@@ -11,7 +11,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
   return (
     <>
       <PageHero
-        eyebrow={de ? "Sonntag, 19. April 2026 · 11:30" : "Sunday, 19 April 2026 · 11:30"}
+        eyebrow={de ? "Erfolge" : "Achievements"}
         title={<>Simon´s <HeroAccent>ASO Therapy</HeroAccent></>}
         sub={de
           ? "Eine maßgeschneiderte RNA-Therapie für Simon — und gleichzeitig eine Vorlage für andere MCOPS12-Kinder."
