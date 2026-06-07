@@ -93,7 +93,7 @@ export default function NaturalHistory({ lang }: { lang: Lang }) {
         </ol>
 
         <Reveal>
-          <div className="mt-10 bg-navy text-white rounded-2xl p-7 sm:p-8 flex gap-5 items-start">
+          <div className="mt-10 bg-navy text-white rounded-2xl p-7 sm:p-8 flex gap-5 items-start overflow-hidden break-words">
             <div className="w-14 h-14 rounded-2xl bg-amber/20 text-amber flex items-center justify-center flex-shrink-0">
               <FileSearch className="w-7 h-7" />
             </div>
