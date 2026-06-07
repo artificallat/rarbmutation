@@ -134,7 +134,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
             </p>
           </div>
 
-          <a href="https://www.hongene.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all">
+          <a href="https://www.hongene.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all overflow-hidden break-words">
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
               <FlaskConical className="w-6 h-6" />
             </div>
