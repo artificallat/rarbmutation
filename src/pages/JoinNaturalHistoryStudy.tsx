@@ -217,7 +217,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
             href="https://ern-ithaca.eu/our-research-activities/calls-for-collaboration/rarb-natural-history-study/"
             target="_blank"
             rel="noreferrer"
-            className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
+            className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4 overflow-hidden break-words"
           >
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0">
               <FileText className="w-6 h-6" />
