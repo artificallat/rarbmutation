@@ -85,7 +85,7 @@ export default function WhoWeAre({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={lang === "de" ? "Über uns" : "About us"}
-        title={lang === "de" ? "Wer wir sind" : "Who We Are"}
+        title={lang === "de" ? <>Wer wir <HeroAccent>sind</HeroAccent></> : <>Who We <HeroAccent>Are</HeroAccent></>}
         sub={lang === "de"
           ? "Cure MCOPS12 ist ein österreichischer Verein, der das Leben von MCOPS12-Patient:innen verbessert und die Forschung zu einer Therapie beschleunigt. Wir sind außerdem eine Plattform für Familien, Forschende und medizinische Fachkräfte."
           : "Cure MCOPS12 is an Austrian nonprofit organization dedicated to improving the lives of those affected by syndromic microphthalmia 12 (MCOPS12) and accelerating research to find a cure. We also provide a platform for connection between families, researchers, and healthcare professionals."} />
