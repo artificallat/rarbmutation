@@ -146,20 +146,21 @@ export default function Network({ lang }: { lang: Lang }) {
         <div className="space-y-6">
           {scientific.map((s, i) => (
             <Reveal key={s.name} delay={i * 120}>
-              <article className="bg-card border border-border rounded-2xl p-6 sm:p-8 grid md:grid-cols-[200px_1fr_auto] gap-6 items-center hover:border-teal hover:shadow-xl transition-all duration-300">
-                <div className="w-full h-28 rounded-xl bg-white border border-border flex items-center justify-center overflow-hidden">
+              <article className="bg-card border border-border rounded-2xl p-5 sm:p-8 grid md:grid-cols-[200px_1fr_auto] gap-5 sm:gap-6 items-center hover:border-teal hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="w-full max-w-[200px] h-24 sm:h-28 mx-auto md:mx-0 rounded-xl bg-white border border-border flex items-center justify-center overflow-hidden">
                   <img src={s.logo} alt={s.name} className="max-w-full max-h-full object-contain p-3" loading="lazy" />
                 </div>
-                <div className="space-y-1">
+                <div className="space-y-1 min-w-0">
                   <p className="text-xs uppercase tracking-[0.2em] text-teal font-semibold">{s.country}</p>
-                  <h3 className="font-display text-xl font-bold text-navy leading-tight">{s.name}</h3>
-                  <p className="text-foreground/85 pt-2"><strong>{s.lead}</strong></p>
-                  <p className="text-sm text-foreground/70">{s.role}</p>
+                  <h3 className="font-display text-lg sm:text-xl font-bold text-navy leading-tight break-words">{s.name}</h3>
+                  <p className="text-foreground/85 pt-2 break-words"><strong>{s.lead}</strong></p>
+                  <p className="text-sm text-foreground/70 break-words">{s.role}</p>
                 </div>
                 <a href={s.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-teal font-semibold hover:underline shrink-0">
                   {de ? "Website" : "Visit"} <ExternalLink className="w-4 h-4" />
                 </a>
               </article>
+
             </Reveal>
           ))}
         </div>
