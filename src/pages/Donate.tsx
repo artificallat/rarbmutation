@@ -16,8 +16,8 @@ export default function Donate({ lang }: { lang: Lang }) {
     <>
       <PageHero eyebrow={de ? "Spenden" : "Donate"}
         title={de
-          ? "Mit Ihrer Hilfe kommen wir einer lebensverändernden Therapie näher. Jede Spende macht einen Unterschied."
-          : "With your help, we can move closer to a life-changing therapy. Every donation makes a difference."} />
+          ? <>Mit Ihrer Hilfe kommen wir einer lebensverändernden <HeroAccent>Therapie</HeroAccent> näher. Jede Spende macht einen Unterschied.</>
+          : <>With your help, we can move closer to a life-changing <HeroAccent>therapy</HeroAccent>. Every donation makes a difference.</>} />
 
       <section className="container-tight pb-12">
         <div className="bg-card border border-border rounded-3xl p-8 sm:p-10 shadow-[var(--shadow-card)]">
