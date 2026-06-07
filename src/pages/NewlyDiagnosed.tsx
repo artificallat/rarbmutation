@@ -168,7 +168,7 @@ export default function NewlyDiagnosed({ lang }: { lang: Lang }) {
       <section className="container-wide pb-12">
         <SectionTitle eyebrow="02" title={de ? "An der Forschung teilnehmen" : "Participate in research"} />
         <Reveal>
-          <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-8 md:p-10 space-y-5">
+          <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-8 md:p-10 space-y-5 overflow-hidden break-words">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 rounded-2xl bg-amber/20 text-amber flex items-center justify-center">
                 <FlaskConical className="w-7 h-7" />
