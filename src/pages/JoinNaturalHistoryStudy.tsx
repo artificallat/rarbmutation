@@ -74,7 +74,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
         <div className="grid md:grid-cols-3 gap-6">
           {features.map((f, i) => (
             <Reveal key={f.t} delay={i * 120}>
-              <div className="bg-card border border-border rounded-2xl p-6 h-full hover:-translate-y-1 hover:shadow-xl hover:border-teal transition-all duration-300 group">
+              <div className="bg-card border border-border rounded-2xl p-6 h-full hover:-translate-y-1 hover:shadow-xl hover:border-teal transition-all duration-300 group overflow-hidden break-words">
                 <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-4 group-hover:bg-teal group-hover:text-white transition-colors">
                   <f.icon className="w-6 h-6" />
                 </div>
