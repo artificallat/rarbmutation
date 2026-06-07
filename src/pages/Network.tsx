@@ -67,43 +67,34 @@ export default function Network({ lang }: { lang: Lang }) {
           : "After establishing Cure MCOPS12 in 2020, we built a global network of patient advocates and researchers."}
       />
 
-      {/* Hero image — desktop shows the wide composition with baked-in quote */}
-      <section className="container-tight pt-4 pb-8 hidden md:block">
+      {/* Hero quote: cropped baby photo + crisp HTML text (responsive) */}
+      <section className="container-tight pt-4 pb-12">
         <Reveal>
-          <img
-            src={networkHero.url}
-            alt={de ? "Kind mit Schnuller schlafend – ein berührender Moment, der unsere Mission inspiriert" : "Sleeping child with pacifier — a moment that inspires our mission"}
-            className="w-full h-auto rounded-2xl object-cover"
-            loading="lazy"
-          />
-        </Reveal>
-      </section>
-
-      {/* Mobile: cropped baby image + readable HTML quote card */}
-      <section className="container-tight pt-4 pb-8 md:hidden">
-        <Reveal>
-          <div className="rounded-2xl overflow-hidden border border-border bg-card">
-            <img
-              src={babyHero.url}
-              alt={de ? "Kind mit Schnuller schlafend" : "Sleeping child with pacifier"}
-              className="w-full aspect-square object-cover"
-              loading="lazy"
-            />
-            <div className="p-5">
-              <p className="font-display text-lg text-navy leading-snug">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="rounded-2xl overflow-hidden border border-border bg-card">
+              <img
+                src={babyHero.url}
+                alt={de ? "Kind mit Schnuller schlafend" : "Sleeping child with pacifier"}
+                className="w-full aspect-square md:aspect-[4/5] object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p className="font-display text-2xl sm:text-3xl text-navy leading-snug">
                 {de
-                  ? "„Wir können nicht warten, bis jemand anderes eine Behandlung entwickelt – also tun wir es selbst."
+                  ? "„Wir können nicht warten, bis jemand anderes eine Behandlung entwickelt — also tun wir es selbst."
                   : "“We cannot wait for someone else to develop a treatment — so we do it ourselves."}
               </p>
-              <p className="text-sm text-foreground/75 mt-3 leading-relaxed">
+              <p className="text-base sm:text-lg text-foreground/75 mt-5 leading-relaxed">
                 {de
-                  ? "Was als persönliche Suche zweier Eltern begann, ist heute eine internationale Forschungsinitiative – getragen von Familien, Wissenschaftler:innen und Unterstützer:innen weltweit."
+                  ? "Was als persönliche Suche zweier Eltern begann, ist heute eine internationale Forschungsinitiative — getragen von Familien, Wissenschaftler:innen und Unterstützer:innen weltweit."
                   : "What began as the personal search of two parents has become an international research effort — carried by families, scientists and supporters all over the world."}
               </p>
             </div>
           </div>
         </Reveal>
       </section>
+
 
       {/* Intro */}
       <section className="container-tight pb-16">
