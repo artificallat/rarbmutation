@@ -314,7 +314,7 @@ export default function Research({ lang }: { lang: Lang }) {
               return (
                 <div key={p.number} className="group flex flex-col rounded-3xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-xl transition-all">
                   {/* Header band */}
-                  <div className="bg-gradient-to-br from-navy to-navy-deep text-white px-6 py-5 min-h-[9.5rem] md:min-h-[10.5rem] lg:min-h-[11.5rem] flex flex-col justify-start">
+                  <div className="bg-gradient-to-br from-navy to-navy-deep text-white px-6 py-5 min-h-[7rem] md:min-h-[7.5rem] lg:min-h-[8rem] flex flex-col justify-start">
                     <p className="text-[11px] uppercase tracking-[0.25em] text-amber font-semibold">
                       {de ? "Säule" : "Pillar"} {p.number}
                     </p>
