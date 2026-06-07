@@ -12,7 +12,7 @@ export default function Layout({ lang }: { lang: Lang }) {
     queueMicrotask(() => window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior }));
   }
   return (
-    <div className="min-h-screen flex flex-col bg-background overflow-x-hidden" key={pathname}>
+    <div className="min-h-screen flex flex-col bg-background overflow-x-clip" key={pathname}>
       <RouteSeo lang={lang} />
       <Navbar lang={lang} />
       <main className="flex-1 pb-24 md:pb-0">
