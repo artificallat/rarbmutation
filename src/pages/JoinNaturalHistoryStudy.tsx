@@ -176,7 +176,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
             download
             target="_blank"
             rel="noreferrer"
-            className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4"
+            className="group bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4 overflow-hidden break-words"
           >
             <div className="w-14 h-14 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0 group-hover:bg-teal group-hover:text-white transition-colors">
               <Download className="w-7 h-7" />
