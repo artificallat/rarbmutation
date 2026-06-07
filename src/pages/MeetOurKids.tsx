@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Placeholder } from "@/components/site/Bits";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { kids, type Lang } from "@/content/site";
 import simonPhoto from "@/assets/simon-schulbeginn.jpg";
 import rhettPhoto from "@/assets/kids/rhett.webp";

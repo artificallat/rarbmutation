@@ -1,6 +1,6 @@
 import { ExternalLink, Eye, Activity, Brain, Dna, Sparkles, AlertCircle } from "lucide-react";
 import { SectionTitle } from "@/components/site/Bits";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
 import { geneFmt } from "@/lib/gene";

@@ -1,5 +1,5 @@
 import { Heart, Dna, Users, Globe2 } from "lucide-react";
-import { PageHero } from "./WhoWeAre";
+import { PageHero, HeroAccent } from "./WhoWeAre";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import { Placeholder } from "@/components/site/Bits";
 import storyPhoto from "@/assets/simon-pony.jpg";

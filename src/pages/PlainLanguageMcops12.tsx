@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Eye, Activity, Footprints, MessageCircle, Sparkles, ArrowRight, HelpCircle } from "lucide-react";
-import { PageHero } from "./WhoWeAre";
+import { PageHero, HeroAccent } from "./WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
 import { geneFmt } from "@/lib/gene";

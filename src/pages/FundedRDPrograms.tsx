@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { PageHero } from "./WhoWeAre";
+import { PageHero, HeroAccent } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import rainrareImg from "@/assets/research/rainrare-abstract.png";

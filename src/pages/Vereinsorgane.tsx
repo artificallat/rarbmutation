@@ -1,5 +1,5 @@
 import { Linkedin } from "lucide-react";
-import { PageHero } from "./WhoWeAre";
+import { PageHero, HeroAccent } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import type { Lang } from "@/content/site";
 import reinhardPhoto from "@/assets/reinhard-pell-portrait.jpg";

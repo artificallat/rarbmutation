@@ -1,4 +1,4 @@
-import { PageHero } from "./WhoWeAre";
+import { PageHero, HeroAccent } from "./WhoWeAre";
 import type { Lang } from "@/content/site";
 
 const advisors = [

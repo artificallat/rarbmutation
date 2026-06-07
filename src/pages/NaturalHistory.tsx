@@ -1,6 +1,6 @@
 import { Mail, Database, Microscope, ClipboardList, ShieldCheck, FileSearch } from "lucide-react";
 import { SectionTitle } from "@/components/site/Bits";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
 import { socials, type Lang } from "@/content/site";

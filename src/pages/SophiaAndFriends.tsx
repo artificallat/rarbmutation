@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
 import sophiaLogo from "@/assets/partners/sophia.png";
 

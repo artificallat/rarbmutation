@@ -1,6 +1,6 @@
 import { Placeholder } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
 import { geneFmt } from "@/lib/gene";
 import simonWinter from "@/assets/simon-winter-2026.jpg";

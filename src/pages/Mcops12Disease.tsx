@@ -1,6 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { SectionTitle } from "@/components/site/Bits";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import type { Lang } from "@/content/site";
 import rarbMutation from "@/assets/rarb-mutation.jpg";
 

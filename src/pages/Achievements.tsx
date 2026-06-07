@@ -1,6 +1,6 @@
 import { FlaskConical, Building2 } from "lucide-react";
 import asoFigure1 from "@/assets/research/aso-figure-1.png";
-import { PageHero } from "@/pages/WhoWeAre";
+import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import { AsoWorkflowFigure } from "@/components/site/AsoWorkflowFigure";
 import type { Lang } from "@/content/site";

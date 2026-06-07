@@ -1,5 +1,5 @@
 import { Mouse, FlaskConical, TestTube2, Pill, BrainCircuit, ScanSearch, CheckCircle2, Clock } from "lucide-react";
-import { PageHero } from "./WhoWeAre";
+import { PageHero, HeroAccent } from "./WhoWeAre";
 import { SectionTitle } from "@/components/site/Bits";
 import { Reveal, Counter } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
