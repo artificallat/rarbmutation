@@ -1,24 +1,24 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Linkedin } from "lucide-react";
 import { t, partners, donationGoal, socials, type Lang } from "@/content/site";
 import { Placeholder, ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import { geneFmt } from "@/lib/gene";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import heroFamily from "@/assets/family-mountains.jpg";
 import heroHorse from "@/assets/simon-horse-mane.jpg";
 import heroBeyond from "@/assets/simon-and-beyond.jpg";
 import heroFairyLights from "@/assets/simon-fairy-lights.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
-import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
-import newsSimonSmile from "@/assets/news-simon-smile.jpg";
-import newsBreakingAso from "@/assets/news-breaking-aso.jpg";
+import newsRunForRare from "@/assets/news-run-for-rare-couple-v2.png.asset.json";
+import newsHappyNewYear from "@/assets/news-happy-new-year.png.asset.json";
 
 const LINKEDIN_URL = "https://www.linkedin.com/company/cure-mcops12/";
 
 const homeNews = [
   {
-    img: newsRunForRare,
+    img: newsRunForRare.url,
     cat: "Community",
     date: "March 2026",
     href: LINKEDIN_URL,
@@ -32,33 +32,88 @@ const homeNews = [
     },
   },
   {
-    img: newsBreakingAso,
-    objectPosition: "center 30%",
+    img: null,
     cat: "Research",
     date: "March 2026",
     href: LINKEDIN_URL,
     en: {
       t: "New preprint on RARB-related disorder",
-      e: "Hi #MCOPS12 community, please take a moment to read Nicolas' recent post about a new publication on RARB-related disorder (RARB-RD) — a rare neurological disorder caused by dominant variants in the Retinoic Acid Receptor Beta (RARB) gene, studied in two new mouse models carrying patient variants (p.R387C and p.L402P).",
+      e: `Hi #MCOPS12 community,
+
+please take a moment to read Nicolas' recent post about a new publication on the MCOPS12/RARB-related disorder (preprint available on bioRxiv: https://lnkd.in/dGydAhC9).
+
+This is a seminal contribution to advancing our understanding of the underlying disease mechanisms of MCOPS12. It also highlights that allele-selective silencing of the mutant RARB gene (e.g. by an allele-selective ASO) represents a promising strategy for developing a disease-modifying therapy.
+
+We are truly grateful for the excellent collaboration with Dr. Wojciech Krezel's team at the IGBMC and Dr. Jacques Michaud's team at Centre de recherche Azrieli du CHU Sainte-Justine.
+
+It has been a pleasure to support you, Nicolas Zinter, PhD, in your PhD journey and to help make this pivotal work a reality.`,
     },
     de: {
-      t: "Neues Preprint zur RARB-related disorder",
-      e: "Hallo #MCOPS12-Community, bitte nehmt euch einen Moment Zeit für Nicolas' aktuellen Beitrag zu einer neuen Publikation über RARB-related disorder (RARB-RD) — eine seltene neurologische Erkrankung, verursacht durch dominante Varianten im RARB-Gen, untersucht in zwei neuen Mausmodellen mit den Patientenvarianten p.R387C und p.L402P.",
+      t: "New preprint on RARB-related disorder",
+      e: `Hi #MCOPS12 community,
+
+please take a moment to read Nicolas' recent post about a new publication on the MCOPS12/RARB-related disorder (preprint available on bioRxiv: https://lnkd.in/dGydAhC9).
+
+This is a seminal contribution to advancing our understanding of the underlying disease mechanisms of MCOPS12. It also highlights that allele-selective silencing of the mutant RARB gene (e.g. by an allele-selective ASO) represents a promising strategy for developing a disease-modifying therapy.
+
+We are truly grateful for the excellent collaboration with Dr. Wojciech Krezel's team at the IGBMC and Dr. Jacques Michaud's team at Centre de recherche Azrieli du CHU Sainte-Justine.
+
+It has been a pleasure to support you, Nicolas Zinter, PhD, in your PhD journey and to help make this pivotal work a reality.`,
     },
   },
   {
-    img: newsSimonSmile,
-    objectPosition: "center 25%",
+    img: newsHappyNewYear.url,
+    objectPosition: "center top",
     cat: "Community",
     date: "January 2026",
     href: LINKEDIN_URL,
     en: {
       t: "Happy New Year from Cure MCOPS12!",
-      e: "As we step into 2026, we want to express our heartfelt gratitude to all our supporters, families, scientists and partners who walked this path with us throughout the year.",
+      e: `Happy New Year from Cure MCOPS12!
+
+As we step into 2026, we want to express our heartfelt gratitude to all our donors for their unwavering support. Together, we've accomplished incredible milestones in 2025:
+
+👉 €56,000 in donations
+
+👉 Proof of concept for Simon's allele-selective Antisense Oligonucleotide (ASO) therapy – we identified several promising ASO candidates that can knock down the mutant RARB gene while preserving the wild-type 😊
+
+👉 Expanded our MCOPS12 Natural History Study – now with 35 patients enrolled
+
+👉 Significant progress in lipidomics biomarker research using the MCOPS12 mouse model
+
+👉 Advanced drug repurposing studies in the MCOPS12 mouse model
+
+👉 Active participation in key events – EURORDIS OpenAcademy 2025, the N=1 Collaborative Annual Meeting, and our very first MCOPS12 Families Conference in Montréal
+
+Looking ahead, 2026 will be a transformative year! We are launching new drug development initiatives in close collaboration with our partners and MCOPS12 warriors: A Cure for Sophia and Friends and A Cure for Sienna.
+
+Stay tuned for exciting updates coming soon!
+
+#HappyNewYear #CureMCOPS12 #ACureforSophiaandFriends #ACureforSienna`,
     },
     de: {
       t: "Happy New Year von Cure MCOPS12!",
-      e: "Mit dem Start in das Jahr 2026 möchten wir all unseren Unterstützer:innen, Familien, Wissenschaftler:innen und Partnern von Herzen danken, die diesen Weg im vergangenen Jahr mit uns gegangen sind.",
+      e: `Happy New Year from Cure MCOPS12!
+
+As we step into 2026, we want to express our heartfelt gratitude to all our donors for their unwavering support. Together, we've accomplished incredible milestones in 2025:
+
+👉 €56,000 in donations
+
+👉 Proof of concept for Simon's allele-selective Antisense Oligonucleotide (ASO) therapy – we identified several promising ASO candidates that can knock down the mutant RARB gene while preserving the wild-type 😊
+
+👉 Expanded our MCOPS12 Natural History Study – now with 35 patients enrolled
+
+👉 Significant progress in lipidomics biomarker research using the MCOPS12 mouse model
+
+👉 Advanced drug repurposing studies in the MCOPS12 mouse model
+
+👉 Active participation in key events – EURORDIS OpenAcademy 2025, the N=1 Collaborative Annual Meeting, and our very first MCOPS12 Families Conference in Montréal
+
+Looking ahead, 2026 will be a transformative year! We are launching new drug development initiatives in close collaboration with our partners and MCOPS12 warriors: A Cure for Sophia and Friends and A Cure for Sienna.
+
+Stay tuned for exciting updates coming soon!
+
+#HappyNewYear #CureMCOPS12 #ACureforSophiaandFriends #ACureforSienna`,
     },
   },
 ];
@@ -69,6 +124,7 @@ export default function Home({ lang }: { lang: Lang }) {
   const tr = t[lang];
   const p = lang === "de" ? "/de" : "";
   const [slide, setSlide] = useState(0);
+  const [openPost, setOpenPost] = useState<number | null>(null);
   const slides = tr.home.slides;
 
   useEffect(() => {
@@ -255,37 +311,84 @@ export default function Home({ lang }: { lang: Lang }) {
             {homeNews.map((post, idx) => (
               <Reveal key={idx} delay={idx * 150}>
                 <article className="group bg-card rounded-3xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] hover:-translate-y-1 hover:border-teal transition-all duration-300 h-full flex flex-col">
-                  <div className="overflow-hidden">
-                    <Placeholder
-                      label={`Thumbnail: ${post.cat}`}
-                      src={post.img}
-                      objectPosition={(post as any).objectPosition || "center"}
-                      className="aspect-[4/3] !rounded-none transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                  </div>
+                  {post.img ? (
+                    <div className="overflow-hidden">
+                      <Placeholder
+                        label={`Thumbnail: ${post.cat}`}
+                        src={post.img}
+                        objectPosition={(post as any).objectPosition || "center"}
+                        className="aspect-[4/3] !rounded-none transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                  ) : (
+                    <div className="aspect-[4/3] bg-gradient-to-br from-teal/15 via-navy/5 to-coral/10 flex items-center justify-center p-6">
+                      <Linkedin className="w-16 h-16 text-teal/70" strokeWidth={1.5} />
+                    </div>
+                  )}
                   <div className="p-6 flex-1 flex flex-col">
                     <p className="text-xs text-teal font-semibold uppercase tracking-wider">
                       {post.cat} · {post.date}
                     </p>
                     <h3 className="font-display text-xl font-bold mt-2">{lang === "de" ? post.de.t : post.en.t}</h3>
-                    <p className="text-sm text-muted-foreground mt-2 line-clamp-3">
+                    <p className="text-sm text-muted-foreground mt-2 line-clamp-3 whitespace-pre-line">
                       {geneFmt(lang === "de" ? post.de.e : post.en.e)}
                     </p>
-                    <a
-                      href={(post as any).href || "https://www.linkedin.com/company/cure-mcops12/"}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-teal transition-colors"
+                    <button
+                      type="button"
+                      onClick={() => setOpenPost(idx)}
+                      className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-teal transition-colors self-start"
                     >
-                      {tr.cta.readMore} <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                    </a>
+                      {tr.cta.readMore} <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                    </button>
                   </div>
                 </article>
               </Reveal>
             ))}
           </div>
         </div>
+
+        <Dialog open={openPost !== null} onOpenChange={(o) => !o && setOpenPost(null)}>
+          <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto">
+            {openPost !== null && (() => {
+              const post = homeNews[openPost];
+              const body = lang === "de" ? post.de : post.en;
+              return (
+                <>
+                  <DialogHeader>
+                    <p className="text-xs text-teal font-semibold uppercase tracking-wider">
+                      {post.cat} · {post.date}
+                    </p>
+                    <DialogTitle className="font-display text-2xl font-bold leading-tight">
+                      {body.t}
+                    </DialogTitle>
+                  </DialogHeader>
+                  {post.img && (
+                    <img
+                      src={post.img}
+                      alt={body.t}
+                      className="w-full rounded-2xl object-cover max-h-80"
+                      style={{ objectPosition: (post as any).objectPosition || "center" }}
+                    />
+                  )}
+                  <div className="text-base text-foreground/85 whitespace-pre-line leading-relaxed">
+                    {geneFmt(body.e)}
+                  </div>
+                  <a
+                    href={post.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 self-start mt-2 px-5 py-2.5 rounded-full bg-[#0a66c2] text-white font-semibold hover:bg-[#084d92] transition-colors"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                    {lang === "de" ? "Auf LinkedIn ansehen" : "View on LinkedIn"}
+                  </a>
+                </>
+              );
+            })()}
+          </DialogContent>
+        </Dialog>
       </section>
+
 
       {/* PARTNERS */}
       <section className="py-24">
