@@ -1,10 +1,9 @@
-import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation } from "lucide-react";
+import { ClipboardList, Activity, Users, Mail, Download, Presentation } from "lucide-react";
 import { SectionTitle, LeadParagraph } from "@/components/site/Bits";
 import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
 import flyerAsset from "@/assets/nhs-flyer.pdf.asset.json";
-import flyerThumb from "@/assets/nhs-flyer-thumb.jpg.asset.json";
 import presentationAsset from "@/assets/nhs-presentation.pdf.asset.json";
 
 
