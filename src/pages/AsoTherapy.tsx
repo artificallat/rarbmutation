@@ -129,7 +129,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             </div>
             <h4 className="font-display text-lg font-bold text-navy">Large pharma company (undisclosed)</h4>
             <p className="text-foreground/75 mt-2 text-base">
-              Additional designs of ASOs and safety testing in Simon´s cell model was performed at a large pharma company (undisclosed).
+              Additional designs of ASOs and safety testing in Simon's cell model was performed at a large pharma company (undisclosed).
             </p>
           </div>
 
