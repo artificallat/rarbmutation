@@ -311,37 +311,84 @@ export default function Home({ lang }: { lang: Lang }) {
             {homeNews.map((post, idx) => (
               <Reveal key={idx} delay={idx * 150}>
                 <article className="group bg-card rounded-3xl overflow-hidden border border-border hover:shadow-[var(--shadow-card)] hover:-translate-y-1 hover:border-teal transition-all duration-300 h-full flex flex-col">
-                  <div className="overflow-hidden">
-                    <Placeholder
-                      label={`Thumbnail: ${post.cat}`}
-                      src={post.img}
-                      objectPosition={(post as any).objectPosition || "center"}
-                      className="aspect-[4/3] !rounded-none transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                  </div>
+                  {post.img ? (
+                    <div className="overflow-hidden">
+                      <Placeholder
+                        label={`Thumbnail: ${post.cat}`}
+                        src={post.img}
+                        objectPosition={(post as any).objectPosition || "center"}
+                        className="aspect-[4/3] !rounded-none transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                  ) : (
+                    <div className="aspect-[4/3] bg-gradient-to-br from-teal/15 via-navy/5 to-coral/10 flex items-center justify-center p-6">
+                      <Linkedin className="w-16 h-16 text-teal/70" strokeWidth={1.5} />
+                    </div>
+                  )}
                   <div className="p-6 flex-1 flex flex-col">
                     <p className="text-xs text-teal font-semibold uppercase tracking-wider">
                       {post.cat} · {post.date}
                     </p>
                     <h3 className="font-display text-xl font-bold mt-2">{lang === "de" ? post.de.t : post.en.t}</h3>
-                    <p className="text-sm text-muted-foreground mt-2 line-clamp-3">
+                    <p className="text-sm text-muted-foreground mt-2 line-clamp-3 whitespace-pre-line">
                       {geneFmt(lang === "de" ? post.de.e : post.en.e)}
                     </p>
-                    <a
-                      href={(post as any).href || "https://www.linkedin.com/company/cure-mcops12/"}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-teal transition-colors"
+                    <button
+                      type="button"
+                      onClick={() => setOpenPost(idx)}
+                      className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-teal transition-colors self-start"
                     >
-                      {tr.cta.readMore} <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                    </a>
+                      {tr.cta.readMore} <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                    </button>
                   </div>
                 </article>
               </Reveal>
             ))}
           </div>
         </div>
+
+        <Dialog open={openPost !== null} onOpenChange={(o) => !o && setOpenPost(null)}>
+          <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto">
+            {openPost !== null && (() => {
+              const post = homeNews[openPost];
+              const body = lang === "de" ? post.de : post.en;
+              return (
+                <>
+                  <DialogHeader>
+                    <p className="text-xs text-teal font-semibold uppercase tracking-wider">
+                      {post.cat} · {post.date}
+                    </p>
+                    <DialogTitle className="font-display text-2xl font-bold leading-tight">
+                      {body.t}
+                    </DialogTitle>
+                  </DialogHeader>
+                  {post.img && (
+                    <img
+                      src={post.img}
+                      alt={body.t}
+                      className="w-full rounded-2xl object-cover max-h-80"
+                      style={{ objectPosition: (post as any).objectPosition || "center" }}
+                    />
+                  )}
+                  <div className="text-base text-foreground/85 whitespace-pre-line leading-relaxed">
+                    {geneFmt(body.e)}
+                  </div>
+                  <a
+                    href={post.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 self-start mt-2 px-5 py-2.5 rounded-full bg-[#0a66c2] text-white font-semibold hover:bg-[#084d92] transition-colors"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                    {lang === "de" ? "Auf LinkedIn ansehen" : "View on LinkedIn"}
+                  </a>
+                </>
+              );
+            })()}
+          </DialogContent>
+        </Dialog>
       </section>
+
 
       {/* PARTNERS */}
       <section className="py-24">
