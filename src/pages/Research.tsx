@@ -45,7 +45,12 @@ const pillars: Pillar[] = [
     groups: [
       {
         heading: "Four different mouse models",
-        items: ["Rarb⁻ᐟ⁻", "Rarb R387C/+", "Rarb L402P/+", "Rarb⁺ᐟ⁻"],
+        items: [
+          <><em>Rarb</em><sup>-/-</sup></>,
+          <><em>Rarb</em><sup>R387C/+</sup></>,
+          <><em>Rarb</em><sup>L402P/+</sup></>,
+          <><em>Rarb</em><sup>+/-</sup></>,
+        ],
       },
       {
         heading: "Studies",
