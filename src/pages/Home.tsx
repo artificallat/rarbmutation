@@ -11,12 +11,69 @@ import heroHorse from "@/assets/simon-horse-mane.jpg";
 import heroBeyond from "@/assets/simon-and-beyond.jpg";
 import heroFairyLights from "@/assets/simon-fairy-lights.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
-import newsRunForRare from "@/assets/news-run-for-rare-couple-v2.png.asset.json";
-import newsHappyNewYear from "@/assets/news-happy-new-year.png.asset.json";
+import newsAsoBreakthrough from "@/assets/news-aso-breakthrough.png.asset.json";
+import newsRunForRare from "@/assets/news-run-for-rare-couple.png.asset.json";
+import newsHappyNewYear from "@/assets/news-happy-new-year-2026.png.asset.json";
 
 const LINKEDIN_URL = "https://www.linkedin.com/company/cure-mcops12/";
 
+const asoBreakingText = `BREAKING NEWS:
+
+We are thrilled to announce the successful completion of the proof-of-concept study for Simon's personalized antisense oligonucleotide (ASO) therapy.
+
+👉 We identified SIX ASO candidates that selectively silence Simon's mutated RARB gene while preserving the healthy (wild-type) gene.
+👉 All six candidates have successfully passed safety testing in Simon's cellular disease model.
+👉 We are now preparing the next and final step: a general toxicity study to identify the safest ASO candidate for Simon.
+
+What began as a bold dream is now close to becoming reality – a personalized ASO therapy for Simon, targeting an ultra-rare genetic neurological disease with fewer than 100 patients worldwide.
+
+#CureMCOPS12 #PrecisionMedicine #oligotherapeutics #AntisenseOligonucleotide`;
+
+const runForRareText = `RUN FOR RARE – RUN FOR SIMON
+
+Das war unser persönliches Motto beim Rare Diseases Run, bei dem Menschen mit seltenen Erkrankungen ins Rampenlicht gerückt werden.
+Gemeinsam für eine bessere Welt zu laufen ist zwar genauso anstrengend – macht aber glücklich 😊
+
+#runforrare #selteneerkrankungen #RareDiseaseDay #CureMCOPS12`;
+
+const happyNewYearText = `Happy New Year from Cure MCOPS12!
+
+As we step into 2026, we want to express our heartfelt gratitude to all our donors for their unwavering support. Together, we've accomplished incredible milestones in 2025:
+
+👉 €56,000 in donations
+
+👉 Proof of concept for Simon's allele-selective Antisense Oligonucleotide (ASO) therapy – we identified several promising ASO candidates that can knock down the mutant RARB gene while preserving the wild-type 😊
+
+👉 Expanded our MCOPS12 Natural History Study – now with 35 patients enrolled
+
+👉 Significant progress in lipidomics biomarker research using the MCOPS12 mouse model
+
+👉 Advanced drug repurposing studies in the MCOPS12 mouse model
+
+👉 Active participation in key events – EURORDIS OpenAcademy 2025, the N=1 Collaborative Annual Meeting, and our very first MCOPS12 Families Conference in Montréal
+
+Looking ahead, 2026 will be a transformative year! We are launching new drug development initiatives in close collaboration with our partners and MCOPS12 warriors: A Cure for Sophia and Friends and A Cure for Sienna.
+
+Stay tuned for exciting updates coming soon!
+
+#HappyNewYear #CureMCOPS12 #ACureforSophiaandFriends #ACureforSienna`;
+
 const homeNews = [
+  {
+    img: newsAsoBreakthrough.url,
+    objectPosition: "center 20%",
+    cat: "Research",
+    date: "April 2026",
+    href: LINKEDIN_URL,
+    en: {
+      t: "BREAKING NEWS: Six ASO candidates identified for Simon",
+      e: asoBreakingText,
+    },
+    de: {
+      t: "BREAKING NEWS: Sechs ASO-Kandidaten für Simon identifiziert",
+      e: asoBreakingText,
+    },
+  },
   {
     img: newsRunForRare.url,
     cat: "Community",
@@ -24,41 +81,11 @@ const homeNews = [
     href: LINKEDIN_URL,
     en: {
       t: "RUN FOR RARE – RUN FOR SIMON",
-      e: "Das war unser persönliches Motto beim Rare Diseases Run, bei dem Menschen mit seltenen Erkrankungen ins Rampenlicht gerückt werden. Gemeinsam für eine bessere Welt zu laufen ist zwar genauso anstrengend – macht aber glücklich.",
+      e: runForRareText,
     },
     de: {
       t: "RUN FOR RARE – RUN FOR SIMON",
-      e: "Das war unser persönliches Motto beim Rare Diseases Run, bei dem Menschen mit seltenen Erkrankungen ins Rampenlicht gerückt werden. Gemeinsam für eine bessere Welt zu laufen ist zwar genauso anstrengend – macht aber glücklich.",
-    },
-  },
-  {
-    img: null,
-    cat: "Research",
-    date: "March 2026",
-    href: LINKEDIN_URL,
-    en: {
-      t: "New preprint on RARB-related disorder",
-      e: `Hi #MCOPS12 community,
-
-please take a moment to read Nicolas' recent post about a new publication on the MCOPS12/RARB-related disorder (preprint available on bioRxiv: https://lnkd.in/dGydAhC9).
-
-This is a seminal contribution to advancing our understanding of the underlying disease mechanisms of MCOPS12. It also highlights that allele-selective silencing of the mutant RARB gene (e.g. by an allele-selective ASO) represents a promising strategy for developing a disease-modifying therapy.
-
-We are truly grateful for the excellent collaboration with Dr. Wojciech Krezel's team at the IGBMC and Dr. Jacques Michaud's team at Centre de recherche Azrieli du CHU Sainte-Justine.
-
-It has been a pleasure to support you, Nicolas Zinter, PhD, in your PhD journey and to help make this pivotal work a reality.`,
-    },
-    de: {
-      t: "New preprint on RARB-related disorder",
-      e: `Hi #MCOPS12 community,
-
-please take a moment to read Nicolas' recent post about a new publication on the MCOPS12/RARB-related disorder (preprint available on bioRxiv: https://lnkd.in/dGydAhC9).
-
-This is a seminal contribution to advancing our understanding of the underlying disease mechanisms of MCOPS12. It also highlights that allele-selective silencing of the mutant RARB gene (e.g. by an allele-selective ASO) represents a promising strategy for developing a disease-modifying therapy.
-
-We are truly grateful for the excellent collaboration with Dr. Wojciech Krezel's team at the IGBMC and Dr. Jacques Michaud's team at Centre de recherche Azrieli du CHU Sainte-Justine.
-
-It has been a pleasure to support you, Nicolas Zinter, PhD, in your PhD journey and to help make this pivotal work a reality.`,
+      e: runForRareText,
     },
   },
   {
@@ -69,51 +96,11 @@ It has been a pleasure to support you, Nicolas Zinter, PhD, in your PhD journey 
     href: LINKEDIN_URL,
     en: {
       t: "Happy New Year from Cure MCOPS12!",
-      e: `Happy New Year from Cure MCOPS12!
-
-As we step into 2026, we want to express our heartfelt gratitude to all our donors for their unwavering support. Together, we've accomplished incredible milestones in 2025:
-
-👉 €56,000 in donations
-
-👉 Proof of concept for Simon's allele-selective Antisense Oligonucleotide (ASO) therapy – we identified several promising ASO candidates that can knock down the mutant RARB gene while preserving the wild-type 😊
-
-👉 Expanded our MCOPS12 Natural History Study – now with 35 patients enrolled
-
-👉 Significant progress in lipidomics biomarker research using the MCOPS12 mouse model
-
-👉 Advanced drug repurposing studies in the MCOPS12 mouse model
-
-👉 Active participation in key events – EURORDIS OpenAcademy 2025, the N=1 Collaborative Annual Meeting, and our very first MCOPS12 Families Conference in Montréal
-
-Looking ahead, 2026 will be a transformative year! We are launching new drug development initiatives in close collaboration with our partners and MCOPS12 warriors: A Cure for Sophia and Friends and A Cure for Sienna.
-
-Stay tuned for exciting updates coming soon!
-
-#HappyNewYear #CureMCOPS12 #ACureforSophiaandFriends #ACureforSienna`,
+      e: happyNewYearText,
     },
     de: {
       t: "Happy New Year von Cure MCOPS12!",
-      e: `Happy New Year from Cure MCOPS12!
-
-As we step into 2026, we want to express our heartfelt gratitude to all our donors for their unwavering support. Together, we've accomplished incredible milestones in 2025:
-
-👉 €56,000 in donations
-
-👉 Proof of concept for Simon's allele-selective Antisense Oligonucleotide (ASO) therapy – we identified several promising ASO candidates that can knock down the mutant RARB gene while preserving the wild-type 😊
-
-👉 Expanded our MCOPS12 Natural History Study – now with 35 patients enrolled
-
-👉 Significant progress in lipidomics biomarker research using the MCOPS12 mouse model
-
-👉 Advanced drug repurposing studies in the MCOPS12 mouse model
-
-👉 Active participation in key events – EURORDIS OpenAcademy 2025, the N=1 Collaborative Annual Meeting, and our very first MCOPS12 Families Conference in Montréal
-
-Looking ahead, 2026 will be a transformative year! We are launching new drug development initiatives in close collaboration with our partners and MCOPS12 warriors: A Cure for Sophia and Friends and A Cure for Sienna.
-
-Stay tuned for exciting updates coming soon!
-
-#HappyNewYear #CureMCOPS12 #ACureforSophiaandFriends #ACureforSienna`,
+      e: happyNewYearText,
     },
   },
 ];
