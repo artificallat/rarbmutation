@@ -88,7 +88,7 @@ const pillars: Pillar[] = [
         ],
       },
     ],
-    partners: ["RareLabs", "Alpha Rose", "Uni Basel"],
+    partners: ["RareLabs", "Uni Basel"],
     accent: "from-navy/10 to-navy/5",
   },
 ];
