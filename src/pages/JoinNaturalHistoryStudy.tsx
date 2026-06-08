@@ -1,10 +1,9 @@
-import { ClipboardList, Activity, Users, Mail, FileText, Download, Presentation } from "lucide-react";
+import { ClipboardList, Activity, Users, Mail, Download, Presentation } from "lucide-react";
 import { SectionTitle, LeadParagraph } from "@/components/site/Bits";
 import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
 import flyerAsset from "@/assets/nhs-flyer.pdf.asset.json";
-import flyerThumb from "@/assets/nhs-flyer-thumb.jpg.asset.json";
 import presentationAsset from "@/assets/nhs-presentation.pdf.asset.json";
 
 
@@ -108,68 +107,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
         </Reveal>
       </section>
 
-      <section className="container-tight pb-12">
-        <Reveal>
-          <div className="bg-card border border-border rounded-3xl p-8 md:p-10 shadow-[var(--shadow-card)]">
-            <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center">
-              <div>
-                <SectionTitle
-                  eyebrow={de ? "Für Fachkreise" : "For physicians"}
-                  title={de ? "Behandeln Sie eine:n Patient:in mit MCOPS12?" : "Do you treat a patient diagnosed with MCOPS12?"}
-                />
-                <p className="text-foreground/85 leading-relaxed -mt-2">
-                  {de
-                    ? "Bitte kontaktieren Sie Valerie Chu, genetische Beraterin und Studienkoordinatorin am CHU Sainte-Justine."
-                    : "Please contact Valerie Chu, genetic counsellor and study coordinator at CHU Sainte-Justine."}
-                </p>
-                <a
-                  href="https://outlook.office.com/mail/deeplink/compose?to=valerie.chu.hsj@ssss.gouv.qc.ca"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-teal px-5 sm:px-6 py-3 font-semibold text-white hover:brightness-110 transition max-w-full break-all text-sm sm:text-base"
-                >
-                  <Mail className="w-4 h-4 shrink-0" />
-                  <span className="break-all">valerie.chu.hsj@ssss.gouv.qc.ca</span>
-                </a>
-                <p className="text-sm text-foreground/70 mt-5">
-                  {de ? "Klicken Sie auf den Flyer, um ihn zu öffnen:" : "Click the flyer to open it:"}
-                </p>
-              </div>
-
-              <a
-                href={flyerAsset.url}
-                target="_blank"
-                rel="noreferrer"
-                className="group block shrink-0 mx-auto"
-                aria-label={de ? "Studien-Flyer öffnen" : "Open study flyer"}
-              >
-                <div className="relative w-44 rounded-xl overflow-hidden border border-border shadow-lg group-hover:shadow-2xl group-hover:-translate-y-1 transition-all bg-white">
-                  <img
-                    src={flyerThumb.url}
-                    alt={de ? "Vorschau des Studien-Flyers" : "Study flyer preview"}
-                    className="w-full h-auto block"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/30 transition-colors flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white text-navy rounded-full p-3 shadow-lg">
-                      <Download className="w-5 h-5" />
-                    </div>
-                  </div>
-                </div>
-                <p className="text-xs text-center text-teal font-semibold mt-2 uppercase tracking-wider">PDF</p>
-              </a>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-
-
-
-
-
-
-      <section className="container-wide pb-12">
+      <section className="container-wide pb-20">
         <SectionTitle
           eyebrow={de ? "Materialien" : "Resources"}
           title={de ? "Flyer & Webinar-Präsentation" : "Flyer & webinar presentation"}
@@ -215,38 +153,6 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      <section className="container-wide pb-20">
-        <div className="grid sm:grid-cols-2 gap-6">
-          <a
-            href="https://ern-ithaca.eu/our-research-activities/calls-for-collaboration/rarb-natural-history-study/"
-            target="_blank"
-            rel="noreferrer"
-            className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4 overflow-hidden break-words"
-          >
-            <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0">
-              <FileText className="w-6 h-6" />
-            </div>
-            <div>
-              <h4 className="font-display text-lg font-bold text-navy">{de ? "Studien-Übersicht (ERN-ITHACA)" : "Study overview (ERN-ITHACA)"}</h4>
-              <p className="text-sm text-teal font-semibold mt-1 break-all">ern-ithaca.eu/.../rarb-natural-history-study</p>
-            </div>
-          </a>
-          <a
-            href="https://research.chusj.org/en/Home"
-            target="_blank"
-            rel="noreferrer"
-            className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4 overflow-hidden break-words"
-          >
-            <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0">
-              <FileText className="w-6 h-6" />
-            </div>
-            <div>
-              <h4 className="font-display text-lg font-bold text-navy">CHU Sainte-Justine</h4>
-              <p className="text-sm text-teal font-semibold mt-1">{de ? "Studienzentrum, Université de Montréal" : "Host research centre, Université de Montréal"}</p>
-            </div>
-          </a>
-        </div>
-      </section>
 
     </>
   );
