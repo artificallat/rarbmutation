@@ -25,14 +25,17 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
         </h2>
         <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
           <p>
-            ASO therapeutics are short, synthetic strands of nucleotides - the building blocks of DNA and RNA - typically 15 to 25 units in length. They are part of the RNA therapeutics class and are designed to bind with high specificity to a single messenger RNA (mRNA), the temporary "recipe" a cell uses to produce a protein.
+            ASOs are short, lab-made strands of genetic material built from the same building blocks as our own DNA and RNA. The easiest way to picture them is as a tiny, highly precise strip of tape that sticks to one — and only one — target inside a cell.
           </p>
           <p>
-            By binding to their target mRNA, ASOs can either block the production of disease‑causing proteins or modify the mRNA in a way that restores normal protein function when it would otherwise be lost. This highly precise mechanism makes ASO therapeutics a powerful approach for treating a wide range of genetic disorders, including rare diseases (Lauffer et al. 2024{" "}
+            That target is messenger RNA (mRNA): the short-lived "recipe" a cell follows to make a protein. By binding to a chosen mRNA, an ASO can either stop a harmful protein from being made or correct the recipe so a missing protein works again.
+          </p>
+          <p>
+            This precision is what makes ASOs so promising for genetic conditions, including rare diseases (Lauffer et al. 2024{" "}
             <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">
               https://www.nature.com/articles/s43856-023-00419-1
             </a>
-            ). Since ASOs act on mRNA and not on DNA, their effects are reversible, meaning repeated dosing is required.
+            ). Because ASOs work on mRNA rather than on DNA itself, their effect is temporary - patients need repeated doses to keep the therapy effective.
           </p>
         </div>
       </section>
@@ -45,13 +48,13 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
           </h2>
           <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
             <p>
-              In most patients with MCOPS12, one copy of the <em>RARB</em> gene is mutated while the other copy stays healthy (wild-type = carries no mutation). Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful RARB protein variant. An ASO can be designed to selectively recognize and bind to the mutant <em>RARB</em> mRNA.
+              In most patients with MCOPS12, <strong>one copy of the <em>RARB</em> gene is mutated</strong> while the <strong>other copy stays healthy</strong>. Both copies produce mRNA, but only the mutant mRNA leads to the production of a harmful version of the RARB protein.
             </p>
             <p>
-              After entering the cell, the ASO binds to its target mRNA through Watson–Crick base pairing, forming a short RNA–DNA duplex (Figure 1, Panel 2). This duplex is detected by a natural enzyme called RNase H1, which cuts and degrades the mRNA. As a result, the mutant protein can no longer be produced. This mechanism is known as <strong>mRNA knockdown</strong>.
+              An ASO can be designed to recognize only the faulty mRNA. Once inside the cell, it pairs with that mRNA like two halves of a zipper (Figure 1, Panel 2). A natural enzyme called RNase H1 spots this pairing and destroys the faulty mRNA — so the harmful protein never gets made. Scientists call this <strong>"mRNA knockdown"</strong>.
             </p>
             <p>
-              For MCOPS12, the ASO must be "allele-specific" - meaning it selectively reduces the mutant <em>RARB</em> mRNA while leaving the healthy mRNA untouched. This selectivity is essential because the RARB protein plays a key role in normal brain development. Eliminating the healthy protein would lead to symptoms similar to those seen in MCOPS12 itself. (Ciancia et al. 2022{" "}
+              <strong>The catch:</strong> the ASO has to be <strong>allele-specific</strong> — it must silence only the faulty copy and leave the healthy one untouched. That's because the healthy RARB protein is essential for normal brain development. Knocking it out by mistake would cause the very symptoms we're trying to prevent. (Ciancia et al. 2022{" "}
               <a className="text-teal font-semibold hover:underline break-all" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">
                 https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub
               </a>
@@ -70,7 +73,6 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
               <strong className="text-navy">Figure 1:</strong> Mechanism of antisense oligonucleotide (ASO) for allele-specific mRNA knockdown.
             </figcaption>
           </figure>
-          <p className="text-sm text-foreground/70 mt-3">Personalized</p>
         </Reveal>
       </section>
 
@@ -85,20 +87,17 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             <a className="text-teal font-semibold hover:underline break-all" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">
               https://www.mdpi.com/1999-4923/14/8/1708
             </a>
-            ). Simon carries the pathogenic <em>RARB</em> variant c.1159C&gt;T (p.R387C), which is present in approximately 30% of all MCOPS12 patients, and characterized as dominant-negative in vivo (Zinter et al. 2026, Link:{" "}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.biorxiv.org/content/10.64898/2026.02.20.706764v1" target="_blank" rel="noreferrer">
-              https://www.biorxiv.org/content/10.64898/2026.02.20.706764v1
-            </a>
-            ). Based on computational analyses, the design of an ASO that selectively targets this specific mutation was not considered promising.
+            ). Simon carries a <em>RARB</em> mutation called c.1159C&gt;T (p.R387C), which is shared by about 30% of MCOPS12 patients. Unfortunately, computer modeling showed that targeting this exact mutation wasn't going to work.
           </p>
           <p>
-            Therefore, we performed advanced genetic analyses using <strong>long‑read sequencing</strong> to <strong>identify additional sequence variants on Simon's mutant <em>RARB</em> allele</strong> that could serve as more suitable ASO target sites. This approach revealed dozens of variants (SNPs, indels) that are exclusively present on the mutant allele and thus represent <strong>ideal targets for an allele‑specific ASO therapy</strong>.
+            So we took a different route. Using advanced genetic analyses called <strong>long-read sequencing</strong>, we mapped Simon's faulty <em>RARB</em> copy (allele) in detail — and identified <strong>dozens of additional unique markers found only on the mutant allele</strong>. Each one is a potential bullseye for an allele-specific ASO.
           </p>
           <p>
-            While these results are very encouraging, they also imply that the resulting ASO therapy is highly customized to Simon. Importantly, however, the ASO development workflow established here (Figure 2) provides a robust <strong>blueprint</strong> that can be applied to the development of personalized ASO therapies <strong>for other patients with MCOPS12</strong>.
+            This is exciting on two fronts. First, it opened a real path forward for Simon's ASO therapy. Second, the workflow established here (Figure 2) is a <strong>blueprint</strong> — one that can be reused to develop personalized ASO therapies <strong>for other children with MCOPS12</strong>.
           </p>
         </div>
       </section>
+
 
       {/* Figure 2 — Workflow */}
       <section className="container-wide py-12">
