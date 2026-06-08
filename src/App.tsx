@@ -46,6 +46,7 @@ const pages = (lang: Lang) => (
     <Route path="mcops12-disease" element={<Mcops12Disease lang={lang} />} />
     <Route path="meet-our-kids" element={<MeetOurKids lang={lang} />} />
     <Route path="meet-our-kids/:slug" element={<KidProfile lang={lang} />} />
+    <Route path="simons-aso-therapy" element={<Achievements lang={lang} />} />
     <Route path="achievements" element={<Achievements lang={lang} />} />
     <Route path="research" element={<Research lang={lang} />} />
     <Route path="network" element={<Network lang={lang} />} />

@@ -43,7 +43,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
   const achievementsItems: NavItem[] = [
     { to: `${p}/network`, label: tr.nav.network },
     { to: `${p}/funded-rd-programs`, label: tr.nav.fundedRD },
-    { to: `${p}/achievements`, label: tr.nav.simonsAsoTherapy },
+    { to: `${p}/simons-aso-therapy`, label: tr.nav.simonsAsoTherapy },
   ];
   const familiesItems: NavItem[] = [
     { to: `${p}/newly-diagnosed`, label: tr.nav.newlyDiagnosed },
