@@ -139,8 +139,8 @@ export default function OurStory({ lang }: { lang: Lang }) {
             <div className="space-y-4 text-foreground/80 leading-relaxed text-lg">
               <p className="font-display text-2xl text-navy">
                 {de
-                  ? "„Wir können nicht warten, bis jemand anderes eine Therapie entwickelt — also tun wir es selbst."
-                  : "\"We cannot wait for someone else to develop a treatment — so we do it ourselves."}
+                  ? "„Wir können nicht warten, bis jemand anderes eine Therapie entwickelt — also tun wir es selbst.“"
+                  : "\"We cannot wait for someone else to develop a treatment — so we do it ourselves.\""}
               </p>
               <p>
                 {de
