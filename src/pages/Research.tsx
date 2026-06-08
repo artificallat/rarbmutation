@@ -180,51 +180,36 @@ export default function Research({ lang }: { lang: Lang }) {
 
       <section className="container-tight py-16 space-y-20">
         {/* Section 1 — RARB biology */}
-        <article className="grid md:grid-cols-12 gap-10">
-          <div className="md:col-span-8 space-y-5 text-lg leading-relaxed text-foreground/85">
-            <SectionTitle eyebrow={de ? "Grundlagen" : "Background"} title="Overview of RARB biology" />
-            <p>
-              <strong className="text-navy">Retinoic acid receptor beta (RARB)</strong> is a transcription factor
-              encoded by the <em>RARB</em> gene. It is widely expressed throughout the human body, with
-              particularly high levels in the brain and eye (
-              <a href="https://www.proteinatlas.org/ENSG00000077092-RARB" target="_blank" rel="noreferrer" className="text-teal underline">
-                The Human Protein Atlas – RARB
-              </a>
-              ). RARB forms heterodimer complexes with{" "}
-              <strong className="text-navy">retinoid X receptors (RXRs)</strong> and becomes activated upon binding
-              to <strong className="text-navy">retinoic acid</strong>, the biologically active form of{" "}
-              <strong className="text-navy">vitamin A</strong>. Following ligand binding, the RARB–RXR complex
-              interacts with <strong className="text-navy">retinoic acid response elements (RAREs)</strong>{" "}
-              contained in target genes to modulate their transcription with the help of coregulators (
-              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0098299714000788?via%3Dihub" target="_blank" rel="noreferrer" className="text-teal underline">
-                di Masi et al. 2015
-              </a>
-              ).
-            </p>
-            <p>
-              Tight regulation of the retinoic acid pathway is critical for the development of multiple organs in
-              both humans and animals, with particularly important roles in{" "}
-              <strong className="text-navy">eye development</strong> and formation of{" "}
-              <strong className="text-navy">striatal projection systems</strong> in the brain (
-              <a className="text-teal underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6605468/" target="_blank" rel="noreferrer">
-                Rataj-Baniowska et al., 2015
-              </a>
-              ).
-            </p>
-          </div>
-          <aside className="md:col-span-4">
-            <div className="sticky top-28 rounded-2xl bg-gradient-to-br from-teal/10 to-teal/5 border border-teal/20 p-6 space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-teal text-white flex items-center justify-center">
-                <Dna className="w-6 h-6" />
-              </div>
-              <p className="text-xs uppercase tracking-[0.2em] text-teal font-semibold">
-                {de ? "Kernkonzept" : "Key concept"}
-              </p>
-              <p className="font-display text-lg font-bold text-navy leading-snug">
-                RARB is a vitamin-A-activated transcription factor critical for the developing eye and striatum.
-              </p>
-            </div>
-          </aside>
+        <article className="space-y-5 text-lg leading-relaxed text-foreground/85">
+          <SectionTitle eyebrow={de ? "Grundlagen" : "Background"} title="Overview of RARB biology" />
+          <p>
+            <strong className="text-navy">Retinoic acid receptor beta (RARB)</strong> is a transcription factor
+            encoded by the <em>RARB</em> gene. It is widely expressed throughout the human body, with
+            particularly high levels in the brain and eye (
+            <a href="https://www.proteinatlas.org/ENSG00000077092-RARB" target="_blank" rel="noreferrer" className="text-teal underline">
+              The Human Protein Atlas – RARB
+            </a>
+            ). RARB forms heterodimer complexes with{" "}
+            <strong className="text-navy">retinoid X receptors (RXRs)</strong> and becomes activated upon binding
+            to <strong className="text-navy">retinoic acid</strong>, the biologically active form of{" "}
+            <strong className="text-navy">vitamin A</strong>. Following ligand binding, the RARB–RXR complex
+            interacts with <strong className="text-navy">retinoic acid response elements (RAREs)</strong>{" "}
+            contained in target genes to modulate their transcription with the help of coregulators (
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0098299714000788?via%3Dihub" target="_blank" rel="noreferrer" className="text-teal underline">
+              di Masi et al. 2015
+            </a>
+            ).
+          </p>
+          <p>
+            Tight regulation of the retinoic acid pathway is critical for the development of multiple organs in
+            both humans and animals, with particularly important roles in{" "}
+            <strong className="text-navy">eye development</strong> and formation of{" "}
+            <strong className="text-navy">striatal projection systems</strong> in the brain (
+            <a className="text-teal underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6605468/" target="_blank" rel="noreferrer">
+              Rataj-Baniowska et al., 2015
+            </a>
+            ).
+          </p>
         </article>
 
         {/* Section 2 — Genetics & pathophysiology */}
