@@ -140,7 +140,7 @@ export default function OurStory({ lang }: { lang: Lang }) {
               <p className="font-display text-2xl text-navy">
                 {de
                   ? "„Wir können nicht warten, bis jemand anderes eine Therapie entwickelt — also tun wir es selbst.“"
-                  : "\"We cannot wait for someone else to develop a treatment — so we do it ourselves.\""}
+                  : "“We cannot wait for someone else to develop a treatment — so we do it ourselves.”"}
               </p>
               <p>
                 {de
