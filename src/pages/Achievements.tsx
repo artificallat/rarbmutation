@@ -31,11 +31,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
             That target is messenger RNA (mRNA): the short-lived "recipe" a cell follows to make a protein. By binding to a chosen mRNA, an ASO can either stop a harmful protein from being made or correct the recipe so a missing protein works again.
           </p>
           <p>
-            This precision is what makes ASOs so promising for genetic conditions, including rare diseases (Lauffer et al. 2024{" "}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">
-              https://www.nature.com/articles/s43856-023-00419-1
-            </a>
-            ). Because ASOs work on mRNA rather than on DNA itself, their effect is temporary - patients need repeated doses to keep the therapy effective.
+            This precision is what makes ASOs so promising for genetic conditions, including rare diseases (<a className="text-teal font-semibold hover:underline" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">Lauffer et al. 2024</a>). Because ASOs work on mRNA rather than on DNA itself, their effect is temporary - patients need repeated doses to keep the therapy effective.
           </p>
         </div>
       </section>
@@ -54,11 +50,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
               An ASO can be designed to recognize only the faulty mRNA. Once inside the cell, it pairs with that mRNA like two halves of a zipper (Figure 1, Panel 2). A natural enzyme called RNase H1 spots this pairing and destroys the faulty mRNA — so the harmful protein never gets made. Scientists call this <strong>"mRNA knockdown"</strong>.
             </p>
             <p>
-              <strong>The catch:</strong> the ASO has to be <strong>allele-specific</strong> — it must silence only the faulty copy and leave the healthy one untouched. That's because the healthy RARB protein is essential for normal brain development. Knocking it out by mistake would cause the very symptoms we're trying to prevent. (Ciancia et al. 2022{" "}
-              <a className="text-teal font-semibold hover:underline break-all" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">
-                https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub
-              </a>
-              ).
+              <strong>The catch:</strong> the ASO has to be <strong>allele-specific</strong> — it must silence only the faulty copy and leave the healthy one untouched. That's because the healthy RARB protein is essential for normal brain development. Knocking it out by mistake would cause the very symptoms we're trying to prevent. (<a className="text-teal font-semibold hover:underline" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">Ciancia et al. 2022</a>).
             </p>
           </div>
         </div>
@@ -83,11 +75,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
         </h2>
         <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
           <p>
-            The development of an allele-specific ASO therapy is inherently challenging (Hauser at al. 2022{" "}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">
-              https://www.mdpi.com/1999-4923/14/8/1708
-            </a>
-            ).
+            The development of an allele-specific ASO therapy is inherently challenging (<a className="text-teal font-semibold hover:underline" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">Hauser et al. 2022</a>).
           </p>
           <p>
             Simon carries a <em>RARB</em> mutation called c.1159C&gt;T (p.R387C), which is shared by about 30% of MCOPS12 patients. Unfortunately, computer modeling showed that targeting this exact mutation wasn't going to work.
