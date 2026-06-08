@@ -116,9 +116,9 @@ export default function Donate({ lang }: { lang: Lang }) {
               </p>
 
               <Collapsible className="mt-5">
-                <CollapsibleTrigger className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition shadow-sm">
-                  {de ? "Spendenbestätigung anfordern" : "Request Your Donation Confirmation"}
-                  <ChevronDown className="w-4 h-4 transition-transform group-data-[state=open]:rotate-180" />
+                <CollapsibleTrigger className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition shadow-sm text-left">
+                  {de ? "Ich möchte meine Spende von der Steuer absetzen" : "I want to deduct my donation from tax"}
+                  <ChevronDown className="w-4 h-4 transition-transform group-data-[state=open]:rotate-180 shrink-0" />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-5">
                   <DonationConfirmationForm lang={lang} />
