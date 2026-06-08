@@ -11,11 +11,11 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
   return (
     <>
       <PageHero
-        eyebrow={de ? "Personalisierte Gentherapie" : "Personalized gene therapy"}
+        eyebrow={de ? "Personalisierte RNA-Therapie" : "Personalized RNA therapy"}
         title={<>N-of-1 <HeroAccent>ASO Therapy</HeroAccent></>}
         sub={de
-          ? "Eine allelspezifische Antisense-Oligonukleotid-Therapie — entwickelt für Simon, als Blaupause für weitere MCOPS12-Patient:innen."
-          : "An allele-specific antisense oligonucleotide therapy — developed for Simon, as a blueprint for other MCOPS12 patients."}
+          ? "Eine allelspezifische Antisense-Oligonukleotid-Therapie — entwickelt für Simon, aber eine Blaupause für weitere MCOPS12-Patient:innen."
+          : "An allele-specific antisense oligonucleotide therapy — developed for Simon, but a blueprint for other MCOPS12 patients."}
       />
 
       {/* What is an ASO */}
