@@ -57,8 +57,8 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
           </p>
           <p>
             {de
-              ? "Die MCOPS12 Natural History Study erfasst Basisdaten sowie Beurteilungen der neurologischen Entwicklung und Motorik. Teilnehmen können Personen jeden Alters, aus jedem Land, die pathogene oder wahrscheinlich pathogene Varianten im RARB-Gen tragen."
-              : "The MCOPS12 Natural History Study collects baseline data and assessments of neurodevelopment and motor skills. Individuals of any age, from any country, carrying pathogenic or likely pathogenic variants in the RARB gene are eligible to participate."}
+              ? <>Die MCOPS12 Natural History Study erfasst Basisdaten sowie Beurteilungen der neurologischen Entwicklung und Motorik. Teilnehmen können Personen jeden Alters, aus jedem Land, die pathogene oder wahrscheinlich pathogene Varianten im <span className="italic">RARB</span>-Gen tragen.</>
+              : <>The MCOPS12 Natural History Study collects baseline data and assessments of neurodevelopment and motor skills. Individuals of any age, from any country, carrying pathogenic or likely pathogenic variants in the <span className="italic">RARB</span> gene are eligible to participate.</>}
           </p>
           <p>
             {de
