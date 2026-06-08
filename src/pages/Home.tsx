@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Linkedin } from "lucide-react";
 import { t, partners, donationGoal, socials, type Lang } from "@/content/site";
 import { Placeholder, ProgressBar, SectionTitle } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import { geneFmt } from "@/lib/gene";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import heroFamily from "@/assets/family-mountains.jpg";
 import heroHorse from "@/assets/simon-horse-mane.jpg";
 import heroBeyond from "@/assets/simon-and-beyond.jpg";
 import heroFairyLights from "@/assets/simon-fairy-lights.jpg";
 import storyPhoto from "@/assets/simon-pony.jpg";
-import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
-import newsSimonSmile from "@/assets/news-simon-smile.jpg";
-import newsBreakingAso from "@/assets/news-breaking-aso.jpg";
+import newsRunForRare from "@/assets/news-run-for-rare-couple-v2.png.asset.json";
+import newsHappyNewYear from "@/assets/news-happy-new-year.png.asset.json";
 
 const LINKEDIN_URL = "https://www.linkedin.com/company/cure-mcops12/";
 
