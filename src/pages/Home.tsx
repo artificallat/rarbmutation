@@ -18,7 +18,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/company/cure-mcops12/";
 
 const homeNews = [
   {
-    img: newsRunForRare,
+    img: newsRunForRare.url,
     cat: "Community",
     date: "March 2026",
     href: LINKEDIN_URL,
@@ -32,33 +32,88 @@ const homeNews = [
     },
   },
   {
-    img: newsBreakingAso,
-    objectPosition: "center 30%",
+    img: null,
     cat: "Research",
     date: "March 2026",
     href: LINKEDIN_URL,
     en: {
       t: "New preprint on RARB-related disorder",
-      e: "Hi #MCOPS12 community, please take a moment to read Nicolas' recent post about a new publication on RARB-related disorder (RARB-RD) — a rare neurological disorder caused by dominant variants in the Retinoic Acid Receptor Beta (RARB) gene, studied in two new mouse models carrying patient variants (p.R387C and p.L402P).",
+      e: `Hi #MCOPS12 community,
+
+please take a moment to read Nicolas' recent post about a new publication on the MCOPS12/RARB-related disorder (preprint available on bioRxiv: https://lnkd.in/dGydAhC9).
+
+This is a seminal contribution to advancing our understanding of the underlying disease mechanisms of MCOPS12. It also highlights that allele-selective silencing of the mutant RARB gene (e.g. by an allele-selective ASO) represents a promising strategy for developing a disease-modifying therapy.
+
+We are truly grateful for the excellent collaboration with Dr. Wojciech Krezel's team at the IGBMC and Dr. Jacques Michaud's team at Centre de recherche Azrieli du CHU Sainte-Justine.
+
+It has been a pleasure to support you, Nicolas Zinter, PhD, in your PhD journey and to help make this pivotal work a reality.`,
     },
     de: {
-      t: "Neues Preprint zur RARB-related disorder",
-      e: "Hallo #MCOPS12-Community, bitte nehmt euch einen Moment Zeit für Nicolas' aktuellen Beitrag zu einer neuen Publikation über RARB-related disorder (RARB-RD) — eine seltene neurologische Erkrankung, verursacht durch dominante Varianten im RARB-Gen, untersucht in zwei neuen Mausmodellen mit den Patientenvarianten p.R387C und p.L402P.",
+      t: "New preprint on RARB-related disorder",
+      e: `Hi #MCOPS12 community,
+
+please take a moment to read Nicolas' recent post about a new publication on the MCOPS12/RARB-related disorder (preprint available on bioRxiv: https://lnkd.in/dGydAhC9).
+
+This is a seminal contribution to advancing our understanding of the underlying disease mechanisms of MCOPS12. It also highlights that allele-selective silencing of the mutant RARB gene (e.g. by an allele-selective ASO) represents a promising strategy for developing a disease-modifying therapy.
+
+We are truly grateful for the excellent collaboration with Dr. Wojciech Krezel's team at the IGBMC and Dr. Jacques Michaud's team at Centre de recherche Azrieli du CHU Sainte-Justine.
+
+It has been a pleasure to support you, Nicolas Zinter, PhD, in your PhD journey and to help make this pivotal work a reality.`,
     },
   },
   {
-    img: newsSimonSmile,
-    objectPosition: "center 25%",
+    img: newsHappyNewYear.url,
+    objectPosition: "center top",
     cat: "Community",
     date: "January 2026",
     href: LINKEDIN_URL,
     en: {
       t: "Happy New Year from Cure MCOPS12!",
-      e: "As we step into 2026, we want to express our heartfelt gratitude to all our supporters, families, scientists and partners who walked this path with us throughout the year.",
+      e: `Happy New Year from Cure MCOPS12!
+
+As we step into 2026, we want to express our heartfelt gratitude to all our donors for their unwavering support. Together, we've accomplished incredible milestones in 2025:
+
+👉 €56,000 in donations
+
+👉 Proof of concept for Simon's allele-selective Antisense Oligonucleotide (ASO) therapy – we identified several promising ASO candidates that can knock down the mutant RARB gene while preserving the wild-type 😊
+
+👉 Expanded our MCOPS12 Natural History Study – now with 35 patients enrolled
+
+👉 Significant progress in lipidomics biomarker research using the MCOPS12 mouse model
+
+👉 Advanced drug repurposing studies in the MCOPS12 mouse model
+
+👉 Active participation in key events – EURORDIS OpenAcademy 2025, the N=1 Collaborative Annual Meeting, and our very first MCOPS12 Families Conference in Montréal
+
+Looking ahead, 2026 will be a transformative year! We are launching new drug development initiatives in close collaboration with our partners and MCOPS12 warriors: A Cure for Sophia and Friends and A Cure for Sienna.
+
+Stay tuned for exciting updates coming soon!
+
+#HappyNewYear #CureMCOPS12 #ACureforSophiaandFriends #ACureforSienna`,
     },
     de: {
       t: "Happy New Year von Cure MCOPS12!",
-      e: "Mit dem Start in das Jahr 2026 möchten wir all unseren Unterstützer:innen, Familien, Wissenschaftler:innen und Partnern von Herzen danken, die diesen Weg im vergangenen Jahr mit uns gegangen sind.",
+      e: `Happy New Year from Cure MCOPS12!
+
+As we step into 2026, we want to express our heartfelt gratitude to all our donors for their unwavering support. Together, we've accomplished incredible milestones in 2025:
+
+👉 €56,000 in donations
+
+👉 Proof of concept for Simon's allele-selective Antisense Oligonucleotide (ASO) therapy – we identified several promising ASO candidates that can knock down the mutant RARB gene while preserving the wild-type 😊
+
+👉 Expanded our MCOPS12 Natural History Study – now with 35 patients enrolled
+
+👉 Significant progress in lipidomics biomarker research using the MCOPS12 mouse model
+
+👉 Advanced drug repurposing studies in the MCOPS12 mouse model
+
+👉 Active participation in key events – EURORDIS OpenAcademy 2025, the N=1 Collaborative Annual Meeting, and our very first MCOPS12 Families Conference in Montréal
+
+Looking ahead, 2026 will be a transformative year! We are launching new drug development initiatives in close collaboration with our partners and MCOPS12 warriors: A Cure for Sophia and Friends and A Cure for Sienna.
+
+Stay tuned for exciting updates coming soon!
+
+#HappyNewYear #CureMCOPS12 #ACureforSophiaandFriends #ACureforSienna`,
     },
   },
 ];
