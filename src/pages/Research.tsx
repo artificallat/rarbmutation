@@ -366,15 +366,6 @@ export default function Research({ lang }: { lang: Lang }) {
               );
             })}
           </div>
-
-          <div className="flex items-center gap-3 rounded-2xl border border-border bg-muted/40 px-5 py-4 text-sm text-foreground/75">
-            <BookOpen className="w-5 h-5 text-teal shrink-0" />
-            <span>
-              {de
-                ? "Möchtet ihr tiefer einsteigen? Kontaktiert uns für die Foliendetails der drei Forschungssäulen."
-                : "Want to go deeper? Reach out for the full slide deck on the three research pillars."}
-            </span>
-          </div>
         </article>
       </section>
     </>
