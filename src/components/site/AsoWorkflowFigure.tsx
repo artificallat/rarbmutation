@@ -68,7 +68,7 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
           statusLabel: "Completed",
           blocks: [
             { heading: "Long-read sequencing", body: <>of <em>RARB</em> alleles</> },
-            { heading: "Target site identification", body: <>Additional mutations on mutant <em>RARB</em> allele</> },
+            { heading: "Target site identification", body: <>Additional variants on mutant <em>RARB</em> allele (SNPs, indels)</> },
             { heading: "ASO design & in silico evaluation", body: <>of off-target effects</> },
           ],
         },
@@ -78,8 +78,8 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
           status: "done",
           statusLabel: "Completed: 6 ASO drugs",
           blocks: [
-            { heading: "Efficacy testing", body: <>{">"} 110 ASOs screened for allele-specific knockdown</> },
-            { heading: "Safety testing", body: <>Immunotoxicity · Cytotoxicity · Off-target effects</> },
+            { heading: "Efficacy testing", body: <>{">"} 110 ASOs screened for allele-specific knockdown (iPSC-derived neural stem cells)</> },
+            { heading: "Safety testing", body: <>Immunotoxicity (BJAB assay) · Cytotoxicity (Caspase assay) · Off-target effects (RNA-seq)</> },
           ],
         },
         {
@@ -98,7 +98,7 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
           status: "planned",
           statusLabel: "In preparation",
           blocks: [
-            { heading: "Clinical study", body: <>Named patient use, conducted in Austria · Intrathecal injection</> },
+            { heading: "Clinical study", body: <>Named patient use, conducted in Austria · Intrathecal administration</> },
             { heading: "Expected outcomes", body: <>Treatment is expected to be safe and well-tolerated · Improved brain function by knockdown of mutant <em>RARB</em> · Reduction in movement disorders · Improved cognitive skills</> },
 
           ],
