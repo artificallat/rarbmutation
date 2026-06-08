@@ -2,6 +2,7 @@ import { LeadParagraph } from "@/components/site/Bits";
 import { PageHero, HeroAccent } from "@/pages/WhoWeAre";
 import { Reveal } from "@/components/site/Reveal";
 import type { Lang } from "@/content/site";
+import { FileText, Presentation } from "lucide-react";
 
 export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
   const de = lang === "de";
