@@ -338,8 +338,8 @@ export default function Research({ lang }: { lang: Lang }) {
                           {g.heading}
                         </h4>
                         <ul className="space-y-1.5">
-                          {g.items.map((it) => (
-                            <li key={it} className="flex gap-2 text-sm text-foreground/80 leading-relaxed">
+                          {g.items.map((it, idx) => (
+                            <li key={idx} className="flex gap-2 text-sm text-foreground/80 leading-relaxed">
                               <span className="mt-2 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
                               <span>{it}</span>
                             </li>
