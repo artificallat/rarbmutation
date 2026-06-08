@@ -202,7 +202,7 @@ export default function Home({ lang }: { lang: Lang }) {
              <p>{geneFmt(tr.home.asoP2)}</p>
             </div>
             <Link
-              to={`${p}/aso-therapy`}
+              to={`${p}/achievements`}
               className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-navy font-semibold hover:bg-amber-deep transition"
             >
               {tr.cta.learnMore} <ArrowRight className="w-4 h-4" />
