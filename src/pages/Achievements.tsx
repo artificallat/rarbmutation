@@ -12,7 +12,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
     <>
       <PageHero
         eyebrow={de ? "Erfolge" : "Achievements"}
-        title={<>Simon´s <HeroAccent>ASO Therapy</HeroAccent></>}
+        title={<>Simon's <HeroAccent>ASO Therapy</HeroAccent></>}
         sub={de
           ? "Eine maßgeschneiderte RNA-Therapie für Simon — und gleichzeitig eine Vorlage für andere MCOPS12-Kinder."
           : "A bespoke RNA therapy for Simon — and a blueprint for other MCOPS12 children."}
@@ -79,7 +79,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
       {/* Simon's personalized therapy */}
       <section className="container-tight pb-12">
         <h2 className="font-display text-3xl font-bold text-navy mb-6">
-          Simon´s personalized allele-specific ASO therapy
+          Simon's personalized allele-specific ASO therapy
         </h2>
         <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
           <p>
@@ -96,7 +96,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
             So we took a different route. Using advanced genetic analyses called long-read sequencing, we mapped Simon's faulty <em>RARB</em> copy (allele) in detail — and identified dozens of additional unique markers found only on the mutant allele. Each one is a potential bullseye for an allele-specific ASO.
           </p>
           <p>
-            This is exciting on two fronts. First, it opened a real path forward for Simon`s ASO therapy. Second, the workflow established here (Figure 2) is a blueprint - one that can be reused to develop personalized ASO therapies for other children with MCOPS12.
+            This is exciting on two fronts. First, it opened a real path forward for Simon's ASO therapy. Second, the workflow established here (Figure 2) is a blueprint - one that can be reused to develop personalized ASO therapies for other children with MCOPS12.
           </p>
         </div>
       </section>
@@ -130,7 +130,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
             </div>
             <h4 className="font-display text-lg font-bold text-navy">Large pharma company (undisclosed)</h4>
             <p className="text-foreground/75 mt-2 text-base">
-              Additional designs of ASOs and safety testing in Simon´s cell model was performed at a large pharma company (undisclosed).
+              Additional designs of ASOs and safety testing in Simon's cell model was performed at a large pharma company (undisclosed).
             </p>
           </div>
 
