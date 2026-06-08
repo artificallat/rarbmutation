@@ -77,7 +77,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
       {/* Simon's personalized therapy */}
       <section className="container-tight pb-12">
         <h2 className="font-display text-3xl font-bold text-navy mb-6">
-          Simon´s personalized allele-specific ASO therapy
+          Simon's personalized allele-specific ASO therapy
         </h2>
         <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
           <p>
@@ -129,7 +129,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             </div>
             <h4 className="font-display text-lg font-bold text-navy">Large pharma company (undisclosed)</h4>
             <p className="text-foreground/75 mt-2 text-base">
-              Additional designs of ASOs and safety testing in Simon´s cell model was performed at a large pharma company (undisclosed).
+              Additional designs of ASOs and safety testing in Simon's cell model was performed at a large pharma company (undisclosed).
             </p>
           </div>
 
