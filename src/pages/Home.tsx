@@ -366,7 +366,7 @@ export default function Home({ lang }: { lang: Lang }) {
                     <img
                       src={post.img}
                       alt={body.t}
-                      className="w-full rounded-2xl object-cover max-h-80"
+                      className="w-full rounded-2xl"
                       style={{ objectPosition: (post as any).objectPosition || "center" }}
                     />
                   )}
