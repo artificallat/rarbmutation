@@ -46,6 +46,54 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
           </div>
         </div>
       </section>
+
+      <section className="container-tight pb-20">
+        <div className="grid md:grid-cols-2 gap-5">
+          <Reveal>
+            <a
+              href="/documents/Flyer-RARB-MCOPS12-Natural-History-Study.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4 h-full"
+            >
+              <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0">
+                <FileText className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="font-display text-lg font-bold text-navy">
+                  {de ? "Studien-Flyer" : "Study flyer"}
+                </h4>
+                <p className="text-sm text-foreground/75 mt-1">
+                  Flyer – RARB (MCOPS12) Natural History Study.pdf
+                </p>
+              </div>
+            </a>
+          </Reveal>
+
+          <Reveal delay={100}>
+            <a
+              href="/documents/RARB-Natural-History-Study-V-Chu-2024.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all flex items-start gap-4 h-full"
+            >
+              <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center shrink-0">
+                <Presentation className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="font-display text-lg font-bold text-navy">
+                  {de
+                    ? "Präsentation – MCOPS12 Familien-Webinar 2024"
+                    : "Presentation – 2024 MCOPS12 families webinar"}
+                </h4>
+                <p className="text-sm text-foreground/75 mt-1">
+                  RARB Natural History Study_V. Chu_2024.pdf
+                </p>
+              </div>
+            </a>
+          </Reveal>
+        </div>
+      </section>
     </>
   );
 }
