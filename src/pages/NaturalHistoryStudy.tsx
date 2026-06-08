@@ -38,13 +38,6 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
               </p>
             </Reveal>
 
-            <Reveal delay={120}>
-              <p>
-                {de
-                  ? "Die MCOPS12 Natural History Study erhebt Basisdaten sowie Beurteilungen der neurologischen Entwicklung und der motorischen Fähigkeiten. Teilnahmeberechtigt sind Personen jeden Alters aus allen Ländern, die pathogene oder wahrscheinlich pathogene Varianten im RARB-Gen tragen."
-                  : "The MCOPS12 Natural History Study collects baseline data, assessments of neurodevelopment and motor skills. Individuals of any age, from any country, carrying pathogenic or likely pathogenic variants in the RARB gene are eligible to participate."}
-              </p>
-            </Reveal>
 
             <Reveal delay={160}>
               <p>
