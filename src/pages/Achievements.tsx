@@ -96,7 +96,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
             So we took a different route. Using advanced genetic analyses called long-read sequencing, we mapped Simon's faulty <em>RARB</em> copy (allele) in detail — and identified dozens of additional unique markers found only on the mutant allele. Each one is a potential bullseye for an allele-specific ASO.
           </p>
           <p>
-            This is exciting on two fronts. First, it opened a real path forward for Simon`s ASO therapy. Second, the workflow established here (Figure 2) is a blueprint - one that can be reused to develop personalized ASO therapies for other children with MCOPS12.
+            This is exciting on two fronts. First, it opened a real path forward for Simon's ASO therapy. Second, the workflow established here (Figure 2) is a blueprint - one that can be reused to develop personalized ASO therapies for other children with MCOPS12.
           </p>
         </div>
       </section>
