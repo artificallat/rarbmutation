@@ -82,8 +82,8 @@ export default function Network({ lang }: { lang: Lang }) {
             <div>
               <p className="font-display text-2xl sm:text-3xl text-navy leading-snug">
                 {de
-                  ? "„Wir können nicht warten, bis jemand anderes eine Behandlung entwickelt — also tun wir es selbst."
-                  : "“We cannot wait for someone else to develop a treatment — so we do it ourselves."}
+                  ? "„Wir können nicht warten, bis jemand anderes eine Behandlung entwickelt — also tun wir es selbst.“"
+                  : "“We cannot wait for someone else to develop a treatment — so we do it ourselves.”"}
               </p>
               <p className="text-base sm:text-lg text-foreground/75 mt-5 leading-relaxed">
                 {de
