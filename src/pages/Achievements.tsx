@@ -50,11 +50,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
               An ASO can be designed to recognize only the faulty mRNA. Once inside the cell, it pairs with that mRNA like two halves of a zipper (Figure 1, Panel 2). A natural enzyme called RNase H1 spots this pairing and destroys the faulty mRNA — so the harmful protein never gets made. Scientists call this <strong>"mRNA knockdown"</strong>.
             </p>
             <p>
-              <strong>The catch:</strong> the ASO has to be <strong>allele-specific</strong> — it must silence only the faulty copy and leave the healthy one untouched. That's because the healthy RARB protein is essential for normal brain development. Knocking it out by mistake would cause the very symptoms we're trying to prevent. (Ciancia et al. 2022{" "}
-              <a className="text-teal font-semibold hover:underline break-all" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">
-                https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub
-              </a>
-              ).
+              <strong>The catch:</strong> the ASO has to be <strong>allele-specific</strong> — it must silence only the faulty copy and leave the healthy one untouched. That's because the healthy RARB protein is essential for normal brain development. Knocking it out by mistake would cause the very symptoms we're trying to prevent. (<a className="text-teal font-semibold hover:underline" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">Ciancia et al. 2022</a>).
             </p>
           </div>
         </div>
