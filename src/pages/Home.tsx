@@ -14,32 +14,36 @@ import newsRunForRare from "@/assets/news-run-for-rare-couple.jpg";
 import newsSimonSmile from "@/assets/news-simon-smile.jpg";
 import newsBreakingAso from "@/assets/news-breaking-aso.jpg";
 
+const LINKEDIN_URL = "https://www.linkedin.com/company/cure-mcops12/";
+
 const homeNews = [
-  {
-    img: newsBreakingAso,
-    objectPosition: "center 30%",
-    cat: "Breakthrough",
-    date: "November 2025",
-    en: {
-      t: "BREAKING NEWS: six ASO candidates pass safety testing",
-      e: "Proof-of-concept complete: six allele-specific ASOs silence Simon's mutated RARB while sparing the healthy copy — and all six passed safety in his cell model.",
-    },
-    de: {
-      t: "BREAKING NEWS: sechs ASO-Kandidaten bestehen Sicherheitstests",
-      e: "Proof-of-Concept abgeschlossen: Sechs allelspezifische ASOs legen das mutierte RARB-Gen still und schonen die gesunde Kopie — alle sechs haben die Sicherheitstests in Simons Zellmodell bestanden.",
-    },
-  },
   {
     img: newsRunForRare,
     cat: "Community",
     date: "March 2026",
+    href: LINKEDIN_URL,
     en: {
-      t: "Run for Rare – Run for Simon",
-      e: "Our personal motto at the Rare Diseases Run: every kilometre run together turns into momentum for MCOPS12 research.",
+      t: "RUN FOR RARE – RUN FOR SIMON",
+      e: "Das war unser persönliches Motto beim Rare Diseases Run, bei dem Menschen mit seltenen Erkrankungen ins Rampenlicht gerückt werden. Gemeinsam für eine bessere Welt zu laufen ist zwar genauso anstrengend – macht aber glücklich.",
     },
     de: {
-      t: "Run for Rare – Run for Simon",
-      e: "Unser persönliches Motto beim Rare Diseases Run: Jeder gemeinsam gelaufene Kilometer wird zu Rückenwind für die MCOPS12-Forschung.",
+      t: "RUN FOR RARE – RUN FOR SIMON",
+      e: "Das war unser persönliches Motto beim Rare Diseases Run, bei dem Menschen mit seltenen Erkrankungen ins Rampenlicht gerückt werden. Gemeinsam für eine bessere Welt zu laufen ist zwar genauso anstrengend – macht aber glücklich.",
+    },
+  },
+  {
+    img: newsBreakingAso,
+    objectPosition: "center 30%",
+    cat: "Research",
+    date: "March 2026",
+    href: LINKEDIN_URL,
+    en: {
+      t: "New preprint on RARB-related disorder",
+      e: "Hi #MCOPS12 community, please take a moment to read Nicolas' recent post about a new publication on RARB-related disorder (RARB-RD) — a rare neurological disorder caused by dominant variants in the Retinoic Acid Receptor Beta (RARB) gene, studied in two new mouse models carrying patient variants (p.R387C and p.L402P).",
+    },
+    de: {
+      t: "Neues Preprint zur RARB-related disorder",
+      e: "Hallo #MCOPS12-Community, bitte nehmt euch einen Moment Zeit für Nicolas' aktuellen Beitrag zu einer neuen Publikation über RARB-related disorder (RARB-RD) — eine seltene neurologische Erkrankung, verursacht durch dominante Varianten im RARB-Gen, untersucht in zwei neuen Mausmodellen mit den Patientenvarianten p.R387C und p.L402P.",
     },
   },
   {
@@ -47,13 +51,14 @@ const homeNews = [
     objectPosition: "center 25%",
     cat: "Community",
     date: "January 2026",
+    href: LINKEDIN_URL,
     en: {
-      t: "Simon's Science Night",
-      e: "An evening dedicated to Simon — bringing together families, scientists, and supporters to share progress and hope for MCOPS12 research.",
+      t: "Happy New Year from Cure MCOPS12!",
+      e: "As we step into 2026, we want to express our heartfelt gratitude to all our supporters, families, scientists and partners who walked this path with us throughout the year.",
     },
     de: {
-      t: "Simon's Science Night",
-      e: "Ein Abend, der Simon gewidmet ist — Familien, Wissenschaftler:innen und Unterstützer:innen kommen zusammen, um Fortschritte und Hoffnung für die MCOPS12-Forschung zu teilen.",
+      t: "Happy New Year von Cure MCOPS12!",
+      e: "Mit dem Start in das Jahr 2026 möchten wir all unseren Unterstützer:innen, Familien, Wissenschaftler:innen und Partnern von Herzen danken, die diesen Weg im vergangenen Jahr mit uns gegangen sind.",
     },
   },
 ];
@@ -266,12 +271,14 @@ export default function Home({ lang }: { lang: Lang }) {
                     <p className="text-sm text-muted-foreground mt-2 line-clamp-3">
                       {geneFmt(lang === "de" ? post.de.e : post.en.e)}
                     </p>
-                    <Link
-                      to={`${p}/news`}
+                    <a
+                      href={(post as any).href || "https://www.linkedin.com/company/cure-mcops12/"}
+                      target="_blank"
+                      rel="noreferrer"
                       className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-teal transition-colors"
                     >
-                      {tr.cta.readMore} <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                    </Link>
+                      {tr.cta.readMore} <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                    </a>
                   </div>
                 </article>
               </Reveal>
