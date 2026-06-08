@@ -124,6 +124,7 @@ export default function Home({ lang }: { lang: Lang }) {
   const tr = t[lang];
   const p = lang === "de" ? "/de" : "";
   const [slide, setSlide] = useState(0);
+  const [openPost, setOpenPost] = useState<number | null>(null);
   const slides = tr.home.slides;
 
   useEffect(() => {
