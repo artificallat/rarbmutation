@@ -1,12 +1,13 @@
 import { SectionTitle } from "@/components/site/Bits";
 import type { Lang } from "@/content/site";
-import { Stethoscope, Mouse, FlaskConical, Sparkles, Dna, BookOpen } from "lucide-react";
+import { Stethoscope, Mouse, FlaskConical, Sparkles, Dna } from "lucide-react";
+import type { ReactNode } from "react";
 
 type Pillar = {
   number: string;
   title: string;
   icon: typeof Stethoscope;
-  groups: { heading: string; items: string[] }[];
+  groups: { heading: string; items: ReactNode[] }[];
   partners: string[];
   accent: string;
 };
@@ -45,7 +46,12 @@ const pillars: Pillar[] = [
     groups: [
       {
         heading: "Four different mouse models",
-        items: ["Rarb⁻ᐟ⁻", "Rarb R387C/+", "Rarb L402P/+", "Rarb⁺ᐟ⁻"],
+        items: [
+          <><em>Rarb</em><sup>-/-</sup></>,
+          <><em>Rarb</em><sup>R387C/+</sup></>,
+          <><em>Rarb</em><sup>L402P/+</sup></>,
+          <><em>Rarb</em><sup>+/-</sup></>,
+        ],
       },
       {
         heading: "Studies",
@@ -82,7 +88,7 @@ const pillars: Pillar[] = [
         ],
       },
     ],
-    partners: ["RareLabs", "Alpha Rose", "Uni Basel"],
+    partners: ["RareLabs", "Uni Basel"],
     accent: "from-navy/10 to-navy/5",
   },
 ];
@@ -273,8 +279,13 @@ export default function Research({ lang }: { lang: Lang }) {
               ):
             </p>
             <div className="flex flex-wrap gap-2 mt-4">
-              {["Rarb⁻ᐟ⁻", "Rarb R387C/+", "Rarb L402P/+", "Rarb⁺ᐟ⁻"].map((m) => (
-                <span key={m} className="inline-flex items-center rounded-full bg-navy text-white px-3 py-1 text-xs font-semibold font-mono">
+              {[
+                <><em>Rarb</em><sup>-/-</sup></>,
+                <><em>Rarb</em><sup>R387C/+</sup></>,
+                <><em>Rarb</em><sup>L402P/+</sup></>,
+                <><em>Rarb</em><sup>+/-</sup></>,
+              ].map((m, i) => (
+                <span key={i} className="inline-flex items-center rounded-full bg-navy text-white px-3 py-1 text-xs font-semibold font-mono">
                   {m}
                 </span>
               ))}
@@ -332,8 +343,8 @@ export default function Research({ lang }: { lang: Lang }) {
                           {g.heading}
                         </h4>
                         <ul className="space-y-1.5">
-                          {g.items.map((it) => (
-                            <li key={it} className="flex gap-2 text-sm text-foreground/80 leading-relaxed">
+                          {g.items.map((it, idx) => (
+                            <li key={idx} className="flex gap-2 text-sm text-foreground/80 leading-relaxed">
                               <span className="mt-2 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
                               <span>{it}</span>
                             </li>
@@ -359,15 +370,6 @@ export default function Research({ lang }: { lang: Lang }) {
                 </div>
               );
             })}
-          </div>
-
-          <div className="flex items-center gap-3 rounded-2xl border border-border bg-muted/40 px-5 py-4 text-sm text-foreground/75">
-            <BookOpen className="w-5 h-5 text-teal shrink-0" />
-            <span>
-              {de
-                ? "Möchtet ihr tiefer einsteigen? Kontaktiert uns für die Foliendetails der drei Forschungssäulen."
-                : "Want to go deeper? Reach out for the full slide deck on the three research pillars."}
-            </span>
           </div>
         </article>
       </section>
