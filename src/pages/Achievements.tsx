@@ -31,11 +31,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
             That target is messenger RNA (mRNA): the short-lived "recipe" a cell follows to make a protein. By binding to a chosen mRNA, an ASO can either stop a harmful protein from being made or correct the recipe so a missing protein works again.
           </p>
           <p>
-            This precision is what makes ASOs so promising for genetic conditions, including rare diseases (Lauffer et al. 2024{" "}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">
-              https://www.nature.com/articles/s43856-023-00419-1
-            </a>
-            ). Because ASOs work on mRNA rather than on DNA itself, their effect is temporary - patients need repeated doses to keep the therapy effective.
+            This precision is what makes ASOs so promising for genetic conditions, including rare diseases (<a className="text-teal font-semibold hover:underline" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">Lauffer et al. 2024</a>). Because ASOs work on mRNA rather than on DNA itself, their effect is temporary - patients need repeated doses to keep the therapy effective.
           </p>
         </div>
       </section>
