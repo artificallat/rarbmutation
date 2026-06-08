@@ -1,32 +1,45 @@
-## Finale Korrekturen
+# Plan
 
-### 1. `src/components/site/AsoWorkflowFigure.tsx` — exakt an die Slide angleichen
-Die Komponente wird auf beiden Seiten (Simon's ASO therapy in Achievements + N-of-1 ASO Therapy) genutzt. Inhalte an die Slide anpassen:
+## 1. Figure 2 caption — `src/components/site/AsoWorkflowFigure.tsx`
 
-- **Spalte 1 – Target identification & ASO design**
-  - "Target site identification" → Body: *Additional mutations on mutant RARB allele* (Klammerzusatz "SNPs, indels" entfernen — auf Slide nicht vorhanden)
-- **Spalte 2 – Efficacy & safety testing in Simon's cell model**
-  - Efficacy testing: *>110 ASOs screened for allele-specific knockdown* (Zusatz "(iPSC-derived neural stem cells)" entfernen)
-  - Safety testing: nur *Immunotoxicity · Cytotoxicity · Off-target effects* (Assay-Klammern entfernen)
-- **Spalte 4 – Clinical study & expected outcomes**
-  - "Intrathecal administration" → **Intrathecal injection**
-  - Expected outcomes leicht umformulieren, damit Reihenfolge/Wortlaut der Slide entspricht: *Treatment is expected to be safe and well-tolerated · Improved brain function by knockdown of mutant RARB · Reduction in movement disorders · Improved cognitive skills*
+Align the figcaption with the wording on the supplied slide:
 
-Dieselben Änderungen jeweils auch in der deutschen Variante derselben Datei.
+- EN: `Allele-specific ASO therapy development workflow — personalized for Simon, but a blueprint for many MCOPS12 patients.`
+- DE: `Entwicklungs-Workflow der allelspezifischen ASO-Therapie — personalisiert für Simon, aber eine Blaupause für viele MCOPS12-Patient:innen.`
 
-### 2. `src/pages/Achievements.tsx` — Satzersetzung prüfen
-Der Satz unter "Simon's ASO Therapy" lautet bereits *"A customized RNA therapy for Simon — opening a path for other children with MCOPS12."* (englische Version bestätigt in Zeile 18). Keine Änderung nötig.
+The 4-column content already matches the slide (Long-read sequencing, Target site identification with SNPs/indels, iPSC-derived neural stem cells, BJAB/Caspase/RNA-seq, intrathecal administration, named patient use Austria, etc.) — no further changes inside the columns.
 
-### 3. `src/pages/NaturalHistoryStudy.tsx` — fehlenden Klinikerabsatz ergänzen
-Aktuell gibt es nur den "Become part of the study"-Block (Patient:innen-Aufruf). Der für Kliniker:innen gerichtete Absatz fehlt. Direkt nach dem bestehenden Kontaktblock (Zeile ~70) einen zweiten Kontaktblock einfügen:
+## 2. Home news — `src/pages/Home.tsx`
 
-- **Eyebrow:** Clinicians / Fachkreise
-- **Titel:** *Do you treat a patient diagnosed with MCOPS12?* / *Behandeln Sie eine:n Patient:in mit MCOPS12?*
-- **Text:** *Please contact Valerie Chu, genetic counsellor and study coordinator, CHU Sainte-Justine.* / *Bitte kontaktieren Sie Valerie Chu, genetische Beraterin und Studienkoordinatorin, CHU Sainte-Justine.*
-- **Mail-Button:** `valerie.chu.hsj@ssss.gouv.qc.ca` (gleicher Outlook-Deeplink wie bestehender Block)
+Replace the existing 3 entries in `homeNews` with the 3 LinkedIn posts in this exact order:
 
-Visuell als zweite Card im selben Stil wie der bestehende Navy-Block (z. B. heller/teal-Variante zur Unterscheidung), damit klar wird: ein Block für Familien, ein Block für Kliniker:innen.
+### Post 1 — "BREAKING NEWS" (urn:li:activity:7447011830209597440)
+- Image: uploaded Simon portrait (image-143 / `170e4503...`)
+- Category: `Research`, Date: `April 2026` (2mo ago from June 2026)
+- Title: `BREAKING NEWS: Six ASO candidates identified`
+- Body: full text 1:1 from the post (proof-of-concept, 6 ASO candidates, safety testing passed, next step toxicity study, ultra-rare disease <100 patients, hashtags)
 
-### Out of scope
-- Keine Änderungen an N-of-1-Hero-Text (bereits "Personalized RNA therapy" + "but a blueprint" gesetzt).
-- Keine inhaltlichen Änderungen am Workflow über die Slide-Angleichung hinaus.
+### Post 2 — "RUN FOR RARE – RUN FOR SIMON" (urn:li:activity:7433651183799422978)
+- Image: composite — use the couple selfie (image-144 / `0aebdcb8...`) as main; the existing `news-run-for-rare-couple-v2` asset can be replaced if a better composite is needed. To keep it simple: use the couple selfie as primary thumbnail.
+- Category: `Community`, Date: `March 2026`
+- Title: `RUN FOR RARE – RUN FOR SIMON`
+- Body: 1:1 German text from the post + hashtags
+
+### Post 3 — "Happy New Year" (urn:li:activity:7412857373310046208)
+- Image: Happy New Year card (image-146 / `9e9cc81c...`)
+- Category: `Community`, Date: `January 2026`
+- Title: `Happy New Year from Cure MCOPS12!`
+- Body: 1:1 full text from the post
+
+All three `href` continue to point at the LinkedIn company page (cards link to LinkedIn). The "Read more" dialog already supports full text via the existing `Dialog` component.
+
+### Technical details
+
+- Upload the 3 needed images to the CDN via `lovable-assets create --file /mnt/user-uploads/<file>.png --filename <name>.png > src/assets/<name>.png.asset.json`:
+  - `news-aso-breakthrough.png` (image-143)
+  - `news-run-for-rare-couple.png` (image-144) — overwrite/replace existing reference
+  - `news-happy-new-year.png` (image-146) — already exists, reuse
+- Update `Home.tsx` imports and `homeNews` array accordingly.
+- Keep all surrounding layout, dialog, and translation logic intact.
+
+No other files change.
