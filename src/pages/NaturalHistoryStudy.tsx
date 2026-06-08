@@ -31,15 +31,11 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
 
           <div className="space-y-6 text-lg leading-relaxed text-foreground/85 pl-1">
             <Reveal delay={80}>
-              <a
-                href="https://ern-ithaca.eu/our-research-activities/calls-for-collaboration/rarb-natural-history-study/"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 text-teal font-semibold hover:underline break-all"
-              >
-                <ExternalLink className="w-4 h-4 shrink-0" />
-                ern-ithaca.eu/our-research-activities/calls-for-collaboration/rarb-natural-history-study/
-              </a>
+              <p>
+                {de
+                  ? "Die MCOPS12 Natural History Study erhebt Basisdaten sowie Beurteilungen der neurologischen Entwicklung und der motorischen Fähigkeiten. Teilnahmeberechtigt sind Personen jeden Alters aus allen Ländern, die pathogene oder wahrscheinlich pathogene Varianten im RARB-Gen tragen."
+                  : "The MCOPS12 Natural History Study collects baseline data, assessments of neurodevelopment and motor skills. Individuals of any age, from any country, carrying pathogenic or likely pathogenic variants in the RARB gene are eligible to participate."}
+              </p>
             </Reveal>
 
             <Reveal delay={120}>
