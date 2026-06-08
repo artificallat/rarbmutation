@@ -109,11 +109,6 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
 
       {/* Partners */}
       <section className="container-tight pb-20">
-        <div className="space-y-5 text-foreground/85 leading-relaxed text-lg mb-8">
-          <p>
-            Target identification, ASO design and efficacy screening was performed at RareLabs (a division of AlphaRose Therapeutics)
-          </p>
-        </div>
         <div className="grid md:grid-cols-3 gap-5">
           <a href="https://hopeatrarelabs.com/" target="_blank" rel="noreferrer" className="bg-card border border-border rounded-2xl p-6 hover:border-teal hover:shadow-xl transition-all overflow-hidden break-words">
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
