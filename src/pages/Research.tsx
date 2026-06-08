@@ -279,8 +279,13 @@ export default function Research({ lang }: { lang: Lang }) {
               ):
             </p>
             <div className="flex flex-wrap gap-2 mt-4">
-              {["Rarb⁻ᐟ⁻", "Rarb R387C/+", "Rarb L402P/+", "Rarb⁺ᐟ⁻"].map((m) => (
-                <span key={m} className="inline-flex items-center rounded-full bg-navy text-white px-3 py-1 text-xs font-semibold font-mono">
+              {[
+                <><em>Rarb</em><sup>-/-</sup></>,
+                <><em>Rarb</em><sup>R387C/+</sup></>,
+                <><em>Rarb</em><sup>L402P/+</sup></>,
+                <><em>Rarb</em><sup>+/-</sup></>,
+              ].map((m, i) => (
+                <span key={i} className="inline-flex items-center rounded-full bg-navy text-white px-3 py-1 text-xs font-semibold font-mono">
                   {m}
                 </span>
               ))}
