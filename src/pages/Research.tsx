@@ -1,12 +1,13 @@
 import { SectionTitle } from "@/components/site/Bits";
 import type { Lang } from "@/content/site";
-import { Stethoscope, Mouse, FlaskConical, Sparkles, Dna, BookOpen } from "lucide-react";
+import { Stethoscope, Mouse, FlaskConical, Sparkles, Dna } from "lucide-react";
+import type { ReactNode } from "react";
 
 type Pillar = {
   number: string;
   title: string;
   icon: typeof Stethoscope;
-  groups: { heading: string; items: string[] }[];
+  groups: { heading: string; items: ReactNode[] }[];
   partners: string[];
   accent: string;
 };
