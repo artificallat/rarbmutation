@@ -14,8 +14,8 @@ export default function Achievements({ lang }: { lang: Lang }) {
         eyebrow={de ? "Erfolge" : "Achievements"}
         title={<>Simon's <HeroAccent>ASO Therapy</HeroAccent></>}
         sub={de
-          ? "Eine maßgeschneiderte RNA-Therapie für Simon — und gleichzeitig eine Vorlage für andere MCOPS12-Kinder."
-          : "A bespoke RNA therapy for Simon — and a blueprint for other MCOPS12 children."}
+          ? "Eine maßgeschneiderte RNA-Therapie für Simon — ein Wegbereiter für andere MCOPS12-Kinder."
+          : "A customized RNA therapy for Simon — opening a path for other children with MCOPS12."}
       />
 
       {/* What is an ASO */}
