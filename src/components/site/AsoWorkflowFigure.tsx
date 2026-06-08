@@ -97,8 +97,8 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
           status: "planned",
           statusLabel: "In preparation",
           blocks: [
-            { heading: "Clinical trial", body: <>Named patient use programme in Austria · intrathecal injection</> },
-            { heading: "Expected outcomes", body: <>Treatment expected to be safe and well-tolerated · improved brain function via knockdown of mutant <em>RARB</em> · reduction in movement disorders · improved cognitive skills</> },
+            { heading: "Clinical trial", body: <>Named patient use program, conducted in Austria · Intrathecal administration</> },
+            { heading: "Expected outcomes", body: <>Treatment is expected to be safe and well-tolerated · Improved brain function by knockdown of mutant <em>RARB</em> · Reduction in movement disorders · Improved cognitive skills</> },
           ],
         },
       ];
