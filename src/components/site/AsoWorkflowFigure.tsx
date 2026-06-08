@@ -24,7 +24,7 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
           statusLabel: "Abgeschlossen",
           blocks: [
             { heading: "Long-Read-Sequenzierung", body: <>der <em>RARB</em>-Allele</> },
-            { heading: "Zielstellen-Identifikation", body: <>Zusätzliche Mutationen auf dem mutierten <em>RARB</em>-Allel</> },
+            { heading: "Zielstellen-Identifikation", body: <>Zusätzliche Varianten auf dem mutierten <em>RARB</em>-Allel (SNPs, Indels)</> },
             { heading: "ASO-Design & in-silico-Bewertung", body: <>möglicher Off-Target-Effekte</> },
           ],
         },
@@ -34,8 +34,8 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
           status: "done",
           statusLabel: "Abgeschlossen: 6 ASO-Wirkstoffe",
           blocks: [
-            { heading: "Wirksamkeitsprüfung", body: <>{">"} 110 ASOs auf allelspezifischen Knockdown getestet</> },
-            { heading: "Sicherheitsprüfung", body: <>Immuntoxizität · Zytotoxizität · Off-Target-Effekte</> },
+            { heading: "Wirksamkeitsprüfung", body: <>{">"} 110 ASOs auf allelspezifischen Knockdown getestet (iPSC-abgeleitete neurale Stammzellen)</> },
+            { heading: "Sicherheitsprüfung", body: <>Immuntoxizität (BJAB-Assay) · Zytotoxizität (Caspase-Assay) · Off-Target-Effekte (RNA-Seq)</> },
           ],
         },
         {
@@ -54,7 +54,7 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
           status: "planned",
           statusLabel: "In Vorbereitung",
           blocks: [
-            { heading: "Klinische Studie", body: <>Named-Patient-Use in Österreich · intrathekale Injektion</> },
+            { heading: "Klinische Studie", body: <>Named-Patient-Use, durchgeführt in Österreich · intrathekale Verabreichung</> },
             { heading: "Erwartete Wirkung", body: <>Die Behandlung wird voraussichtlich sicher und gut verträglich sein · verbesserte Hirnfunktion durch Knockdown des mutierten <em>RARB</em> · Reduktion der Bewegungsstörungen · verbesserte kognitive Fähigkeiten</> },
 
           ],
