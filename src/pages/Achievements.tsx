@@ -75,11 +75,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
         </h2>
         <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
           <p>
-            The development of an allele-specific ASO therapy is inherently challenging (Hauser at al. 2022{" "}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">
-              https://www.mdpi.com/1999-4923/14/8/1708
-            </a>
-            ).
+            The development of an allele-specific ASO therapy is inherently challenging (<a className="text-teal font-semibold hover:underline" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">Hauser et al. 2022</a>).
           </p>
           <p>
             Simon carries a <em>RARB</em> mutation called c.1159C&gt;T (p.R387C), which is shared by about 30% of MCOPS12 patients. Unfortunately, computer modeling showed that targeting this exact mutation wasn't going to work.
