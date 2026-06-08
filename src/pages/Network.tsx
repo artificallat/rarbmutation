@@ -168,7 +168,7 @@ export default function Network({ lang }: { lang: Lang }) {
         <Reveal>
           <p className="text-foreground/80 mt-10 max-w-4xl text-lg">
             {de ? "Mehr zu unseren bisherigen und laufenden Programmen findest du unter " : "To learn more about our past and current programs, have a look at "}
-            <Link to={`${base}/research`} className="text-teal font-semibold hover:underline">{de ? "Forschung & Wirkstoffentwicklung" : "Research and Drug Development"}</Link>.
+            <Link to={`${base}/funded-rd-programs`} className="text-teal font-semibold hover:underline">{de ? "Geförderte F&E-Programme" : "Funded R&D Programs"}</Link>.
           </p>
         </Reveal>
       </section>
