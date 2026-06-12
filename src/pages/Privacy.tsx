@@ -80,7 +80,7 @@ export default function Privacy({ lang }: { lang: Lang }) {
         <h2 className="font-display text-2xl font-bold text-navy mt-8">{de ? "8. SSL-/TLS-Verschlüsselung" : "8. SSL/TLS encryption"}</h2>
         <p>
           {de
-            ? "Diese Website nutzt eine SSL-/TLS-Verschlüsselung, um die Übertragung vertraulicher Inhalte zu schützen. Eine verschlüsselte Verbindung erkennen Sie an „https://" in der Adresszeile Ihres Browsers."
+            ? "Diese Website nutzt eine SSL-/TLS-Verschlüsselung, um die Übertragung vertraulicher Inhalte zu schützen. Eine verschlüsselte Verbindung erkennen Sie am Präfix „https://“ in der Adresszeile Ihres Browsers."
             : "This website uses SSL/TLS encryption to protect the transmission of confidential content. You can recognise an encrypted connection by the “https://” prefix in your browser’s address bar."}
         </p>
 
