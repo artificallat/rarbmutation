@@ -111,6 +111,9 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
               <FlaskConical className="w-6 h-6" />
             </div>
             <h4 className="font-display text-lg font-bold text-navy">RareLabs (AlphaRose Therapeutics)</h4>
+            <p className="text-foreground/75 mt-2 text-base">
+              Design and development of Simon's allele-specific ASO therapy is performed in collaboration with RareLabs (AlphaRose Therapeutics).
+            </p>
             <p className="text-sm text-teal font-semibold mt-3 break-all">https://hopeatrarelabs.com/</p>
           </a>
 
