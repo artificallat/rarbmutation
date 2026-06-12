@@ -221,7 +221,7 @@ export function AsoWorkflowFigure({ lang, caption = true }: { lang: Lang; captio
         <figcaption className="text-sm text-foreground/70 p-4 border-t border-border">
           <strong className="text-navy">{de ? "Abbildung 2:" : "Figure 2:"}</strong>{" "}
           {de
-            ? "Entwicklungs-Workflow der allelspezifischen ASO-Therapie — personalisiert für Simon, aber eine Blaupause für viele MCOPS12-Patient:innen."
+            ? "Entwicklungs-Workflow der allelspezifischen ASO-Therapie — personalisiert für Simon, die zugrundeliegende Strategie ist aber auf andere MCOPS12-Patient:innen übertragbar."
             : "Allele-specific ASO therapy development workflow — personalized for Simon, but a blueprint for many MCOPS12 patients."}
         </figcaption>
       )}
