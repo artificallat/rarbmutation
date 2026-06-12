@@ -14,8 +14,8 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
         eyebrow={de ? "Personalisierte RNA-Therapie" : "Personalized RNA therapy"}
         title={<>N-of-1 <HeroAccent>ASO Therapy</HeroAccent></>}
         sub={de
-          ? "Eine allelspezifische Antisense-Oligonukleotid-Therapie — entwickelt für Simon, aber eine Blaupause für weitere MCOPS12-Patient:innen."
-          : "An allele-specific antisense oligonucleotide therapy — developed for Simon, but a blueprint for other MCOPS12 patients."}
+          ? "Eine allelspezifische Antisense-Oligonukleotid-Therapie — entwickelt für Simon, aber der zugrunde liegende Entwicklungsansatz ist auf andere MCOPS12-Patient:innen übertragbar."
+          : "An allele-specific antisense oligonucleotide therapy — tailored to Simon, the underlying development approach is amenable to other MCOPS12 patients."}
       />
 
       {/* What is an ASO */}
@@ -95,7 +95,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             Therefore, we performed advanced genetic analyses using <strong>long‑read sequencing</strong> to <strong>identify additional sequence variants on Simon's mutant <em>RARB</em> allele</strong> that could serve as more suitable ASO target sites. This approach revealed dozens of variants (SNPs, indels) that are exclusively present on the mutant allele and thus represent <strong>ideal targets for an allele‑specific ASO therapy</strong>.
           </p>
           <p>
-            While these results are very encouraging, they also imply that the resulting ASO therapy is highly customized to Simon. Importantly, however, the ASO development workflow established here (Figure 2) provides a robust <strong>blueprint</strong> that can be applied to the development of personalized ASO therapies <strong>for other patients with MCOPS12</strong>.
+            While these results are very encouraging, they also imply that the resulting ASO therapy is highly customized to Simon. Importantly, however, the ASO development workflow established here (Figure 2) provides a robust development approach that is amenable to other patients with MCOPS12.
           </p>
         </div>
       </section>
