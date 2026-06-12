@@ -28,11 +28,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
             ASO therapeutics are short, synthetic strands of nucleotides - the building blocks of DNA and RNA - typically 15 to 25 units in length. They are part of the RNA therapeutics class and are designed to bind with high specificity to a single messenger RNA (mRNA), the temporary "recipe" a cell uses to produce a protein.
           </p>
           <p>
-            By binding to their target mRNA, ASOs can either block the production of disease‑causing proteins or modify the mRNA in a way that restores normal protein function when it would otherwise be lost. This highly precise mechanism makes ASO therapeutics a powerful approach for treating a wide range of genetic disorders, including rare diseases (Lauffer et al. 2024{" "}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">
-              https://www.nature.com/articles/s43856-023-00419-1
-            </a>
-            ). Since ASOs act on mRNA and not on DNA, their effects are reversible, meaning repeated dosing is required.
+            By binding to their target mRNA, ASOs can either block the production of disease‑causing proteins or modify the mRNA in a way that restores normal protein function when it would otherwise be lost. This highly precise mechanism makes ASO therapeutics a powerful approach for treating a wide range of genetic disorders, including rare diseases (<a className="text-teal font-semibold hover:underline" href="https://www.nature.com/articles/s43856-023-00419-1" target="_blank" rel="noreferrer">Lauffer et al. 2024</a>). Since ASOs act on mRNA and not on DNA, their effects are reversible, meaning repeated dosing is required.
           </p>
         </div>
       </section>
