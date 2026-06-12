@@ -25,7 +25,7 @@ const makeTimeline = (base: string): TimelineItem[] => [
     details: (
       <div className="space-y-5">
         <p>
-          <span className="font-semibold text-navy">Mehr Info durch Anklicken: </span>
+          <span className="font-semibold text-navy">More infos: </span>
           <a className="text-teal font-semibold hover:underline break-all" href="https://www.ejprarediseases.org/rainrare/" target="_blank" rel="noreferrer">
             https://www.ejprarediseases.org/rainrare/
           </a>

@@ -190,7 +190,7 @@ export default function NewlyDiagnosed({ lang }: { lang: Lang }) {
                 ? "Eure Teilnahme ist entscheidend, um zu verstehen, wie sich die Erkrankung über die Zeit verändert."
                 : "Your participation is crucial to improving our understanding of disease phenotypes and how they change over time."}{" "}
               <span className="font-normal text-white/85">
-                {de ? "Mehr Infos: " : "To learn more, click "}
+                {de ? "More infos: " : "To learn more, click "}
                 <a href="/join-natural-history-study" className="underline hover:text-amber">
                   {de ? "Zur Natural History Study" : "Join The Natural History Study"}
                 </a>.
