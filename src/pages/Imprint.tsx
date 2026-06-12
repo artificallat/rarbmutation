@@ -8,7 +8,7 @@ export default function Imprint({ lang }: { lang: Lang }) {
       <PageHero
         eyebrow={de ? "Rechtliches" : "Legal"}
         title={de ? <><HeroAccent>Impressum</HeroAccent></> : <><HeroAccent>Imprint</HeroAccent></>}
-        sub={de ? "Angaben gemäß § 5 ECG und § 25 MedienG." : "Information pursuant to § 5 ECG and § 25 MedienG (Austrian law)."}
+        sub={de ? "Angaben gemäß § 5 ECG, § 25 MedienG und Art. 13/14 DSGVO." : "Information pursuant to § 5 ECG, § 25 MedienG and Art. 13/14 GDPR (Austrian law)."}
       />
       <section className="container-tight pb-24 prose prose-slate max-w-none">
         <h2 className="font-display text-2xl font-bold text-navy mt-2">{de ? "Medieninhaber & Verein" : "Media owner & association"}</h2>
@@ -17,7 +17,9 @@ export default function Imprint({ lang }: { lang: Lang }) {
             ? "Verein zur Förderung einer Therapieentwicklung für MCOPS12-Patient:innen"
             : "Association for the advancement of therapy development for MCOPS12 patients"}<br />
           4963 St. Peter am Hart, {de ? "Österreich" : "Austria"}<br />
-          ZVR: 1002067031
+          ZVR: 1002067031<br />
+          {de ? "Vereinssitz" : "Registered seat"}: St. Peter am Hart, {de ? "Österreich" : "Austria"}<br />
+          {de ? "Vereinsbehörde" : "Registration authority"}: {de ? "Bezirkshauptmannschaft Braunau am Inn" : "District Authority Braunau am Inn"}
         </p>
 
         <h2 className="font-display text-2xl font-bold text-navy mt-8">{de ? "Vertretungsberechtigte" : "Authorised representatives"}</h2>
@@ -55,11 +57,18 @@ export default function Imprint({ lang }: { lang: Lang }) {
           </li>
         </ul>
 
+        <h2 className="font-display text-2xl font-bold text-navy mt-8">{de ? "Online-Streitbeilegung" : "Online dispute resolution"}</h2>
+        <p>
+          {de
+            ? <>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a className="text-teal hover:underline" href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noreferrer">ec.europa.eu/consumers/odr</a>. Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</>
+            : <>The European Commission provides a platform for online dispute resolution (ODR): <a className="text-teal hover:underline" href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noreferrer">ec.europa.eu/consumers/odr</a>. We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.</>}
+        </p>
+
         <h2 className="font-display text-2xl font-bold text-navy mt-8">{de ? "Haftungsausschluss" : "Disclaimer"}</h2>
         <p>
           {de
-            ? "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
-            : "Despite careful content review, we accept no liability for the content of external links. The operators of the linked pages are solely responsible for their content."}
+            ? "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Inhalte dieser Website dienen ausschließlich der allgemeinen Information und stellen keine medizinische Beratung dar."
+            : "Despite careful content review, we accept no liability for the content of external links. The operators of the linked pages are solely responsible for their content. Content on this website is for general information only and does not constitute medical advice."}
         </p>
 
         <h2 className="font-display text-2xl font-bold text-navy mt-8">{de ? "Urheberrecht" : "Copyright"}</h2>
