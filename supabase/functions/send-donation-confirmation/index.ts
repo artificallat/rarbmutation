@@ -1,7 +1,7 @@
 import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
 import { z } from "npm:zod@3.23.8";
 
-const RECIPIENTS = ["rpell@rarbmutation.org", "epell@rarbmutation.org"];
+const RECIPIENTS = ["rpell@rarbmutation.org"];
 
 const BodySchema = z.object({
   firstName: z.string().trim().min(1).max(100),
