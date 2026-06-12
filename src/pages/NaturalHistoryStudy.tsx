@@ -50,11 +50,11 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
       <section className="container-tight pb-12">
         <Reveal>
           <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-10 shadow-[var(--shadow-card)]">
-            <SectionTitle eyebrow={de ? "Interessiert?" : "Interested?"} title={de ? "Werde Teil der Studie" : "Become part of the study"} light />
+            <SectionTitle eyebrow={de ? "Fachkreise" : "Clinicians"} title={de ? "Behandeln Sie eine:n Patient:in mit MCOPS12?" : "Do you treat a patient diagnosed with MCOPS12?"} light />
             <p className="text-white/90 leading-relaxed -mt-2">
               {de
-                ? "Kontaktiere Valerie Chu, genetische Beraterin und Studienkoordinatorin am CHU Sainte-Justine."
-                : "Reach out to Valerie Chu, genetic counsellor and study coordinator at CHU Sainte-Justine."}
+                ? "Bitte kontaktieren Sie Valerie Chu, genetische Beraterin und Studienkoordinatorin, CHU Sainte-Justine."
+                : "Please contact Valerie Chu, genetic counsellor and study coordinator, CHU Sainte-Justine."}
             </p>
             <a
               href="https://outlook.office.com/mail/deeplink/compose?to=valerie.chu.hsj@ssss.gouv.qc.ca"
