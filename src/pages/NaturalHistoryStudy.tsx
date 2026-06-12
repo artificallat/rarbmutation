@@ -68,25 +68,6 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
           </div>
         </Reveal>
 
-        <Reveal delay={100}>
-          <div className="mt-5 bg-card border border-border rounded-3xl p-10 shadow-sm">
-            <SectionTitle eyebrow={de ? "Fachkreise" : "Clinicians"} title={de ? "Behandeln Sie eine:n Patient:in mit MCOPS12?" : "Do you treat a patient diagnosed with MCOPS12?"} />
-            <p className="text-foreground/85 leading-relaxed -mt-2">
-              {de
-                ? "Bitte kontaktieren Sie Valerie Chu, genetische Beraterin und Studienkoordinatorin, CHU Sainte-Justine."
-                : "Please contact Valerie Chu, genetic counsellor and study coordinator, CHU Sainte-Justine."}
-            </p>
-            <a
-              href="https://outlook.office.com/mail/deeplink/compose?to=valerie.chu.hsj@ssss.gouv.qc.ca"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-teal px-5 sm:px-7 py-3 font-semibold text-white hover:brightness-95 transition max-w-full break-all text-sm sm:text-base"
-            >
-              <Mail className="w-4 h-4 shrink-0" />
-              <span className="break-all">valerie.chu.hsj@ssss.gouv.qc.ca</span>
-            </a>
-          </div>
-        </Reveal>
       </section>
 
 
