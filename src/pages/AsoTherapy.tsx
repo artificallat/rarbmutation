@@ -73,15 +73,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
         </h2>
         <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
           <p>
-            The development of an allele‑specific ASO therapy is inherently challenging (Hauser at al. 2022{" "}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">
-              https://www.mdpi.com/1999-4923/14/8/1708
-            </a>
-            ). Simon carries the pathogenic <em>RARB</em> variant c.1159C&gt;T (p.R387C), which is present in approximately 30% of all MCOPS12 patients, and characterized as dominant-negative in vivo (Zinter et al. 2026, Link:{" "}
-            <a className="text-teal font-semibold hover:underline break-all" href="https://www.biorxiv.org/content/10.64898/2026.02.20.706764v1" target="_blank" rel="noreferrer">
-              https://www.biorxiv.org/content/10.64898/2026.02.20.706764v1
-            </a>
-            ). Based on computational analyses, the design of an ASO that selectively targets this specific mutation was not considered promising.
+            The development of an allele‑specific ASO therapy is inherently challenging (<a className="text-teal font-semibold hover:underline" href="https://www.mdpi.com/1999-4923/14/8/1708" target="_blank" rel="noreferrer">Hauser et al. 2022</a>). Simon carries the pathogenic <em>RARB</em> variant c.1159C&gt;T (p.R387C), which is present in approximately 30% of all MCOPS12 patients, and characterized as dominant-negative in vivo (<a className="text-teal font-semibold hover:underline" href="https://www.biorxiv.org/content/10.64898/2026.02.20.706764v1" target="_blank" rel="noreferrer">Zinter et al. 2026</a>). Based on computational analyses, the design of an ASO that selectively targets this specific mutation was not considered promising.
           </p>
           <p>
             Therefore, we performed advanced genetic analyses using <strong>long‑read sequencing</strong> to <strong>identify additional sequence variants on Simon's mutant <em>RARB</em> allele</strong> that could serve as more suitable ASO target sites. This approach revealed dozens of variants (SNPs, indels) that are exclusively present on the mutant allele and thus represent <strong>ideal targets for an allele‑specific ASO therapy</strong>.
