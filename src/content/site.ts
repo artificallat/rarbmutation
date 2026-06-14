@@ -276,7 +276,7 @@ export const t = {
       asoP1:
         "In collaboration with a biotech partner in the US and scientists in France and Canada, we are developing a personalized ASO therapy for Simon. This innovative approach is designed to specifically silence the mutation in the RARB gene that causes his condition. In a tremendous effort, we identified six promising ASO drugs that show strong efficacy and safety in laboratory studies. We are now entering the final step - conducting toxicology studies to determine the safest ASO drug for Simon.",
       asoP2:
-        "While this therapy is tailored to Simon, but a blueprint for other MCOPS12 patients.",
+        "While this therapy is tailored to Simon, the underlying development approach is amenable to other MCOPS12 patients.",
       stats: [
         { n: "52", l: "MCOPS12 patients documented worldwide (2023 systematic review)" },
         { n: "€235,000+", l: "raised for research and drug development" },
