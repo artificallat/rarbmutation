@@ -47,11 +47,7 @@ export default function AsoTherapy({ lang }: { lang: Lang }) {
               After entering the cell, the ASO binds to its target mRNA through Watson–Crick base pairing, forming a short RNA–DNA duplex (Figure 1, Panel 2). This duplex is detected by a natural enzyme called RNase H1, which cuts and degrades the mRNA. As a result, the mutant protein can no longer be produced. This mechanism is known as <strong>mRNA knockdown</strong>.
             </p>
             <p>
-              For MCOPS12, the ASO must be "allele-specific" - meaning it selectively reduces the mutant <em>RARB</em> mRNA while leaving the healthy mRNA untouched. This selectivity is essential because the RARB protein plays a key role in normal brain development. Eliminating the healthy protein would lead to symptoms similar to those seen in MCOPS12 itself. (Ciancia et al. 2022{" "}
-              <a className="text-teal font-semibold hover:underline break-all" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">
-                https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub
-              </a>
-              ).
+              For MCOPS12, the ASO must be "allele-specific" - meaning it selectively reduces the mutant <em>RARB</em> mRNA while leaving the healthy mRNA untouched. This selectivity is essential because the RARB protein plays a key role in normal brain development. Eliminating the healthy protein would lead to symptoms similar to those seen in MCOPS12 itself (<a className="text-teal font-semibold hover:underline" href="https://www.sciencedirect.com/science/article/pii/S0301008222000326?via%3Dihub" target="_blank" rel="noreferrer">Ciancia et al. 2022</a>).
             </p>
           </div>
         </div>
