@@ -105,7 +105,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
             </div>
             <h4 className="font-display text-lg font-bold text-navy">RareLabs (AlphaRose Therapeutics)</h4>
             <p className="text-foreground/75 mt-2 text-base">
-              Target identification, ASO design and efficacy screening was performed at RareLabs (a division of AlphaRose Therapeutics).
+              Target identification, ASO design and efficacy testing were performed at RareLabs.
             </p>
             <p className="text-sm text-teal font-semibold mt-3 break-all">https://hopeatrarelabs.com/</p>
           </a>
