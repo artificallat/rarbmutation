@@ -1,5 +1,6 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/__l5e/:path*", "destination": "https://rarbmutation.lovable.app/__l5e/:path*" },
+    { "source": "/((?!__l5e/|assets/|.*\\.).*)", "destination": "/index.html" }
   ]
 }
