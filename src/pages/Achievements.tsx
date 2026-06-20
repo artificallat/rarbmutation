@@ -126,7 +126,7 @@ export default function Achievements({ lang }: { lang: Lang }) {
             </div>
             <h4 className="font-display text-lg font-bold text-navy">Hongene Biotech</h4>
             <p className="text-foreground/75 mt-2 text-base">
-              ASO drugs for in vivo safety studies were produced at Hongene Biotech.
+              ASO drugs for in toxicology studies were produced at Hongene Biotech.
             </p>
             <p className="text-sm text-teal font-semibold mt-3 break-all">https://www.hongene.com/</p>
           </a>
