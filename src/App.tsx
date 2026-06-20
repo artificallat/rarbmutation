@@ -79,7 +79,6 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route element={<Layout lang="en" />}>{pages("en")}</Route>
-          <Route path="/de" element={<Layout lang="de" />}>{pages("de")}</Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

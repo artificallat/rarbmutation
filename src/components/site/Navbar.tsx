@@ -1,6 +1,6 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ChevronDown, ChevronRight, Globe, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import { t, type Lang } from "@/content/site";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
@@ -24,11 +24,6 @@ export default function Navbar({ lang }: { lang: Lang }) {
   }, []);
   useEffect(() => setOpen(false), [pathname]);
 
-  const otherLang: Lang = lang === "en" ? "de" : "en";
-  const otherPath = (() => {
-    if (lang === "en") return "/de" + (pathname === "/" ? "" : pathname);
-    return pathname.replace(/^\/de/, "") || "/";
-  })();
 
   const isActive = (path: string) => {
     const current = pathname.replace(/^\/de/, "") || "/";
@@ -79,9 +74,6 @@ export default function Navbar({ lang }: { lang: Lang }) {
           </div>
 
           <div className="flex items-center gap-2">
-            <Link to={otherPath} className="hidden sm:inline-flex items-center gap-1 text-sm font-medium px-3 py-2 rounded-full hover:bg-muted/60">
-              <Globe className="w-4 h-4" /> {otherLang.toUpperCase()}
-            </Link>
             <Link to={`${p}/donate`} className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber text-navy font-semibold text-sm hover:bg-amber-deep transition-colors shadow-[var(--shadow-amber)]">
               {tr.cta.donate}
             </Link>
@@ -103,14 +95,6 @@ export default function Navbar({ lang }: { lang: Lang }) {
             <MobileGroup label={tr.nav.families} items={familiesItems} onNavigate={() => setOpen(false)} isActive={isActive} />
             <MobileGroup label={tr.nav.clinicians} items={cliniciansItems} onNavigate={() => setOpen(false)} isActive={isActive} />
 
-            <Link
-              to={otherPath}
-              onClick={() => setOpen(false)}
-              className="flex items-center min-h-[44px] px-3 py-2 mt-1 rounded-lg text-sm font-medium"
-              style={{ color: "#ffffff" }}
-            >
-              🌐 {otherLang.toUpperCase()}
-            </Link>
             <Link
               to={`${p}/donate`}
               onClick={() => setOpen(false)}
