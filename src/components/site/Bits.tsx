@@ -5,7 +5,7 @@ export function Placeholder({ label, className = "aspect-[4/3]", src, objectPosi
         <img
           src={src}
           alt={label}
-          loading="lazy"
+          decoding="async"
           style={{
             width: "100%",
             height: "100%",
