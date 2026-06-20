@@ -26,7 +26,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
   return (
     <>
       <PageHero
-        eyebrow={de ? "Familien" : "Families"}
+        eyebrow={de ? "Familien" : "FAMILIES"}
         title={de
           ? <>Nimm an der Natural History <HeroAccent>Study</HeroAccent> teil</>
           : <>Join the Natural History <HeroAccent>Study</HeroAccent></>}
@@ -88,7 +88,7 @@ export default function JoinNaturalHistoryStudy({ lang }: { lang: Lang }) {
       <section className="container-tight pb-12">
         <Reveal>
           <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-10 shadow-[var(--shadow-card)]">
-            <SectionTitle eyebrow={de ? "Fachkreise" : "Clinicians"} title={de ? "Behandeln Sie eine:n Patient:in mit MCOPS12?" : "Do you treat a patient diagnosed with MCOPS12?"} light />
+            <SectionTitle eyebrow={de ? "INTERESSIERT?" : "FAMILIES"} title={de ? "Behandeln Sie eine:n Patient:in mit MCOPS12?" : "Interested?"} light />
             <p className="text-white/90 leading-relaxed -mt-2">
               {de
                 ? "Bitte kontaktieren Sie Valerie Chu, genetische Beraterin und Studienkoordinatorin, CHU Sainte-Justine."

@@ -10,7 +10,7 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
   return (
     <>
       <PageHero
-        eyebrow={de ? "Fachkreise" : "Clinicians"}
+        eyebrow={de ? "FAMILIEN" : "FAMILIES"}
         title={<>Natural History <HeroAccent>Study</HeroAccent></>}
         sub={de
           ? "Eine internationale Studie am CHU Sainte-Justine zur Erfassung des natürlichen Verlaufs der MCOPS12 (RARB)-Erkrankung."
@@ -50,7 +50,7 @@ export default function NaturalHistoryStudy({ lang }: { lang: Lang }) {
       <section className="container-tight pb-12">
         <Reveal>
           <div className="bg-gradient-to-br from-navy to-navy-deep text-white rounded-3xl p-10 shadow-[var(--shadow-card)]">
-            <SectionTitle eyebrow={de ? "Fachkreise" : "Clinicians"} title={de ? "Behandeln Sie eine:n Patient:in mit MCOPS12?" : "Do you treat a patient diagnosed with MCOPS12?"} light />
+            <SectionTitle eyebrow={de ? "INTERESSIERT?" : "FAMILIES"} title={de ? "Behandeln Sie eine:n Patient:in mit MCOPS12?" : "Interested?"} light />
             <p className="text-white/90 leading-relaxed -mt-2">
               {de
                 ? "Bitte kontaktieren Sie Valerie Chu, genetische Beraterin und Studienkoordinatorin, CHU Sainte-Justine."
