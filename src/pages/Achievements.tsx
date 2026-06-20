@@ -114,9 +114,9 @@ export default function Achievements({ lang }: { lang: Lang }) {
             <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-3">
               <Building2 className="w-6 h-6" />
             </div>
-            <h4 className="font-display text-lg font-bold text-navy">Large pharma company (undisclosed)</h4>
+            <h4 className="font-display text-lg font-bold text-navy">Undisclosed pharmaceutical company</h4>
             <p className="text-foreground/75 mt-2 text-base">
-              Additional designs of ASOs and safety testing in Simon's cell model was performed at a large pharma company (undisclosed).
+              Further ASO design and safety testing in Simon's cell model were conducted at an undisclosed pharmaceutical company.
             </p>
           </div>
 
